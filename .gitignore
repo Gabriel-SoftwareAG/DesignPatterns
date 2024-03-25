@@ -12,8 +12,8 @@
 .DS_Store
  
 # Maven
-/logs/
-*/target/*
+/target/
+*/target/**
 /doc/
 allure-results/
 /bin/
