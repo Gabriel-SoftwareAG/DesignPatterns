@@ -13,8 +13,7 @@
  
 # Maven
 /logs/
-/target/
-/Patterns/target/
+*/target/*
 /doc/
 allure-results/
 /bin/
