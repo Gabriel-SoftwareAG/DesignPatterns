@@ -17,26 +17,26 @@
  */
 package ai.verisoft.creational;
 
-import org.junit.jupiter.api.Assertions;
+import ai.verisoft.creational.factorymethod.Document;
+import ai.verisoft.creational.factorymethod.DocumentFactory;
 import org.junit.jupiter.api.Test;
 
-public class SingeltonTest {
+public class FactoryMethodTest {
 
     @Test
-    public void shouldHaveTheSameMessage(){
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
+    public void test() {
 
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
-    }
+        // Given
+        Document wordDocument = DocumentFactory.createDocument(DocumentFactory.DocumentType.WORD);
+        Document pdfDocument = DocumentFactory.createDocument(DocumentFactory.DocumentType.PDF);
 
+        // Then
+        wordDocument.open();
+        wordDocument.save();
+        wordDocument.close();
 
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+        pdfDocument.open();
+        pdfDocument.save();
+        pdfDocument.close();
     }
 }

@@ -15,28 +15,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.creational.abstractfactory;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-public class SingeltonTest {
-
-    @Test
-    public void shouldHaveTheSameMessage(){
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
-
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
+public class DarkThemeFactory implements GUIFactory {
+    public Button createButton() {
+        return (Button) new DarkButton();
     }
 
-
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+    public Checkbox createCheckbox() {
+        return new DarkCheckbox();
     }
 }

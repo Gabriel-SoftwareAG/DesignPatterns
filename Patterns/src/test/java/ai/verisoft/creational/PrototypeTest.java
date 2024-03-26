@@ -17,26 +17,23 @@
  */
 package ai.verisoft.creational;
 
-import org.junit.jupiter.api.Assertions;
+import ai.verisoft.creational.prototype.Shape;
+import ai.verisoft.creational.prototype.ShapeCache;
 import org.junit.jupiter.api.Test;
 
-public class SingeltonTest {
+public class PrototypeTest {
 
     @Test
-    public void shouldHaveTheSameMessage(){
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
+    public void shouldBeAbleToCreatePrototype() {
+        ShapeCache.loadCache();
 
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
-    }
+        Shape clonedShape = ShapeCache.getShape("1");
+        clonedShape.draw();
+        System.out.println("Shape : " + clonedShape.getType());
 
-
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+        Shape clonedShape2 = ShapeCache.getShape("2");
+        System.out.println("Shape : " + clonedShape2.getType());
+        clonedShape2.draw();
     }
 }
+

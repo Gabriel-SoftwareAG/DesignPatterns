@@ -15,28 +15,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.creational.prototype;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import java.util.Hashtable;
 
-public class SingeltonTest {
+public class ShapeCache {
 
-    @Test
-    public void shouldHaveTheSameMessage(){
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
+    private static Hashtable<String, Shape> shapeMap  = new Hashtable<>();
 
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
+    public static Shape getShape(String shapeId) {
+        Shape cachedShape = shapeMap.get(shapeId);
+        return (Shape) cachedShape.clone();
     }
 
+    // for each shape run database query and create shape
+    // shapeMap.put(shapeKey, shape);
+    // for example, we are adding three shapes
 
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+    public static void loadCache() {
+        Circle circle = new Circle();
+        circle.setId("1");
+        shapeMap.put(circle.getId(),circle);
+
+        Rectangle rectangle = new Rectangle();
+        rectangle.setId("2");
+        shapeMap.put(rectangle.getId(), rectangle);
     }
 }
+

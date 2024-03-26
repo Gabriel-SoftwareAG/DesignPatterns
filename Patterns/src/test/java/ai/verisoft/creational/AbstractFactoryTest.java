@@ -17,26 +17,32 @@
  */
 package ai.verisoft.creational;
 
-import org.junit.jupiter.api.Assertions;
+import ai.verisoft.creational.abstractfactory.Application;
+import ai.verisoft.creational.abstractfactory.DarkThemeFactory;
+import ai.verisoft.creational.abstractfactory.GUIFactory;
+import ai.verisoft.creational.abstractfactory.LightThemeFactory;
 import org.junit.jupiter.api.Test;
 
-public class SingeltonTest {
+public class AbstractFactoryTest {
 
     @Test
-    public void shouldHaveTheSameMessage(){
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
-
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
+    public void test() {
+        Application app = configureApplication();
+        app.paint();
     }
 
 
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+    private static Application configureApplication() {
+        GUIFactory factory;
+        String theme = System.getenv("THEME"); // Just an example of how you might decide which factory to use
+
+        if ("dark".equalsIgnoreCase(theme)) {
+            factory = new DarkThemeFactory();
+        } else {
+            factory = new LightThemeFactory();
+        }
+
+        return new Application(factory);
     }
+
 }

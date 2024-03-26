@@ -15,28 +15,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.creational.prototype;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+public abstract class Shape implements Cloneable {
+    private String id;
+    protected String type;
 
-public class SingeltonTest {
+    public abstract void draw();
 
-    @Test
-    public void shouldHaveTheSameMessage(){
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
-
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
+    public String getType(){
+        return type;
     }
 
+    public String getId() {
+        return id;
+    }
 
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Object clone() {
+        Object clone = null;
+
+        try {
+            clone = super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+        return clone;
     }
 }
+
