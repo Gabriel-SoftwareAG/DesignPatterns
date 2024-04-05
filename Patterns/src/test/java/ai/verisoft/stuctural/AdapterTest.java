@@ -15,28 +15,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.stuctural;
 
-import org.junit.jupiter.api.Assertions;
+import ai.verisoft.behavioral.structural.adapter.PlaywrightAdapter;
+import ai.verisoft.behavioral.structural.adapter.WebBrowser;
 import org.junit.jupiter.api.Test;
 
-public class SingeltonTest {
+public class AdapterTest {
 
     @Test
-    public void shouldHaveTheSameMessage() {
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
+    public void testAdapter() {
+        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
 
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
-    }
-
-
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+        browser.navigate("https://www.google.com");
+        browser.click("[name='q']");
+        browser.type("[name='q']", "Adapter Pattern");
+        // Wait a bit to see the action
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        browser.close();
     }
 }

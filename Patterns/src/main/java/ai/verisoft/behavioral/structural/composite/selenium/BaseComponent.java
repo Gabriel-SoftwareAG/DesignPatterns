@@ -15,28 +15,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.behavioral.structural.composite.selenium;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
-public class SingeltonTest {
+public abstract class BaseComponent {
+    protected WebDriver driver;
 
-    @Test
-    public void shouldHaveTheSameMessage() {
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
-
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
+    public BaseComponent(WebDriver driver) {
+        this.driver = driver;
     }
 
-
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
-    }
+    public abstract void action();
 }

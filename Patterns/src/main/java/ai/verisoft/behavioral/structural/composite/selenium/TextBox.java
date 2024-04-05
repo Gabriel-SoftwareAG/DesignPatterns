@@ -15,28 +15,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.behavioral.structural.composite.selenium;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class SingeltonTest {
+class TextBox extends BaseComponent {
+    private final By locator;
 
-    @Test
-    public void shouldHaveTheSameMessage() {
-        Singleton instance1 = Singleton.getInstance();
-        instance1.getHelloWorldMessage();
-        Assertions.assertEquals("Hello world!", instance1.getHelloWorldMessage());
-
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals("Hello world!", instance2.getHelloWorldMessage());
+    public TextBox(WebDriver driver, By locator) {
+        super(driver);
+        this.locator = locator;
     }
 
+    @Override
+    public void action() {
+        WebElement element = driver.findElement(locator);
+        element.click();
+    }
 
-    @Test
-    public void shouldBeTheSameOnject() {
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
-        Assertions.assertEquals(instance1, instance2);
+    // Method to enter text
+    public void enterText(String text) {
+        WebElement element = driver.findElement(locator);
+        element.sendKeys(text + Keys.ENTER);
     }
 }
