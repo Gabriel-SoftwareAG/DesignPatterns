@@ -15,27 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.creational.factorymethod.example2;
 
-import ai.verisoft.creational.prototype.Shape;
-import ai.verisoft.creational.prototype.ShapeCache;
-import org.junit.jupiter.api.Test;
-
-public class PrototypeTest {
-
-    @Test
-    public void shouldBeAbleToCreatePrototype() {
-        // Build the object bank
-        ShapeCache.loadCache();
-
-        // Get the cloned object
-        Shape clonedShape = ShapeCache.getShape("1");
-        clonedShape.draw();
-        System.out.println("Shape : " + clonedShape.getType());
-
-        Shape clonedShape2 = ShapeCache.getShape("2");
-        System.out.println("Shape : " + clonedShape2.getType());
-        clonedShape2.draw();
+public class LightCheckbox implements Checkbox {
+    @Override
+    public void paint() {
+        System.out.println("Rendering checkbox in light theme.");
     }
 }
-

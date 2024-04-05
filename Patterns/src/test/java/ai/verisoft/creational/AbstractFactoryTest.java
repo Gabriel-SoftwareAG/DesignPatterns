@@ -35,6 +35,7 @@ public class AbstractFactoryTest {
     private static Application configureApplication() {
         GUIFactory factory;
         String theme = System.getenv("THEME"); // Just an example of how you might decide which factory to use
+        theme = "dark";
 
         if ("dark".equalsIgnoreCase(theme)) {
             factory = new DarkThemeFactory();

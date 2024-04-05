@@ -17,7 +17,7 @@
  */
 package ai.verisoft.creational.abstractfactory;
 
-public class DarkButton implements Checkbox {
+public class DarkButton implements Button {
     public void paint() {
         System.out.println("Rendering button in dark theme.");
     }

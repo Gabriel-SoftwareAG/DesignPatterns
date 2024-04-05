@@ -17,26 +17,45 @@
  */
 package ai.verisoft.creational;
 
-import ai.verisoft.creational.factorymethod.Document;
-import ai.verisoft.creational.factorymethod.DocumentFactory;
+import ai.verisoft.creational.factorymethod.example1.Document;
+import ai.verisoft.creational.factorymethod.example1.DocumentFactory;
+import ai.verisoft.creational.factorymethod.example2.Checkbox;
+import ai.verisoft.creational.factorymethod.example2.CheckboxFactory;
 import org.junit.jupiter.api.Test;
 
 public class FactoryMethodTest {
 
     @Test
-    public void test() {
+    public void documentFactoryMethodExample() {
 
         // Given
         Document wordDocument = DocumentFactory.createDocument(DocumentFactory.DocumentType.WORD);
         Document pdfDocument = DocumentFactory.createDocument(DocumentFactory.DocumentType.PDF);
 
         // Then
+        assert wordDocument != null;
         wordDocument.open();
         wordDocument.save();
         wordDocument.close();
 
+        assert pdfDocument != null;
         pdfDocument.open();
         pdfDocument.save();
         pdfDocument.close();
+    }
+
+    @Test
+    public void checkboxFactoryMethodExample() {
+        // Given
+        Checkbox lightCheckbox = CheckboxFactory.createCheckbox(CheckboxFactory.Theme.LIGHT);
+        Checkbox darkCheckbox = CheckboxFactory.createCheckbox(CheckboxFactory.Theme.DARK);
+
+
+        // Then
+        assert lightCheckbox != null;
+        lightCheckbox.paint();
+
+        assert darkCheckbox != null;
+        darkCheckbox.paint();
     }
 }

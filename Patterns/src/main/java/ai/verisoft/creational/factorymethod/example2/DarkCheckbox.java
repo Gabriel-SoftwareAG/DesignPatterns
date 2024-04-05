@@ -15,19 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational.factorymethod;
+package ai.verisoft.creational.factorymethod.example2;
 
-public class PdfDocument implements Document {
-    public void open() {
-        System.out.println("Opening PDF document.");
-    }
-
-    public void save() {
-        System.out.println("Saving PDF document.");
-    }
-
-    public void close() {
-        System.out.println("Closing PDF document.");
+public class DarkCheckbox implements Checkbox {
+    @Override
+    public void paint() {
+        System.out.println("Rendering checkbox in dark theme.");
     }
 }
-

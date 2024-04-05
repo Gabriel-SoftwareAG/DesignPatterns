@@ -15,26 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational.factorymethod;
+package ai.verisoft.creational.factorymethod.example1;
 
-public abstract class DocumentFactory {
-    public enum DocumentType {
-        WORD, PDF
+public class PdfDocument implements Document {
+    public void open() {
+        System.out.println("Opening PDF document.");
     }
 
+    public void save() {
+        System.out.println("Saving PDF document.");
+    }
 
-    // Should not become a DocumentCreator instance
-    private DocumentFactory(){}
-
-    public static Document createDocument(DocumentType type){
-        if (type == DocumentType.WORD) {
-            return new WordDocument();
-        } else if (type == DocumentType.PDF) {
-            return new PdfDocument();
-        }
-
-        // If we got this far, we have an unsupported document type
-        return null;
+    public void close() {
+        System.out.println("Closing PDF document.");
     }
 }
 

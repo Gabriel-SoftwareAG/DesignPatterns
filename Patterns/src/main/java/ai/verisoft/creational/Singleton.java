@@ -20,20 +20,28 @@ package ai.verisoft.creational;
 public class Singleton {
 
     // The static variable that contains the single instance of the class
-    private static Singleton instance;
+    private static volatile Singleton instance;
 
 
     // Private constructor so no instances can be created outside of this class
     private Singleton() {
     }
 
+
     // Public static method that returns the instance of the class, creating it if it doesn't exist
     public static Singleton getInstance() {
-        if (instance == null) {
-            instance = new Singleton();
+        Singleton result = instance;
+        if (result == null) {
+            synchronized (Singleton.class) {
+                result = instance;
+                if (result == null) {
+                    instance = new Singleton();
+                }
+            }
         }
         return instance;
     }
+
 
     // Example method to demonstrate the use of the Singleton
     public String getHelloWorldMessage() {

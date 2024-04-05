@@ -21,7 +21,8 @@ import java.util.Hashtable;
 
 public class ShapeCache {
 
-    private static Hashtable<String, Shape> shapeMap  = new Hashtable<>();
+    // Will clone all types of shapes
+    private static final Hashtable<String, Shape> shapeMap  = new Hashtable<>();
 
     public static Shape getShape(String shapeId) {
         Shape cachedShape = shapeMap.get(shapeId);

@@ -15,27 +15,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.creational;
+package ai.verisoft.creational.factorymethod.example1;
 
-import ai.verisoft.creational.prototype.Shape;
-import ai.verisoft.creational.prototype.ShapeCache;
-import org.junit.jupiter.api.Test;
+public abstract class DocumentFactory {
+    public enum DocumentType {
+        WORD, PDF
+    }
 
-public class PrototypeTest {
 
-    @Test
-    public void shouldBeAbleToCreatePrototype() {
-        // Build the object bank
-        ShapeCache.loadCache();
+    // Should not become a DocumentCreator instance
+    private DocumentFactory() {
+    }
 
-        // Get the cloned object
-        Shape clonedShape = ShapeCache.getShape("1");
-        clonedShape.draw();
-        System.out.println("Shape : " + clonedShape.getType());
+    public static Document createDocument(DocumentType type) {
+        if (type == DocumentType.WORD) {
+            return new WordDocument();
+        } else if (type == DocumentType.PDF) {
+            return new PdfDocument();
+        }
 
-        Shape clonedShape2 = ShapeCache.getShape("2");
-        System.out.println("Shape : " + clonedShape2.getType());
-        clonedShape2.draw();
+        // If we got this far, we have an unsupported document type
+        return null;
     }
 }
 
