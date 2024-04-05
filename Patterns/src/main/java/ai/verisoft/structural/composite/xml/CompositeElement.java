@@ -15,27 +15,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.stuctural;
+package ai.verisoft.structural.composite.xml;
 
-import ai.verisoft.structural.adapter.PlaywrightAdapter;
-import ai.verisoft.structural.adapter.WebBrowser;
-import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.List;
 
-public class AdapterTest {
+public class CompositeElement implements XmlElement {
+    private final String tagName;
+    private final List<XmlElement> children = new ArrayList<>();
 
-    @Test
-    public void testAdapter() {
-        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
+    public CompositeElement(String tagName) {
+        this.tagName = tagName;
+    }
 
-        browser.navigate("https://www.google.com");
-        browser.click("[name='q']");
-        browser.type("[name='q']", "Adapter Pattern");
-        // Wait a bit to see the action
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public void addElement(XmlElement element) {
+        children.add(element);
+    }
+
+    @Override
+    public void printStructure(String indent) {
+        System.out.println(indent + "<" + tagName + ">");
+        for (XmlElement element : children) {
+            element.printStructure(indent + "    ");
         }
-        browser.close();
+        System.out.println(indent + "</" + tagName + ">");
     }
 }

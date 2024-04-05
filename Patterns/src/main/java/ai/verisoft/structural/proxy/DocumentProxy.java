@@ -15,27 +15,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.stuctural;
+package ai.verisoft.structural.proxy;
 
-import ai.verisoft.structural.adapter.PlaywrightAdapter;
-import ai.verisoft.structural.adapter.WebBrowser;
-import org.junit.jupiter.api.Test;
+public class DocumentProxy implements Document {
+    private RealDocument realDocument;
+    private final String fileName;
 
-public class AdapterTest {
+    public DocumentProxy(String fileName) {
+        this.fileName = fileName;
+    }
 
-    @Test
-    public void testAdapter() {
-        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
-
-        browser.navigate("https://www.google.com");
-        browser.click("[name='q']");
-        browser.type("[name='q']", "Adapter Pattern");
-        // Wait a bit to see the action
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    @Override
+    public void displayDocument() {
+        if (realDocument == null) {
+            realDocument = new RealDocument(fileName);
         }
-        browser.close();
+        realDocument.displayDocument();
     }
 }
+

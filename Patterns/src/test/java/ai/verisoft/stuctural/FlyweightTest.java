@@ -17,43 +17,37 @@
  */
 package ai.verisoft.stuctural;
 
-import ai.verisoft.structural.composite.selenium.GoogleHomePage;
-import ai.verisoft.structural.composite.xml.CompositeElement;
-import ai.verisoft.structural.composite.xml.LeafElement;
+import ai.verisoft.structural.flyweight.TextInputElement;
+import ai.verisoft.structural.flyweight.WebElementFactory;
+import ai.verisoft.structural.flyweight.WebElementFlyweight;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CompositeTest {
+public class FlyweightTest {
 
     @Test
-    public void seleniumCompositeExample() throws InterruptedException {
+    public void testFlyweight() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
-
         driver.get("https://www.google.com");
 
-        GoogleHomePage googleHomePage = new GoogleHomePage(driver);
-        googleHomePage.searchFor("Selenium WebDriver");
+        WebElementFactory factory = new WebElementFactory(driver);
 
-        // Wait for 5 seconds to see the result
+        // Use the factory to get the Google search box element
+        WebElementFlyweight searchBox = factory.getElement("textInput", By.name("q"));
+
+        // Type a query into the Google search box
+        if (searchBox instanceof TextInputElement) {
+            ((TextInputElement) searchBox).setText("Flyweight Design Pattern");
+        }
+
         Thread.sleep(5000);
+
+        // Remember to close the browser
         driver.quit();
-
-    }
-
-    @Test
-    public void xmlCompositeExample() {
-        CompositeElement root = new CompositeElement("book");
-        root.addElement(new LeafElement("title"));
-        CompositeElement author = new CompositeElement("author");
-        author.addElement(new LeafElement("firstName"));
-        author.addElement(new LeafElement("lastName"));
-        root.addElement(author);
-
-        root.printStructure("");
-
     }
 }

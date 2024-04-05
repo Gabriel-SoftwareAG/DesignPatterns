@@ -17,25 +17,19 @@
  */
 package ai.verisoft.stuctural;
 
-import ai.verisoft.structural.adapter.PlaywrightAdapter;
-import ai.verisoft.structural.adapter.WebBrowser;
+import ai.verisoft.structural.proxy.Document;
+import ai.verisoft.structural.proxy.DocumentProxy;
 import org.junit.jupiter.api.Test;
 
-public class AdapterTest {
+public class ProxyTest {
 
     @Test
-    public void testAdapter() {
-        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
-
-        browser.navigate("https://www.google.com");
-        browser.click("[name='q']");
-        browser.type("[name='q']", "Adapter Pattern");
-        // Wait a bit to see the action
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        browser.close();
+    public void testProxy() {
+        Document document = new DocumentProxy("testDocument.pdf");
+        System.out.println("Document Proxy initialized. Document will be loaded upon display.");
+        System.out.println("Displaying document for the first time:");
+        document.displayDocument(); // This will load and then display the document
+        System.out.println("Displaying document for the second time:");
+        document.displayDocument(); // This will only display the document without loading it again
     }
 }

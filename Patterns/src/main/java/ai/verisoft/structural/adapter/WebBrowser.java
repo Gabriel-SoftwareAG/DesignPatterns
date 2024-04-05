@@ -15,27 +15,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.stuctural;
+package ai.verisoft.structural.adapter;
 
-import ai.verisoft.structural.adapter.PlaywrightAdapter;
-import ai.verisoft.structural.adapter.WebBrowser;
-import org.junit.jupiter.api.Test;
+public interface WebBrowser {
+    void navigate(String url);
 
-public class AdapterTest {
+    void click(String selector);
 
-    @Test
-    public void testAdapter() {
-        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
+    void type(String selector, String text);
 
-        browser.navigate("https://www.google.com");
-        browser.click("[name='q']");
-        browser.type("[name='q']", "Adapter Pattern");
-        // Wait a bit to see the action
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        browser.close();
-    }
+    void close();
 }

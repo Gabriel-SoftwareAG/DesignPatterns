@@ -15,30 +15,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.behavioral.structural.composite.selenium;
+package ai.verisoft.structural.composite.selenium;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-class TextBox extends BaseComponent {
-    private final By locator;
+public abstract class BaseComponent {
+    protected WebDriver driver;
 
-    public TextBox(WebDriver driver, By locator) {
-        super(driver);
-        this.locator = locator;
+    public BaseComponent(WebDriver driver) {
+        this.driver = driver;
     }
 
-    @Override
-    public void action() {
-        WebElement element = driver.findElement(locator);
-        element.click();
-    }
-
-    // Method to enter text
-    public void enterText(String text) {
-        WebElement element = driver.findElement(locator);
-        element.sendKeys(text + Keys.ENTER);
-    }
+    public abstract void action();
 }

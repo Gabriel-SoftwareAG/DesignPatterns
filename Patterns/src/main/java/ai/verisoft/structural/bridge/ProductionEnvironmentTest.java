@@ -15,14 +15,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.behavioral.structural.composite.selenium;
+package ai.verisoft.structural.bridge;
 
 import org.openqa.selenium.WebDriver;
 
-public abstract class PageObject {
-    protected WebDriver driver;
+public class ProductionEnvironmentTest extends TestScenario {
 
-    public PageObject(WebDriver driver) {
-        this.driver = driver;
+    public ProductionEnvironmentTest(WebDriver driver) {
+        super(driver);
+    }
+
+    @Override
+    public void setupEnvironment() {
+        System.out.println("Setting up Production Environment");
+        //driver.get("http://example.com/login");
+        // Additional setup for Production environment
+    }
+
+    @Override
+    public void tearDown() {
+        // Clean up after test
+        driver.quit();
+    }
+
+    @Override
+    public void executeTest() {
+        // Implementation of the test in Production environment
+        System.out.println("Executing test in Production Environment");
+        // Example: Log in and assert
     }
 }
+

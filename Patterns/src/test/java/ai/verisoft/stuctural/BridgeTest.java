@@ -17,43 +17,34 @@
  */
 package ai.verisoft.stuctural;
 
-import ai.verisoft.structural.composite.selenium.GoogleHomePage;
-import ai.verisoft.structural.composite.xml.CompositeElement;
-import ai.verisoft.structural.composite.xml.LeafElement;
+import ai.verisoft.structural.bridge.DevEnvironmentTest;
+import ai.verisoft.structural.bridge.ProductionEnvironmentTest;
+import ai.verisoft.structural.bridge.TestScenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CompositeTest {
+public class BridgeTest {
 
     @Test
-    public void seleniumCompositeExample() throws InterruptedException {
+    public void testBridge() {
         WebDriverManager.chromedriver().setup();
-
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.google.com");
+        TestScenario testScenario;
 
-        GoogleHomePage googleHomePage = new GoogleHomePage(driver);
-        googleHomePage.searchFor("Selenium WebDriver");
+        // Decide on the environment; this could be based on input, configuration files, etc.
+        String environment = "dev"; // or "prod"
 
-        // Wait for 5 seconds to see the result
-        Thread.sleep(5000);
-        driver.quit();
+        if ("dev".equalsIgnoreCase(environment)) {
+            testScenario = new DevEnvironmentTest(driver);
+        } else {
+            testScenario = new ProductionEnvironmentTest(driver);
+        }
 
-    }
-
-    @Test
-    public void xmlCompositeExample() {
-        CompositeElement root = new CompositeElement("book");
-        root.addElement(new LeafElement("title"));
-        CompositeElement author = new CompositeElement("author");
-        author.addElement(new LeafElement("firstName"));
-        author.addElement(new LeafElement("lastName"));
-        root.addElement(author);
-
-        root.printStructure("");
-
+        testScenario.setupEnvironment();
+        testScenario.executeTest();
+        testScenario.tearDown();
     }
 }

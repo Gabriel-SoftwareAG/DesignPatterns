@@ -15,22 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.behavioral.structural.composite.selenium;
+package ai.verisoft.structural.proxy;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-public class GoogleHomePage extends PageObject {
-    private final TextBox searchTextBox;
-
-    public GoogleHomePage(WebDriver driver) {
-        super(driver);
-        this.searchTextBox = new TextBox(driver, By.name("q"));
-    }
-
-
-    public void searchFor(String text) {
-        this.searchTextBox.enterText(text);
-    }
+public interface Document {
+    void displayDocument();
 }
 

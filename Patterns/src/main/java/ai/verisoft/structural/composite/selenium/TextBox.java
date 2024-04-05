@@ -15,27 +15,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.stuctural;
+package ai.verisoft.structural.composite.selenium;
 
-import ai.verisoft.structural.adapter.PlaywrightAdapter;
-import ai.verisoft.structural.adapter.WebBrowser;
-import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class AdapterTest {
+class TextBox extends BaseComponent {
+    private final By locator;
 
-    @Test
-    public void testAdapter() {
-        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
+    public TextBox(WebDriver driver, By locator) {
+        super(driver);
+        this.locator = locator;
+    }
 
-        browser.navigate("https://www.google.com");
-        browser.click("[name='q']");
-        browser.type("[name='q']", "Adapter Pattern");
-        // Wait a bit to see the action
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        browser.close();
+    @Override
+    public void action() {
+        WebElement element = driver.findElement(locator);
+        element.click();
+    }
+
+    // Method to enter text
+    public void enterText(String text) {
+        WebElement element = driver.findElement(locator);
+        element.sendKeys(text + Keys.ENTER);
     }
 }

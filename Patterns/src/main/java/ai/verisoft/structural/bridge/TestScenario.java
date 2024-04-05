@@ -15,27 +15,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.stuctural;
+package ai.verisoft.structural.bridge;
 
-import ai.verisoft.structural.adapter.PlaywrightAdapter;
-import ai.verisoft.structural.adapter.WebBrowser;
-import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
-public class AdapterTest {
+public abstract class TestScenario {
+    protected WebDriver driver;
 
-    @Test
-    public void testAdapter() {
-        WebBrowser browser = new PlaywrightAdapter(); // or new SeleniumAdapter();
-
-        browser.navigate("https://www.google.com");
-        browser.click("[name='q']");
-        browser.type("[name='q']", "Adapter Pattern");
-        // Wait a bit to see the action
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        browser.close();
+    public TestScenario(WebDriver driver) {
+        this.driver = driver;
     }
+
+    public abstract void setupEnvironment();
+
+    public abstract void tearDown();
+
+    public abstract void executeTest();
 }
+

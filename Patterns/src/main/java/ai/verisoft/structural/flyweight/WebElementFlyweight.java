@@ -15,16 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ai.verisoft.behavioral.structural.composite.selenium;
+package ai.verisoft.structural.flyweight;
 
-import org.openqa.selenium.WebDriver;
-
-public abstract class BaseComponent {
-    protected WebDriver driver;
-
-    public BaseComponent(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    public abstract void action();
+public interface WebElementFlyweight {
+    void click();
+    // Add more actions relevant to your web elements here
 }
+
