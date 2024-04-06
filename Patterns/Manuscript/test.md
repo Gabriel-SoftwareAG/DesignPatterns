@@ -2,14 +2,46 @@
 
 ## Introduction to Observer Pattern
 
-In the world of software design, the Observer Pattern stands tall as a fundamental architectural blueprint. It facilitates one-to-many relationships between objects, where changes in one object, known as the subject or observable, trigger updates in multiple dependent objects, known as observers. This pattern is a cornerstone of modern software development, enabling flexible, decoupled systems that adapt seamlessly to changing requirements.
+Imagine you're in a classroom where the teacher is like a news broadcaster, giving out information (or "news") to all the students. Now, in this classroom, some students are interested in math news, some in science news, and others might be interested in literature news. Each student who is interested in a particular type of news tells the teacher, "Hey, please let me know whenever there's news about my favorite subject!"
+
+The Observer Pattern works a lot like this classroom scenario. In this pattern, the teacher acts as the "Subject," and the students are the "Observers." The Subject has important information or updates to share, and the Observers are interested in receiving updates about certain topics.
+
+1. **Subject (Teacher):** This is the main object that has the information or updates. It keeps a list of observers (students) who want to be notified about certain information.
+
+2. **Observers (Students):** These are the objects or people interested in receiving updates from the Subject. They subscribe (or "register interest") to the Subject to get the news they care about.
+
+Whenever the Subject has new information or an update (like the teacher getting news about a science competition), it goes through its list of Observers (students who are interested in science news) and sends them the update (tells them about the competition). This way, only the students who are interested in science news will be notified, and not everyone in the class gets the same information, preventing those who are not interested from being overloaded with irrelevant news.
+
+In summary, the Observer Pattern is a way for objects (Observers) to receive updates or notifications about changes or news from another object (Subject), based on their interests. It's like subscribing to a newsletter but in a programming context.
+
 
 ## Key Components
 
 The Observer Pattern comprises two essential components:
 
-- **Observable (Subject):** The observable represents the object being observed. It maintains a list of observers and provides methods for attaching, detaching, and notifying observers of any changes in its state.
+- **Subject (Observable):** The subject represents the object being observed. It maintains a list of observers and provides methods for attaching, detaching, and notifying observers of any changes in its state.
 - **Observer:** Observers are entities interested in the state changes of the observable. They adhere to a common interface that includes an update method, allowing them to react appropriately to changes in the observable.
+
+## Diagram
+![Observer Design Pattern UML Diagram](./W3sDesign_Observer_Design_Pattern_UML.jpg)
+
+### Class Diagram
+#### Observable Class
+This class is at the heart of the pattern, acting as the subject that maintains a list of its observers. It typically includes three main operations:
+
+- **registerObserver(Observer)**: Allows an observer to register itself with the observable to receive updates.
+- **removeObserver(Observer)**: Permits an observer to remove itself from the list, stopping it from receiving further updates.
+- **notifyObservers()**: Invoked to notify all registered observers about a change. This can be done by pushing the new state to the observers or allowing them to pull it.
+
+#### Observer Interface
+Defines the `update` method that any class wishing to receive notifications from the observable must implement. The specifics of this method can vary depending on the observable's approach to notifying observers (push vs. pull).
+
+#### Concrete Observer Classes
+These are specific implementations of the Observer interface. Each one will implement the `update` method to respond to notifications from the observable in a manner appropriate to its role.
+
+#### Relationships
+- A one-to-many relationship exists between the Observable class and the Observer interface, indicating that one observable can have multiple observers attached to it.
+- Concrete Observer classes implement the Observer interface, which establishes an inheritance relationship.
 
 ## Implementation Walkthrough
 
@@ -28,6 +60,16 @@ interface Observable {
 }
 ```
 The Observable interface outlines the methods necessary for managing observers and notifying them of changes.
+### Methods Defined in the Observable
+
+- `void addObserver(Observer observer);`  
+  This method is intended to add an observer to the list of observers for the observable object, meaning it "registers" an observer to receive updates.
+
+- `void removeObserver(Observer observer);`  
+  Conversely, this method removes an observer from the observable object's list of observers, effectively "unregistering" it from receiving updates.
+
+- `void notifyObservers();`  
+  This method is used to notify all registered observers of a change or event by calling one of their methods. It's how the observable object broadcasts updates to interested parties.
 
 2. **Observer Interface**
 
@@ -76,7 +118,7 @@ class ConcreteObserver implements Observer {
 ```
 The ConcreteObserver class implements the Observer interface and specifies the actions to be taken when notified of a state change.
 
-5. **Implementation Walkthrough (with Main Method)**
+5. **Main Method**
 
 ```java
 public class ObserverPatternExample {
