@@ -20,7 +20,7 @@ In summary, the Observer Pattern is a way for objects (Observers) to receive upd
 
 == Diagram
 
-image::./W3sDesign_Observer_Design_Pattern_UML.jpg[Observer Design Pattern UML Diagram]
+image::../Diagram/W3sDesign_Observer_Design_Pattern_UML.jpg[Observer Design Pattern UML Diagram]
 xref:image-label[Observer Pattern UML Diagram - Wikipedia, url="https://en.wikipedia.org/wiki/Observer_pattern#/media/File:W3sDesign_Observer_Design_Pattern_UML.jpg"]
 
 === Class Diagram
