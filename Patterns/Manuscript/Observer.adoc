@@ -1,66 +1,66 @@
-# Chapter: Observer Pattern in Java
+= Chapter: The Observer Pattern
 
-## Introduction to Observer Pattern
+== Introduction
 
 Imagine you're in a classroom where the teacher is like a news broadcaster, giving out information (or "news") to all the students. Now, in this classroom, some students are interested in math news, some in science news, and others might be interested in literature news. Each student who is interested in a particular type of news tells the teacher, "Hey, please let me know whenever there's news about my favorite subject!"
 
 The Observer Pattern works a lot like this classroom scenario. In this pattern, the teacher acts as the "Subject," and the students are the "Observers." The Subject has important information or updates to share, and the Observers are interested in receiving updates about certain topics.
 
-1. **Subject (Teacher):** This is the main object that has the information or updates. It keeps a list of observers (students) who want to be notified about certain information.
+== Key Components
 
-2. **Observers (Students):** These are the objects or people interested in receiving updates from the Subject. They subscribe (or "register interest") to the Subject to get the news they care about.
+=== Subject (Teacher)
+This is the main object that has the information or updates. It keeps a list of observers (students) who want to be notified about certain information.
+
+=== Observers (Students)
+These are the objects or people interested in receiving updates from the Subject. They subscribe (or "register interest") to the Subject to get the news they care about.
 
 Whenever the Subject has new information or an update (like the teacher getting news about a science competition), it goes through its list of Observers (students who are interested in science news) and sends them the update (tells them about the competition). This way, only the students who are interested in science news will be notified, and not everyone in the class gets the same information, preventing those who are not interested from being overloaded with irrelevant news.
 
 In summary, the Observer Pattern is a way for objects (Observers) to receive updates or notifications about changes or news from another object (Subject), based on their interests. It's like subscribing to a newsletter but in a programming context.
 
+== Diagram
 
-## Key Components
+image::./W3sDesign_Observer_Design_Pattern_UML.jpg[Observer Design Pattern UML Diagram]
+xref:image-label[Observer Pattern UML Diagram - Wikipedia, url="https://en.wikipedia.org/wiki/Observer_pattern#/media/File:W3sDesign_Observer_Design_Pattern_UML.jpg"]
 
-The Observer Pattern comprises two essential components:
-
-- **Subject (Observable):** The subject represents the object being observed. It maintains a list of observers and provides methods for attaching, detaching, and notifying observers of any changes in its state.
-- **Observer:** Observers are entities interested in the state changes of the observable. They adhere to a common interface that includes an update method, allowing them to react appropriately to changes in the observable.
-
-## Diagram
-![Observer Design Pattern UML Diagram](./W3sDesign_Observer_Design_Pattern_UML.jpg)
-
-### Class Diagram
-#### Observable Class
+=== Class Diagram
+==== Subject Interface
 This class is at the heart of the pattern, acting as the subject that maintains a list of its observers. It typically includes three main operations:
 
-- **registerObserver(Observer)**: Allows an observer to register itself with the observable to receive updates.
-- **removeObserver(Observer)**: Permits an observer to remove itself from the list, stopping it from receiving further updates.
-- **notifyObservers()**: Invoked to notify all registered observers about a change. This can be done by pushing the new state to the observers or allowing them to pull it.
+- *attach(o) or registerObserver(Observer):* Allows an observer to register itself with the observable to receive updates.
+- *detach (o) or removeObserver(Observer):* Permits an observer to remove itself from the list, stopping it from receiving further updates.
+- *notify() or notifyObservers():* Invoked to notify all registered observers about a change. This can be done by pushing the new state to the observers or allowing them to pull it.
 
-#### Observer Interface
+==== Observer Interface
 Defines the `update` method that any class wishing to receive notifications from the observable must implement. The specifics of this method can vary depending on the observable's approach to notifying observers (push vs. pull).
 
-#### Concrete Observer Classes
-These are specific implementations of the Observer interface. Each one will implement the `update` method to respond to notifications from the observable in a manner appropriate to its role.
+==== Concrete Observer Classes
+These are specific implementations of the Observer interface (`Observer1` `Observer2`). Each one will implement the `update` method to respond to notifications from the observable in a manner appropriate to its role.
 
-#### Relationships
-- A one-to-many relationship exists between the Observable class and the Observer interface, indicating that one observable can have multiple observers attached to it.
-- Concrete Observer classes implement the Observer interface, which establishes an inheritance relationship.
+==== Concrete Subject Class
+This is a concrete class which implements the Subject interface.
 
-## Implementation Walkthrough
+==== Relationships
+A one-to-many relationship exists between the Observable class and the Observer interface, indicating that one observable can have multiple observers attached to it. Concrete Observer classes implement the Observer interface, which establishes an inheritance relationship.
 
-Let's delve into the nitty-gritty of implementing the Observer Pattern in Java:
+== Implementation Walkthrough
 
-1. **Observable Interface**
+Let's dive in and implement the Observer Pattern:
 
-```java
-import java.util.ArrayList;
-import java.util.List;
+=== *Observable Interface*
 
-interface Observable {
+[source,java]
+----
+public interface Observable {
     void addObserver(Observer observer);
     void removeObserver(Observer observer);
     void notifyObservers();
 }
-```
+----
+
 The Observable interface outlines the methods necessary for managing observers and notifying them of changes.
-### Methods Defined in the Observable
+
+==== Methods Defined in the Observable
 
 - `void addObserver(Observer observer);`  
   This method is intended to add an observer to the list of observers for the observable object, meaning it "registers" an observer to receive updates.
@@ -71,18 +71,21 @@ The Observable interface outlines the methods necessary for managing observers a
 - `void notifyObservers();`  
   This method is used to notify all registered observers of a change or event by calling one of their methods. It's how the observable object broadcasts updates to interested parties.
 
-2. **Observer Interface**
+==== *Observer Interface*
 
-```java
-interface Observer {
+[source,java]
+----
+public interface Observer {
     void update();
 }
-```
+----
+
 The Observer interface defines the update method that observers must implement to respond to changes in the observable.
 
-3. **Concrete Observable Class**
+=== *Concrete Observable Class*
 
-```java
+[source,java]
+----
 class ConcreteObservable implements Observable {
     private List<Observer> observers = new ArrayList<>();
 
@@ -103,24 +106,28 @@ class ConcreteObservable implements Observable {
         }
     }
 }
-```
+----
+
 The ConcreteObservable class implements the Observable interface and manages the list of observers.
 
-4. **Concrete Observer Class**
+=== *Concrete Observer Class*
 
-```java
+[source,java]
+----
 class ConcreteObserver implements Observer {
     @Override
     public void update() {
         System.out.println("Observer notified of state change.");
     }
 }
-```
+----
+
 The ConcreteObserver class implements the Observer interface and specifies the actions to be taken when notified of a state change.
 
-5. **Main Method**
+=== *Main Method*
 
-```java
+[source,java]
+----
 public class ObserverPatternExample {
 
     public static void main(String[] args) {
@@ -134,16 +141,19 @@ public class ObserverPatternExample {
         observable.notifyObservers();
     }
 }
-```
+----
+
 In the main method, we instantiate objects of the ConcreteObservable and ConcreteObserver classes.
 We register the observer instances with the observable using the addObserver method.
 We then notify all observers by calling the notifyObservers method.
 
-## Real-life Example: Report Observer with Walkthrough
+== Real-life Example: Report Observer with Walkthrough
 
-Consider a scenario where a `TestReportGenerator` class generates test reports, and we want to notify observers when a report is generated:
+Consider a test framework which sends a report about the state of the test, the test results and some additional info. There are several report systems which are interested in getting some of the information created during the test scenario. So, consider where a `TestReportGenerator` class generates test reports, and we want to notify observers when a report is generated. Actually we implement two types of report; a pure HTML report and reporting system, called Report Portal.
+First, let's take a look of the concrete class TestReportGenerator, which serves as our Observable concrete class:
 
-```java
+[source,java]
+----
 class TestReportGenerator implements Observable {
     private List<Observer> observers = new ArrayList<>();
 
@@ -172,19 +182,51 @@ class TestReportGenerator implements Observable {
         }
     }
 }
+----
 
+
+1. `private List<Observer> observers = new ArrayList<>();`::
+   Declares a private field `observers` of type `List` to store the observers interested in changes in the `TestReportGenerator` object.
+
+2. `public void generateReport() { ... }`::
+   Method to generate a test report. After generating the report, it notifies all the registered observers by calling the `notifyObservers()` method.
+
+3. `@Override` annotations::
+   Indicate that the methods below are overriding methods from the `Observable` interface.
+
+4. `public void addObserver(Observer observer) { ... }`::
+   Method to add an observer to the list of observers. It takes an `Observer` object as a parameter and adds it to the `observers` list.
+
+5. `public void removeObserver(Observer observer) { ... }`::
+   Method to remove an observer from the list of observers. It takes an `Observer` object as a parameter and removes it from the `observers` list.
+
+6. `public void notifyObservers() { ... }`::
+   Method to notify all the registered observers by calling their `update()` method. It iterates through the list of observers and calls the `update()` method for each observer.
+
+
+Next, we implement the Observer class:
+[source,java]
+----
 class ReportObserver implements Observer {
     @Override
     public void update() {
         System.out.println("Report generated. Notifying observers...");
     }
 }
-```
-The TestReportGenerator class generates reports and notifies observers upon report generation.
-The ReportObserver class reacts to notifications by printing a message.
+----
+1. `@Override` annotation::
+   Indicates that the `update()` method overrides the corresponding method in the `Observer` interface.
+
+2. `public void update() { ... }`::
+   This method is called when the observed object (in this case, `TestReportGenerator`) has been updated. It prints a message indicating that a report has been generated and observers are being notified.
+
+This code defines a `ReportObserver` class, which is an implementation of the Observer pattern. When attached to a `TestReportGenerator` instance as an observer, this class will be notified whenever a report is generated.
 
 
-```java
+Next, we implement two observers and generate a report:
+
+[source,java]
+----
 public class ReportObserverExample {
 
     public static void main(String[] args) {
@@ -198,20 +240,21 @@ public class ReportObserverExample {
         reportGenerator.generateReport();
     }
 }
-```
+----
+
 In the main method, we create instances of the TestReportGenerator and ReportObserver classes.
 We register observer instances with the report generator using the addObserver method.
 We then generate a test report using the generateReport method, which triggers the notification of all observers.
 
-## Design Considerations
+== Design Considerations
 
 When implementing the Observer Pattern, it's crucial to consider several factors:
 
-- **Decoupling:** The Observer Pattern promotes loose coupling between the subject and its observers, leading to better maintainability and flexibility in the codebase.
-- **Scalability:** The pattern supports multiple observers subscribing to a single subject, making it scalable and adaptable to changing requirements.
-- **Flexibility:** Observers can be added or removed dynamically during runtime, providing flexibility in managing dependencies and behaviors.
-- **Responsiveness:** Observers are notified immediately when changes occur in the subject's state, ensuring timely updates and responsiveness in the system.
+- *Decoupling:* The Observer Pattern promotes loose coupling between the subject and its observers, leading to better maintainability and flexibility in the codebase.
+- *Scalability:* The pattern supports multiple observers subscribing to a single subject, making it scalable and adaptable to changing requirements.
+- *Flexibility:* Observers can be added or removed dynamically during runtime, providing flexibility in managing dependencies and behaviors.
+- *Responsiveness:* Observers are notified immediately when changes occur in the subject's state, ensuring timely updates and responsiveness in the system.
 
-# Conclusion
+== Conclusion
 
 The Observer Pattern is a cornerstone of modern software design, enabling flexible and decoupled systems. By facilitating dynamic communication between objects, it enhances maintainability, scalability, and responsiveness. Understanding and applying the Observer Pattern principles is crucial for building robust and adaptable software solutions.
