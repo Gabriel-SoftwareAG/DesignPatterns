@@ -2,11 +2,16 @@
 
 == Introduction
 
-Imagine you're in a classroom where the teacher is like a news broadcaster, giving out information (or "news") to all the students. Now, in this classroom, some students are interested in math news, some in science news, and others might be interested in literature news. image:../Images/observer_teacher_image.jpg[width=500 scale=50%] 
+[cols="2", frame="none"]
+|===
+|Imagine you're in a classroom where the teacher is like a news broadcaster, giving out information (or "news") to all the students. Now, in this classroom, some students are interested in math news, some in science news, and others might be interested in literature news. 
 
 Each student who is interested in a particular type of news tells the teacher, "Hey, please let me know whenever there's news about my favorite subject!"
 
 The Observer Pattern works a lot like this classroom scenario. In this pattern, the teacher acts as the "Subject," and the students are the "Observers." The Subject has important information or updates to share, and the Observers are interested in receiving updates about certain topics.
+
+|image:../Images/observer_teacher_image.jpg[width=370 scale=50%]
+|===
 
 == Key Components
 
