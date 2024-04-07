@@ -1,6 +1,6 @@
 = The Observer Pattern
 
-:imagesdir: ../images
+:imagesdir: ./images
 
 == Introduction
 
@@ -11,7 +11,7 @@
 Each student who is interested in a particular type of news tells the teacher, "Hey, please let me know whenever there's news about my favorite subject!"
 
 The Observer Pattern works a lot like this classroom scenario. In this pattern, the teacher acts as the "Subject," and the students are the "Observers." The Subject has important information or updates to share, and the Observers are interested in receiving updates about certain topics.
-|image:observer_teacher_image.jpg[width=370 scale=50%]
+|image:observer_teacher_image.jpg[width=370, scale=50%]
 |===
 == Key Components
 
