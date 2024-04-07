@@ -1,0 +1,22 @@
+= The Interpreter Pattern
+
+:imagesdir: ./images
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you're traveling to a foreign country where you don't speak the language. To communicate with locals, you hire an interpreter who translates your words into the local language and vice versa.
+
+In software design, the interpreter pattern works similarly. It's used to interpret or evaluate expressions written in a specific language. Just like a human interpreter translates between languages, a software interpreter translates between different languages or formats within a computer program.
+
+For example, let's say you're building a calculator application that can evaluate mathematical expressions. You can implement an interpreter that understands mathematical expressions written in a specific format, such as infix notation (e.g., "2 + 3 * 5").
+
+|image:interpreter.jpg[width=400, scale=50%]
+|===
+
+The interpreter parses these expressions, evaluates them according to mathematical rules, and returns the result.
+
+Similarly, interpreters can be used in other domains, such as parsing and evaluating programming languages, querying databases, or processing markup languages like XML or JSON. In each case, the interpreter pattern provides a way to interpret expressions or commands written in a specific format and perform the necessary actions based on that interpretation.
+
+Overall, the interpreter pattern enables the processing of expressions or commands written in a specific language or format within a computer program, similar to how a human interpreter translates between languages to facilitate communication between people.

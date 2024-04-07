@@ -9,7 +9,7 @@
 |Imagine you have a universal remote control that can operate different types of electronic devices in your home, like TVs, DVD players, and sound systems. Now, think about how this remote control works.
 
 At its core, the remote control has buttons for common functions like turning devices on and off, adjusting volume, and changing channels or tracks. These functions are what you expect from any remote control, regardless of the specific device it's controlling.
-|image:abstract_factory_amusement_theme_park.jpg[width=320, scale=50%]
+|image:bridge_universal_remote_control.jpg[width=320, scale=50%]
 |===
 
 However, behind the scenes, the remote control needs to communicate with each device differently. For example, turning on a Samsung TV might require sending one type of signal, while turning on an LG TV might require a different one. Similarly, adjusting the volume on a Sony sound system might use a different command than adjusting the volume on a Bose sound system.

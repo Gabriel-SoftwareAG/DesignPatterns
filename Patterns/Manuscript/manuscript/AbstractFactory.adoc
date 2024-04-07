@@ -1,4 +1,4 @@
-= The Abstract Factory Method
+= The Abstract Factory Pattern
 
 :imagesdir: ./images
 
