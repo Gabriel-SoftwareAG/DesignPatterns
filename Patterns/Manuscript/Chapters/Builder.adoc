@@ -1,0 +1,10 @@
+= The Builder Pattern
+
+
+== Introduction
+
+Let's say you're at a sandwich shop, and you want to order a custom sandwich. You have many options like choosing the type of bread, the filling, the toppings, and the sauce.
+
+Now, imagine the builder pattern as the process the sandwich maker follows to build your sandwich. Instead of telling them all the details at once, you can give them step-by-step instructions. First, you specify the type of bread you want, then the filling, followed by the toppings, and finally, the sauce. image:../images/builder_sandwich.jpg[]
+
+The sandwich maker, like a builder in the builder pattern, follows these instructions and constructs your sandwich accordingly. This way, you can create a wide variety of sandwiches with different combinations without the need for predefined sandwich types cluttering up the menu. The builder pattern simplifies the process of creating complex objects step by step, just like ordering a custom sandwich.
