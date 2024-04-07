@@ -1,10 +1,14 @@
 = Command Design Pattern
 
+:imagesdir: ./images
+
 == Introduction
 
-The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object. This allows request parameters to be saved, queued, and executed at different times according to the application's needs. Imagine you're at a restaurant. You (the `Client`) give your order (`Command`) to a waiter (`Invoker`), who then delivers the order to the kitchen (`Receiver`). The kitchen prepares your meal and eventually, the waiter delivers the meal back to you. In this analogy, your order is encapsulated as a command and handled independently of the initial request.
-
-image:../Images/command_kitchen.jpg[]
+[cols="2", frame="none", grid="none"]
+|===
+|The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object. This allows request parameters to be saved, queued, and executed at different times according to the application's needs. Imagine you're at a restaurant. You (the `Client`) give your order (`Command`) to a waiter (`Invoker`), who then delivers the order to the kitchen (`Receiver`). The kitchen prepares your meal and eventually, the waiter delivers the meal back to you. In this analogy, your order is encapsulated as a command and handled independently of the initial request.
+|image:command_kitchen.jpg[width=280, scale=50%]
+|===
 
 == Key Concepts
 
