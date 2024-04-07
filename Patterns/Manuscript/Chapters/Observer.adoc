@@ -2,7 +2,7 @@
 
 == Introduction
 
-Imagine you're in a classroom where the teacher is like a news broadcaster, giving out information (or "news") to all the students. Now, in this classroom, some students are interested in math news, some in science news, and others might be interested in literature news. image:../Images/observer_teacher_image.jpg[width=200 scale=50%] 
+Imagine you're in a classroom where the teacher is like a news broadcaster, giving out information (or "news") to all the students. Now, in this classroom, some students are interested in math news, some in science news, and others might be interested in literature news. image:../Images/observer_teacher_image.jpg[width=500 scale=50%] 
 
 Each student who is interested in a particular type of news tells the teacher, "Hey, please let me know whenever there's news about my favorite subject!"
 
