@@ -1,0 +1,51 @@
+= Home Assignment: Implementing the Adapter Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Adapter design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of allowing objects with incompatible interfaces to collaborate.
+
+== Instructions
+
+1. Imagine you are the owner of a vintage vinyl record store, and you want to digitize your collection for online sales.
+2. Create a Java project named "VinylRecordStore" using your preferred IDE or command-line tools.
+3. Implement the Adapter design pattern with the following components:
+
+=== RecordPlayer
+An interface representing a vinyl record player, with methods for playing and stopping the record.
+
+=== ModernMediaPlayer
+An interface representing a modern digital media player, with methods for playing and pausing digital audio files.
+
+=== RecordPlayerAdapter
+A class that implements the ModernMediaPlayer interface and adapts the RecordPlayer interface to work with modern media players.
+
+4. Write clean, modular, and well-documented code following Java coding conventions.
+5. Implement unit tests to ensure the correctness of your implementation.
+6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+7. Create a Git repository for your project and initialize it with a README.md file.
+8. Commit your initial project setup to Git.
+9. Implement the Adapter pattern in Java according to the following scenario:
+
+=== Scenario
+- As the owner of the vintage vinyl record store, you have a collection of classic vinyl records that you want to digitize and sell online.
+- Implement a RecordPlayer interface with methods for playing and stopping the vinyl record.
+- Implement a ModernMediaPlayer interface with methods for playing and pausing digital audio files.
+- Create a RecordPlayerAdapter class that adapts the RecordPlayer interface to work with the ModernMediaPlayer interface, allowing you to play vinyl records on modern media players.
+
+10. Test your implementation by creating instances of the RecordPlayerAdapter and using it to play vinyl records on modern media players.
+11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+
+== Submission
+
+- Share the link to your Git repository with your instructor for evaluation.
+- Ensure that your repository is publicly accessible and well-documented to facilitate review.
+
+== Note
+
+- Feel free to consult online resources, textbooks, or other references while working on the assignment.
+- Remember to adhere to academic integrity guidelines and avoid plagiarism.
+- Enjoy the process of designing and implementing a VinylRecordStore using the Adapter pattern in Java with a real-life example!

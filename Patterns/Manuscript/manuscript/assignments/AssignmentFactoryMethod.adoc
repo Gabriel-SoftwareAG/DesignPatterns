@@ -1,0 +1,50 @@
+= Home Assignment: Implementing the Factory Method Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Factory Method design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of defining an interface for creating objects and letting subclasses decide which class to instantiate.
+
+== Instructions
+
+1. Imagine you are the owner of a chocolate factory specializing in artisanal chocolate bars.
+2. Create a Java project named "ChocolateBarFactory" using your preferred IDE or command-line tools.
+3. Implement the Factory Method design pattern with the following components:
+
+=== ChocolateBar
+An abstract class or interface representing a chocolate bar, with methods for producing and packaging the bar.
+
+=== ChocolateBarFactory
+An abstract class or interface defining a method for creating chocolate bars. This class acts as a factory for producing different types of chocolate bars.
+
+=== DarkChocolateBarFactory, MilkChocolateBarFactory, WhiteChocolateBarFactory
+Concrete subclasses of ChocolateBarFactory that implement the factory method to create specific types of chocolate bars (dark chocolate, milk chocolate, white chocolate).
+
+4. Write clean, modular, and well-documented code following Java coding conventions.
+5. Implement unit tests to ensure the correctness of your implementation.
+6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+7. Create a Git repository for your project and initialize it with a README.md file.
+8. Commit your initial project setup to Git.
+9. Implement the Factory Method pattern in Java according to the following scenario:
+
+=== Scenario
+- As the owner of the chocolate factory, you have recipes for various types of chocolate bars, including dark chocolate, milk chocolate, and white chocolate bars.
+- Implement concrete factories such as DarkChocolateBarFactory, MilkChocolateBarFactory, and WhiteChocolateBarFactory that produce specific types of chocolate bars based on their recipes.
+- Use the Factory Method pattern to create instances of these chocolate bars and package them accordingly.
+
+10. Test your implementation by creating instances of different types of chocolate bars using the respective factories.
+11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+
+== Submission
+
+- Share the link to your Git repository with your instructor for evaluation.
+- Ensure that your repository is publicly accessible and well-documented to facilitate review.
+
+== Note
+
+- Feel free to consult online resources, textbooks, or other references while working on the assignment.
+- Remember to adhere to academic integrity guidelines and avoid plagiarism.
+- Enjoy the process of designing and implementing a ChocolateBarFactory using the Factory Method pattern in Java with a real-life example!

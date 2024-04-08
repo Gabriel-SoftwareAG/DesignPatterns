@@ -1,0 +1,52 @@
+= Home Assignment: Implementing the Strategy Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Strategy design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of defining a family of algorithms, encapsulating each one, and making them interchangeable.
+
+== Instructions
+
+1. Imagine you are a delivery service provider that offers different shipping options to customers.
+2. Create a Java project named "ShippingService" using your preferred IDE or command-line tools.
+3. Implement the Strategy design pattern with the following components:
+
+=== ShippingStrategy
+An interface representing a shipping strategy, with a method for calculating the shipping cost.
+
+=== StandardShipping, ExpressShipping, SameDayShipping
+Concrete classes implementing the ShippingStrategy interface, representing different shipping options with their own algorithms for calculating shipping costs.
+
+=== ShippingContext
+A context class that contains a reference to a ShippingStrategy and allows clients to change the shipping strategy dynamically.
+
+4. Write clean, modular, and well-documented code following Java coding conventions.
+5. Implement unit tests to ensure the correctness of your implementation.
+6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+7. Create a Git repository for your project and initialize it with a README.md file.
+8. Commit your initial project setup to Git.
+9. Implement the Strategy pattern in Java according to the following scenario:
+
+=== Scenario
+- As a delivery service provider, you want to offer customers different shipping options with varying costs.
+- Implement a ShippingStrategy interface with a method for calculating the shipping cost.
+- Create StandardShipping, ExpressShipping, and SameDayShipping classes representing different shipping options with their own algorithms for calculating shipping costs.
+- Implement a ShippingContext class that contains a reference to a ShippingStrategy and allows clients to change the shipping strategy dynamically.
+- Use the Strategy pattern to encapsulate each shipping algorithm and make them interchangeable, allowing customers to choose different shipping options at checkout.
+
+10. Test your implementation by creating instances of ShippingContext with different shipping strategies and calculating shipping costs for various orders.
+11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+
+== Submission
+
+- Share the link to your Git repository with your instructor for evaluation.
+- Ensure that your repository is publicly accessible and well-documented to facilitate review.
+
+== Note
+
+- Feel free to consult online resources, textbooks, or other references while working on the assignment.
+- Remember to adhere to academic integrity guidelines and avoid plagiarism.
+- Enjoy the process of designing and implementing ShippingService using the Strategy pattern in Java with a real-life example!

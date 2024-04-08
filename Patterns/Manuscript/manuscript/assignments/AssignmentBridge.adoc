@@ -1,0 +1,59 @@
+= Home Assignment: Implementing the Bridge Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Bridge design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of separating an object’s abstraction from its implementation so that the two can vary independently.
+
+== Instructions
+
+1. Imagine you are a toy manufacturer creating a line of remote-controlled cars.
+2. Create a Java project named "RemoteControlCars" using your preferred IDE or command-line tools.
+3. Implement the Bridge design pattern with the following components:
+
+=== Car
+An interface representing a remote-controlled car, with methods for driving forward, backward, turning left, and turning right.
+
+=== RemoteControl
+An interface representing a remote control for the car, with methods for controlling the car's movements.
+
+=== RemoteControlImpl
+A concrete class implementing the RemoteControl interface, which contains a reference to the Car interface and delegates the control commands to the car.
+
+=== CarModel
+An interface representing different models of remote-controlled cars, with methods for specifying car features such as speed and color.
+
+=== CarImpl
+A concrete class implementing the Car interface, which represents a specific model of remote-controlled car. It contains the implementation details of how the car moves and turns.
+
+4. Write clean, modular, and well-documented code following Java coding conventions.
+5. Implement unit tests to ensure the correctness of your implementation.
+6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+7. Create a Git repository for your project and initialize it with a README.md file.
+8. Commit your initial project setup to Git.
+9. Implement the Bridge pattern in Java according to the following scenario:
+
+=== Scenario
+- As a toy manufacturer, you want to create a line of remote-controlled cars with different models and control mechanisms.
+- Implement a Car interface with methods for driving and turning the car.
+- Create a RemoteControl interface representing a remote control for the car, with methods for controlling the car's movements.
+- Implement a RemoteControlImpl class that contains a reference to the Car interface and delegates control commands to the car.
+- Implement a CarModel interface representing different models of remote-controlled cars, with methods for specifying car features such as speed and color.
+- Create a CarImpl class representing a specific model of remote-controlled car, with the implementation details of how the car moves and turns.
+
+10. Test your implementation by creating instances of RemoteControl and different Car models, and controlling the cars using the remote control.
+11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+
+== Submission
+
+- Share the link to your Git repository with your instructor for evaluation.
+- Ensure that your repository is publicly accessible and well-documented to facilitate review.
+
+== Note
+
+- Feel free to consult online resources, textbooks, or other references while working on the assignment.
+- Remember to adhere to academic integrity guidelines and avoid plagiarism.
+- Enjoy the process of designing and implementing RemoteControlCars using the Bridge pattern in Java with a real-life example!
