@@ -1,0 +1,34 @@
+@startuml TemplateMethodPatternSequenceDiagram
+
+actor Client
+participant "AbstractClass" as AbstractClass
+participant "ConcreteClass1" as ConcreteClass1
+participant "ConcreteClass2" as ConcreteClass2
+
+Client -> AbstractClass: templateMethod()
+activate AbstractClass
+
+AbstractClass -> ConcreteClass1: primitiveOperation1()
+activate ConcreteClass1
+ConcreteClass1 --> AbstractClass: primitiveOperation1 completed
+deactivate ConcreteClass1
+
+AbstractClass -> ConcreteClass2: primitiveOperation1()
+activate ConcreteClass2
+ConcreteClass2 --> AbstractClass: primitiveOperation1 completed
+deactivate ConcreteClass2
+
+AbstractClass -> ConcreteClass1: primitiveOperation2()
+activate ConcreteClass1
+ConcreteClass1 --> AbstractClass: primitiveOperation2 completed
+deactivate ConcreteClass1
+
+AbstractClass -> ConcreteClass2: primitiveOperation2()
+activate ConcreteClass2
+ConcreteClass2 --> AbstractClass: primitiveOperation2 completed
+deactivate ConcreteClass2
+
+AbstractClass --> Client
+deactivate AbstractClass
+
+@enduml

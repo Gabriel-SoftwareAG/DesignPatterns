@@ -1,0 +1,35 @@
+@startuml IteratorPatternSequenceDiagram
+
+actor Client
+participant Aggregate
+participant ConcreteAggregate
+participant Iterator
+participant ConcreteIterator
+
+Client -> Aggregate: createIterator()
+activate Aggregate
+Aggregate -> ConcreteIterator: createIterator()
+activate ConcreteIterator
+ConcreteIterator --> Client: iterator
+deactivate ConcreteIterator
+deactivate Aggregate
+
+Client -> Iterator: hasNext()
+activate Iterator
+Iterator --> ConcreteIterator: hasNext()
+activate ConcreteIterator
+ConcreteIterator --> Iterator: hasMoreElements
+deactivate ConcreteIterator
+Iterator --> Client: hasMoreElements
+deactivate Iterator
+
+Client -> Iterator: next()
+activate Iterator
+Iterator --> ConcreteIterator: next()
+activate ConcreteIterator
+ConcreteIterator --> Iterator: getNextElement()
+deactivate ConcreteIterator
+Iterator --> Client: nextElement
+deactivate Iterator
+
+@enduml

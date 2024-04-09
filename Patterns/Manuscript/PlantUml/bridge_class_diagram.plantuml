@@ -1,0 +1,34 @@
+@startuml BridgePatternClassDiagram
+
+' Abstraction
+abstract class Abstraction {
+  -implementor : Implementor
+  +operation() : void
+}
+
+' RefinedAbstraction
+class RefinedAbstraction extends Abstraction {
+  +operation() : void
+}
+
+' Implementor Interface
+interface Implementor {
+  +implementationOperation() : void
+}
+
+' ConcreteImplementors
+class ConcreteImplementorA implements Implementor {
+  +implementationOperation() : void
+}
+
+class ConcreteImplementorB implements Implementor {
+  +implementationOperation() : void
+}
+
+' Relationships
+Abstraction o-- Implementor : composition >
+RefinedAbstraction -|> Abstraction
+ConcreteImplementorA .|> Implementor
+ConcreteImplementorB .|> Implementor
+
+@enduml

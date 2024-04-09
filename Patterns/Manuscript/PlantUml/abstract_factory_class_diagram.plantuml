@@ -1,0 +1,50 @@
+@startuml AbstractFactoryPatternClassDiagram
+
+' Abstract Factory
+interface AbstractFactory {
+  +createProductA() : AbstractProductA
+  +createProductB() : AbstractProductB
+}
+
+' Concrete Factories
+class ConcreteFactory1 implements AbstractFactory {
+  +createProductA() : AbstractProductA
+  +createProductB() : AbstractProductB
+}
+class ConcreteFactory2 implements AbstractFactory {
+  +createProductA() : AbstractProductA
+  +createProductB() : AbstractProductB
+}
+
+' Abstract Products
+interface AbstractProductA {
+}
+
+interface AbstractProductB {
+}
+
+' Concrete Products for Factory 1
+class ProductA1 implements AbstractProductA {
+}
+class ProductB1 implements AbstractProductB {
+}
+
+' Concrete Products for Factory 2
+class ProductA2 implements AbstractProductA {
+}
+class ProductB2 implements AbstractProductB {
+}
+
+' Relations
+AbstractFactory <|.. ConcreteFactory1
+AbstractFactory <|.. ConcreteFactory2
+AbstractProductA <|.. ProductA1
+AbstractProductA <|.. ProductA2
+AbstractProductB <|.. ProductB1
+AbstractProductB <|.. ProductB2
+ConcreteFactory1 ..> ProductA1 : creates >
+ConcreteFactory1 ..> ProductB1 : creates >
+ConcreteFactory2 ..> ProductA2 : creates >
+ConcreteFactory2 ..> ProductB2 : creates >
+
+@enduml

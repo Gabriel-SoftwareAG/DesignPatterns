@@ -1,0 +1,30 @@
+@startuml ChainOfResponsibilityPatternClassDiagram
+
+' Handler interface
+interface Handler {
+  +setSuccessor(handler: Handler): void
+  +handleRequest(request: Request): void
+}
+
+' ConcreteHandler classes
+class ConcreteHandler1 {
+  -successor: Handler
+  +setSuccessor(handler: Handler): void
+  +handleRequest(request: Request): void
+}
+
+class ConcreteHandler2 {
+  -successor: Handler
+  +setSuccessor(handler: Handler): void
+  +handleRequest(request: Request): void
+}
+
+' Request class
+class Request
+
+' Relationships
+Handler <|-- ConcreteHandler1 : implements
+Handler <|-- ConcreteHandler2 : implements
+Request *-- Handler : sent to
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml AdapterPatternSequenceDiagram
+
+actor Client
+participant "Target Interface" as Target
+participant "Adapter" as Adapter
+participant "Adaptee" as Adaptee
+
+Client -> Target : request()
+activate Target
+
+Target -> Adapter : request()
+activate Adapter
+
+Adapter -> Adaptee : specificRequest()
+activate Adaptee
+
+Adaptee --> Adapter : specificResponse
+deactivate Adaptee
+
+Adapter --> Target : response
+deactivate Adapter
+
+Target --> Client : response
+deactivate Target
+
+note right of Adapter
+  Adapter translates the\nrequest from the Target\ninterface to the Adaptee's\nspecificRequest method.
+end note
+
+@enduml

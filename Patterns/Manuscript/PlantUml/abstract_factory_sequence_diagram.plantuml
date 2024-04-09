@@ -1,0 +1,43 @@
+@startuml AbstractFactorySequenceDiagram
+
+participant Client
+participant "AbstractFactory" as AbstractFactory
+participant "ConcreteFactory1" as ConcreteFactory1
+participant "AbstractProductA" as AbstractProductA
+participant "ConcreteProductA1" as ConcreteProductA1
+participant "AbstractProductB" as AbstractProductB
+participant "ConcreteProductB1" as ConcreteProductB1
+
+Client -> AbstractFactory : getFactory()
+activate AbstractFactory
+
+AbstractFactory --> Client : ConcreteFactory1
+deactivate AbstractFactory
+
+Client -> ConcreteFactory1 : createProductA()
+activate ConcreteFactory1
+
+ConcreteFactory1 -> ConcreteProductA1 : new()
+activate ConcreteProductA1
+
+ConcreteProductA1 --> ConcreteFactory1 : return productA1
+deactivate ConcreteProductA1
+
+ConcreteFactory1 --> Client : productA1
+deactivate ConcreteFactory1
+
+Client -> ConcreteFactory1 : createProductB()
+activate ConcreteFactory1
+
+ConcreteFactory1 -> ConcreteProductB1 : new()
+activate ConcreteProductB1
+
+ConcreteProductB1 --> ConcreteFactory1 : return productB1
+deactivate ConcreteProductB1
+
+ConcreteFactory1 --> Client : productB1
+deactivate ConcreteFactory1
+
+note right of Client : Client uses productA1 and productB1\nwithout knowing their concrete classes.
+
+@enduml

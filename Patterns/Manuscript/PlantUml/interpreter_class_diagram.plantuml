@@ -1,0 +1,32 @@
+@startuml InterpreterPatternClassDiagram
+
+' AbstractExpression class
+abstract class AbstractExpression {
+  +interpret(context: Context): void
+}
+
+' TerminalExpression class
+class TerminalExpression {
+  +interpret(context: Context): void
+}
+
+' NonterminalExpression class
+class NonterminalExpression {
+  +interpret(context: Context): void
+}
+
+' Context class
+class Context
+
+' Client class
+class Client {
+  +interpret(expression: AbstractExpression): void
+}
+
+' Relationships
+AbstractExpression <|-- TerminalExpression : is a
+AbstractExpression <|-- NonterminalExpression : is a
+Client --> AbstractExpression : uses
+Client --> Context : uses
+
+@enduml

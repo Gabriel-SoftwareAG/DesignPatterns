@@ -1,0 +1,31 @@
+@startuml InterpreterPatternSequenceDiagram
+
+actor Client
+participant Context
+participant Interpreter
+participant TerminalExpression
+participant NonterminalExpression
+
+Client -> Context: interpret(expression)
+activate Context
+
+Context -> Interpreter: interpret(expression)
+activate Interpreter
+
+Interpreter -> TerminalExpression: interpret(context)
+activate TerminalExpression
+TerminalExpression --> Interpreter: result
+deactivate TerminalExpression
+
+Interpreter -> NonterminalExpression: interpret(context)
+activate NonterminalExpression
+NonterminalExpression --> Interpreter: result
+deactivate NonterminalExpression
+
+Interpreter --> Context: result
+deactivate Interpreter
+
+Context --> Client: result
+deactivate Context
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml MementoPatternClassDiagram
+
+class Originator {
+  -state : String
+  +setState(state : String) : void
+  +getState() : String
+  +saveStateToMemento() : Memento
+  +getStateFromMemento(memento : Memento) : void
+}
+
+class Memento {
+  -state : String
+  +Memento(state : String)
+  +getState() : String
+}
+
+class Caretaker {
+  -mementoList : List<Memento>
+  +add(memento : Memento) : void
+  +get(index : int) : Memento
+}
+
+Originator --> Memento : creates >
+Caretaker --> Memento : stores >
+
+@enduml

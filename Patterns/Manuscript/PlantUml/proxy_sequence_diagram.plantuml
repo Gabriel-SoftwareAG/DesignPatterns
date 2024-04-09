@@ -1,0 +1,23 @@
+@startuml ProxyPatternSequenceDiagram
+
+actor Client
+participant "Proxy" as Proxy
+participant "RealSubject" as RealSubject
+
+Client -> Proxy : request()
+activate Proxy
+
+Proxy -> RealSubject : forwardRequest()
+activate RealSubject
+
+RealSubject --> Proxy : response
+deactivate RealSubject
+
+Proxy --> Client : response
+deactivate Proxy
+
+note right of Proxy
+  Proxy may perform additional\noperations before or after\nforwarding the request.
+end note
+
+@enduml
