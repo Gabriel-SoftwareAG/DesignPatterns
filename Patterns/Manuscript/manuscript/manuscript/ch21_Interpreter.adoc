@@ -20,3 +20,26 @@ The interpreter parses these expressions, evaluates them according to mathematic
 Similarly, interpreters can be used in other domains, such as parsing and evaluating programming languages, querying databases, or processing markup languages like XML or JSON. In each case, the interpreter pattern provides a way to interpret expressions or commands written in a specific format and perform the necessary actions based on that interpretation.
 
 Overall, the interpreter pattern enables the processing of expressions or commands written in a specific language or format within a computer program, similar to how a human interpreter translates between languages to facilitate communication between people.
+
+== Key Components
+Given the following description, Describe the key components of the design pattern in one paragraph, each component should be a bullet. Write as an adoc code: 
+
+== UML Diagrams 
+Next, we will explain the concept of the XXXXXXXXXXXXXXX design pattern using UML.
+
+=== Class Diagram
+image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram"]
+given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
+
+=== Sequence Diagram
+image::BuilderPatternSequenceDiagram.png[title="The Builder Sequence Diagram"]
+given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
+
+== Implementation Walkthrough
+Based on the two diagrams, while using the XXXXXXXXXXX analogy above as reference, write a detailed implementation walkthrough example in java, in adoc format. Divide the classes into sections and explain each section
+
+== Design Considerations
+write design considerations paragrapgh for this design pattern, as an adoc code
+
+== Conclusion
+write a conclusion to this design pattern
