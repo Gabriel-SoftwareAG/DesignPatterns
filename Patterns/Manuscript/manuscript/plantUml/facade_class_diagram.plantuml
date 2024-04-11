@@ -29,7 +29,9 @@ Facade --> SubsystemClassB : Uses
 Facade --> SubsystemClassC : Uses
 
 note right of Facade
-  Facade provides a simple interface\nto the complex functionality\nof the subsystems.
+  Facade provides a simple interface
+  to the complex functionality
+  of the subsystems.
 end note
 
 
