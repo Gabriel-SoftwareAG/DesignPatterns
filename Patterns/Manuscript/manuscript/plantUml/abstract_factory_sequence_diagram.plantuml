@@ -1,4 +1,4 @@
-@startuml AbstractFactorySequenceDiagram
+@startuml AbstractFactoryPatternSequenceDiagram
 
 participant Client
 participant "AbstractFactory" as AbstractFactory
