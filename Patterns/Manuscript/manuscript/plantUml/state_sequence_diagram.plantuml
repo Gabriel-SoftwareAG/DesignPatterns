@@ -1,4 +1,4 @@
-@startuml StateDesignPatternSequenceDiagram
+@startuml StatePatternSequenceDiagram
 
 actor Client
 participant "Context" as Context
