@@ -16,10 +16,10 @@ In the world of software, the Singleton Pattern is like having that one library 
 It ensures that a particular class in a program can be instantiated once and only once. This unique instance then becomes the central point of access for the specified service or resource throughout the application. Like the town's single library, the Singleton Pattern provides a single, global reference point to the resource or service it represents, making sure that everyone goes through it to access the capabilities it offers.
 
 == Key Components
-- Unique Instance: The Singleton Pattern ensures that only one instance of a particular class can exist within the program, mimicking the one and only library in the town scenario.
-- Central Point of Access: Similar to how the town's single library serves as the central hub for all book-related activities, the Singleton Pattern designates the instantiated object as the sole access point for the specified service or resource in the application.
-- Global Reference Point: Just as the town's library serves as the go-to spot for all book-related needs, the Singleton Pattern offers a single, global reference to the instantiated object, ensuring that all interactions with the service or resource go through it.
-- Managed Place: Like the centralized management of the town's library for book borrowing and sharing, the Singleton Pattern facilitates controlled access and usage of the instantiated object, promoting consistency and coordination within the application.
+- **Unique Instance:** The Singleton Pattern ensures that only one instance of a particular class can exist within the program, mimicking the one and only library in the town scenario.
+- **Central Point of Access:** Similar to how the town's single library serves as the central hub for all book-related activities, the Singleton Pattern designates the instantiated object as the sole access point for the specified service or resource in the application.
+- **Global Reference Point:** Just as the town's library serves as the go-to spot for all book-related needs, the Singleton Pattern offers a single, global reference to the instantiated object, ensuring that all interactions with the service or resource go through it.
+- **Managed Place:** Like the centralized management of the town's library for book borrowing and sharing, the Singleton Pattern facilitates controlled access and usage of the instantiated object, promoting consistency and coordination within the application.
 
 
 == UML Diagrams 

@@ -17,10 +17,10 @@ The sandwich maker, like a builder in the builder pattern, follows these instruc
 This way, you can create a wide variety of sandwiches with different combinations without the need for predefined sandwich types cluttering up the menu. The builder pattern simplifies the process of creating complex objects step by step, just like ordering a custom sandwich.
 
 == Key Components
-* **Director**: In this scenario, the sandwich maker acts as the director. They take the step-by-step instructions from the customer and oversee the construction process of the sandwich.
-* **Builder Interface**: The builder interface defines the steps involved in sandwich construction, such as choosing the type of bread, filling, toppings, and sauce. Each step is abstracted, allowing for different implementations depending on the specific sandwich.
-* **Concrete Builders**: These are the specific implementations of the builder interface. For each type of sandwich or combination, there would be a concrete builder defining how to construct that particular sandwich, ensuring flexibility and customization.
-* **Product**: The end result of the construction process, in this case, the custom sandwich. It's the object that's gradually built up according to the step-by-step instructions provided by the customer.
+- **Director**: In this scenario, the sandwich maker acts as the director. They take the step-by-step instructions from the customer and oversee the construction process of the sandwich.
+- **Builder Interface**: The builder interface defines the steps involved in sandwich construction, such as choosing the type of bread, filling, toppings, and sauce. Each step is abstracted, allowing for different implementations depending on the specific sandwich.
+- **Concrete Builders**: These are the specific implementations of the builder interface. For each type of sandwich or combination, there would be a concrete builder defining how to construct that particular sandwich, ensuring flexibility and customization.
+- **Product**: The end result of the construction process, in this case, the custom sandwich. It's the object that's gradually built up according to the step-by-step instructions provided by the customer.
 
 
 == UML Diagrams 

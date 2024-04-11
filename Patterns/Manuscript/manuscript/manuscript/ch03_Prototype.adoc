@@ -16,10 +16,10 @@ So, in simpler terms, the prototype pattern allows you to create new objects by 
 
 == Key Components
 
-* **Prototype**: In this analogy, the original teddy bear acts as the prototype. It represents the object that serves as a template for creating new copies.
-* **Cloneable Interface**: Similar to the special machine in the analogy, the Cloneable interface allows objects to specify that they support cloning, enabling the creation of exact copies.
-* **Concrete Prototype**: These are the actual objects that implement the Cloneable interface and define how cloning is performed. In the analogy, these would be the teddy bears created by copying the original prototype.
-* **Client**: The entity that requests the creation of new objects using the prototype. In the analogy, the client corresponds to the user who wants to create copies of their favorite teddy bear without going through the hassle of designing and sewing each one from scratch.
+- **Prototype**: In this analogy, the original teddy bear acts as the prototype. It represents the object that serves as a template for creating new copies.
+- **Cloneable Interface**: Similar to the special machine in the analogy, the Cloneable interface allows objects to specify that they support cloning, enabling the creation of exact copies.
+- **Concrete Prototype**: These are the actual objects that implement the Cloneable interface and define how cloning is performed. In the analogy, these would be the teddy bears created by copying the original prototype.
+- **Client**: The entity that requests the creation of new objects using the prototype. In the analogy, the client corresponds to the user who wants to create copies of their favorite teddy bear without going through the hassle of designing and sewing each one from scratch.
 
 
 == UML Diagrams 
