@@ -1,4 +1,4 @@
-@startuml StrategyDesignPatternClassDiagram
+@startuml StrategyPatternClassDiagram
 
 ' Context class
 class Context {
