@@ -18,9 +18,9 @@ Overall, the strategy pattern provides flexibility and adaptability in software 
 
 == Key Components
 
-- **Context**: The context is the class or object that interacts with the strategies. In our analogy, the context represents the road trip planner or navigation app that selects the appropriate strategy for the journey.
-- **Strategy Interface**: The strategy interface defines the contract for all strategies, specifying the methods that each strategy must implement. In our example, the strategy interface defines methods for calculating routes, such as `calculateRoute()` or `planTrip()`.
-- **Concrete Strategies**: Concrete strategies are the different algorithms or approaches for accomplishing the task defined by the strategy interface. In our analogy, concrete strategies represent the various routes or navigation algorithms, such as the highway route, scenic route, fastest route, or shortest route.
+- _Context_: The context is the class or object that interacts with the strategies. In our analogy, the context represents the road trip planner or navigation app that selects the appropriate strategy for the journey.
+- _Strategy Interface_: The strategy interface defines the contract for all strategies, specifying the methods that each strategy must implement. In our example, the strategy interface defines methods for calculating routes, such as `calculateRoute()` or `planTrip()`.
+- _Concrete Strategies_: Concrete strategies are the different algorithms or approaches for accomplishing the task defined by the strategy interface. In our analogy, concrete strategies represent the various routes or navigation algorithms, such as the highway route, scenic route, fastest route, or shortest route.
 
 
 == UML Diagrams 

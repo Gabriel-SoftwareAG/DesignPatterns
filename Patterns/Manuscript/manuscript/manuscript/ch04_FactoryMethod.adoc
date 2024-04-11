@@ -16,10 +16,10 @@ Instead, it asks the corresponding "stall" (factory) for it. This factory knows 
 
 == Key Components
 
-* **Creator**: In this analogy, the Creator corresponds to the food stalls in the amusement park. It defines the interface for creating objects but delegates the actual creation to concrete subclasses (factories).
-* **Concrete Creator**: These are the specific implementations of the Creator interface, representing the different food stalls in the amusement park. Each concrete creator (factory) knows how to create a specific type of object (dish) in a particular way.
-* **Product**: The Product represents the objects (dishes) created by the factories. Each product may have different attributes or behaviors depending on the factory that created it.
-* **Concrete Product**: These are the actual objects (dishes) created by the factories. Each concrete product corresponds to a specific type of object (dish) and implements the behavior defined by the product interface.
+* _Creator_: In this analogy, the Creator corresponds to the food stalls in the amusement park. It defines the interface for creating objects but delegates the actual creation to concrete subclasses (factories).
+* _Concrete Creator_: These are the specific implementations of the Creator interface, representing the different food stalls in the amusement park. Each concrete creator (factory) knows how to create a specific type of object (dish) in a particular way.
+* _Product_: The Product represents the objects (dishes) created by the factories. Each product may have different attributes or behaviors depending on the factory that created it.
+* _Concrete Product_: These are the actual objects (dishes) created by the factories. Each concrete product corresponds to a specific type of object (dish) and implements the behavior defined by the product interface.
 
 
 == UML Diagrams 

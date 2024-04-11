@@ -20,10 +20,10 @@ In this scenario, the universal adapter acts as an adapter pattern, bridging the
 
 == Key Components
 
-- **Client**: In the travel scenario, the client represents the traveler who owns various electronic devices and needs to charge them while traveling. The client interacts with the adapter to connect their devices to different types of electrical outlets.
-- **Adaptee**: The electronic devices, such as phones, cameras, and laptops, are the adaptees in the scenario. They have different types of plugs that need to be connected to various types of electrical outlets.
-- **Target Interface**: The target interface is represented by the universal adapter in the scenario. It defines a common interface that the client can use to connect their devices to different types of electrical outlets.
-- **Adapter**: The universal adapter acts as the adapter in the scenario, bridging the gap between the different types of plugs on the client's devices and the various types of outlets encountered during travel. It adapts the interface of the devices to the target interface defined by the universal adapter, enabling the devices to be connected to different types of electrical outlets seamlessly.
+- _Client_: In the travel scenario, the client represents the traveler who owns various electronic devices and needs to charge them while traveling. The client interacts with the adapter to connect their devices to different types of electrical outlets.
+- _Adaptee_: The electronic devices, such as phones, cameras, and laptops, are the adaptees in the scenario. They have different types of plugs that need to be connected to various types of electrical outlets.
+- _Target Interface_: The target interface is represented by the universal adapter in the scenario. It defines a common interface that the client can use to connect their devices to different types of electrical outlets.
+- _Adapter_: The universal adapter acts as the adapter in the scenario, bridging the gap between the different types of plugs on the client's devices and the various types of outlets encountered during travel. It adapts the interface of the devices to the target interface defined by the universal adapter, enabling the devices to be connected to different types of electrical outlets seamlessly.
 
 
 == UML Diagrams 

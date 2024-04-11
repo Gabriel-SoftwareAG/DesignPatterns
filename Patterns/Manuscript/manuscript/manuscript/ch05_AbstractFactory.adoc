@@ -16,10 +16,10 @@ In programming, the Abstract Factory Pattern works similarly. It's not just abou
 
 == Key Components
 
-- **Abstract Factory**: In the amusement park analogy, the Abstract Factory represents the organizational system behind themed areas. It defines an interface for creating families of related objects (themed food), without specifying their concrete classes.
-- **Concrete Factory**: These are the specific implementations of the Abstract Factory, corresponding to themed areas in the amusement park (Adventure Land, Fantasy Land, Future World). Each concrete factory creates a set of related objects (themed food) that adhere to the theme of its respective area.
-- **Abstract Product**: The Abstract Product represents the general concept of a product (food) within a themed area. It defines an interface for creating specific types of products (e.g., ice cream or pizza) without specifying their concrete classes.
-- **Concrete Product**: These are the specific implementations of the Abstract Product, representing themed food items within each themed area. Each concrete product corresponds to a specific type of themed food and implements the behavior defined by the abstract product interface.
+- _Abstract Factory_: In the amusement park analogy, the Abstract Factory represents the organizational system behind themed areas. It defines an interface for creating families of related objects (themed food), without specifying their concrete classes.
+- _Concrete Factory_: These are the specific implementations of the Abstract Factory, corresponding to themed areas in the amusement park (Adventure Land, Fantasy Land, Future World). Each concrete factory creates a set of related objects (themed food) that adhere to the theme of its respective area.
+- _Abstract Product_: The Abstract Product represents the general concept of a product (food) within a themed area. It defines an interface for creating specific types of products (e.g., ice cream or pizza) without specifying their concrete classes.
+- _Concrete Product_: These are the specific implementations of the Abstract Product, representing themed food items within each themed area. Each concrete product corresponds to a specific type of themed food and implements the behavior defined by the abstract product interface.
 
 == UML Diagrams 
 Next, we will explain the concept of the Abstract Factory design pattern using UML.

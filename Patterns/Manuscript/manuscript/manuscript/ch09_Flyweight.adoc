@@ -14,9 +14,9 @@ Instead of creating a new object each time, the pattern reuses existing instance
 
 == Key Components
 
-* **Object Reuse**: The Flyweight Pattern promotes the reuse of existing instances rather than creating new objects each time, akin to reusing balloon designs in decorating a party hall. This approach saves memory and improves performance by reducing the number of objects created and the associated memory overhead.
-* **Common Parts Sharing**: The pattern involves sharing common parts among multiple instances and storing unique parts separately, similar to how the repeated balloon designs are shared throughout the hall while unique decorations are added as needed. This sharing mechanism minimizes memory consumption and reduces the storage requirements for each object.
-* **Large Number of Similar Objects**: The Flyweight Pattern is particularly useful when dealing with a large number of objects that have similar properties or data, just like the hundreds of balloons needed for decorating the party hall. By reusing instances and sharing common parts, the pattern optimizes memory usage and enhances performance, making it ideal for scenarios with a high object count.
+- _Object Reuse_: The Flyweight Pattern promotes the reuse of existing instances rather than creating new objects each time, akin to reusing balloon designs in decorating a party hall. This approach saves memory and improves performance by reducing the number of objects created and the associated memory overhead.
+- _Common Parts Sharing_: The pattern involves sharing common parts among multiple instances and storing unique parts separately, similar to how the repeated balloon designs are shared throughout the hall while unique decorations are added as needed. This sharing mechanism minimizes memory consumption and reduces the storage requirements for each object.
+- _Large Number of Similar Objects_: The Flyweight Pattern is particularly useful when dealing with a large number of objects that have similar properties or data, just like the hundreds of balloons needed for decorating the party hall. By reusing instances and sharing common parts, the pattern optimizes memory usage and enhances performance, making it ideal for scenarios with a high object count.
 
 
 == UML Diagrams 

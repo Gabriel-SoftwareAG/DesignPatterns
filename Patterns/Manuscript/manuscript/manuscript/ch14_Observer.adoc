@@ -16,8 +16,8 @@ The Observer Pattern works a lot like this classroom scenario. In this pattern, 
 
 == Key Components
 
-* **Subject**: The Subject is the class or object that holds the important information or updates. In the classroom analogy, the teacher represents the Subject who broadcasts news to the students.
-* **Observer**: Observers are the classes or objects that are interested in receiving updates from the Subject. In the classroom scenario, the students represent the Observers who request to be notified whenever there's news about their favorite subject.
+* _Subject_: The Subject is the class or object that holds the important information or updates. In the classroom analogy, the teacher represents the Subject who broadcasts news to the students.
+* _Observer_: Observers are the classes or objects that are interested in receiving updates from the Subject. In the classroom scenario, the students represent the Observers who request to be notified whenever there's news about their favorite subject.
 
 == UML Diagrams 
 Next, we will explain the concept of the Observer design pattern using UML.

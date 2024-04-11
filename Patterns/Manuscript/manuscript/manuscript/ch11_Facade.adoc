@@ -16,9 +16,9 @@ So, just like the facade of a building hides its inner complexities, the control
 
 == Key Components
 
-* **Facade**: The facade acts as a simplified interface to a complex system, providing a unified and straightforward access point for interacting with multiple subsystems. In our analogy, the control panel facade hides the complexities of the car's advanced features, such as automatic parking, adaptive cruise control, and collision avoidance systems, from the driver.
-* **Subsystem**: Subsystems are individual components or systems that make up the larger, complex system. In our example, the automatic parking system, adaptive cruise control, and collision avoidance systems represent subsystems of the high-tech car.
-* **Client**: The client is the entity that interacts with the facade to access the functionalities provided by the subsystems. In our analogy, the driver of the car interacts with the control panel facade to activate features like park assist, cruise control, and collision avoidance.
+- _Facade_: The facade acts as a simplified interface to a complex system, providing a unified and straightforward access point for interacting with multiple subsystems. In our analogy, the control panel facade hides the complexities of the car's advanced features, such as automatic parking, adaptive cruise control, and collision avoidance systems, from the driver.
+- _Subsystem_: Subsystems are individual components or systems that make up the larger, complex system. In our example, the automatic parking system, adaptive cruise control, and collision avoidance systems represent subsystems of the high-tech car.
+- _Client_: The client is the entity that interacts with the facade to access the functionalities provided by the subsystems. In our analogy, the driver of the car interacts with the control panel facade to activate features like park assist, cruise control, and collision avoidance.
 
 
 == UML Diagrams 

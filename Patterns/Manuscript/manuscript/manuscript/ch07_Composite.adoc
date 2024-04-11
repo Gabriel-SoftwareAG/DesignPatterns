@@ -17,10 +17,10 @@ In software, the Composite Pattern allows similar flexibility. It lets you treat
 
 == Key Components
 
-- **Component**: In the music playlist analogy, the component represents the interface for both individual songs and collections of songs. It defines common operations that can be performed on both simple objects (individual songs) and composite objects (collections of songs), such as playing or adding to the playlist.
-- **Leaf**: The leaf represents the individual objects in the playlist, such as single songs. These are the simplest elements that cannot be further subdivided. They implement the Component interface and perform specific operations relevant to their type, such as playing the song.
-- **Composite**: The composite represents the collections of objects in the playlist, such as albums or themed collections. These are composed of one or more leaf objects or other composite objects. They implement the Component interface and can perform operations on their child components, such as playing all songs in the collection.
-- **Client**: The client represents the entity that interacts with the playlist, such as the host of the party. It treats both individual songs and collections of songs uniformly, allowing operations to be performed seamlessly on any element in the playlist, regardless of its type. This enables the client to manage complex structures of songs and collections effortlessly, much like organizing a diverse music playlist for a party.
+- _Component_: In the music playlist analogy, the component represents the interface for both individual songs and collections of songs. It defines common operations that can be performed on both simple objects (individual songs) and composite objects (collections of songs), such as playing or adding to the playlist.
+- _Leaf_: The leaf represents the individual objects in the playlist, such as single songs. These are the simplest elements that cannot be further subdivided. They implement the Component interface and perform specific operations relevant to their type, such as playing the song.
+- _Composite_: The composite represents the collections of objects in the playlist, such as albums or themed collections. These are composed of one or more leaf objects or other composite objects. They implement the Component interface and can perform operations on their child components, such as playing all songs in the collection.
+- _Client_: The client represents the entity that interacts with the playlist, such as the host of the party. It treats both individual songs and collections of songs uniformly, allowing operations to be performed seamlessly on any element in the playlist, regardless of its type. This enables the client to manage complex structures of songs and collections effortlessly, much like organizing a diverse music playlist for a party.
 
 
 == UML Diagrams 

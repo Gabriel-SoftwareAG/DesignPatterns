@@ -16,10 +16,10 @@ Each decorator enhances the flavor profile of the pizza without changing its fun
 
 == Key Components
 
-- **Component**: The component represents the base object to which decorators are added. In our analogy, the plain cheese pizza serves as the component.
-- **Decorator**: Decorators are additional layers that enhance the functionality or behavior of the component without altering its core structure. In our example, pepperoni, mushrooms, bell peppers, and barbecue sauce serve as decorators, adding various toppings to customize the flavor of the pizza.
-- **Concrete Component**: The concrete component is the actual implementation of the component interface. In our analogy, the plain cheese pizza is the concrete component that implements the base pizza functionality.
-- **Concrete Decorator**: Concrete decorators are the specific implementations of decorators that add functionality to the component. In our example, each topping (pepperoni, mushrooms, bell peppers, and barbecue sauce) is a concrete decorator that adds a unique flavor or texture to the pizza.
+- _Component_: The component represents the base object to which decorators are added. In our analogy, the plain cheese pizza serves as the component.
+- _Decorator_: Decorators are additional layers that enhance the functionality or behavior of the component without altering its core structure. In our example, pepperoni, mushrooms, bell peppers, and barbecue sauce serve as decorators, adding various toppings to customize the flavor of the pizza.
+- _Concrete Component_: The concrete component is the actual implementation of the component interface. In our analogy, the plain cheese pizza is the concrete component that implements the base pizza functionality.
+- _Concrete Decorator_: Concrete decorators are the specific implementations of decorators that add functionality to the component. In our example, each topping (pepperoni, mushrooms, bell peppers, and barbecue sauce) is a concrete decorator that adds a unique flavor or texture to the pizza.
 
 
 == UML Diagrams 

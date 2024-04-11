@@ -19,9 +19,9 @@ Overall, the memento pattern provides a way to capture and restore the state of 
 
 == Key Components
 
-- **Originator (e.g., Player):** The Originator is the object whose state needs to be saved. In the video game example, the Player class represents the character whose state is being saved and restored.
-- **Memento (e.g., PlayerMemento):** The Memento is an object that stores the state of the Originator at a specific point in time. In the video game example, the PlayerMemento class encapsulates the state of the player, including attributes like health, inventory, and progress.
-- **Caretaker (e.g., SaveManager):** The Caretaker is responsible for keeping track of the Memento objects. In the video game example, the SaveManager class acts as a repository for storing and retrieving PlayerMemento objects. It manages the save/load functionality by maintaining a collection of mementos.
+- _Originator (e.g., Player)_: The Originator is the object whose state needs to be saved. In the video game example, the Player class represents the character whose state is being saved and restored.
+- _Memento (e.g., PlayerMemento)_: The Memento is an object that stores the state of the Originator at a specific point in time. In the video game example, the PlayerMemento class encapsulates the state of the player, including attributes like health, inventory, and progress.
+- _Caretaker (e.g., SaveManager)_: The Caretaker is responsible for keeping track of the Memento objects. In the video game example, the SaveManager class acts as a repository for storing and retrieving PlayerMemento objects. It manages the save/load functionality by maintaining a collection of mementos.
 
 
 == UML Diagrams 

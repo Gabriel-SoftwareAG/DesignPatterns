@@ -12,10 +12,10 @@
 
 == Key Components
 
-- **Client:** Represents the entity that initiates requests or commands. In the restaurant analogy, the client corresponds to the customer who places an order.
-- **Command:** Encapsulates a request as an object, allowing it to be parameterized and passed as an argument. In the restaurant scenario, the command represents the customer's order, which contains details of the requested meal.
-- **Invoker:** Sends commands to execute requests, but it doesn't know how the request is handled. It acts as an intermediary between the client and the receiver. In the restaurant context, the invoker is akin to the waiter who takes the customer's order and relays it to the kitchen.
-- **Receiver:** Handles the request specified by the command. It knows how to perform the action associated with the command. In the restaurant example, the receiver is the kitchen staff responsible for preparing the meal according to the order received.
+- _Client_: Represents the entity that initiates requests or commands. In the restaurant analogy, the client corresponds to the customer who places an order.
+- _Command_: Encapsulates a request as an object, allowing it to be parameterized and passed as an argument. In the restaurant scenario, the command represents the customer's order, which contains details of the requested meal.
+- _Invoker_: Sends commands to execute requests, but it doesn't know how the request is handled. It acts as an intermediary between the client and the receiver. In the restaurant context, the invoker is akin to the waiter who takes the customer's order and relays it to the kitchen.
+- _Receiver_: Handles the request specified by the command. It knows how to perform the action associated with the command. In the restaurant example, the receiver is the kitchen staff responsible for preparing the meal according to the order received.
 
 
 == UML Diagrams 

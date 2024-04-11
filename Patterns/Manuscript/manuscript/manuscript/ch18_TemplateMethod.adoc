@@ -15,3 +15,34 @@ In software design, the Template Method pattern can be applied to model the cons
 For example, subclasses for building different types of houses, such as a modern-style house or a traditional-style house, can extend the "HouseBuilder" class and override specific steps to implement unique construction techniques or architectural features. While both types of houses follow the same overall construction process, they can differ in the choice of materials, design elements, and finishing touches.
 
 Overall, the Template Method pattern provides a flexible and reusable way to define the overall structure of a complex process, allowing subclasses to customize specific steps to meet varying requirements or preferences, similar to how different types of houses can be built using a common construction framework with room for customization based on architectural style and design preferences.
+
+== Key Components
+
+* _HouseBuilder Class (Abstract Base Class)_: Represents the template method itself, defining the skeleton of the algorithm for building a house. It includes steps that are common and fixed in the process, such as laying the foundation, constructing the walls, and installing the roof. These steps are implemented as individual methods within the class, some of which may be defined as abstract methods to force subclasses to provide specific implementations.
+
+* _ConcreteHouseBuilder Subclasses_: These are specific implementations of the HouseBuilder class, such as ModernHouseBuilder or TraditionalHouseBuilder. Each subclass overrides the abstract methods or hooks provided by the HouseBuilder class to implement steps in the construction process that vary between different types of houses. For instance, the material selection for walls, roof designs, and interior finishing techniques can differ significantly between a modern and a traditional house.
+
+* _Template Method_: This is a method within the HouseBuilder class that outlines the sequence of steps for building a house. It calls the step-specific methods in a particular order, ensuring that the base structure of the process is always followed. The template method itself is invariant, meaning it does not change when subclasses extend the base class, ensuring that the core structure of the algorithm is preserved.
+
+* _Customizable Steps (Hooks/Abstract Methods)_: Within the HouseBuilder class, certain steps are left intentionally undefined (abstract) or minimally defined (hooks) to allow subclasses to tailor these steps according to specific requirements. This design allows for flexibility and customization in the construction process, enabling the creation of houses with different architectural styles and features while adhering to a standard construction sequence.
+
+
+== UML Diagrams 
+Next, we will explain the concept of the XXXXXXXXXXXXXXX design pattern using UML.
+
+=== Class Diagram
+image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram"]
+given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
+
+=== Sequence Diagram
+image::BuilderPatternSequenceDiagram.png[title="The Builder Sequence Diagram"]
+given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
+
+== Implementation Walkthrough
+Based on the two diagrams, while using the XXXXXXXXXXX analogy above as reference, write a detailed implementation walkthrough example in java, in adoc format. Divide the classes into sections and explain each section
+
+== Design Considerations
+write design considerations paragrapgh for this design pattern, as an adoc code
+
+== Conclusion
+write a conclusion to this design pattern

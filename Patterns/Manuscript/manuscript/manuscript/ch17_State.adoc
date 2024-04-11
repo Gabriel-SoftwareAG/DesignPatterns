@@ -21,9 +21,9 @@ Overall, the state pattern provides a way to model objects that can change their
 
 == Key Components
 
-- **Context:** The Context represents the object whose behavior can change dynamically based on its internal state. In the traffic light analogy, the traffic light itself serves as the Context, while in the vending machine example, the vending machine is the Context.
-- **State:** The State interface defines a common interface for all concrete state classes, encapsulating the behavior associated with a particular state. For instance, in the traffic light scenario, the State interface defines methods like `stop()`, `prepareToStop()`, and `go()`, implemented by concrete state classes like `RedState`, `YellowState`, and `GreenState`. Similarly, in the vending machine example, the State interface would define methods like `selectItem()`, `dispenseItem()`, etc.
-- **Concrete State:** Concrete State classes implement the State interface and encapsulate the behavior associated with a specific state of the Context. For instance, the `RedState`, `YellowState`, and `GreenState` classes in the traffic light analogy, and `IdleState`, `SelectionState`, `DispensingState`, and `OutOfStockState` classes in the vending machine example.
+- _Context_: The Context represents the object whose behavior can change dynamically based on its internal state. In the traffic light analogy, the traffic light itself serves as the Context, while in the vending machine example, the vending machine is the Context.
+- _State_: The State interface defines a common interface for all concrete state classes, encapsulating the behavior associated with a particular state. For instance, in the traffic light scenario, the State interface defines methods like `stop()`, `prepareToStop()`, and `go()`, implemented by concrete state classes like `RedState`, `YellowState`, and `GreenState`. Similarly, in the vending machine example, the State interface would define methods like `selectItem()`, `dispenseItem()`, etc.
+- _Concrete State_: Concrete State classes implement the State interface and encapsulate the behavior associated with a specific state of the Context. For instance, the `RedState`, `YellowState`, and `GreenState` classes in the traffic light analogy, and `IdleState`, `SelectionState`, `DispensingState`, and `OutOfStockState` classes in the vending machine example.
 
 
 == UML Diagrams 
