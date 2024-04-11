@@ -1,0 +1,15 @@
+= The Decorator Pattern
+
+:imagesdir: ../images/ch12_Decorator
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+| Let's say you have a plain cheese pizza. It's delicious on its own, but you want to add some extra flavor to it. Instead of ordering multiple different pizzas, you can use the decorator pattern to customize your pizza with various toppings.
+
+You start with the plain cheese pizza as your base. Then, you add pepperoni as a decorator to give it a savory and slightly spicy flavor. Next, you sprinkle some mushrooms as another decorator to add a rich and earthy taste. Additionally, you include bell peppers as another decorator to add a sweet and crunchy texture. Finally, you drizzle some barbecue sauce as a final decorator to add a tangy and smoky finish.  
+|image:decorator_pizza.jpg[width=300, scale=50%]
+|===
+
+Each decorator enhances the flavor profile of the pizza without changing its fundamental nature. You can mix and match toppings based on your preferences, creating a customized pizza that suits your taste buds. Just like adding layers of decoration to a cake or features to a smartphone, the decorator pattern allows you to enhance and customize objects dynamically, making them more delicious and satisfying.

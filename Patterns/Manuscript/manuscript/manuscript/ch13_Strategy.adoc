@@ -1,0 +1,17 @@
+= The Strategy Pattern
+
+:imagesdir: ../images/ch13_Strategy
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you're planning a road trip, and you have different options for getting to your destination. You could take the highway, which is the fastest but may have tolls. Alternatively, you could take scenic routes, which are slower but offer beautiful views. Depending on factors like time, budget, and personal preferences, you might choose different strategies for your journey.
+
+In software design, the strategy pattern works similarly. It allows you to define a family of algorithms, or strategies, for accomplishing a task, and then select the appropriate one at runtime based on specific conditions or requirements. Just like choosing a route for your road trip, you can dynamically select the best strategy for solving a problem based on various factors.
+|image:strategy_roads.jpg[width=370, scale=50%]
+|===
+
+For example, if you're building a navigation app, you could implement different strategies for calculating the fastest route, the shortest route, or the most scenic route to a destination. Depending on user preferences or real-time traffic conditions, the app can switch between these strategies to provide the best possible route for the user's needs.
+
+Overall, the strategy pattern provides flexibility and adaptability in software design by allowing you to encapsulate different algorithms and dynamically select the most suitable one at runtime, just like choosing the best strategy for a road trip based on various factors.

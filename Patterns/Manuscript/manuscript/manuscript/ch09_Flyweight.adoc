@@ -1,0 +1,13 @@
+= The Flyweight Patther
+
+:imagesdir: ../images/ch09_Flyweight
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you're decorating a large party hall with hundreds of balloons. Instead of buying hundreds of unique balloons, which would be expensive and wasteful, you decide to use just a few designs repeated over and over. You have, let's say, five designs - stars, hearts, moons, suns, and clouds. Each design is used multiple times throughout the hall, creating a vibrant and cohesive decoration scheme without the need for hundreds of different designs. This approach saves you money and time, while still achieving a fantastic effect. The Flyweight Pattern in programming works on a similar principle. It's used when you need a large number of similar objects.
+|image:flyweight_balloons.jpg[width=300, scale=50%]
+|===
+
+Instead of creating a new object each time, the pattern reuses existing instances, just like reusing the balloon designs. This is particularly useful in software to save memory and improve performance, especially when dealing with a huge number of objects that have similar properties or data. By sharing common parts and only storing the unique parts separately, the Flyweight Pattern makes the application lighter (like a "flyweight") and more efficient.

@@ -1,0 +1,15 @@
+= The Abstract Factory Pattern
+
+:imagesdir: ../images/ch05_AbstractFactory
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Remember our amusement park example from the factory method pattern chapter? Let's continue that analogy where we had different food stalls for pizza, ice cream, and burgers, let's take it a step further. Imagine now that the park is divided into different themed areas, each offering a unique experience: Adventure Land, Fantasy Land, and Future World. Each of these areas has its own set of food stalls, but they're specialized even further. For example, Adventure Land might have tropical-themed ice cream and exotic pizzas, Fantasy Land offers magical treats and enchanted pizzas, and Future World serves space-age ice cream and futuristic burgers. 
+|image:abstract_factory_amusement_theme_park.jpg[width=320, scale=50%]
+|===
+
+The Abstract Factory Pattern is like the organizational system behind these themed areas. Instead of just going to any stall for ice cream or pizza, you first choose which themed area you're interested in based on the kind of experience you want. Then, within that area, you go to the specific stall for your food. This way, the type of food you get is not just about whether it's pizza or ice cream, but it's a pizza or ice cream that fits the theme of your chosen area.
+
+In programming, the Abstract Factory Pattern works similarly. It's not just about creating objects; it's about creating families of related objects without specifying their concrete classes. When your software needs a set of related objects (like all the food from Fantasy Land), it asks an abstract factory for them, and this factory ensures that all the objects work well together, adhering to the theme. This way, you can switch themes (or families of objects) easily, just like choosing to spend your day in a different area of the amusement park, and still get a coherent experience.

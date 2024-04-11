@@ -1,0 +1,19 @@
+= The Iterator Pattern
+
+:imagesdir: ../images/ch23_Iterator
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+| Let's consider a scenario in web development where you have a list of blog posts displayed on a webpage. Each blog post is represented as a card with a title, author, and summary. Users can scroll through the list of blog posts and click on a post to read the full content.
+
+In this scenario, the iterator pattern can be applied to iterate over the list of blog posts without needing to know the internal details of how the list is implemented. Instead of directly accessing the list of blog posts, we use an iterator object, such as a scroll bar or pagination controls, to move through the list sequentially.
+|image:iterator_blog.jpg[width=320, scale=50%]
+|===
+
+For example, the scroll bar allows users to scroll up and down the list of blog posts, displaying a subset of posts at a time. As users scroll, the scroll bar updates the visible portion of the list, allowing users to navigate through the entire collection of blog posts seamlessly.
+
+Similarly, pagination controls allow users to navigate between different pages of blog posts, with each page displaying a fixed number of posts. Users can click on the pagination controls to move forward or backward through the list of pages, accessing different subsets of blog posts as they navigate through the collection.
+
+In both cases, the iterator pattern provides a way to iterate over the elements of the list of blog posts sequentially, abstracting away the details of how the list is implemented and allowing users to focus on navigating through the collection of posts effortlessly.

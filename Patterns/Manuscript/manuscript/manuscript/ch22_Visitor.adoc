@@ -1,0 +1,19 @@
+= The Visitor Pattern
+
+:imagesdir: ../images/ch22_Visitor
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+| Let's imagine you're visiting different rooms in a museum, and each room has different exhibits on display. As you move from room to room, you want to learn more about each exhibit and maybe even interact with some of them.
+
+In software design, the visitor pattern works similarly. It allows you to visit, or traverse, different elements of a complex data structure, such as a collection of objects, and perform actions or operations on them without modifying their internal structure.
+
+For example, let's say you have a collection of objects representing different shapes in a drawing application. You can use the visitor pattern to define a visitor object that knows how to visit each type of shape and perform specific operations, such as calculating the area or perimeter of a shape.
+|image:visitor_museum.jpg[width=400, scale=50%]
+|===
+
+As you traverse the collection of shapes, you can apply the visitor to each shape, which then executes the appropriate operation based on the type of shape being visited. This allows you to perform complex operations on the shapes without needing to modify their individual classes.
+
+Overall, the visitor pattern provides a way to separate the algorithm for traversing a data structure from the operations performed on the elements within that structure, similar to how you visit different exhibits in a museum and interact with them without changing their displays.

@@ -1,0 +1,15 @@
+= The Prototype Pattern
+
+:imagesdir: ../images/ch03_Prototype
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you have a favorite toy, let's say it's a teddy bear. Over time, this teddy bear might get worn out or damaged because you play with it a lot. But what if you could easily make an exact copy of your favorite teddy bear whenever you need a new one?
+
+That's where the prototype pattern comes in. It's like having a special machine that can duplicate your favorite teddy bear perfectly. You don't need to go through the hassle of designing and sewing a new teddy bear from scratch every time. Instead, you just use the prototype – your original teddy bear – to create as many copies as you want. 
+|image:prototype_teddy_bear.jpg[width=320, scale=50%]
+|===
+
+So, in simpler terms, the prototype pattern allows you to create new objects by copying an existing object. It's like making a photocopy of your favorite toy whenever you need a replacement. This saves time and effort because you don't have to start from scratch every time you want to create a similar object.

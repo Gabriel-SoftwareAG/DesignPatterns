@@ -1,0 +1,23 @@
+= The Bridge Pattern
+
+:imagesdir: ../images/ch10_Bridge
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you have a universal remote control that can operate different types of electronic devices in your home, like TVs, DVD players, and sound systems. Now, think about how this remote control works.
+
+At its core, the remote control has buttons for common functions like turning devices on and off, adjusting volume, and changing channels or tracks. These functions are what you expect from any remote control, regardless of the specific device it's controlling.
+|image:bridge_universal_remote_control.jpg[width=320, scale=50%]
+|===
+
+However, behind the scenes, the remote control needs to communicate with each device differently. For example, turning on a Samsung TV might require sending one type of signal, while turning on an LG TV might require a different one. Similarly, adjusting the volume on a Sony sound system might use a different command than adjusting the volume on a Bose sound system.
+
+This is where the bridge pattern comes in. The bridge pattern separates the core functionalities of the remote control (like turning devices on and off) from the specific way these functions are carried out for each device.
+
+In our example, the core functionalities of the remote control form the abstraction. These include operations like turning devices on and off, adjusting volume, and changing channels or tracks.
+
+On the other hand, the specific way these operations are carried out for each device forms the implementation. This includes the different commands or protocols needed to communicate with each brand and model of device.
+
+By using the bridge pattern, the remote control can have a unified interface for users (the core functionalities), while still being able to communicate with different devices in their own specific way (the implementation). This makes the remote control versatile and easy to use, allowing users to control all their devices with just one remote.

@@ -1,0 +1,15 @@
+= The Mediator Pattern
+
+:imagesdir: ../images/ch19_Mediator
+
+== Introduction
+
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you're part of an agile software development team working on a project. The team consists of developers, testers, and designers, each responsible for different aspects of the project. To ensure effective collaboration and communication among team members, you appoint a scrum master as a mediator.
+
+In this scenario, the scrum master serves as a central point of contact for the team. Instead of individual team members directly communicating with each other, they communicate through the scrum master. For example, when a developer completes a task, they inform the scrum master, who then coordinates with the tester to ensure proper testing. Similarly, if a designer needs clarification on a requirement, they communicate with the scrum master, who then facilitates communication with the product owner.
+|image:mediator_agile_team.jpg[width=400, scale=50%]
+|===
+
+Using the mediator pattern in this context helps streamline communication and coordination within the agile team. It ensures that information flows smoothly between team members without creating unnecessary dependencies or bottlenecks. By centralizing communication through the scrum master, the team can work efficiently and effectively towards achieving their project goals.
