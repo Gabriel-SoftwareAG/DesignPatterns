@@ -22,17 +22,27 @@ Similarly, interpreters can be used in other domains, such as parsing and evalua
 Overall, the interpreter pattern enables the processing of expressions or commands written in a specific language or format within a computer program, similar to how a human interpreter translates between languages to facilitate communication between people.
 
 == Key Components
-Given the following description, Describe the key components of the design pattern in one paragraph, each component should be a bullet. Write as an adoc code: 
+
+- _AbstractExpression (Interface)_: This component represents the expression interface that declares an interpret operation. Just like a human interpreter who understands and translates languages, the AbstractExpression in the interpreter pattern provides the foundation for interpreting various expressions in a specific language or format. Each concrete expression in the program must implement this interface.
+
+- _TerminalExpression (Class)_: A class that implements the AbstractExpression interface for interpreting terminal expressions in the language. In the analogy, this would be akin to interpreting basic words or phrases that don't need further decomposition. For a calculator application, TerminalExpression might interpret individual numbers or simple operands.
+
+- _NonTerminalExpression (Class)_: This class also implements the AbstractExpression interface but is used for interpreting expressions that are composed of multiple expressions. Similar to complex sentences that require contextual understanding in language translation, NonTerminalExpression handles the logic for combining or processing multiple TerminalExpressions or NonTerminalExpressions according to the rules of the language or format.
+
+- _Context (Class)_: Represents the context of the interpretation, containing information that's global to the interpreter. In our travel analogy, this could be akin to the specific details or rules of grammar and syntax of the local language that the interpreter must understand. In software, Context might include the specifics of the expression format or the environment in which the expression should be evaluated.
+
+- _Client (Class)_: The client utilizes the interpreter. It constructs the necessary expressions and calls the interpret method to evaluate or process the expression. Just like a traveler who forms sentences to communicate a message and relies on the interpreter to translate, the Client in the pattern constructs expressions using the language or format understood by the interpreter to achieve a specific outcome, such as calculating the result of a mathematical expression.
+
 
 == UML Diagrams 
-Next, we will explain the concept of the XXXXXXXXXXXXXXX design pattern using UML.
+Next, we will explain the concept of the Interpreter design pattern using UML.
 
 === Class Diagram
-image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram"]
+image::InterpreterPatternClassDiagram.png[title="The Interpreter Class Diagram"]
 given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
 
 === Sequence Diagram
-image::BuilderPatternSequenceDiagram.png[title="The Builder Sequence Diagram"]
+image::InterpreterPatternSequenceDiagram.png[title="The Interpreter Sequence Diagram"]
 given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
 
 == Implementation Walkthrough
