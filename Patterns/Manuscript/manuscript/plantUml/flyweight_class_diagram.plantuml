@@ -29,15 +29,22 @@ FlyweightFactory o-- Flyweight : Creates >
 Client --> Flyweight : Uses >
 
 note right of ConcreteFlyweight
-  "ConcreteFlyweight" stores intrinsic\nstate that is shareable across many\nobjects and implements the operation\nusing both intrinsic and extrinsic state.
+  "ConcreteFlyweight" stores intrinsic
+  state that is shareable across many
+  objects and implements the operation
+  using both intrinsic and extrinsic state.
 end note
 
 note right of FlyweightFactory
-  "FlyweightFactory" manages flyweight\nobjects and creates them as needed,\nensuring that flyweights are shared properly.
+  "FlyweightFactory" manages flyweight
+  objects and creates them as needed,
+  ensuring that flyweights are shared properly.
 end note
 
 note right of Client
-  "Client" maintains extrinsic state\n(unique for each flyweight) and\npasses it to flyweight's operations.
+  "Client" maintains extrinsic state
+  (unique for each flyweight) and
+  passes it to flyweight's operations.
 end note
 
 @enduml
