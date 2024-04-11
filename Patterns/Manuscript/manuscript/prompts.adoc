@@ -9,7 +9,7 @@ image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram"]
 given the following diagram, write an explanation for the diagram in one paragraph. Use the [XXXXXXXXXXXXX] as an analogy and explain each class using the analogy:
 
 === Sequence Diagram
-image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram"]
+image::BuilderPatternSequenceDiagram.png[title="The Builder Sequence Diagram"]
 given the following diagram, write an explanation for the diagram in one paragraph. Use the [XXXXXXXXXXXXX] as an analogy and explain each class using the analogy:
 
 == Implementation Walkthrough

@@ -24,12 +24,14 @@ Component <|.. Composite
 Composite o-- Component : contains
 
 note left of Component
-  "Component" declares the interface for objects in the composition.
+  "Component" declares the interface 
+  for objects in the composition.
 end note
 
 note right of Leaf
-  "Leaf" represents leaf objects in the composition. 
-  A leaf has no children.
+  "Leaf" represents leaf objects 
+  in the composition. A leaf has 
+  no children.
 end note
 
 note right of Composite
