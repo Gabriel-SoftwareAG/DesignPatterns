@@ -24,7 +24,9 @@ Target --> Client : response
 deactivate Target
 
 note right of Adapter
-  Adapter translates the\nrequest from the Target\ninterface to the Adaptee's\nspecificRequest method.
+  Adapter translates the
+  request from the Target
+  interface to the Adaptee's\nspecificRequest method.
 end note
 
 @enduml

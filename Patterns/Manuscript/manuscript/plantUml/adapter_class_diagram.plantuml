@@ -22,15 +22,18 @@ Adapter .right.> Adaptee : adapts
 Target <|.. Adapter
 
 note right of Target
-  Target defines the domain-specific\ninterface that Client uses.
+  Target defines the domain-specific
+  interface that Client uses.
 end note
 
 note right of Adaptee
-  Adaptee defines an existing interface\nthat needs adapting.
+  Adaptee defines an existing interface
+  that needs adapting.
 end note
 
 note right of Adapter
-  Adapter adapts the interface\nof Adaptee to the Target interface.
+  Adapter adapts the interface
+  of Adaptee to the Target interface.
 end note
 
 @enduml

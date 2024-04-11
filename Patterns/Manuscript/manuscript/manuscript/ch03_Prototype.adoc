@@ -26,11 +26,11 @@ So, in simpler terms, the prototype pattern allows you to create new objects by 
 Next, we will explain the concept of the Prototype design pattern using UML.
 
 === Class Diagram
-image::PrototypePatternClassDiagram.png[title="The Builder Class Diagram"]
+image::PrototypePatternClassDiagram.png[title="The Prototype Class Diagram"]
 In the analogy represented by the class diagram, the Prototype Pattern is likened to the process of duplicating a favorite teddy bear. The abstract class Prototype serves as the blueprint for creating new teddy bears, declaring the clone() method that enables the creation of exact copies. The ConcretePrototype1 and ConcretePrototype2 classes represent specific types of teddy bears that implement the cloning mechanism defined by the Prototype class. Each concrete prototype class provides its own implementation of the clone() method, allowing for customization and variation in the cloning process. Through this pattern, users can create multiple copies of their favorite teddy bear without needing to recreate it from scratch, just like making duplicates of a beloved toy.
 
 === Sequence Diagram
-image::PrototypePatternSequenceDiagram.png[title="The Builder Class Diagram"]
+image::PrototypePatternSequenceDiagram.png[title="The Prototype Sequence Diagram"]
 In the teddy bear analogy depicted by the sequence diagram, the Client represents the entity seeking to duplicate their favorite teddy bear. The Client interacts with the Prototype, which acts as the template for creating new teddy bears. When the Client requests a clone using the getClone() method, the Prototype activates and delegates the cloning process to the ConcretePrototype, representing a specific type of teddy bear. The ConcretePrototype creates a copy of itself using the clone() method, which is then returned to the Prototype. Finally, the Prototype passes the cloned teddy bear back to the Client, who receives an exact duplicate of their favorite toy. This sequence demonstrates how the Prototype Pattern enables the creation of new objects by copying an existing object, just like making a duplicate of a beloved teddy bear.
 
 == Implementation Walkthrough
