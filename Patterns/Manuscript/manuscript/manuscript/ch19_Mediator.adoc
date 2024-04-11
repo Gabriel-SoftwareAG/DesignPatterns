@@ -13,3 +13,189 @@ In this scenario, the scrum master serves as a central point of contact for the 
 |===
 
 Using the mediator pattern in this context helps streamline communication and coordination within the agile team. It ensures that information flows smoothly between team members without creating unnecessary dependencies or bottlenecks. By centralizing communication through the scrum master, the team can work efficiently and effectively towards achieving their project goals.
+
+== Key Components
+
+* _Scrum Master (Mediator)_: Acts as the central point of communication and coordination within the team. By funneling all communication through the scrum master, the team minimizes direct interdependencies among its members, allowing for clearer and more organized interaction. The scrum master facilitates discussions, resolves conflicts, and ensures that all team members are aligned with the project's goals and timelines.
+
+* _Developers, Testers, and Designers (Colleagues)_: These team members focus on their specific responsibilities within the project. They interact with the mediation process by communicating their updates, questions, and concerns through the scrum master rather than directly with each other. This setup helps maintain a structured workflow and reduces the complexity of communication channels within the team.
+
+== UML Diagrams 
+Next, we will explain the concept of the Mediator design pattern using UML.
+
+=== Class Diagram
+image::MediatorPatternClassDiagram.png[title="The Mediator Class Diagram"]
+The diagram illustrates the Mediator Pattern, represented through an analogy of an agile software development team. In this setup, the Mediator interface acts like the role of a scrum master, defining how communication is facilitated within the team. The ConcreteMediator class implements the Mediator interface, embodying the scrum master who actively coordinates communication and tasks among team members. This class holds references to Colleague instances, akin to having contact with developers, testers, and designers on the agile team.
+
+The Colleague abstract class represents team members, each with their responsibilities but needing to communicate and collaborate to achieve project goals. Team members (developers, testers, and designers) are instantiated as ConcreteColleague1 and ConcreteColleague2, highlighting the diversity of roles within the team, such as a developer and a tester or a designer and a developer. These concrete classes extend the Colleague class, enabling them to use the communication framework established by the Mediator (scrum master).
+
+In practice, when a ConcreteColleague (e.g., a developer) completes a task or needs assistance, they don't directly contact another colleague (e.g., a tester). Instead, they send a message through the ConcreteMediator (scrum master), who then decides how to mediate the message, possibly directing it to another Colleague (e.g., informing a tester that code is ready for testing) who receives and acts upon it. This setup streamlines communication, ensuring that it's efficient, clear, and aligned with the agile team's goals, much like a scrum master coordinates an agile team's activities to ensure smooth and effective collaboration towards project completion.
+
+=== Sequence Diagram
+image::MediatorPatternSequenceDiagram.png[title="The Mediator Sequence Diagram"]
+The sequence diagram represents the interactions within an agile software development team using the Mediator Pattern, with each participant mirroring a specific role or function in this scenario. The Client acts as the project manager or product owner, initiating requests related to the project. The Mediator symbolizes the scrum master, the central figure who coordinates all communication and task delegation within the team.
+
+When the Client (project manager/product owner) has a request or needs an update on the project's progress, they communicate this need to the Mediator (scrum master) instead of going directly to the team members. The scrum master then assesses the request and decides the best course of action.
+
+First, the scrum master approaches Colleague1 (e.g., a developer), asking them to handle a specific request (like developing a new feature or fixing a bug). Once Colleague1 completes their task, they report back to the scrum master with their response or the results of their work.
+
+Subsequently, the scrum master might find it necessary to engage Colleague2 (e.g., a tester) to verify the work done by Colleague1 or to proceed with the next step in the project, like testing the new feature. After Colleague2 has finished their task and provided their response, the scrum master compiles the updates and feedback from both colleagues and reports back to the Client, closing the loop of communication.
+
+This sequence of interactions highlights the mediator pattern's effectiveness in managing communication and workflow within an agile team. By centralizing communication through the scrum master, the team avoids confusion and ensures that everyone is focused on their tasks, facilitating a smoother, more organized approach to project management.
+
+== Implementation Walkthrough
+
+The Mediator Pattern facilitates interaction between objects, reducing the direct communications between them and thus decoupling the objects from each other. In an agile software development team, this pattern can be represented by the interactions between team members (developers, testers) through a central figure, the scrum master. Below is a detailed walkthrough of implementing this pattern in Java, using the agile team analogy.
+
+=== Mediator Interface: Team
+
+The `Team` interface acts as the mediator, outlining the methods for communication that the scrum master will facilitate among team members.
+
+[source,java]
+----
+public interface Team {
+    void request(String message, Colleague colleague);
+    void response(String message, Colleague colleague);
+}
+----
+
+== ConcreteMediator Class: ScrumMaster
+
+`ScrumMaster` implements the `Team` interface, coordinating communication between different team members. It holds references to the team members to be able to forward messages between them.
+
+[source,java]
+----
+public class ScrumMaster implements Team {
+    private Developer developer;
+    private Tester tester;
+
+    public void setDeveloper(Developer developer) {
+        this.developer = developer;
+    }
+
+    public void setTester(Tester tester) {
+        this.tester = tester;
+    }
+
+    @Override
+    public void request(String message, Colleague colleague) {
+        if (colleague == developer) {
+            tester.receive(message);
+        } else if (colleague == tester) {
+            developer.receive(message);
+        }
+    }
+
+    @Override
+    public void response(String message, Colleague colleague) {
+        System.out.println("Scrum Master handling response: " + message);
+    }
+}
+----
+
+=== Colleague Abstract Class
+
+The `Colleague` abstract class represents team members, providing a link to the `Team` mediator for communication.
+
+[source,java]
+----
+public abstract class Colleague {
+    protected Team team;
+
+    public Colleague(Team team) {
+        this.team = team;
+    }
+
+    abstract void send(String message);
+    abstract void receive(String message);
+}
+----
+
+=== ConcreteColleague Classes: Developer and Tester
+
+`Developer` and `Tester` are concrete classes that extend `Colleague`, representing specific roles within the agile team. They implement the send and receive methods for communication through the `ScrumMaster`.
+
+[source,java]
+----
+public class Developer extends Colleague {
+    public Developer(Team team) {
+        super(team);
+    }
+
+    @Override
+    public void send(String message) {
+        System.out.println("Developer sending message: " + message);
+        team.request(message, this);
+    }
+
+    @Override
+    public void receive(String message) {
+        System.out.println("Developer received task: " + message);
+    }
+}
+
+public class Tester extends Colleague {
+    public Tester(Team team) {
+        super(team);
+    }
+
+    @Override
+    public void send(String message) {
+        System.out.println("Tester sending message: " + message);
+        team.request(message, this);
+    }
+
+    @Override
+    public void receive(String message) {
+        System.out.println("Tester received task: " + message);
+    }
+}
+----
+
+=== Client Class: AgileTeam
+
+The `AgileTeam` class simulates the interaction between the scrum master and the team members, showcasing the mediator pattern in action.
+
+[source,java]
+----
+public class AgileTeam {
+    public static void main(String[] args) {
+        ScrumMaster scrumMaster = new ScrumMaster();
+        Developer developer = new Developer(scrumMaster);
+        Tester tester = new Tester(scrumMaster);
+
+        scrumMaster.setDeveloper(developer);
+        scrumMaster.setTester(tester);
+
+        developer.send("Feature development complete. Need testing.");
+        tester.send("Testing complete. Feature ready for production.");
+    }
+}
+----
+
+In this setup, the `Developer` and `Tester` communicate their progress and requests through the `ScrumMaster`, who coordinates the workflow. This implementation encapsulates the mediator pattern within the context of an agile software development team, streamlining communication and collaboration.
+
+
+== Design Considerations
+
+When integrating the Mediator Pattern into your project, several key design considerations should guide your implementation to ensure that it brings the intended benefits without introducing unnecessary complexity. Firstly, identify the components that interact frequently and are likely to change together; these are your prime candidates for mediation. The goal is to reduce direct dependencies among them, enhancing modularity and facilitating easier maintenance and updates.
+
+The choice of mediator (`Team` in our agile team analogy) should be made with an eye towards maintaining a balance between encapsulation and functionality. The mediator should be aware of all the colleagues it manages (`Developer`, `Tester`), but not become so overburdened with logic that it becomes a god object, centralizing too much functionality and decision-making.
+
+In terms of scalability, consider how the mediator pattern might impact the growth of your system. As new colleague types are added or existing ones change, the mediator might need to be updated. Strive for a design where adding new colleague types minimizes changes to the mediator itself, possibly by using more generalized methods of communication.
+
+Another consideration is the complexity of the mediator logic. While the mediator can significantly simplify the interactions between colleagues, the logic within the mediator itself can become complex. Aim to keep the mediator's logic as simple as possible, potentially by breaking down complex scenarios into simpler, more manageable interactions.
+
+Finally, consider the implications for testing. The mediator pattern can simplify unit testing for the individual colleague components by isolating them from their peers. However, the mediator itself might require more complex integration tests, given its role in coordinating the interactions between various components.
+
+Adhering to these design considerations will help ensure that your implementation of the Mediator Pattern effectively reduces coupling between components, simplifies communication and interaction logic, and maintains system flexibility and scalability.
+
+== Conclusion
+
+The Mediator Pattern plays a crucial role in facilitating communication and interaction between objects in a system, acting as a central point of control that helps reduce direct dependencies among them. This pattern is particularly beneficial in complex systems where multiple components need to interact in a well-organized manner, such as in our analogy of an agile software development team, where the scrum master (mediator) coordinates the activities of developers, testers, and designers (colleagues).
+
+By implementing the Mediator Pattern, developers can achieve a higher level of decoupling, leading to a system that is more maintainable, scalable, and easier to understand. The pattern encourages a cleaner organization of code and improves the ability to modify or extend the system with minimal impact on existing components. Furthermore, it simplifies the testing of individual components by isolating them from the complexity of their interactions.
+
+However, while the Mediator Pattern offers significant advantages, it's important to apply it judiciously. Overuse can lead to a mediator that becomes a bottleneck or a god object, centralizing too much functionality and making the system harder to maintain. Therefore, careful consideration should be given to the system's design to ensure that the mediator remains focused and lightweight.
+
+In conclusion, the Mediator Pattern is a powerful tool in the object-oriented design toolkit. It streamlines system communication and interaction, fostering a modular and cohesive architecture. When used appropriately, it can significantly enhance the flexibility, maintainability, and overall quality of a software system.

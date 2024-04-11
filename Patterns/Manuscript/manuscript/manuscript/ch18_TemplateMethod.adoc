@@ -28,21 +28,150 @@ Overall, the Template Method pattern provides a flexible and reusable way to def
 
 
 == UML Diagrams 
-Next, we will explain the concept of the XXXXXXXXXXXXXXX design pattern using UML.
+Next, we will explain the concept of the Template Method design pattern using UML.
 
 === Class Diagram
-image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram"]
-given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
+image::TemplateMethodPatternClassDiagram.png[title="The Template Method Class Diagram"]
+In the given UML diagram, we see the Template Method design pattern represented through classes that resemble the process of constructing a house, using an analogy to explain each class's role. The AbstractClass acts as the blueprint or the general contractor for building a house, defining the overall sequence of construction steps (templateMethod()) and specifying that certain tasks (like laying the foundation primitiveOperation1() and installing the roof primitiveOperation2()) need customization but does not dictate how to perform these tasks. This class mandates that any specific construction project (house) must define how these tasks are carried out. The ConcreteClass1 and ConcreteClass2 are akin to specialized builders or construction teams for different styles of houses, say a modern-style home and a traditional-style home, respectively. These classes provide concrete implementations for the foundation-laying and roof-installing steps (primitiveOperation1() and primitiveOperation2()) according to the requirements or design specifics of the house they are tasked to build. The relationship arrows indicate that both specialized builders inherit the overall construction plan from the general contractor but tailor specific steps based on the architectural style and construction techniques suitable for the type of house being constructed.
 
 === Sequence Diagram
-image::BuilderPatternSequenceDiagram.png[title="The Builder Sequence Diagram"]
-given the following diagram, write an explanation for the diagram in one paragraph. Use the XXXXXXXXXXXXX as an analogy and explain each class using the analogy:
+image::TemplateMethodPatternSequenceDiagram.png[title="The Template Method Sequence Diagram"]
+This sequence diagram illustrates the interaction between different components in the Template Method design pattern through the analogy of constructing a house. The Client represents the homeowner or project manager, initiating the construction process by calling the templateMethod() on the AbstractClass, which acts as the general blueprint or construction guideline for building a house. This blueprint outlines the necessary steps for construction but delegates the specifics of some steps to its subclasses.
+
+The AbstractClass then coordinates the construction process by engaging two different types of specialized construction teams, represented by ConcreteClass1 and ConcreteClass2. These could be likened to teams specializing in different styles of houses or different construction tasks. For instance, ConcreteClass1 might be a team skilled in laying foundations and ConcreteClass2 skilled in roof installations, or they might represent teams building in modern and traditional styles, respectively.
+
+The process begins with the AbstractClass directing ConcreteClass1 to perform primitiveOperation1(), perhaps laying the foundation in a specific manner suited to its expertise. Once ConcreteClass1 reports completion, the AbstractClass similarly instructs ConcreteClass2 to perform the same operation (primitiveOperation1()), adapted to its unique style or method.
+
+Following the foundation work, the AbstractClass then orchestrates both teams to carry out primitiveOperation2(), which could involve installing roofs, again allowing each class to apply its specific techniques or materials suited to the style of house being constructed.
+
+The sequence of calls and responses between the AbstractClass and the concrete classes demonstrates the template method pattern's power to outline a standard process while accommodating customization in the execution of certain steps, ensuring that regardless of the style or specific techniques employed by the construction teams, the overall process adheres to a unified construction plan set forth by the AbstractClass.
 
 == Implementation Walkthrough
-Based on the two diagrams, while using the XXXXXXXXXXX analogy above as reference, write a detailed implementation walkthrough example in java, in adoc format. Divide the classes into sections and explain each section
+
+This example demonstrates how to use the Template Method Pattern to model a house construction process. The process is outlined in an abstract `HouseBuilder` class (analogous to `AbstractClass` in the UML diagrams), which defines the template method for building a house. Specific steps like laying the foundation and installing the roof are implemented by concrete classes (`ConcreteClass1` and `ConcreteClass2`), representing different styles of houses or construction teams with unique expertise.
+
+=== AbstractClass: HouseBuilder
+
+[source,java]
+----
+public abstract class HouseBuilder {
+
+    // The template method defining the sequence of steps to build a house.
+    public final void buildHouse() {
+        layFoundation();
+        buildWalls();
+        installRoof();
+        doInterior();
+    }
+
+    // Common step implemented in the abstract class itself.
+    private void layFoundation() {
+        System.out.println("Laying the foundation with concrete and steel bars.");
+    }
+
+    // Steps that need to be implemented by subclasses.
+    protected abstract void buildWalls();
+    protected abstract void installRoof();
+    protected abstract void doInterior();
+}
+----
+
+`HouseBuilder` is the abstract base class defining the template method `buildHouse()`. It includes a mix of methods: a concrete implementation for laying the foundation (a step common to all houses) and abstract methods for steps that vary depending on the type of house being built.
+
+=== ConcreteClass1: ModernHouseBuilder
+
+[source,java]
+----
+public class ModernHouseBuilder extends HouseBuilder {
+
+    @Override
+    protected void buildWalls() {
+        System.out.println("Building walls with glass and steel.");
+    }
+
+    @Override
+    protected void installRoof() {
+        System.out.println("Installing a flat, green roof.");
+    }
+
+    @Override
+    protected void doInterior() {
+        System.out.println("Doing interior with an open concept design and minimalist furniture.");
+    }
+}
+----
+
+`ModernHouseBuilder` represents a construction team specializing in modern houses. It provides concrete implementations for the abstract methods defined in `HouseBuilder`, applying techniques and materials characteristic of modern architecture.
+
+=== ConcreteClass2: TraditionalHouseBuilder
+
+[source,java]
+----
+public class TraditionalHouseBuilder extends HouseBuilder {
+
+    @Override
+    protected void buildWalls() {
+        System.out.println("Building walls with bricks and mortar.");
+    }
+
+    @Override
+    protected void installRoof() {
+        System.out.println("Installing a pitched roof with clay tiles.");
+    }
+
+    @Override
+    protected void doInterior() {
+        System.out.println("Doing interior with a classic design and wood furniture.");
+    }
+}
+----
+
+`TraditionalHouseBuilder` is akin to a team expert in traditional-style houses. It overrides the abstract methods from `HouseBuilder` to reflect the construction techniques, materials, and design preferences typical of traditional architecture.
+
+=== Client
+
+In the context of our analogy, the `Client` could be the project manager or the homeowner who initiates the building process. The client code decides which type of house to build and then calls the `buildHouse()` method.
+
+[source,java]
+----
+public class ConstructionClient {
+
+    public static void main(String[] args) {
+        HouseBuilder modernBuilder = new ModernHouseBuilder();
+        modernBuilder.buildHouse(); // Builds a modern house
+
+        System.out.println("----------");
+
+        HouseBuilder traditionalBuilder = new TraditionalHouseBuilder();
+        traditionalBuilder.buildHouse(); // Builds a traditional house
+    }
+}
+----
+
+This client demonstrates how the construction process for both a modern and a traditional house can be initiated using the same `buildHouse()` method, showcasing the Template Method Pattern's ability to standardize a sequence of steps while allowing for customization in the implementation of those steps.
+
 
 == Design Considerations
-write design considerations paragrapgh for this design pattern, as an adoc code
+
+When applying the Template Method Pattern, several design considerations should be taken into account to ensure its effective use and integration into your software design. Firstly, it's crucial to distinguish between steps that are invariant (fixed) and those that are variant (subject to change) across different implementations. The invariant steps are implemented directly within the template method in the abstract class, ensuring a consistent process flow. In contrast, the variant steps are abstracted out, allowing subclasses to provide specific implementations.
+
+Another important consideration is the use of hooks. Hooks are optional steps defined in the abstract class, providing a default implementation that subclasses may override. This technique allows for greater flexibility, enabling subclasses to extend the algorithm's behavior without altering its structure.
+
+Moreover, it's essential to ensure that the template method itself is marked as final to prevent subclasses from altering the sequence of steps. This maintains the integrity of the algorithm's structure, which is central to the pattern's intent.
+
+The choice between using abstract methods versus providing a default implementation (hooks) for customizable steps depends on whether you want to enforce that a step is always overridden (use abstract methods) or provide a default behavior that might suffice for some subclasses (use hooks).
+
+Lastly, consider the principle of least knowledge (also known as Demeter's Law) to minimize direct collaborations between classes, which can lead to a more decoupled and maintainable codebase. In the context of the Template Method Pattern, this often means that the abstract class should not have detailed knowledge of the subclasses' internal workings, focusing instead on orchestrating the steps of the algorithm.
+
+These considerations are pivotal in leveraging the Template Method Pattern effectively, enabling the development of flexible, reusable, and maintainable software systems that encapsulate complex algorithms or processes.
+
 
 == Conclusion
-write a conclusion to this design pattern
+
+The Template Method Pattern offers a robust framework for encapsulating the skeleton of an algorithm, process, or workflow within a base class while allowing subclasses to customize specific steps without changing the overall structure. This pattern is particularly useful in scenarios where the sequence of operations is fixed, but the actual implementation of one or more steps can vary. By defining invariant parts of the algorithm once and allowing variant behaviors to be implemented by subclasses, the Template Method Pattern promotes code reuse and adherence to the DRY (Don't Repeat Yourself) principle.
+
+In the context of our house construction analogy, the Template Method Pattern allows us to define a universal construction process while accommodating variations that arise from different architectural styles or construction techniques. This not only simplifies the management of complex processes but also enhances flexibility and scalability in software design.
+
+Furthermore, by encouraging the use of inheritance and providing a clear protocol for extending functionalities, the Template Method Pattern helps maintain a well-organized and decoupled codebase. It encourages thinking in terms of high-level workflows, making it easier to comprehend and maintain complex logic.
+
+In summary, the Template Method Pattern is a powerful tool in the object-oriented design toolbox, offering a structured approach to defining algorithms with customizable steps. When applied judiciously, it can greatly enhance the flexibility, reusability, and maintainability of software, making it an essential pattern for developers to understand and utilize effectively.
