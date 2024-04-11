@@ -1,4 +1,4 @@
-@startuml SingletonSequenceDiagram
+@startuml SingletonPatternSequenceDiagram
 
 participant Client
 participant Singleton
