@@ -1,0 +1,4 @@
+= Summary
+
+. link:manuscript/part1.adoc[Part 1]
+. link:manuscript/ch01_first_stepsch01_Singleton.adoc[Chapter 1: Singleton]

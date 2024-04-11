@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "anchors",
+    "ga"
+  ],
+  "title": "Design Patterns: The examples approach",
+  "author": "Nir Gallner",
+  "language": "en",
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-63355778-2"
+    }
+  }
+}
