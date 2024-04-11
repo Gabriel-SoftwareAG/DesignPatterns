@@ -1,32 +1,26 @@
-@startuml ObserverPatternSequence
+@startuml ObserverPatternClassDiagram
 
-participant "Subject" as subject
-participant "ObserverA" as observerA
-participant "ObserverB" as observerB
+interface Observer {
+  +update() : void
+}
 
-activate subject
-subject -> observerA : attach()
-activate observerA
-deactivate observerA
+class ConcreteObserverA implements Observer {
+  +update() : void
+}
 
-subject -> observerB : attach()
-activate observerB
-deactivate observerB
+class ConcreteObserverB implements Observer {
+  +update() : void
+}
 
-subject -> subject : setState(newState)
-activate subject
-deactivate subject
+class Subject {
+  -observers : List<Observer>
+  +attach(observer : Observer) : void
+  +detach(observer : Observer) : void
+  +notifyObservers() : void
+}
 
-subject -> observerA : notify()
-activate observerA
-observerA -> observerA : update(newState)
-deactivate observerA
-
-subject -> observerB : notify()
-activate observerB
-observerB -> observerB : update(newState)
-deactivate observerB
-
-deactivate subject
+Subject -right-> Observer : notifies >
+Observer <|-down- ConcreteObserverA : implements
+Observer <|-down- ConcreteObserverB : implements
 
 @enduml
