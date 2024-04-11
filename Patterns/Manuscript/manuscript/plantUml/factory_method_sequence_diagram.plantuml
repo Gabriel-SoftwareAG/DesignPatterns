@@ -1,4 +1,4 @@
-@startuml FactoryMethodSequenceDiagram
+@startuml FactoryMethodPatternSequenceDiagram
 
 participant Client
 participant "Creator" as Creator

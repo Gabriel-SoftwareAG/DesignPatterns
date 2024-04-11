@@ -10,6 +10,7 @@ given the following diagram, write an explanation for the diagram in one paragra
 
 === Sequence Diagram
 image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram"]
+given the following diagram, write an explanation for the diagram in one paragraph. Use the [XXXXXXXXXXXXX] as an analogy and explain each class using the analogy:
 
 == Implementation Walkthrough
 Based on the two diagrams, while using the XXXXXXXXXXX analogy above as reference, write a detailed implementation walkthrough example in java, in adoc format. Divide the classes into sections and explain each section

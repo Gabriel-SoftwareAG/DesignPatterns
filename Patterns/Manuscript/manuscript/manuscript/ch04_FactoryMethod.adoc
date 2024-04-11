@@ -13,3 +13,130 @@ It's like having different "stalls" (factories) in your software. When a part of
 |===
 
 Instead, it asks the corresponding "stall" (factory) for it. This factory knows how to create the object in a specific way. This setup makes it easy to add new types of objects without changing the way your program asks for them, just like how the amusement park can add a new food stall without changing how you order food.
+
+== Key Components
+
+* **Creator**: In this analogy, the Creator corresponds to the food stalls in the amusement park. It defines the interface for creating objects but delegates the actual creation to concrete subclasses (factories).
+* **Concrete Creator**: These are the specific implementations of the Creator interface, representing the different food stalls in the amusement park. Each concrete creator (factory) knows how to create a specific type of object (dish) in a particular way.
+* **Product**: The Product represents the objects (dishes) created by the factories. Each product may have different attributes or behaviors depending on the factory that created it.
+* **Concrete Product**: These are the actual objects (dishes) created by the factories. Each concrete product corresponds to a specific type of object (dish) and implements the behavior defined by the product interface.
+
+
+== UML Diagrams 
+Next, we will explain the concept of the Factory Method design pattern using UML.
+
+=== Class Diagram
+
+image::FactoryMethodPatternClassDiagram.png[title="The Builder Class Diagram"]
+In the Factory Method Pattern depicted in the class diagram, the analogy is akin to an amusement park with various food stalls specializing in different dishes. The abstract class Product represents the general idea of a dish, which can be customized into specific dishes like ConcreteProductA and ConcreteProductB, analogous to pizza or ice cream. The Creator acts as the manager of each food stall, defining an abstract factory method that specifies how dishes are prepared. Concrete creators (ConcreteCreatorA and ConcreteCreatorB) represent different food stalls in the amusement park, each responsible for creating a specific type of dish. They override the factory method to prepare their respective dishes (ConcreteProductA or ConcreteProductB). This pattern allows for the addition of new types of dishes to the amusement park without changing the way dishes are ordered, similar to adding new food stalls without altering the overall food ordering process.
+
+=== Sequence Diagram
+
+image::FactoryMethodPatternSequenceDiagram.png[title="The Builder Class Diagram"]
+In the Factory Method Pattern illustrated by the sequence diagram, the analogy is likened to the process of ordering food at an amusement park. The Client represents the customer placing an order for a dish without knowing the specifics of how it's prepared. The Creator corresponds to the food stall manager who oversees the creation of dishes. When the Client requests a dish, the Creator activates and delegates the creation process to the ConcreteCreator, representing a specific food stall. The ConcreteCreator then creates a new ConcreteProduct (dish) according to its own method, which is returned to the Creator and ultimately delivered to the Client. Through this pattern, the Client can order dishes without needing to know the details of how they're prepared, similar to ordering food at an amusement park without needing to know the specifics of each food stall's cooking process.
+
+== Implementation Walkthrough
+
+=== Abstract Product: Product
+
+[source,java]
+----
+abstract class Product {
+}
+
+----
+
+The `Product` abstract class represents the general concept of a dish served at the amusement park food stalls. It serves as the base for concrete products representing specific dishes.
+
+=== Concrete Products: ConcreteProductA and ConcreteProductB
+
+[source,java]
+----
+class ConcreteProductA extends Product {
+}
+
+class ConcreteProductB extends Product {
+}
+
+----
+
+The `ConcreteProductA` and `ConcreteProductB` classes represent specific dishes served at the amusement park food stalls. They extend the `Product` class to inherit its behavior and attributes.
+
+=== Creator Interface or Abstract Class: FoodStall
+
+[source,java]
+----
+abstract class FoodStall {
+  abstract Product createProduct();
+  void takeOrder() {
+    Product product = createProduct();
+    // Additional operations using the product
+  }
+}
+
+----
+
+The `FoodStall` abstract class defines the factory method `createProduct()` for preparing dishes at the amusement park food stalls. It also includes a method `takeOrder()` to simulate the process of taking an order and preparing the dish.
+
+=== Concrete Creators: PizzaStall and IceCreamStall
+
+[source,java]
+----
+class PizzaStall extends FoodStall {
+  Product createProduct() {
+    return new ConcreteProductA();
+  }
+}
+
+class IceCreamStall extends FoodStall {
+  Product createProduct() {
+    return new ConcreteProductB();
+  }
+}
+
+----
+
+The `PizzaStall` and `IceCreamStall` classes represent specific food stalls at the amusement park. They extend the `FoodStall` class and implement the `createProduct()` method to prepare specific dishes (`ConcreteProductA` or `ConcreteProductB`).
+
+=== Client Interaction: ParkVisitor
+
+[source,java]
+----
+public class ParkVisitor {
+  public static void main(String[] args) {
+    FoodStall pizzaStall = new PizzaStall();
+    FoodStall iceCreamStall = new IceCreamStall();
+
+    // Ordering dishes from different food stalls
+    Product pizza = pizzaStall.createProduct();
+    Product iceCream = iceCreamStall.createProduct();
+
+    // Using the dishes
+    // (Park visitor receives and enjoys the dishes without knowing their specific type)
+    System.out.println("Ordered Pizza: " + pizza.getClass().getSimpleName());
+    System.out.println("Ordered Ice Cream: " + iceCream.getClass().getSimpleName());
+  }
+}
+----
+
+The `ParkVisitor` class represents the visitor at the amusement park ordering dishes from different food stalls. It creates instances of concrete creators (`PizzaStall` and `IceCreamStall`) representing different food stalls, orders dishes using their `createProduct()` method, and enjoys the dishes without knowing their specific type.
+
+
+== Design Considerations
+
+When implementing the Factory Method Pattern for managing object creation in an amusement park food stall scenario, several design considerations should be taken into account:
+
+* **Abstraction and Encapsulation**: The abstract product and creator classes should provide a clear abstraction of the types of products and creators in the system. Encapsulating the creation process within the creator classes promotes separation of concerns and maintains a clean interface for clients.
+
+* **Flexibility and Extensibility**: The pattern should allow for easy addition of new types of products and creators without requiring changes to existing code. This flexibility ensures that the system can accommodate future changes and expansions, such as adding new food stalls or menu items to the amusement park.
+
+* **Consistency and Reusability**: Consistent naming conventions and design patterns should be followed across product and creator classes to ensure code readability and maintainability. Reusable components and modular design principles should be employed to maximize code reuse and minimize duplication.
+
+* **Error Handling**: Considerations should be made for error handling during the creation process, such as handling exceptions or invalid input gracefully to prevent unexpected behavior or program crashes.
+
+* **Documentation and Communication**: Clear documentation of the factory method interfaces and their implementations is crucial for ensuring that developers understand how to use and extend the pattern effectively. 
+
+
+== Conclusion
+
+The Factory Method Pattern provides a flexible and extensible solution for managing object creation in scenarios like an amusement park with various food stalls. By encapsulating the creation process within creator classes, the pattern promotes abstraction, encapsulation, and separation of concerns. Through the amusement park analogy, we've seen how the pattern simplifies the process of ordering dishes from different food stalls, allowing park visitors to enjoy a variety of menu items without needing to know the specifics of how they're prepared. By adhering to design considerations such as abstraction, flexibility, consistency, error handling, and documentation, developers can leverage the Factory Method Pattern to efficiently manage object creation in their software projects.
