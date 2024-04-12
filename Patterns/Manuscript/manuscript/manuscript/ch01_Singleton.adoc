@@ -1,8 +1,6 @@
+
 =  The Singleton Pattern
-Chapter 1
-
 :imagesdir: ../images/ch01_Singleton
-
 
 == Introduction
 
@@ -21,7 +19,6 @@ It ensures that a particular class in a program can be instantiated once and onl
 - _Central Point of Access_: Similar to how the town's single library serves as the central hub for all book-related activities, the Singleton Pattern designates the instantiated object as the sole access point for the specified service or resource in the application.
 - _Global Reference Point_: Just as the town's library serves as the go-to spot for all book-related needs, the Singleton Pattern offers a single, global reference to the instantiated object, ensuring that all interactions with the service or resource go through it.
 - _Managed Place_: Like the centralized management of the town's library for book borrowing and sharing, the Singleton Pattern facilitates controlled access and usage of the instantiated object, promoting consistency and coordination within the application.
-
 
 == UML Diagrams 
 Next, we will explain the concept of the Singleton design pattern using UML.

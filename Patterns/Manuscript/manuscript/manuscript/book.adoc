@@ -1,16 +1,10 @@
-= Design Patterns: The Good Way
+= Dsign Patterns : The good way
+Nir Gallner
 :doctype: book
-:toc: left
-:toclevels: 3
-
-Author: Nir Gallner
-
-== Introduction
-This is the introductory content... (Optional, can be in a separate file too)
-
-include::Summary.adoc[]
-
-== Part 1: Creational
+:sectnums!:         // This disables section numbers globally
+:icons: font
+:source-highlighter: rouge
+:leveloffset: 1
 
 include::part1.adoc[]
 include::ch01_Singleton.adoc[]
@@ -18,8 +12,6 @@ include::ch02_Builder.adoc[]
 include::ch03_Prototype.adoc[]
 include::ch04_FactoryMethod.adoc[]
 include::ch05_AbstractFactory.adoc[]
-
-== Part 2: Structural
 
 include::part2.adoc[]
 include::ch06_Adapter.adoc[]
@@ -29,8 +21,6 @@ include::ch09_Flyweight.adoc[]
 include::ch10_Bridge.adoc[]
 include::ch11_Facade.adoc[]
 include::ch12_Decorator.adoc[]
-
-== Part 3: Behavioral
 
 include::part3.adoc[]
 include::ch13_Strategy.adoc[]
