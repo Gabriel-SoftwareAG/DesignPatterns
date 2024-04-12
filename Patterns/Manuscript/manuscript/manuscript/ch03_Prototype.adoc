@@ -40,11 +40,11 @@ In the teddy bear analogy depicted by the sequence diagram, the Client represent
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/prototype/Prototype.java[]
+include::{java_path}/prototype/Prototype.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/Prototype.py[]
+include::{python_path}/prototype/Prototype.py[lines=3..]
 endif::[]
 ----
 
@@ -55,22 +55,22 @@ The `Prototype` abstract class declares the `clone()` method, which will be impl
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/prototype/ConcretePrototype1.java[]
+include::{java_path}/prototype/ConcretePrototype1.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/ConcretePrototype1.py[]
+include::{python_path}/prototype/ConcretePrototype1.py[lines=3..]
 endif::[]
 ----
 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/prototype/ConcretePrototype2.java[]
+include::{java_path}/prototype/ConcretePrototype2.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/ConcretePrototype2.py[]
+include::{python_path}/prototype/ConcretePrototype2.py[lines=3..]
 endif::[]
 ----
 
@@ -81,11 +81,11 @@ The `ConcretePrototype1` and `ConcretePrototype2` classes extend the `Prototype`
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/prototype/Client.java[]
+include::{java_path}/prototype/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/Client.py[]
+include::{python_path}/prototype/Client.py[lines=3..]
 endif::[]
 ----
 

@@ -45,11 +45,11 @@ In the Adapter Pattern depicted by the sequence diagram, the analogy involves a 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/adapter/ElectricalOutlet.java[]
+include::{java_path}/adapter/ElectricalOutlet.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/ElectricalOutlet.py[]
+include::{python_path}/adapter/ElectricalOutlet.py[lines=3..]
 endif::[]
 ----
 
@@ -60,11 +60,11 @@ The `ElectricalOutlet` interface represents the common interface expected by ele
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/adapter/ElectronicDevice.java[]
+include::{java_path}/adapter/ElectronicDevice.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/ElectronicDevice.py[]
+include::{python_path}/adapter/ElectronicDevice.py[lines=3..]
 endif::[]
 ----
 
@@ -75,11 +75,11 @@ The `ElectronicDevice` class represents the electronic device owned by the trave
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/adapter/UniversalAdapter.java[]
+include::{java_path}/adapter/UniversalAdapter.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/UniversalAdapter.py[]
+include::{python_path}/adapter/UniversalAdapter.py[lines=3..]
 endif::[]
 ----
 
@@ -90,11 +90,11 @@ The `UniversalAdapter` class acts as the universal adapter used by the traveler 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/adapter/Traveler.java[]
+include::{java_path}/adapter/Traveler.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/Traveler.py[]
+include::{python_path}/adapter/Traveler.py[lines=3..]
 endif::[]
 ----
 

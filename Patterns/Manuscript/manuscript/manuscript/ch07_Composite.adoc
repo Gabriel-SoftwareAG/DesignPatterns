@@ -42,11 +42,11 @@ In the Composite Pattern sequence diagram, the analogy is based on manipulating 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/composite/PlaylistComponent.java[]
+include::{java_path}/composite/PlaylistComponent.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/PlaylistComponent.py[]
+include::{python_path}/composite/PlaylistComponent.py[lines=3..]
 endif::[]
 ----
 
@@ -57,11 +57,11 @@ The `PlaylistComponent` interface represents both individual songs and collectio
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/composite/Song.java[]
+include::{java_path}/composite/Song.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/Song.py[]
+include::{python_path}/composite/Song.py[lines=3..]
 endif::[]
 ----
 
@@ -72,11 +72,11 @@ The `Song` class represents individual songs in the music playlist. It implement
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/composite/Playlist.java[]
+include::{java_path}/composite/Playlist.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/Playlist.py[]
+include::{python_path}/composite/Playlist.py[lines=3..]
 endif::[]
 ----
 
@@ -87,11 +87,11 @@ The `Playlist` class represents collections of songs in the music playlist. It i
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/composite/MusicPlayer.java[]
+include::{java_path}/composite/MusicPlayer.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/MusicPlayer.py[]
+include::{python_path}/composite/MusicPlayer.py[lines=3..]
 endif::[]
 ----
 

@@ -43,11 +43,11 @@ In the Factory Method Pattern illustrated by the sequence diagram, the analogy i
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/Product.java[]
+include::{java_path}/factorymethod/Product.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/Product.py[]
+include::{python_path}/factorymethod/Product.py[lines=3..]
 endif::[]
 ----
 
@@ -58,22 +58,22 @@ The `Product` abstract class represents the general concept of a dish served at 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/ConcreteProductA.java[]
+include::{java_path}/factorymethod/ConcreteProductA.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/ConcreteProductA.py[]
+include::{python_path}/factorymethod/ConcreteProductA.py[lines=3..]
 endif::[]
 ----
 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/ConcreteProductB.java[]
+include::{java_path}/factorymethod/ConcreteProductB.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/ConcreteProductB.py[]
+include::{python_path}/factorymethod/ConcreteProductB.py[lines=3..]
 endif::[]
 ----
 
@@ -84,11 +84,11 @@ The `ConcreteProductA` and `ConcreteProductB` classes represent specific dishes 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/FoodStall.java[]
+include::{java_path}/factorymethod/FoodStall.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/FoodStall.py[]
+include::{python_path}/factorymethod/FoodStall.py[lines=3..]
 endif::[]
 ----
 
@@ -99,22 +99,22 @@ The `FoodStall` abstract class defines the factory method `createProduct()` for 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/PizzaStall.java[]
+include::{java_path}/factorymethod/PizzaStall.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/PizzaStall.py[]
+include::{python_path}/factorymethod/PizzaStall.py[lines=3..]
 endif::[]
 ----
 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/IceCreamStall.java[]
+include::{java_path}/factorymethod/IceCreamStall.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/IceCreamStall.py[]
+include::{python_path}/factorymethod/IceCreamStall.py[lines=3..]
 endif::[]
 ----
 
@@ -125,11 +125,11 @@ The `PizzaStall` and `IceCreamStall` classes represent specific food stalls at t
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/factorymethod/ParkVisitor.java[]
+include::{java_path}/factorymethod/ParkVisitor.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/ParkVisitor.py[]
+include::{python_path}/factorymethod/ParkVisitor.py[lines=3..]
 endif::[]
 ----
 

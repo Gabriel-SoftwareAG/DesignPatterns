@@ -41,11 +41,11 @@ In this example, we'll implement the Proxy Pattern in Java using the analogy of 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/proxy/LegalService.java[]
+include::{java_path}/proxy/LegalService.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/LegalService.py[]
+include::{python_path}/proxy/LegalService.py[lines=3..]
 endif::[]
 ----
 
@@ -54,11 +54,11 @@ endif::[]
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/proxy/ProxyLegalService.java[]
+include::{java_path}/proxy/ProxyLegalService.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/ProxyLegalService.py[]
+include::{python_path}/proxy/ProxyLegalService.py[lines=3..]
 endif::[]
 ----
 
@@ -69,11 +69,11 @@ The `ProxyLegalService` class acts as an intermediary legal service provider bet
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/proxy/RealLegalService.java[]
+include::{java_path}/proxy/RealLegalService.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/RealLegalService.py[]
+include::{python_path}/proxy/RealLegalService.py[lines=3..]
 endif::[]
 ----
 
@@ -86,11 +86,11 @@ Now, let's see how the classes are used together:
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/proxy/Client.java[]
+include::{java_path}/proxy/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/Client.py[]
+include::{python_path}/proxy/Client.py[lines=3..]
 endif::[]
 ----
 

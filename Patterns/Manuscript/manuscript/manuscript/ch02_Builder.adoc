@@ -41,11 +41,11 @@ In the sandwich analogy depicted by the sequence diagram, the Client represents 
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/builder/Builder.java[]
+include::{java_path}/builder/Builder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Builder.py[]
+include::{python_path}/builder/Builder.py[lines=3..]
 endif::[]
 ----
 
@@ -56,11 +56,11 @@ The `Builder` interface defines the steps involved in constructing a custom sand
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/builder/ConcreteBuilder.java[]
+include::{java_path}/builder/ConcreteBuilder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/ConcreteBuilder.py[]
+include::{python_path}/builder/ConcreteBuilder.py[lines=3..]
 endif::[]
 ----
 
@@ -71,11 +71,11 @@ The `ConcreteBuilder` class implements the `Builder` interface to provide specif
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/builder/Product.java[]
+include::{java_path}/builder/Product.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Product.py[]
+include::{python_path}/builder/Product.py[lines=3..]
 endif::[]
 ----
 
@@ -86,11 +86,11 @@ The `Product` class represents the custom sandwich being constructed. It contain
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/builder/Director.java[]
+include::{java_path}/builder/Director.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Director.py[]
+include::{python_path}/builder/Director.py[lines=3..]
 endif::[]
 ----
 
@@ -101,11 +101,11 @@ The `Director` class controls the construction process of the custom sandwich. I
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/builder/Client.java[]
+include::{java_path}/builder/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Client.py[]
+include::{python_path}/builder/Client.py[lines=3..]
 endif::[]
 ----
 

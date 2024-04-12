@@ -37,80 +37,60 @@ In this example, we'll implement the Flyweight Pattern in Java using the analogy
 
 === Balloon Interface
 
-[source,java]
+[source, {lang}]
 ----
-public interface Balloon {
-    void decorate(String position);
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/flyweight/Balloon.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/flyweight/Balloon.py[lines=3..]
+endif::[]
 ----
 
 The `Balloon` interface defines the operation that can be performed on a balloon, using both intrinsic and extrinsic state. In our analogy, it represents a type of balloon.
 
 === ConcreteBalloon Class
 
-[source,java]
+[source, {lang}]
 ----
-public class ConcreteBalloon implements Balloon {
-    private String color;
+ifeval::["{lang}" == "java"]
+include::{java_path}/flyweight/ConcreteBalloon.java[lines=3..]
+endif::[]
 
-    public ConcreteBalloon(String color) {
-        this.color = color;
-    }
-
-    @Override
-    public void decorate(String position) {
-        System.out.println("Balloon with color '" + color + "' is floating " + position + " in the party hall.");
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/flyweight/ConcreteBalloon.py[lines=3..]
+endif::[]
 ----
 
 The `ConcreteBalloon` class represents a specific type of balloon. It implements the `Balloon` interface and stores intrinsic state (such as color) that is shareable across many balloons. In our implementation, we initialize the color through the constructor and define the decorate method to perform an action on the balloon, using both intrinsic and extrinsic state.
 
 === BalloonFactory Class
 
-[source,java]
+[source, {lang}]
 ----
-import java.util.HashMap;
-import java.util.Map;
+ifeval::["{lang}" == "java"]
+include::{java_path}/flyweight/BalloonFactory.java[lines=3..]
+endif::[]
 
-public class BalloonFactory {
-    private Map<String, Balloon> balloons = new HashMap<>();
-
-    public Balloon getBalloon(String color) {
-        if (!balloons.containsKey(color)) {
-            balloons.put(color, new ConcreteBalloon(color));
-        }
-        return balloons.get(color);
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/flyweight/BalloonFactory.py[lines=3..]
+endif::[]
 ----
 
 The `BalloonFactory` class acts as a balloon factory, managing different types of balloons. It maintains a map of balloons, where each key represents the color of a balloon, and each value is the corresponding balloon instance. The `getBalloon` method checks if a balloon with the given color already exists. If it does, it returns the existing balloon. If not, it creates a new balloon with the given color and returns it.
 
 === PartyDecorator Class
 
-[source,java]
+[source, {lang}]
 ----
-public class PartyDecorator {
-    private BalloonFactory balloonFactory;
+ifeval::["{lang}" == "java"]
+include::{java_path}/flyweight/PartyDecorator.java[lines=3..]
+endif::[]
 
-    public PartyDecorator(BalloonFactory balloonFactory) {
-        this.balloonFactory = balloonFactory;
-    }
-
-    public void decoratePartyHall() {
-        Balloon balloon1 = balloonFactory.getBalloon("red");
-        balloon1.decorate("near the stage");
-
-        Balloon balloon2 = balloonFactory.getBalloon("blue");
-        balloon2.decorate("at the entrance");
-
-        Balloon balloon3 = balloonFactory.getBalloon("red");
-        balloon3.decorate("on the ceiling");
-
-        // Additional balloon decorations...
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/flyweight/PartyDecorator.py[lines=3..]
+endif::[]
 ----
 
 The `PartyDecorator` class represents someone decorating the party hall. It holds a reference to the `BalloonFactory` and uses it to get balloon instances for decorating the hall. In the `decoratePartyHall` method, the decorator requests balloons with specific colors and performs operations on them, passing extrinsic state (unique to each balloon, like its position in the hall).
@@ -119,15 +99,15 @@ The `PartyDecorator` class represents someone decorating the party hall. It hold
 
 Now, let's see how the classes are used together:
 
-[source,java]
+[source, {lang}]
 ----
-public class Main {
-    public static void main(String[] args) {
-        BalloonFactory balloonFactory = new BalloonFactory();
-        PartyDecorator partyDecorator = new PartyDecorator(balloonFactory);
-        partyDecorator.decoratePartyHall();
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/flyweight/Client.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/flyweight/Client.py[lines=3..]
+endif::[]
 ----
 
 When the `Main` class is executed, it creates instances of the `BalloonFactory` and `PartyDecorator` classes. The decorator then decorates the party hall by requesting balloons from the factory and performing operations on them.

@@ -44,11 +44,11 @@ In this example, we'll implement the Singleton pattern in Java using a library a
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/singleton/Library.java[]
+include::{java_path}/singleton/Library.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/singleton/Library.py[]
+include::{python_path}/singleton/Library.py[lines=3..]
 endif::[]
 ----
 
@@ -62,11 +62,11 @@ endif::[]
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/singleton/Client.java[]
+include::{java_path}/singleton/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/singleton/Client.py[]
+include::{python_path}/singleton/Client.py[lines=3..]
 endif::[]
 ----
 
