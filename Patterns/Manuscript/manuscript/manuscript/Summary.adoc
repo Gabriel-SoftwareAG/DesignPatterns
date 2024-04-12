@@ -1,4 +1,34 @@
 == Summary
 
-. link:part1.adoc[Part 1]
+. link:part1.adoc[Part 1: Creational]
+. link:part2.adoc[Part 2: Structural]
+. link:part3.adoc[Part 3: Behavioral]
+
+=== Part 1: Creational
 . link:ch01_Singleton.adoc[Chapter 1: Singleton]
+. link:ch02_Builder.adoc[Chapter 2: Builder]
+. link:ch03_Prototype.adoc[Chapter 3: Prototype]
+. link:ch04_FactoryMethod.adoc[Chapter 4: Factory Method]
+. link:ch05_AbstractFactory.adoc[Chapter 5: Abstract Factory]
+
+=== Part 2: Structural
+. link:ch06_Adapter.adoc[Chapter 6: Adapter]
+. link:ch07_Composite.adoc[Chapter 7: Composite]
+. link:ch08_Proxy.adoc[Chapter 8: Proxy]
+. link:ch09_Flyweight.adoc[Chapter 9: Flyweight]
+. link:ch10_Bridge.adoc[Chapter 10: Bridge]
+. link:ch11_Facade.adoc[Chapter 11: Facade]
+. link:ch12_Decorator.adoc[Chapter 12: Decorator]
+
+=== Part 3: Behavioral
+. link:ch13_Strategy.adoc[Chapter 13: Strategy]
+. link:ch14_Observer.adoc[Chapter 14: Observer]
+. link:ch15_Command.adoc[Chapter 15: Command]
+. link:ch16_Memento.adoc[Chapter 16: Memento]
+. link:ch17_State.adoc[Chapter 17: State]
+. link:ch18_TemplateMethod.adoc[Chapter 18: Template Method]
+. link:ch19_Mediator.adoc[Chapter 19: Mediator]
+. link:ch20_ChainOfResponsibility.adoc[Chapter 20: Chain of Responsibility]
+. link:ch21_Interpreter.adoc[Chapter 21: Interpreter]
+. link:ch22_Visitor.adoc[Chapter 22: Visitor]
+. link:ch23_Iterator.adoc[Chapter 23: Iterator]

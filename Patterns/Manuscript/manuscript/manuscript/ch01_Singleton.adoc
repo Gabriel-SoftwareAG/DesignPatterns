@@ -3,6 +3,7 @@ Chapter 1
 
 :imagesdir: ../images/ch01_Singleton
 
+
 == Introduction
 
 [cols="2", frame="none", grid="none"]

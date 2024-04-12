@@ -1,20 +1,26 @@
+= Design Patterns: The Good Way
 :doctype: book
+:toc: left
+:toclevels: 3
 
-:doctype: book
-
-= Design Patterns : The good way
 Author: Nir Gallner
 
 == Introduction
 This is the introductory content... (Optional, can be in a separate file too)
 
 include::Summary.adoc[]
+
+== Part 1: Creational
+
 include::part1.adoc[]
 include::ch01_Singleton.adoc[]
 include::ch02_Builder.adoc[]
 include::ch03_Prototype.adoc[]
 include::ch04_FactoryMethod.adoc[]
 include::ch05_AbstractFactory.adoc[]
+
+== Part 2: Structural
+
 include::part2.adoc[]
 include::ch06_Adapter.adoc[]
 include::ch07_Composite.adoc[]
@@ -23,6 +29,9 @@ include::ch09_Flyweight.adoc[]
 include::ch10_Bridge.adoc[]
 include::ch11_Facade.adoc[]
 include::ch12_Decorator.adoc[]
+
+== Part 3: Behavioral
+
 include::part3.adoc[]
 include::ch13_Strategy.adoc[]
 include::ch14_Observer.adoc[]
@@ -35,8 +44,3 @@ include::ch20_ChainOfResponsibility.adoc[]
 include::ch21_Interpreter.adoc[]
 include::ch22_Visitor.adoc[]
 include::ch23_Iterator.adoc[]
-include::ch02_Builder.adoc[]
-include::ch02_Builder.adoc[]
-include::ch02_Builder.adoc[]
-include::ch02_Builder.adoc[]
-include::ch02_Builder.adoc[]

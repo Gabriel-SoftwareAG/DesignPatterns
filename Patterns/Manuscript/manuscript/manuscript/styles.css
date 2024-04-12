@@ -1,0 +1,118 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Table of contents */
+.toc {
+  margin-top: 1em;
+}
+
+.toc-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.toc-level-1 {
+  margin-left: 0;
+}
+
+.toc-level-2 {
+  margin-left: 20px;
+}
+
+/* Code blocks */
+pre > code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Syntax highlighting */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #9a6e3a;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
