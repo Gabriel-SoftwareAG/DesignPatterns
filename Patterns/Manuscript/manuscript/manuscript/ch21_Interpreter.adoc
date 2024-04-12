@@ -37,7 +37,6 @@ Overall, the interpreter pattern enables the processing of expressions or comman
 == UML Diagrams 
 Next, we will explain the concept of the Interpreter design pattern using UML.
 
-
 === Class Diagram
 image::InterpreterPatternClassDiagram.png[title="The Interpreter Class Diagram"]
 In this analogy, imagine you're in a foreign country trying to communicate with locals using a language you don't understand. The AbstractExpression class represents the concept of language itself, providing a template for interpreting expressions within a specific context. It's akin to the framework of language rules and grammar. The TerminalExpression class embodies simple phrases or words in the language that can be directly translated, much like basic vocabulary. On the other hand, the NonterminalExpression class represents more complex language constructs, akin to compound sentences or idiomatic expressions that require interpretation beyond literal translation. The Context class serves as the environment or setting in which expressions are interpreted, analogous to the cultural or situational context affecting language usage. Finally, the Client class acts as the traveler or communicator, utilizing the AbstractExpression to convey messages within the given context. It's as if the traveler employs the language framework to communicate effectively with locals.
