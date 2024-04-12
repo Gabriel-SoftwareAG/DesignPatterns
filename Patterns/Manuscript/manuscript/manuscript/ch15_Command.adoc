@@ -1,4 +1,5 @@
-= Command Design Pattern
+
+= Chapter 15: Command Design Pattern
 
 :imagesdir: ../images/ch15_Command
 

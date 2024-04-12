@@ -1,4 +1,5 @@
-= The Bridge Pattern
+
+= Chapter 10: The Bridge Pattern
 
 :imagesdir: ../images/ch10_Bridge
 

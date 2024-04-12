@@ -1,4 +1,5 @@
-= The Decorator Pattern
+
+= Chapter 12: The Decorator Pattern
 
 :imagesdir: ../images/ch12_Decorator
 

@@ -1,4 +1,5 @@
-= The Interpreter Pattern
+
+= Chapter 21: The Interpreter Pattern
 
 :imagesdir: ../images/ch21_Interpreter
 

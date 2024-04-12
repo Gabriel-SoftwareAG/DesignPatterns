@@ -1,4 +1,5 @@
-= The Facade Pattern
+
+= Chapter 11: The Facade Pattern
 
 :imagesdir: ../images/ch11_Facade
 

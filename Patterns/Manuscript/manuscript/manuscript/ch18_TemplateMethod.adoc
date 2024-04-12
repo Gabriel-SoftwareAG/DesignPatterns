@@ -1,4 +1,5 @@
-= The Template Method Pattern
+
+= Chapter 18: The Template Method Pattern
 
 :imagesdir: ../images/ch18_TemplateMethod
 

@@ -1,4 +1,5 @@
-= The Adapter Pattern
+
+= Chapter 6: The Adapter Pattern
 
 :imagesdir: ../images/ch06_Adapter
 

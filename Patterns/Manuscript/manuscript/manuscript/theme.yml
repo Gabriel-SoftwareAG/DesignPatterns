@@ -51,3 +51,7 @@ footer:
     center: '{page-number}'
   verso_content:
     center: '{page-number}'
+role:
+  blank-page:
+    font_size: 0
+    page_break_before: always

@@ -1,4 +1,5 @@
-= The Factory Method Pattern
+
+= Chapter 4: The Factory Method Pattern
 
 :imagesdir: ../images/ch04_FactoryMethod
 

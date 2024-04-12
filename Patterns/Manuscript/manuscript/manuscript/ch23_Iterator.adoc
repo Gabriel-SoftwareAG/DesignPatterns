@@ -1,4 +1,5 @@
-= The Iterator Pattern
+
+= Chapter 23: The Iterator Pattern
 
 :imagesdir: ../images/ch23_Iterator
 

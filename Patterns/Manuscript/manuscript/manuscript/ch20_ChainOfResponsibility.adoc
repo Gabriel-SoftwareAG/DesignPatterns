@@ -1,4 +1,5 @@
-= The Chain of Responsibility Pattern
+
+= Chapter 20: The Chain of Responsibility Pattern
 
 :imagesdir: ../images/ch20_ChainOfResponsibility
 

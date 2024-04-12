@@ -1,4 +1,5 @@
-= The State Pattern
+
+= Chapter 17: The State Pattern
 
 :imagesdir: ../images/ch17_State
 

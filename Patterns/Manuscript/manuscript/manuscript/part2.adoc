@@ -1,3 +1,4 @@
+
 = Part 2: Structural
 
 As we journey deeper into the realm of design patterns, we now arrive at Part 2: Structural. Just as a skilled artisan meticulously arranges the bricks and mortar to create a sturdy framework for a building, structural design patterns provide the scaffolding upon which complex software architectures are built.

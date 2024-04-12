@@ -1,4 +1,5 @@
-= The Abstract Factory Pattern
+
+= Chapter 5: The Abstract Factory Pattern
 
 :imagesdir: ../images/ch05_AbstractFactory
 

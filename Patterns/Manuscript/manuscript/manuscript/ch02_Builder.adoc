@@ -1,4 +1,5 @@
-= The Builder Pattern
+
+= Chapter 2: The Builder Pattern
 
 :imagesdir: ../images/ch02_Builder
 
@@ -21,7 +22,6 @@ This way, you can create a wide variety of sandwiches with different combination
 - _Builder Interface_: The builder interface defines the steps involved in sandwich construction, such as choosing the type of bread, filling, toppings, and sauce. Each step is abstracted, allowing for different implementations depending on the specific sandwich.
 - _Concrete Builders_: These are the specific implementations of the builder interface. For each type of sandwich or combination, there would be a concrete builder defining how to construct that particular sandwich, ensuring flexibility and customization.
 - _Product_: The end result of the construction process, in this case, the custom sandwich. It's the object that's gradually built up according to the step-by-step instructions provided by the customer.
-
 
 == UML Diagrams 
 Next, we will explain the concept of the Builder design pattern using UML.
@@ -155,7 +155,6 @@ public class Client {
 The `Client` class represents the customer at the sandwich shop. It creates instances of the `ConcreteBuilder` and `Director` classes, initiates the construction process, retrieves the final sandwich from the builder, and displays the custom sandwich ingredients.
 
 
-
 == Design Considerations
 
 When implementing the Builder Pattern for constructing complex objects like the custom sandwich example, several design considerations should be taken into account:
@@ -171,7 +170,6 @@ When implementing the Builder Pattern for constructing complex objects like the 
 * **Performance**: Depending on the complexity of the object being constructed, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the construction process while maintaining readability and flexibility.
 
 * **Documentation and Communication**: Clear documentation of the Builder interface and its implementations is crucial for ensuring that developers understand how to use and extend the pattern effectively. Communication between the client code, Director, Builder, and Product should be well-documented to facilitate collaboration and maintainability.
-
 
 == Conclusion
 

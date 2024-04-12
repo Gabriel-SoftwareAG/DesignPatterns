@@ -1,4 +1,5 @@
-= The Observer Pattern
+
+= Chapter 14: The Observer Pattern
 :imagesdir: ../images/ch14_Observer
 
 == Introduction

@@ -1,4 +1,5 @@
-= The Composite Pattern
+
+= Chapter 7: The Composite Pattern
 
 :imagesdir: ../images/ch07_Composite
 

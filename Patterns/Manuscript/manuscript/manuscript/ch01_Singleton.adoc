@@ -1,5 +1,6 @@
 
-=  The Singleton Pattern
+=  Chapter 1: The Singleton Pattern
+
 :imagesdir: ../images/ch01_Singleton
 
 == Introduction

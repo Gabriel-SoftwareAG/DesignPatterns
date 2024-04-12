@@ -1,4 +1,5 @@
-= The Mediator Pattern
+
+= Chapter 19: The Mediator Pattern
 
 :imagesdir: ../images/ch19_Mediator
 

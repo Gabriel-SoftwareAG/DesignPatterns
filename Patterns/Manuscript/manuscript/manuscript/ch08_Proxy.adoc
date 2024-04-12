@@ -1,4 +1,5 @@
-= The Proxy Pattern
+
+= Chapter 8: The Proxy Pattern
 
 :imagesdir: ../images/ch08_Proxy
 

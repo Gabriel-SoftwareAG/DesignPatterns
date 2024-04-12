@@ -1,4 +1,5 @@
-= The Visitor Pattern
+
+= Chapter 22: The Visitor Pattern
 
 :imagesdir: ../images/ch22_Visitor
 

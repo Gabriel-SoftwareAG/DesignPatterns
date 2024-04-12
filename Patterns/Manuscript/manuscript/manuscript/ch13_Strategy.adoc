@@ -1,4 +1,5 @@
-= The Strategy Pattern
+
+= Chapter 13: The Strategy Pattern
 
 :imagesdir: ../images/ch13_Strategy
 

@@ -1,4 +1,5 @@
-= The Flyweight Patther
+
+= Chapter 9: The Flyweight Patther
 
 :imagesdir: ../images/ch09_Flyweight
 

@@ -1,4 +1,5 @@
-= The Prototype Pattern
+
+= Chapter 3: The Prototype Pattern
 
 :imagesdir: ../images/ch03_Prototype
 
@@ -20,7 +21,6 @@ So, in simpler terms, the prototype pattern allows you to create new objects by 
 - _Cloneable Interface_: Similar to the special machine in the analogy, the Cloneable interface allows objects to specify that they support cloning, enabling the creation of exact copies.
 - _Concrete Prototype_: These are the actual objects that implement the Cloneable interface and define how cloning is performed. In the analogy, these would be the teddy bears created by copying the original prototype.
 - _Client_: The entity that requests the creation of new objects using the prototype. In the analogy, the client corresponds to the user who wants to create copies of their favorite teddy bear without going through the hassle of designing and sewing each one from scratch.
-
 
 == UML Diagrams 
 Next, we will explain the concept of the Prototype design pattern using UML.
@@ -91,7 +91,6 @@ public class Client {
 The `Client` class represents the entity requesting the duplication of teddy bears. It creates instances of concrete prototypes (`ConcretePrototype1` and `ConcretePrototype2`) and clones them using the `clone()` method. Finally, it displays information about the cloned teddy bears.
 
 
-
 == Design Considerations
 
 When implementing the Prototype Pattern for object cloning, several design considerations should be taken into account:
@@ -107,7 +106,6 @@ When implementing the Prototype Pattern for object cloning, several design consi
 * **Error Handling**: Considerations should be made for error handling during the cloning process, such as handling exceptions or invalid input gracefully to prevent unexpected behavior or program crashes.
 
 * **Documentation and Communication**: Clear documentation of the cloning process, including any limitations or caveats, is crucial for ensuring that developers understand how to use the Prototype Pattern effectively. Communication between components involved in the cloning process should be well-documented to facilitate collaboration and maintenance.
-
 
 == Conclusion
 

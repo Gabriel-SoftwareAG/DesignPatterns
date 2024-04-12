@@ -1,4 +1,5 @@
-= The Memento Pattern
+
+= Chapter 16: The Memento Pattern
 
 :imagesdir: ../images/ch16_Memento
 
