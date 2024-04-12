@@ -42,63 +42,60 @@ In the Adapter Pattern depicted by the sequence diagram, the analogy involves a 
 
 === Target Interface: ElectricalOutlet
 
-[source,java]
+[source, {lang}]
 ----
-interface ElectricalOutlet {
-    void request();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/adapter/ElectricalOutlet.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/adapter/ElectricalOutlet.py[]
+endif::[]
 ----
 
 The `ElectricalOutlet` interface represents the common interface expected by electrical outlets worldwide. It declares a method `request()` to initiate the charging process.
 
 === Adaptee: ElectronicDevice
 
-[source,java]
+[source, {lang}]
 ----
-class ElectronicDevice {
-    void specificRequest() {
-        // Perform device-specific charging process
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/adapter/ElectronicDevice.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/adapter/ElectronicDevice.py[]
+endif::[]
 ----
 
 The `ElectronicDevice` class represents the electronic device owned by the traveler. It has a specific interface with a `specificRequest()` method to initiate the charging process.
 
 === Adapter: UniversalAdapter
 
-[source,java]
+[source, {lang}]
 ----
-class UniversalAdapter implements ElectricalOutlet {
-    private ElectronicDevice device;
+ifeval::["{lang}" == "java"]
+include::{java_path}/adapter/UniversalAdapter.java[]
+endif::[]
 
-    UniversalAdapter(ElectronicDevice device) {
-        this.device = device;
-    }
-
-    void request() {
-        device.specificRequest();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/adapter/UniversalAdapter.py[]
+endif::[]
 ----
 
 The `UniversalAdapter` class acts as the universal adapter used by the traveler to connect their electronic device to different types of electrical outlets. It implements the `ElectricalOutlet` interface and contains a reference to the electronic device. The `request()` method of the adapter translates the request from the common `ElectricalOutlet` interface to the specific `specificRequest()` method of the electronic device.
 
 === Client: Traveler
 
-[source,java]
+[source, {lang}]
 ----
-public class Traveler {
-    public static void main(String[] args) {
-        // Create electronic device
-        ElectronicDevice device = new ElectronicDevice();
+ifeval::["{lang}" == "java"]
+include::{java_path}/adapter/Traveler.java[]
+endif::[]
 
-        // Create universal adapter
-        UniversalAdapter adapter = new UniversalAdapter(device);
-
-        // Connect device to electrical outlet and charge
-        adapter.request();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/adapter/Traveler.py[]
+endif::[]
 ----
 
 The `Traveler` class represents the traveler who needs to charge their electronic device while traveling. In the `main()` method, the traveler creates an instance of the electronic device and the universal adapter. Then, the traveler connects the device to the electrical outlet using the adapter and initiates the charging process.
