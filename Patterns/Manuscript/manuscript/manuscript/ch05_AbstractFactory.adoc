@@ -37,111 +37,130 @@ In the Abstract Factory Pattern depicted by the sequence diagram, the analogy co
 
 === Abstract Factory: AbstractFoodStallFactory
 
-[source,java]
+[source, {lang}]
 ----
-interface AbstractFoodStallFactory {
-    AbstractProductA createProductA();
-    AbstractProductB createProductB();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/AbstractFoodStallFactory.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/AbstractFoodStallFactory.py[]
+endif::[]
 ----
 
 The `AbstractFoodStallFactory` interface represents the concept of themed areas in the amusement park, where each factory is responsible for creating families of related themed food items. It declares methods for creating specific types of themed food items.
 
 === Concrete Factories: AdventureLandFactory and FantasyLandFactory
 
-[source,java]
+[source, {lang}]
 ----
-class AdventureLandFactory implements AbstractFoodStallFactory {
-    AbstractProductA createProductA() {
-        return new TropicalIceCream();
-    }
-    AbstractProductB createProductB() {
-        return new ExoticPizza();
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/AdventureLandFactory.java[]
+endif::[]
 
-class FantasyLandFactory implements AbstractFoodStallFactory {
-    AbstractProductA createProductA() {
-        return new MagicalIceCream();
-    }
-    AbstractProductB createProductB() {
-        return new EnchantedPizza();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/AdventureLandFactory.py[]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/FantasyLandFactory.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/FantasyLandFactory.py[]
+endif::[]
 ----
 
 The `AdventureLandFactory` and `FantasyLandFactory` classes represent specific themed areas in the amusement park. They implement the `AbstractFoodStallFactory` interface and provide methods to create themed food items (`AbstractProductA` and `AbstractProductB`) that adhere to the theme of their respective areas.
 
 === Abstract Products: AbstractProductA and AbstractProductB
 
-[source,java]
+[source, {lang}]
 ----
-interface AbstractProductA {
-    void enjoy();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/AbstractProductA.java[]
+endif::[]
 
-interface AbstractProductB {
-    void enjoy();
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/AbstractProductA.py[]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/AbstractProductB.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/AbstractProductB.py[]
+endif::[]
 ----
 
 The `AbstractProductA` and `AbstractProductB` interfaces define the general concept of themed food items within the amusement park. They declare methods for enjoying the themed food items.
 
 === Concrete Products: TropicalIceCream, ExoticPizza, MagicalIceCream, and EnchantedPizza
 
-[source,java]
+[source, {lang}]
 ----
-class TropicalIceCream implements AbstractProductA {
-    void enjoy() {
-        // Enjoy tropical-themed ice cream
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/TropicalIceCream.java[]
+endif::[]
 
-class ExoticPizza implements AbstractProductB {
-    void enjoy() {
-        // Enjoy exotic-themed pizza
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/TropicalIceCream.py[]
+endif::[]
+----
 
-class MagicalIceCream implements AbstractProductA {
-    void enjoy() {
-        // Enjoy magical-themed ice cream
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/ExoticPizza.java[]
+endif::[]
 
-class EnchantedPizza implements AbstractProductB {
-    void enjoy() {
-        // Enjoy enchanted-themed pizza
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/ExoticPizza.py[]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/MagicalIceCream.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/MagicalIceCream.py[]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/EnchantedPizza.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/EnchantedPizza.py[]
+endif::[]
 ----
 
 The `TropicalIceCream`, `ExoticPizza`, `MagicalIceCream`, and `EnchantedPizza` classes represent specific themed food items within the amusement park. They implement the `AbstractProductA` and `AbstractProductB` interfaces and provide methods for enjoying the themed food items.
 
 === Client Interaction: ParkVisitor
 
-[source,java]
+[source, {lang}]
 ----
-public class ParkVisitor {
-    public static void main(String[] args) {
-        // Choose themed area (factory)
-        AbstractFoodStallFactory factory1 = new AdventureLandFactory();
-        AbstractFoodStallFactory factory2 = new FantasyLandFactory();
+ifeval::["{lang}" == "java"]
+include::{java_path}/abstractfactory/ParkVisitor.java[]
+endif::[]
 
-        // Order themed food items
-        AbstractProductA iceCream1 = factory1.createProductA();
-        AbstractProductB pizza1 = factory1.createProductB();
-
-        AbstractProductA iceCream2 = factory2.createProductA();
-        AbstractProductB pizza2 = factory2.createProductB();
-
-        // Enjoy themed food items
-        iceCream1.enjoy();
-        pizza1.enjoy();
-        iceCream2.enjoy();
-        pizza2.enjoy();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/abstractfactory/ParkVisitor.py[]
+endif::[]
 ----
 
 The `ParkVisitor` class represents a visitor at the amusement park. It chooses themed areas (factories) to visit and orders themed food items using factory methods. Then, it enjoys the themed food items without knowing their concrete classes.

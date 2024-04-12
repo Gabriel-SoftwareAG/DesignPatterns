@@ -40,84 +40,97 @@ In the Factory Method Pattern illustrated by the sequence diagram, the analogy i
 
 === Abstract Product: Product
 
-[source,java]
+[source, {lang}]
 ----
-abstract class Product {
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/Product.java[]
+endif::[]
 
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/Product.py[]
+endif::[]
 ----
 
 The `Product` abstract class represents the general concept of a dish served at the amusement park food stalls. It serves as the base for concrete products representing specific dishes.
 
 === Concrete Products: ConcreteProductA and ConcreteProductB
 
-[source,java]
+[source, {lang}]
 ----
-class ConcreteProductA extends Product {
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/ConcreteProductA.java[]
+endif::[]
 
-class ConcreteProductB extends Product {
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/ConcreteProductA.py[]
+endif::[]
+----
 
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/ConcreteProductB.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/ConcreteProductB.py[]
+endif::[]
 ----
 
 The `ConcreteProductA` and `ConcreteProductB` classes represent specific dishes served at the amusement park food stalls. They extend the `Product` class to inherit its behavior and attributes.
 
 === Creator Interface or Abstract Class: FoodStall
 
-[source,java]
+[source, {lang}]
 ----
-abstract class FoodStall {
-  abstract Product createProduct();
-  void takeOrder() {
-    Product product = createProduct();
-    // Additional operations using the product
-  }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/FoodStall.java[]
+endif::[]
 
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/FoodStall.py[]
+endif::[]
 ----
 
 The `FoodStall` abstract class defines the factory method `createProduct()` for preparing dishes at the amusement park food stalls. It also includes a method `takeOrder()` to simulate the process of taking an order and preparing the dish.
 
 === Concrete Creators: PizzaStall and IceCreamStall
 
-[source,java]
+[source, {lang}]
 ----
-class PizzaStall extends FoodStall {
-  Product createProduct() {
-    return new ConcreteProductA();
-  }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/PizzaStall.java[]
+endif::[]
 
-class IceCreamStall extends FoodStall {
-  Product createProduct() {
-    return new ConcreteProductB();
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/PizzaStall.py[]
+endif::[]
+----
 
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/IceCreamStall.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/IceCreamStall.py[]
+endif::[]
 ----
 
 The `PizzaStall` and `IceCreamStall` classes represent specific food stalls at the amusement park. They extend the `FoodStall` class and implement the `createProduct()` method to prepare specific dishes (`ConcreteProductA` or `ConcreteProductB`).
 
 === Client Interaction: ParkVisitor
 
-[source,java]
+[source, {lang}]
 ----
-public class ParkVisitor {
-  public static void main(String[] args) {
-    FoodStall pizzaStall = new PizzaStall();
-    FoodStall iceCreamStall = new IceCreamStall();
+ifeval::["{lang}" == "java"]
+include::{java_path}/factorymethod/ParkVisitor.java[]
+endif::[]
 
-    // Ordering dishes from different food stalls
-    Product pizza = pizzaStall.createProduct();
-    Product iceCream = iceCreamStall.createProduct();
-
-    // Using the dishes
-    // (Park visitor receives and enjoys the dishes without knowing their specific type)
-    System.out.println("Ordered Pizza: " + pizza.getClass().getSimpleName());
-    System.out.println("Ordered Ice Cream: " + iceCream.getClass().getSimpleName());
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/factorymethod/ParkVisitor.py[]
+endif::[]
 ----
 
 The `ParkVisitor` class represents the visitor at the amusement park ordering dishes from different food stalls. It creates instances of concrete creators (`PizzaStall` and `IceCreamStall`) representing different food stalls, orders dishes using their `createProduct()` method, and enjoys the dishes without knowing their specific type.
