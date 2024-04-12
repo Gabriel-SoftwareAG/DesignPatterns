@@ -39,88 +39,60 @@ In the Composite Pattern sequence diagram, the analogy is based on manipulating 
 
 === Component Interface: PlaylistComponent
 
-[source,java]
+[source, {lang}]
 ----
-interface PlaylistComponent {
-    void operation();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/PlaylistComponent.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/PlaylistComponent.py[]
+endif::[]
 ----
 
 The `PlaylistComponent` interface represents both individual songs and collections of songs in the music playlist. It defines common operations that can be performed on both leaf objects (individual songs) and composite objects (collections of songs).
 
 === Leaf: Song
 
-[source,java]
+[source, {lang}]
 ----
-class Song implements PlaylistComponent {
-    private String title;
-    
-    Song(String title) {
-        this.title = title;
-    }
-    
-    void operation() {
-        // Perform song-specific operation, such as playing
-        System.out.println("Playing song: " + title);
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/Song.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/Song.py[]
+endif::[]
 ----
 
 The `Song` class represents individual songs in the music playlist. It implements the `PlaylistComponent` interface and performs song-specific operations, such as playing the song.
 
 === Composite: Playlist
 
-[source,java]
+[source, {lang}]
 ----
-import java.util.ArrayList;
-import java.util.List;
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/Playlist.java[]
+endif::[]
 
-class Playlist implements PlaylistComponent {
-    private List<PlaylistComponent> components;
-
-    Playlist() {
-        this.components = new ArrayList<>();
-    }
-
-    void addComponent(PlaylistComponent component) {
-        components.add(component);
-    }
-
-    void removeComponent(PlaylistComponent component) {
-        components.remove(component);
-    }
-
-    void operation() {
-        // Perform playlist-specific operation, such as playing all songs
-        System.out.println("Playing playlist:");
-        for (PlaylistComponent component : components) {
-            component.operation();
-        }
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/Playlist.py[]
+endif::[]
 ----
 
 The `Playlist` class represents collections of songs in the music playlist. It implements the `PlaylistComponent` interface and contains a list of child components, which can be either individual songs (Leaf) or other playlists (Composite). The `addComponent()` and `removeComponent()` methods allow adding and removing songs or playlists from the collection. The `operation()` method plays all songs in the playlist.
 
 === Client: MusicPlayer
 
-[source,java]
+[source, {lang}]
 ----
-public class MusicPlayer {
-    public static void main(String[] args) {
-        // Create individual songs
-        Song song1 = new Song("Song 1");
-        Song song2 = new Song("Song 2");
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/MusicPlayer.java[]
+endif::[]
 
-        // Create playlist and add songs
-        Playlist playlist = new Playlist();
-        playlist.addComponent(song1);
-        playlist.addComponent(song2);
-
-        // Play playlist
-        playlist.operation();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/MusicPlayer.py[]
+endif::[]
 ----
 
 The `MusicPlayer` class represents the entity managing the music playlist. In the `main()` method, individual songs are created using the `Song` class. Then, a playlist is created using the `Playlist` class, and songs are added to the playlist using the `addComponent()` method. Finally, the `operation()` method is called on the playlist to play all songs in the playlist.
