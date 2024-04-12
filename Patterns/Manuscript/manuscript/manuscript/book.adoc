@@ -1,4 +1,5 @@
-= Dsign Patterns : The good way
+= From Concept to Code: Mastering Design Patterns 
+Java Edition
 Nir Gallner
 :doctype: book
 :sectnums!:         // This disables section numbers globally
@@ -8,7 +9,8 @@ Nir Gallner
 :toc: preamble      // Generates the TOC in the preamble of the document
 :toc-title: Table of Contents
 :toclevels: 1       // Only include top-level sections in the TOC
-:front-cover-image: image:../images/cover/cover_option3_patterns.jpg
+:front-cover-image: ../images/cover/cover_option3_patterns.jpg
+
 
 
 include::blank.adoc[]

@@ -46,6 +46,16 @@ admonition:
   label:
     font_style: bold
     font_size: 10
+header:
+  border_width: 0.5     # Sets the width of the border line
+  border_top_width: 1   # Specifically sets the top border line width
+  height: 1cm           # Sets the height of the header area
+  recto:
+    left:
+      content: '{document-title}'  # Example content: document title centered
+  verso:
+    left:
+      content: '{document-title}'  # Same for verso pages
 footer:
   recto_content:
     center: '{page-number}'
