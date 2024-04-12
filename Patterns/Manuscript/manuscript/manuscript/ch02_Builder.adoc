@@ -38,118 +38,75 @@ In the sandwich analogy depicted by the sequence diagram, the Client represents 
 
 === Interface Definition: Builder
 
-[source,java]
+[source, {lang}]
 ----
-interface Builder {
-  void buildPartA();
-  void buildPartB();
-  void buildPartC();
-  Product getProduct();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/builder/Builder.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/builder/Builder.py[]
+endif::[]
 ----
 
 The `Builder` interface defines the steps involved in constructing a custom sandwich. Each method corresponds to a step in the sandwich-making process: selecting the type of bread, filling, toppings, and sauce.
 
 === Concrete Builder Implementation: ConcreteBuilder
 
-[source,java]
+[source, {lang}]
 ----
-class ConcreteBuilder implements Builder {
-  private Product product;
+ifeval::["{lang}" == "java"]
+include::{java_path}/builder/ConcreteBuilder.java[]
+endif::[]
 
-  public ConcreteBuilder() {
-    this.product = new Product();
-  }
-
-  public void buildPartA() {
-    product.addPart("Whole Wheat Bread");
-  }
-
-  public void buildPartB() {
-    product.addPart("Turkey");
-  }
-
-  public void buildPartC() {
-    product.addPart("Lettuce, Tomato, Onion");
-  }
-
-  public Product getProduct() {
-    return product;
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/builder/ConcreteBuilder.py[]
+endif::[]
 ----
 
 The `ConcreteBuilder` class implements the `Builder` interface to provide specific implementations for constructing a custom sandwich. Each method adds a specific part to the product (sandwich) being constructed.
 
 === Product Representation: Product
 
-[source,java]
+[source, {lang}]
 ----
-class Product {
-  private List<String> parts;
+ifeval::["{lang}" == "java"]
+include::{java_path}/builder/Product.java[]
+endif::[]
 
-  public Product() {
-    this.parts = new ArrayList<>();
-  }
-
-  public void addPart(String part) {
-    parts.add(part);
-  }
-
-  public void show() {
-    System.out.println("Custom Sandwich Ingredients:");
-    for (String part : parts) {
-      System.out.println("- " + part);
-    }
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/builder/Product.py[]
+endif::[]
 ----
 
 The `Product` class represents the custom sandwich being constructed. It contains methods for adding parts (ingredients) to the sandwich and displaying the final sandwich ingredients.
 
 === Director: Director
 
-[source,java]
+[source, {lang}]
 ----
-class Director {
-  private Builder builder;
+ifeval::["{lang}" == "java"]
+include::{java_path}/builder/Director.java[]
+endif::[]
 
-  public Director(Builder builder) {
-    this.builder = builder;
-  }
-
-  public void constructSandwich() {
-    builder.buildPartA();
-    builder.buildPartB();
-    builder.buildPartC();
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/builder/Director.py[]
+endif::[]
 ----
 
 The `Director` class controls the construction process of the custom sandwich. It takes a `Builder` instance and orchestrates the sequence of steps required to construct the sandwich.
 
 === Client Interaction: Client
 
-[source,java]
+[source, {lang}]
 ----
-public class Client {
-  public static void main(String[] args) {
-    // Create a ConcreteBuilder instance
-    Builder builder = new ConcreteBuilder();
+ifeval::["{lang}" == "java"]
+include::{java_path}/builder/Client.java[]
+endif::[]
 
-    // Create a Director instance and pass the builder
-    Director director = new Director(builder);
-
-    // Construct the custom sandwich
-    director.constructSandwich();
-
-    // Get the final product (sandwich) from the builder
-    Product sandwich = builder.getProduct();
-
-    // Display the custom sandwich ingredients
-    sandwich.show();
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/builder/Client.py[]
+endif::[]
 ----
 
 The `Client` class represents the customer at the sandwich shop. It creates instances of the `ConcreteBuilder` and `Director` classes, initiates the construction process, retrieves the final sandwich from the builder, and displays the custom sandwich ingredients.

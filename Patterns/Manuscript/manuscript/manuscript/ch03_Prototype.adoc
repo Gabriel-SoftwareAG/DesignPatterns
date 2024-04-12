@@ -37,55 +37,56 @@ In the teddy bear analogy depicted by the sequence diagram, the Client represent
 
 === Abstract Prototype Class: Prototype
 
-[source,java]
+[source, {lang}]
 ----
-abstract class Prototype implements Cloneable {
-  abstract Prototype clone();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/prototype/Prototype.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/prototype/Prototype.py[]
+endif::[]
 ----
 
 The `Prototype` abstract class declares the `clone()` method, which will be implemented by concrete subclasses to enable cloning. In the teddy bear analogy, this class represents the blueprint for creating new teddy bears.
 
 === Concrete Prototype Classes: ConcretePrototype1 and ConcretePrototype2
 
-[source,java]
+[source, {lang}]
 ----
-class ConcretePrototype1 extends Prototype {
-  @Override
-  Prototype clone() {
-    return new ConcretePrototype1();
-  }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/prototype/ConcretePrototype1.java[]
+endif::[]
 
-class ConcretePrototype2 extends Prototype {
-  @Override
-  Prototype clone() {
-    return new ConcretePrototype2();
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/prototype/ConcretePrototype1.py[]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/prototype/ConcretePrototype2.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/prototype/ConcretePrototype2.py[]
+endif::[]
 ----
 
 The `ConcretePrototype1` and `ConcretePrototype2` classes extend the `Prototype` class and provide specific implementations of the `clone()` method. In the teddy bear analogy, these classes represent different types of teddy bears that can be duplicated.
 
 === Client Class: Client
 
-[source,java]
+[source, {lang}]
 ----
-public class Client {
-  public static void main(String[] args) {
-    // Create concrete prototype instances
-    Prototype teddyBear1 = new ConcretePrototype1();
-    Prototype teddyBear2 = new ConcretePrototype2();
+ifeval::["{lang}" == "java"]
+include::{java_path}/prototype/Client.java[]
+endif::[]
 
-    // Clone teddy bears
-    Prototype clonedTeddyBear1 = teddyBear1.clone();
-    Prototype clonedTeddyBear2 = teddyBear2.clone();
-
-    // Display the cloned teddy bears
-    System.out.println("Cloned Teddy Bear 1: " + clonedTeddyBear1.getClass().getSimpleName());
-    System.out.println("Cloned Teddy Bear 2: " + clonedTeddyBear2.getClass().getSimpleName());
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/prototype/Client.py[]
+endif::[]
 ----
 
 The `Client` class represents the entity requesting the duplication of teddy bears. It creates instances of concrete prototypes (`ConcretePrototype1` and `ConcretePrototype2`) and clones them using the `clone()` method. Finally, it displays information about the cloned teddy bears.
