@@ -1,0 +1,3 @@
+:lang: java
+:java_path: ../code/java/DesignPatterns/src/main/java
+:python_path: ../code/python

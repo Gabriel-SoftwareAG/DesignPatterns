@@ -39,22 +39,17 @@ In the sequence diagram, the interaction between the Client and Singleton classe
 
 In this example, we'll implement the Singleton pattern in Java using a library analogy. The Singleton pattern ensures that only one instance of a class exists throughout the application.
 
-=== Singleton
+=== The Library class - a Singleton
 
-[source,java]
+[source, {lang}]
 ----
-public class Singleton {
-  private static Singleton uniqueInstance;
+ifeval::["{lang}" == "java"]
+include::{java_path}/singleton/Library.java[]
+endif::[]
 
-  private Singleton() {}
-
-  public static synchronized Singleton getInstance() {
-    if (uniqueInstance == null) {
-      uniqueInstance = new Singleton();
-    }
-    return uniqueInstance;
-  }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/singleton/Library.py[]
+endif::[]
 ----
 
 - The `Singleton` class represents the central library in our analogy.
@@ -64,14 +59,15 @@ public class Singleton {
 
 === Client
 
-[source,java]
+[source, {lang}]
 ----
-public class Client {
-  public static void main(String[] args) {
-    Singleton library = Singleton.getInstance();
-    // Use the library instance
-  }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/singleton/Client.java[]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/singleton/Client.py[]
+endif::[]
 ----
 
 - The `Client` class represents a user of the library in our analogy.

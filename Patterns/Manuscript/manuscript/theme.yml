@@ -52,12 +52,12 @@ header:
   height: 1cm           # Sets the height of the header area
   recto:
     left:
-      content: 'From Concept to Code: Mastering Design Patterns (Java Edition)'  # Example content: document title centered
+      content: 'From Concept to Code: Mastering Design Patterns'  # Example content: document title centered
     right:
       content: 'Nir Gallner, VeriSoft'  # Example content: document title centered
   verso:
     left:
-      content: 'From Concept to Code: Mastering Design Patterns (Java Edition)'  # Same for verso pages
+      content: 'From Concept to Code: Mastering Design Patterns'  # Same for verso pages
     right:
       content: 'Nir Gallner, VeriSoft'  # Example content: document title centered
 footer:
