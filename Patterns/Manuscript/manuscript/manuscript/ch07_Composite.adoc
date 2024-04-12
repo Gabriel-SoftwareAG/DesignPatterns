@@ -28,11 +28,11 @@ In software, the Composite Pattern allows similar flexibility. It lets you treat
 Next, we will explain the concept of the Composite design pattern using UML.
 
 === Class Diagram
-image::CompositePatternClassDiagram.png[title="The Composite Class Diagram"]
+image::CompositePatternClassDiagram.png[title="The Composite Class Diagram", align=center]
 In the Composite Pattern depicted by the class diagram, the analogy is based on organizing a music playlist. The Component interface represents both individual songs and collections of songs in the playlist, defining common operations that can be performed on them. The Leaf class represents individual songs in the playlist, implementing the Component interface and performing specific operations relevant to single songs, such as playing. On the other hand, the Composite class represents collections of songs, such as albums or themed playlists. It contains child components (either Leaf or other Composite objects) and implements operations to manage these children, such as adding or removing songs from the collection. The relations between Component and Leaf, as well as Component and Composite, illustrate that both Leaf and Composite objects are treated uniformly as components in the playlist.
 
 === Sequence Diagram
-image::CompositePatternSequenceDiagram.png[title="The Composite Sequence Diagram"]
+image::CompositePatternSequenceDiagram.png[title="The Composite Sequence Diagram", align=center]
 In the Composite Pattern sequence diagram, the analogy is based on manipulating a music playlist. The Client represents the entity managing the playlist, such as a user interacting with a music player application. The Client adds individual songs (represented by Leaf1 and Leaf2) to a composite object (represented by Composite), which acts as a collection of songs in the playlist. When the Client invokes the operation() method on the playlist, the Component interface (representing both individual songs and collections of songs) forwards the operation to the Composite object. The Composite object, in turn, delegates the operation to all its child components, including Leaf1 and Leaf2. Each leaf component performs its specific operation, such as playing the song, and returns control back to the Composite. Finally, the Composite returns control to the Component interface, which then responds to the Client. This sequence illustrates how the Composite Pattern allows for uniform treatment of individual songs and collections of songs in the playlist, enabling seamless management and operation on complex structures.
 
 == Implementation Walkthrough

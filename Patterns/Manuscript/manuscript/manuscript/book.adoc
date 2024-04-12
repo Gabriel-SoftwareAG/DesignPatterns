@@ -1,4 +1,4 @@
-= From Concept to Code: Mastering Design Patterns 
+= From Concept to Code: Mastering Design Patterns
 Java Edition
 Nir Gallner
 :doctype: book
@@ -9,11 +9,10 @@ Nir Gallner
 :toc: preamble      // Generates the TOC in the preamble of the document
 :toc-title: Table of Contents
 :toclevels: 1       // Only include top-level sections in the TOC
-:front-cover-image: ../images/cover/cover_option3_patterns.jpg
 
 
 
-include::blank.adoc[]
+
 include::part1.adoc[]
 include::ch01_Singleton.adoc[]
 include::ch02_Builder.adoc[]
@@ -42,4 +41,3 @@ include::ch20_ChainOfResponsibility.adoc[]
 include::ch21_Interpreter.adoc[]
 include::ch22_Visitor.adoc[]
 include::ch23_Iterator.adoc[]
-include::blank.adoc[]

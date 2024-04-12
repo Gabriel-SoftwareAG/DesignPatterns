@@ -24,11 +24,11 @@ Instead of creating a new object each time, the pattern reuses existing instance
 Next, we will explain the concept of the Flyweight design pattern using UML.
 
 === Class Diagram
-image::FlyweightPatternClassDiagram.png[title="The Flyweight Class Diagram"]
+image::FlyweightPatternClassDiagram.png[title="The Flyweight Class Diagram", align=center]
 In this diagram, imagine a scenario where you're decorating a party hall with hundreds of balloons. The "Flyweight" interface represents a type of balloon, defining the operation to perform. The "ConcreteFlyweight" class represents a specific type of balloon, like a star or a heart, storing intrinsic state (such as color or size) that is shareable across many balloons. The "FlyweightFactory" class acts as a balloon factory, managing different types of balloons and creating them as needed to ensure they are shared properly. Finally, the "Client" class represents someone decorating the party hall, maintaining extrinsic state (unique for each balloon, like its position in the hall) and passing it to the balloon's operation. By using this pattern, you can achieve a cohesive decoration scheme with a variety of balloons while minimizing memory usage and improving performance by reusing common balloon types.
 
 === Sequence Diagram
-image::FlyweightPatternSequenceDiagram.png[title="The Flyweight Sequence Diagram"]
+image::FlyweightPatternSequenceDiagram.png[title="The Flyweight Sequence Diagram", align=center]
 In this sequence diagram, think of a scenario where you're decorating a party hall with balloons using the Flyweight Pattern. The "Client" represents someone decorating the hall, while the "FlyweightFactory" acts as a balloon factory that manages different types of balloons. When the client requests a balloon with specific intrinsic state (such as color or shape), the factory checks if a balloon with that intrinsic state already exists. If it does, the factory returns the existing balloon to the client. If not, the factory creates a new balloon with the given intrinsic state and returns it to the client. The client then performs an operation on the balloon, potentially using both intrinsic and extrinsic state (unique to each balloon, like its position in the hall). This pattern allows for the efficient use of memory and resources by reusing existing balloons where possible and creating new ones only when needed.
 
 == Implementation Walkthrough

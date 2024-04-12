@@ -28,7 +28,7 @@ Overall, the strategy pattern provides flexibility and adaptability in software 
 Next, we will explain the concept of the Strategy design pattern using UML.
 
 === Class Diagram
-image::StrategyPatternClassDiagram.png[title="The Strategy Class Diagram"]
+image::StrategyPatternClassDiagram.png[title="The Strategy Class Diagram", align=center]
 In this diagram, let's interpret the Strategy Pattern using the analogy of planning routes for a road trip. The "Context" class represents the road trip planner or navigation app, which selects the appropriate strategy (route) for the journey. The "Strategy" interface defines the contract for all strategies, specifying the method algorithmInterface() that each strategy must implement. Concrete strategies are represented by classes such as "ConcreteStrategyA," "ConcreteStrategyB," and "ConcreteStrategyC," each implementing the Strategy interface with its unique algorithm for planning a route. For example, ConcreteStrategyA could represent the fastest route, ConcreteStrategyB the shortest route, and ConcreteStrategyC the most scenic route. The "Context" class holds a reference to the selected strategy and delegates the route planning task to it. Overall, the Strategy Pattern allows for flexibility and adaptability in selecting the best route for a road trip based on specific conditions or preferences.
 
 === Sequence Diagram

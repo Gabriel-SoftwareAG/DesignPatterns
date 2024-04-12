@@ -28,12 +28,12 @@ Next, we will explain the concept of the Factory Method design pattern using UML
 
 === Class Diagram
 
-image::FactoryMethodPatternClassDiagram.png[title="The Factory Method Class Diagram"]
+image::FactoryMethodPatternClassDiagram.png[title="The Factory Method Class Diagram", align=center]
 In the Factory Method Pattern depicted in the class diagram, the analogy is akin to an amusement park with various food stalls specializing in different dishes. The abstract class Product represents the general idea of a dish, which can be customized into specific dishes like ConcreteProductA and ConcreteProductB, analogous to pizza or ice cream. The Creator acts as the manager of each food stall, defining an abstract factory method that specifies how dishes are prepared. Concrete creators (ConcreteCreatorA and ConcreteCreatorB) represent different food stalls in the amusement park, each responsible for creating a specific type of dish. They override the factory method to prepare their respective dishes (ConcreteProductA or ConcreteProductB). This pattern allows for the addition of new types of dishes to the amusement park without changing the way dishes are ordered, similar to adding new food stalls without altering the overall food ordering process.
 
 === Sequence Diagram
 
-image::FactoryMethodPatternSequenceDiagram.png[title="The Factory Method Sequence Diagram"]
+image::FactoryMethodPatternSequenceDiagram.png[title="The Factory Method Sequence Diagram", align=center]
 In the Factory Method Pattern illustrated by the sequence diagram, the analogy is likened to the process of ordering food at an amusement park. The Client represents the customer placing an order for a dish without knowing the specifics of how it's prepared. The Creator corresponds to the food stall manager who oversees the creation of dishes. When the Client requests a dish, the Creator activates and delegates the creation process to the ConcreteCreator, representing a specific food stall. The ConcreteCreator then creates a new ConcreteProduct (dish) according to its own method, which is returned to the Creator and ultimately delivered to the Client. Through this pattern, the Client can order dishes without needing to know the details of how they're prepared, similar to ordering food at an amusement park without needing to know the specifics of each food stall's cooking process.
 
 == Implementation Walkthrough

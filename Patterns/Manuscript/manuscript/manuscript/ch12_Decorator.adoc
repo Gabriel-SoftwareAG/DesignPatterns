@@ -27,7 +27,7 @@ Each decorator enhances the flavor profile of the pizza without changing its fun
 Next, we will explain the concept of the Decorator design pattern using UML.
 
 === Class Diagram
-image::DecoratorPatternClassDiagram.png[title="The Decorator Class Diagram"]
+image::DecoratorPatternClassDiagram.png[title="The Decorator Class Diagram", align=center]
 In this diagram, let's interpret the Decorator Pattern using the analogy of customizing a pizza. The "Component" interface represents the base pizza, defining the operation of the pizza, such as baking. The "ConcreteComponent" class is the concrete implementation of the pizza, representing the plain cheese pizza. The "Decorator" abstract class serves as the base decorator, which adds toppings to the pizza. It contains a reference to the base pizza component. "ConcreteDecoratorA" and "ConcreteDecoratorB" are concrete decorators that add specific toppings to the pizza, such as pepperoni and mushrooms. Each concrete decorator extends the decorator class and adds its unique behavior, such as adding pepperoni slices or mushroom slices to the pizza. Overall, the Decorator Pattern allows for dynamic customization of objects by adding multiple layers of decorators, similar to customizing a pizza with various toppings.
 
 === Sequence Diagram

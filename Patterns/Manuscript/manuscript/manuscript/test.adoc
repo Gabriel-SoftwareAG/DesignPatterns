@@ -1,0 +1,48 @@
+
+:doctype: book
+:sectnums!:
+:icons: font
+:source-highlighter: rouge
+:leveloffset: 1
+:toc: preamble
+:toc-title: Table of Contents
+:toclevels: 1
+
+= ''
+image::../images/cover/cover_option3_patterns.jpg[align=center, alt="Cover Image"]
+== From Concept to Code: 
+=== Mastering Design Patterns
+=== Java Edition
+==== Nir Gallner
+===== VeriSoft Inc.
+
+
+
+include::part1.adoc[]
+include::ch01_Singleton.adoc[]
+include::ch02_Builder.adoc[]
+include::ch03_Prototype.adoc[]
+include::ch04_FactoryMethod.adoc[]
+include::ch05_AbstractFactory.adoc[]
+
+include::part2.adoc[]
+include::ch06_Adapter.adoc[]
+include::ch07_Composite.adoc[]
+include::ch08_Proxy.adoc[]
+include::ch09_Flyweight.adoc[]
+include::ch10_Bridge.adoc[]
+include::ch11_Facade.adoc[]
+include::ch12_Decorator.adoc[]
+
+include::part3.adoc[]
+include::ch13_Strategy.adoc[]
+include::ch14_Observer.adoc[]
+include::ch15_Command.adoc[]
+include::ch16_Memento.adoc[]
+include::ch17_State.adoc[]
+include::ch18_TemplateMethod.adoc[]
+include::ch19_Mediator.adoc[]
+include::ch20_ChainOfResponsibility.adoc[]
+include::ch21_Interpreter.adoc[]
+include::ch22_Visitor.adoc[]
+include::ch23_Iterator.adoc[]

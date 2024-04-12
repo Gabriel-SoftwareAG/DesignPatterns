@@ -25,7 +25,7 @@ Using the mediator pattern in this context helps streamline communication and co
 Next, we will explain the concept of the Mediator design pattern using UML.
 
 === Class Diagram
-image::MediatorPatternClassDiagram.png[title="The Mediator Class Diagram"]
+image::MediatorPatternClassDiagram.png[title="The Mediator Class Diagram", align=center]
 The diagram illustrates the Mediator Pattern, represented through an analogy of an agile software development team. In this setup, the Mediator interface acts like the role of a scrum master, defining how communication is facilitated within the team. The ConcreteMediator class implements the Mediator interface, embodying the scrum master who actively coordinates communication and tasks among team members. This class holds references to Colleague instances, akin to having contact with developers, testers, and designers on the agile team.
 
 The Colleague abstract class represents team members, each with their responsibilities but needing to communicate and collaborate to achieve project goals. Team members (developers, testers, and designers) are instantiated as ConcreteColleague1 and ConcreteColleague2, highlighting the diversity of roles within the team, such as a developer and a tester or a designer and a developer. These concrete classes extend the Colleague class, enabling them to use the communication framework established by the Mediator (scrum master).
@@ -33,7 +33,7 @@ The Colleague abstract class represents team members, each with their responsibi
 In practice, when a ConcreteColleague (e.g., a developer) completes a task or needs assistance, they don't directly contact another colleague (e.g., a tester). Instead, they send a message through the ConcreteMediator (scrum master), who then decides how to mediate the message, possibly directing it to another Colleague (e.g., informing a tester that code is ready for testing) who receives and acts upon it. This setup streamlines communication, ensuring that it's efficient, clear, and aligned with the agile team's goals, much like a scrum master coordinates an agile team's activities to ensure smooth and effective collaboration towards project completion.
 
 === Sequence Diagram
-image::MediatorPatternSequenceDiagram.png[title="The Mediator Sequence Diagram"]
+image::MediatorPatternSequenceDiagram.png[title="The Mediator Sequence Diagram", align=center]
 The sequence diagram represents the interactions within an agile software development team using the Mediator Pattern, with each participant mirroring a specific role or function in this scenario. The Client acts as the project manager or product owner, initiating requests related to the project. The Mediator symbolizes the scrum master, the central figure who coordinates all communication and task delegation within the team.
 
 When the Client (project manager/product owner) has a request or needs an update on the project's progress, they communicate this need to the Mediator (scrum master) instead of going directly to the team members. The scrum master then assesses the request and decides the best course of action.

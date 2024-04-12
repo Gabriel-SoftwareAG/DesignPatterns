@@ -38,11 +38,11 @@ Overall, the visitor pattern provides a way to separate the algorithm for traver
 Next, we will explain the concept of the Visitor design pattern using UML.
 
 === Class Diagram
-image::VisitorPatternClassDiagram.png[title="The Visitor Class Diagram"]
+image::VisitorPatternClassDiagram.png[title="The Visitor Class Diagram", align=center]
 In this analogy, imagine you're exploring a museum with different types of exhibits. The Visitor interface represents the visitor's role, defining the actions they can perform on each exhibit. Just like a museum visitor might have different interests in various exhibits, the ConcreteVisitor class implements specific actions for each type of exhibit. The Element interface represents the exhibits themselves, providing a method for accepting visitors. Similarly, in the museum, each exhibit allows visitors to interact with it in some way. The ConcreteElementA and ConcreteElementB classes represent specific types of exhibits, each implementing the accept method to accommodate visitors. Finally, the relationships between Visitor and Element indicate that visitors can visit and interact with the exhibits, with the visitor implementing actions specific to each exhibit type.
 
 === Sequence Diagram
-image::VisitorPatternSequenceDiagram.png[title="The Visitor Sequence Diagram"]
+image::VisitorPatternSequenceDiagram.png[title="The Visitor Sequence Diagram", align=center]
 In this analogy, imagine you're a museum visitor exploring different exhibits. The Client represents you, initiating the visit to each exhibit. The Element represents each exhibit in the museum, and the ConcreteElementA and ConcreteElementB are specific types of exhibits you encounter. As you visit each exhibit, you interact with a Visitor, which represents your actions or interests related to that exhibit. The ConcreteVisitor class represents different roles you might assume during your visit, such as a historian or an art enthusiast. As you interact with each exhibit, you trigger specific actions defined by the Visitor. For example, when you visit ConcreteElementA, you trigger the performOperationA() action implemented by the ConcreteVisitor. Similarly, when you visit ConcreteElementB, you trigger the performOperationB() action. The sequence diagram illustrates how you, as the client, interact with different exhibits and trigger specific actions via the visitor pattern.
 
 == Implementation Walkthrough
