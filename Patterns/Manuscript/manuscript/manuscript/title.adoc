@@ -1,8 +1,0 @@
-
-= ''
-image::../images/cover/cover_option3_patterns.jpg[align=center, alt="Cover Image"]
-== From Concept to Code: 
-== Mastering Design Patterns
-=== Java Edition
-=== Nir Gallner
-==== VeriSoft Inc.

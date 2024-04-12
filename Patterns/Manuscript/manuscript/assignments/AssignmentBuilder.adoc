@@ -1,4 +1,5 @@
-= Home Assignment: The Builder Pattern for API Requests
+
+= Assignment: The Builder Pattern for API Requests
 
 == Objective
 
@@ -41,14 +42,3 @@ The builder class that constructs and assembles parts of the ApiRequest object.
 10. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
 11. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
 12. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
-
-== Submission
-
-- Share the link to your Git repository with your instructor for evaluation.
-- Ensure that your repository is publicly accessible and well-documented to facilitate review.
-
-== Note
-
-- Feel free to consult online resources, textbooks, or other references while working on the assignment.
-- Remember to adhere to academic integrity guidelines and avoid plagiarism.
-- Enjoy the process of designing and implementing an ApiRequestBuilder class using the Builder pattern in Java!

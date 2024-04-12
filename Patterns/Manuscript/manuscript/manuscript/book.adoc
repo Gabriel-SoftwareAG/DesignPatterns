@@ -41,3 +41,6 @@ include::ch20_ChainOfResponsibility.adoc[]
 include::ch21_Interpreter.adoc[]
 include::ch22_Visitor.adoc[]
 include::ch23_Iterator.adoc[]
+
+include::appendices.adoc[]
+include::apA_example.adoc[]

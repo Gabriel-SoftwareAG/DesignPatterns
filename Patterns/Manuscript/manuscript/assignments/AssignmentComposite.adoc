@@ -1,4 +1,4 @@
-= Home Assignment: Implementing the Composite Pattern in Java with Real-life Example
+= Assignment: Implement the Composite Pattern in Java with Real-life Example
 
 == Objective
 
@@ -35,14 +35,3 @@ Concrete classes representing specific types of park elements, such as trees and
 11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
 12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
 13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
-
-== Submission
-
-- Share the link to your Git repository with your instructor for evaluation.
-- Ensure that your repository is publicly accessible and well-documented to facilitate review.
-
-== Note
-
-- Feel free to consult online resources, textbooks, or other references while working on the assignment.
-- Remember to adhere to academic integrity guidelines and avoid plagiarism.
-- Enjoy the process of designing and implementing a ParkDesign using the Composite pattern in Java with a real-life example!

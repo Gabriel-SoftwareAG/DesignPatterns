@@ -65,31 +65,3 @@ footer:
     center: '{page-number}'
   verso_content:
     center: '{page-number}'
-role:
-  blank-page:
-    font_size: 0
-    page_break_before: always
-  title-page:
-    page_margin_top: 100
-    page_margin_bottom: 100
-    page_margin_inner: 100
-    page_margin_outer: 100
-    page_size: A4
-    page_orientation: portrait
-    image:
-      align: center
-      margin_top: 50
-      margin_bottom: 50
-      width: 400
-    title:
-      font_family: Helvetica
-      font_size: 48
-      align: right
-      margin_top: 100
-      margin_right: 50
-    author:
-      font_family: Helvetica
-      font_size: 24
-      align: right
-      margin_top: 50
-      margin_right: 50

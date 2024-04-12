@@ -24,4 +24,4 @@ write a conclusion to this design pattern
 
 Object Pool Pattern Dependency Injection Pattern Data Transfer Object (DTO) Pattern Model-View-Controller (MVC) Pattern Model-View-Presenter (MVP) Pattern Model-View-ViewModel (MVVM) Pattern Null Object Pattern Service Locator Pattern Specification Pattern Value Object Pattern Repository Pattern Unit of Work Pattern
 
-asciidoctor-pdf -a pdf-theme="./theme.yml" Book.adoc
+asciidoctor-pdf -a pdf-theme="../theme.yml" -o DesignPatternsBookJava.pdf Book.adoc
