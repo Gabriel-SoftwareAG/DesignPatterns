@@ -42,84 +42,71 @@ In this example, we'll implement the Observer Pattern in Java using the analogy 
 
 === Student Interface
 
-[source,java]
+[source, {lang}]
 ----
-public interface Student {
-    void receiveUpdate();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/observer/Student.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/observer/Student.py[lines=3..]
+endif::[]
 ----
 
 The `Student` interface defines the contract for all students (observers) interested in receiving updates. It specifies the `receiveUpdate()` method that each student must implement.
 
 === MathStudent and ScienceStudent Classes
 
-[source,java]
+[source, {lang}]
 ----
-public class MathStudent implements Student {
-    public void receiveUpdate() {
-        System.out.println("Math student received an update from the teacher.");
-        // Logic for processing the update
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/observer/MathStudent.java[lines=3..]
+endif::[]
 
-public class ScienceStudent implements Student {
-    public void receiveUpdate() {
-        System.out.println("Science student received an update from the teacher.");
-        // Logic for processing the update
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/observer/MathStudent.py[lines=3..]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/observer/ScienceStudent.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/observer/ScienceStudent.py[lines=3..]
+endif::[]
 ----
 
 The `MathStudent` and `ScienceStudent` classes represent individual students interested in receiving updates from the teacher. They implement the `Student` interface and provide their own logic for processing updates.
 
 === Teacher Class
 
-[source,java]
+[source, {lang}]
 ----
-import java.util.ArrayList;
-import java.util.List;
+ifeval::["{lang}" == "java"]
+include::{java_path}/observer/Teacher.java[lines=3..]
+endif::[]
 
-public class Teacher {
-    private List<Student> students = new ArrayList<>();
-
-    public void addStudent(Student student) {
-        students.add(student);
-    }
-
-    public void removeStudent(Student student) {
-        students.remove(student);
-    }
-
-    public void notifyStudents() {
-        for (Student student : students) {
-            student.receiveUpdate();
-        }
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/observer/Teacher.py[lines=3..]
+endif::[]
 ----
 
 The `Teacher` class represents the teacher who holds important information or updates. It maintains a list of students interested in receiving updates and provides methods to add, remove, and notify students.
 
 === Usage Example
 
-[source,java]
+[source, {lang}]
 ----
-public class Main {
-    public static void main(String[] args) {
-        Teacher teacher = new Teacher();
-        
-        // Students interested in updates
-        Student mathStudent = new MathStudent();
-        Student scienceStudent = new ScienceStudent();
-        
-        // Teacher adds students
-        teacher.addStudent(mathStudent);
-        teacher.addStudent(scienceStudent);
-        
-        // Teacher broadcasts an update
-        teacher.notifyStudents();
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/observer/Client.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/observer/Client.py[lines=3..]
+endif::[]
 ----
 
 In this example, we create a `Teacher` object representing the teacher. We then create two `Student` objects representing students interested in updates. We add both students to the teacher, and then the teacher broadcasts an update. Each student receives the update and processes it accordingly.
