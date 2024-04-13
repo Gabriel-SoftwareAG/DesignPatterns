@@ -52,81 +52,88 @@ In this analogy, imagine you're a museum visitor exploring different exhibits. T
 == Implementation Walkthrough
 In this example, we'll implement a visitor pattern in Java using a museum analogy to explain each component of the design. We'll simulate a museum with different types of exhibits and visitors who interact with them.
 
-=== Element Interface
-[source,java]
+=== Exhibit Interface
+
+[source, {lang}]
 ----
-public interface Exhibit {
-    void accept(Visitor visitor);
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Exhibit.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Exhibit.py[lines=3..]
+endif::[]
 ----
 
 The `Exhibit` interface defines the accept method that allows exhibits to accept visitors.
 
-=== Artifacts Class
-[source,java]
-----
-public class Painting implements Exhibit {
-    @Override
-    public void accept(Visitor visitor) {
-        visitor.visitPainting(this);
-    }
-}
+=== Artifacts Classes
 
-public class Sculpture implements Exhibit {
-    @Override
-    public void accept(Visitor visitor) {
-        visitor.visitSculpture(this);
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Painting.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Painting.py[lines=3..]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Sculpture.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Sculpture.py[lines=3..]
+endif::[]
 ----
 
 The `Painting` and `Sculpture` classes represent specific types of exhibits. They implement the accept method to trigger the visit method specific to their exhibit type.
 
 === Visitor Interface
-[source,java]
+
+[source, {lang}]
 ----
-public interface Visitor {
-    void visitPainting(Painting painting);
-    void visitSculpture(Sculpture sculpture);
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Visitor.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Visitor.py[lines=3..]
+endif::[]
 ----
 
 The `Visitor` interface defines visit methods for each type of exhibit, allowing visitors to perform actions on exhibits.
 
 === Patron Class
-[source,java]
-----
-public class Patron implements Visitor {
-    @Override
-    public void visitPainting(Painting painting) {
-        // Interact with the painting exhibit
-        System.out.println("Patron admires the painting");
-    }
 
-    @Override
-    public void visitSculpture(Sculpture sculpture) {
-        // Interact with the sculpture exhibit
-        System.out.println("Patron examines the sculpture");
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Patron.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Patron.py[lines=3..]
+endif::[]
 ----
 
 The `Patron` class represents a museum visitor. It implements visit methods to perform specific actions on each type of exhibit.
 
 === Museum Class
-[source,java]
+
+[source, {lang}]
 ----
-public class Museum {
-    public static void main(String[] args) {
-        Exhibit painting = new Painting();
-        Exhibit sculpture = new Sculpture();
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Museum.java[lines=3..]
+endif::[]
 
-        Visitor patron = new Patron();
-
-        painting.accept(patron); // Patron interacts with a painting exhibit
-        sculpture.accept(patron); // Patron interacts with a sculpture exhibit
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Museum.py[lines=3..]
+endif::[]
 ----
 
 The `Museum` class initiates the visit to each exhibit by creating exhibit instances and a visitor object, then calling the accept method on each exhibit to trigger visitor interaction.
