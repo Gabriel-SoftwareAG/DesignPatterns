@@ -1,0 +1,23 @@
+
+=  Acknowledgment
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
+
+As I reflect on the completion of this endeavor, I am humbled and profoundly grateful for the support and encouragement extended to me by numerous individuals who have played instrumental roles in bringing this book to fruition.
+
+First and foremost, I express my deepest gratitude to my family for their unwavering love, patience, and understanding throughout this journey. Their constant support and belief in my aspirations have been the cornerstone of my perseverance.
+
+I extend heartfelt thanks to my mentor, whose guidance and wisdom have been invaluable in shaping my understanding of design patterns and refining my writing skills. Your insights have been a beacon of inspiration, guiding me through the intricate realms of software architecture.
+
+I am indebted to the dedicated team at our publishing house, whose expertise and professionalism have transformed this manuscript into a polished work of art. Your commitment to excellence and attention to detail have elevated this book to new heights.
+
+I extend my appreciation to the vibrant community of software developers whose passion for innovation and collaboration has been a constant source of inspiration. Your contributions to the field of design patterns have enriched this book and shaped its narrative.
+
+Finally, I express my profound gratitude to the readers who have chosen to embark on this journey with me. Your curiosity and thirst for knowledge drive the ongoing evolution of our craft, and it is to you that this book is ultimately dedicated.
+
+With sincere appreciation,
+
+Nir Gallner
