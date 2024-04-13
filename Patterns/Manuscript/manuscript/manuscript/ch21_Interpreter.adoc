@@ -63,103 +63,76 @@ The implementation consists of several classes:
 - `NonterminalExpression`: Represents more complex language constructs.
 
 === Context Class
-[source,java]
+
+[source, {lang}]
 ----
-public class Context {
-    private String language;
+ifeval::["{lang}" == "java"]
+include::{java_path}/interpreter/Context.java[lines=3..]
+endif::[]
 
-    public Context(String language) {
-        this.language = language;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/interpreter/Context.py[lines=3..]
+endif::[]
 ----
 
 The `Context` class represents the environment or situation in which communication occurs. It holds any relevant information affecting interpretation, such as the language being spoken.
 
 === Interpreter Class
-[source,java]
+
+[source, {lang}]
 ----
-import java.util.HashMap;
-import java.util.Map;
+ifeval::["{lang}" == "java"]
+include::{java_path}/interpreter/Interpreter.java[lines=3..]
+endif::[]
 
-public class Interpreter {
-    private Map<String, TerminalExpression> expressions;
-
-    public Interpreter() {
-        expressions = new HashMap<>();
-        expressions.put("Hello", new TerminalExpression("Bonjour"));
-        // Add more expressions as needed
-    }
-
-    public void interpret(String expression, Context context) {
-        if (expressions.containsKey(expression)) {
-            TerminalExpression terminalExpression = expressions.get(expression);
-            String translation = terminalExpression.interpret(context);
-            System.out.println("Interpreter: Translated expression - " + translation);
-        } else {
-            System.out.println("Interpreter: Expression not recognized");
-        }
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/interpreter/Interpreter.py[lines=3..]
+endif::[]
 ----
 
 The `Interpreter` class manages translation between expressions. It holds a mapping of expressions to `TerminalExpression` objects and provides a method to interpret expressions within a given context.
 
 === TerminalExpression Class
-[source,java]
+
+[source, {lang}]
 ----
-public class TerminalExpression {
-    private String translation;
+ifeval::["{lang}" == "java"]
+include::{java_path}/interpreter/TerminalExpression.java[lines=3..]
+endif::[]
 
-    public TerminalExpression(String translation) {
-        this.translation = translation;
-    }
-
-    public String interpret(Context context) {
-        return translation;
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/interpreter/TerminalExpression.py[lines=3..]
+endif::[]
 ----
 
 The `TerminalExpression` class represents simple phrases or words in the language. It holds the translation of the expression and provides a method to interpret it within a given context.
 
 === NonterminalExpression Class
-[source,java]
+
+[source, {lang}]
 ----
-public class NonterminalExpression {
-    private String expression;
+ifeval::["{lang}" == "java"]
+include::{java_path}/interpreter/NonterminalExpression.java[lines=3..]
+endif::[]
 
-    public NonterminalExpression(String expression) {
-        this.expression = expression;
-    }
-
-    public String interpret(Context context) {
-        // Implementation of interpretation logic for nonterminal expressions
-        // Example: Translate a complex expression based on context
-        return "Translation of complex expression: " + expression;
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/interpreter/NonterminalExpression.py[lines=3..]
+endif::[]
 ----
 
 The `NonterminalExpression` class represents more complex language constructs. It contains the logic to interpret these expressions based on the provided context.
 
 == Client Class
-[source,java]
-----
-public class Client {
-    public static void main(String[] args) {
-        Context context = new Context("English"); // Create a context/environment
-        Interpreter interpreter = new Interpreter(); // Create an interpreter
 
-        String expression = "Hello"; // Expression to interpret
-        System.out.println("Client: Sending expression - " + expression);
-        interpreter.interpret(expression, context); // Interpret the expression
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/interpreter/Client.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/interpreter/Client.py[lines=3..]
+endif::[]
 ----
 
 The `Client` class initializes a `Context` and an `Interpreter`. It then sends an expression to be interpreted by the `Interpreter`.
