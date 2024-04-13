@@ -55,102 +55,64 @@ The sequence of calls and responses between the AbstractClass and the concrete c
 
 This example demonstrates how to use the Template Method Pattern to model a house construction process. The process is outlined in an abstract `HouseBuilder` class (analogous to `AbstractClass` in the UML diagrams), which defines the template method for building a house. Specific steps like laying the foundation and installing the roof are implemented by concrete classes (`ConcreteClass1` and `ConcreteClass2`), representing different styles of houses or construction teams with unique expertise.
 
-=== AbstractClass: HouseBuilder
+=== Abstract Class: HouseBuilder
 
-[source,java]
+[source, {lang}]
 ----
-public abstract class HouseBuilder {
+ifeval::["{lang}" == "java"]
+include::{java_path}/templatemethod/HouseBuilder.java[lines=3..]
+endif::[]
 
-    // The template method defining the sequence of steps to build a house.
-    public final void buildHouse() {
-        layFoundation();
-        buildWalls();
-        installRoof();
-        doInterior();
-    }
-
-    // Common step implemented in the abstract class itself.
-    private void layFoundation() {
-        System.out.println("Laying the foundation with concrete and steel bars.");
-    }
-
-    // Steps that need to be implemented by subclasses.
-    protected abstract void buildWalls();
-    protected abstract void installRoof();
-    protected abstract void doInterior();
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/templatemethod/HouseBuilder.py[lines=3..]
+endif::[]
 ----
 
 `HouseBuilder` is the abstract base class defining the template method `buildHouse()`. It includes a mix of methods: a concrete implementation for laying the foundation (a step common to all houses) and abstract methods for steps that vary depending on the type of house being built.
 
-=== ConcreteClass1: ModernHouseBuilder
+=== ConcreteClass 1: ModernHouseBuilder
 
-[source,java]
+[source, {lang}]
 ----
-public class ModernHouseBuilder extends HouseBuilder {
+ifeval::["{lang}" == "java"]
+include::{java_path}/templatemethod/ModernHouseBuilder.java[lines=3..]
+endif::[]
 
-    @Override
-    protected void buildWalls() {
-        System.out.println("Building walls with glass and steel.");
-    }
-
-    @Override
-    protected void installRoof() {
-        System.out.println("Installing a flat, green roof.");
-    }
-
-    @Override
-    protected void doInterior() {
-        System.out.println("Doing interior with an open concept design and minimalist furniture.");
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/templatemethod/ModernHouseBuilder.py[lines=3..]
+endif::[]
 ----
 
 `ModernHouseBuilder` represents a construction team specializing in modern houses. It provides concrete implementations for the abstract methods defined in `HouseBuilder`, applying techniques and materials characteristic of modern architecture.
 
-=== ConcreteClass2: TraditionalHouseBuilder
+=== ConcreteClass 2: TraditionalHouseBuilder
 
-[source,java]
+[source, {lang}]
 ----
-public class TraditionalHouseBuilder extends HouseBuilder {
+ifeval::["{lang}" == "java"]
+include::{java_path}/templatemethod/TraditionalHouseBuilder.java[lines=3..]
+endif::[]
 
-    @Override
-    protected void buildWalls() {
-        System.out.println("Building walls with bricks and mortar.");
-    }
-
-    @Override
-    protected void installRoof() {
-        System.out.println("Installing a pitched roof with clay tiles.");
-    }
-
-    @Override
-    protected void doInterior() {
-        System.out.println("Doing interior with a classic design and wood furniture.");
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/templatemethod/TraditionalHouseBuilder.py[lines=3..]
+endif::[]
 ----
 
 `TraditionalHouseBuilder` is akin to a team expert in traditional-style houses. It overrides the abstract methods from `HouseBuilder` to reflect the construction techniques, materials, and design preferences typical of traditional architecture.
 
-=== Client
+=== Example Usage
 
 In the context of our analogy, the `Client` could be the project manager or the homeowner who initiates the building process. The client code decides which type of house to build and then calls the `buildHouse()` method.
 
-[source,java]
+[source, {lang}]
 ----
-public class ConstructionClient {
+ifeval::["{lang}" == "java"]
+include::{java_path}/templatemethod/Client.java[lines=3..]
+endif::[]
 
-    public static void main(String[] args) {
-        HouseBuilder modernBuilder = new ModernHouseBuilder();
-        modernBuilder.buildHouse(); // Builds a modern house
-
-        System.out.println("----------");
-
-        HouseBuilder traditionalBuilder = new TraditionalHouseBuilder();
-        traditionalBuilder.buildHouse(); // Builds a traditional house
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/templatemethod/Client.py[lines=3..]
+endif::[]
 ----
 
 This client demonstrates how the construction process for both a modern and a traditional house can be initiated using the same `buildHouse()` method, showcasing the Template Method Pattern's ability to standardize a sequence of steps while allowing for customization in the implementation of those steps.
