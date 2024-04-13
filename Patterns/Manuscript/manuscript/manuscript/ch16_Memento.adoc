@@ -44,93 +44,66 @@ In the video game analogy illustrated in the sequence diagram, the Player initia
 
 In this example, we'll implement the Memento design pattern in Java using a video game analogy. We'll have three main classes: `Player` as the Originator, `GameState` as the Memento, and `SaveManager` as the Caretaker.
 
+=== GameState Class (Memento)
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/memento/GameState.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/memento/GameState.py[lines=3..]
+endif::[]
+----
+
+Explanation: The `GameState` class acts as a Memento, representing a snapshot of the player's state at a specific point in the game. It holds the state data and provides a method to access it.
+
 === Player Class (Originator)
-[source,java]
+
+[source, {lang}]
 ----
-public class Player {
-    private String state;
+ifeval::["{lang}" == "java"]
+include::{java_path}/memento/Player.java[lines=3..]
+endif::[]
 
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public GameState saveStateToMemento() {
-        return new GameState(state);
-    }
-
-    public void getStateFromMemento(GameState gameState) {
-        state = gameState.getState();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/memento/Player.py[lines=3..]
+endif::[]
 ----
+
 Explanation: The `Player` class represents the player in the video game. It maintains its current state and provides methods to set and get the state. The `saveStateToMemento()` method creates a `GameState` object (Memento) representing the current game state. The `getStateFromMemento()` method restores the player's state from a given `GameState` object.
 
 
-=== GameState Class (Memento)
-
-[source,java]
-----
-public class GameState {
-    private final String state;
-
-    public GameState(String state) {
-        this.state = state;
-    }
-
-    public String getState() {
-        return state;
-    }
-}
-----
-Explanation: The `GameState` class acts as a Memento, representing a snapshot of the player's state at a specific point in the game. It holds the state data and provides a method to access it.
-
 === SaveManager Class (Caretaker)
-[source,java]
+
+[source, {lang}]
 ----
-import java.util.ArrayList;
-import java.util.List;
+ifeval::["{lang}" == "java"]
+include::{java_path}/memento/SaveManager.java[lines=3..]
+endif::[]
 
-public class SaveManager {
-    private final List<GameState> savedStates = new ArrayList<>();
-
-    public void add(GameState gameState) {
-        savedStates.add(gameState);
-    }
-
-    public GameState get(int index) {
-        return savedStates.get(index);
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/memento/SaveManager.py[lines=3..]
+endif::[]
 ----
+
 Explanation: The `SaveManager` class serves as the Caretaker, responsible for managing the saved game states. It maintains a list of `GameState` objects and provides methods to add new states and retrieve states by index.
 
 === Implementation Example
-[source,java]
+
+[source, {lang}]
 ----
-public class Main {
-    public static void main(String[] args) {
-        Player player = new Player();
-        SaveManager saveManager = new SaveManager();
+ifeval::["{lang}" == "java"]
+include::{java_path}/memento/Client.java[lines=3..]
+endif::[]
 
-        // Player progresses in the game
-        player.setState("Level 1");
-        saveManager.add(player.saveStateToMemento());
-
-        // Player reaches a checkpoint
-        player.setState("Level 2");
-        saveManager.add(player.saveStateToMemento());
-
-        // Player wants to revert to the previous state
-        player.getStateFromMemento(saveManager.get(0));
-        System.out.println("Player reverted to state: " + player.getState());
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/memento/Client.py[lines=3..]
+endif::[]
 ----
-Explanation: In the `Main` class, we demonstrate the usage of the Memento pattern. The `Player` progresses through the game, and at each checkpoint, the game state is saved using the `saveStateToMemento()` method and added to the `SaveManager`. Later, if the player needs to revert to a previous state, the desired state is retrieved from the `SaveManager` using the `get()` method and restored using `getStateFromMemento()`.
+
+Explanation: In the implementation example, we demonstrate the usage of the Memento pattern. The `Player` progresses through the game, and at each checkpoint, the game state is saved using the `saveStateToMemento()` method and added to the `SaveManager`. Later, if the player needs to revert to a previous state, the desired state is retrieved from the `SaveManager` using the `get()` method and restored using `getStateFromMemento()`.
 
 
 == Design Considerations
