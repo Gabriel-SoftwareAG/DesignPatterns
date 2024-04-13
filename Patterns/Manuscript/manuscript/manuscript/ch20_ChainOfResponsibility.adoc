@@ -66,98 +66,71 @@ In the context of a help desk system, this pattern can streamline the process of
 
 This interface outlines the structure for the handlers in the chain, defining the method to set the next handler and the method to handle requests.
 
-[source,java]
+[source, {lang}]
 ----
-public interface SupportLevel {
-    void setNext(SupportLevel next);
-    void handleRequest(SupportTicket ticket);
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/chainofresponsibility/SupportLevel.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/chainofresponsibility/SupportLevel.py[lines=3..]
+endif::[]
 ----
 
 == Concrete Handlers: LevelOneSupport, LevelTwoSupport
 
 These classes represent different levels of support within the help desk system. Each level has the ability to handle specific types of support tickets or escalate them to a higher level of support.
 
-[source,java]
+[source, {lang}]
 ----
-public class LevelOneSupport implements SupportLevel {
-    private SupportLevel next;
+ifeval::["{lang}" == "java"]
+include::{java_path}/chainofresponsibility/LevelOneSupport.java[lines=3..]
+endif::[]
 
-    @Override
-    public void setNext(SupportLevel next) {
-        this.next = next;
-    }
+ifeval::["{lang}" == "python"]
+include::{python_path}/chainofresponsibility/LevelOneSupport.py[lines=3..]
+endif::[]
+----
 
-    @Override
-    public void handleRequest(SupportTicket ticket) {
-        if (ticket.getLevel() <= 1) {
-            System.out.println("Level One Support handling ticket: " + ticket.getDescription());
-        } else {
-            next.handleRequest(ticket);
-        }
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/chainofresponsibility/LevelTwoSupport.java[lines=3..]
+endif::[]
 
-public class LevelTwoSupport implements SupportLevel {
-    private SupportLevel next;
-
-    @Override
-    public void setNext(SupportLevel next) {
-        this.next = next;
-    }
-
-    @Override
-    public void handleRequest(SupportTicket ticket) {
-        System.out.println("Level Two Support handling ticket: " + ticket.getDescription());
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/chainofresponsibility/LevelTwoSupport.py[lines=3..]
+endif::[]
 ----
 
 === SupportTicket Class
 
 This class represents a support ticket submitted by a client. It contains details such as the issue level and description.
 
-[source,java]
+[source, {lang}]
 ----
-public class SupportTicket {
-    private int level;
-    private String description;
+ifeval::["{lang}" == "java"]
+include::{java_path}/chainofresponsibility/SupportTicket.java[lines=3..]
+endif::[]
 
-    public SupportTicket(int level, String description) {
-        this.level = level;
-        this.description = description;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/chainofresponsibility/SupportTicket.py[lines=3..]
+endif::[]
 ----
 
-=== Client Class: HelpDesk
+=== Usage Example
 
 The `HelpDesk` class demonstrates how a support ticket is processed through the chain of responsibility.
 
-[source,java]
+[source, {lang}]
 ----
-public class HelpDesk {
-    public static void main(String[] args) {
-        LevelOneSupport levelOne = new LevelOneSupport();
-        LevelTwoSupport levelTwo = new LevelTwoSupport();
+ifeval::["{lang}" == "java"]
+include::{java_path}/chainofresponsibility/HelpDesk.java[lines=3..]
+endif::[]
 
-        levelOne.setNext(levelTwo);
-
-        SupportTicket ticket = new SupportTicket(1, "Cannot connect to the internet.");
-        levelOne.handleRequest(ticket);
-
-        SupportTicket anotherTicket = new SupportTicket(2, "Computer does not start.");
-        levelOne.handleRequest(anotherTicket);
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/chainofresponsibility/HelpDesk.py[lines=3..]
+endif::[]
 ----
 
 In this example, when the `HelpDesk` receives a support ticket, it starts with Level One Support. If Level One Support cannot handle the ticket (based on its level), it is escalated to Level Two Support. This implementation allows for a flexible and efficient processing of support tickets, ensuring that each ticket is addressed at the appropriate level of support within the help desk system.
