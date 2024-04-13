@@ -1,6 +1,10 @@
 
 =  Chapter 1: The Singleton Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch01_Singleton
 
 == Introduction
@@ -52,10 +56,10 @@ include::{python_path}/singleton/Library.py[lines=3..]
 endif::[]
 ----
 
-- The `Singleton` class represents the central library in our analogy.
+- The `Library` class represents the central library in our analogy.
 - It contains a private static variable `uniqueInstance` to hold the single instance of the class.
-- The constructor is private, ensuring that no other class can instantiate a `Singleton` object.
-- The `getInstance()` method is a static method that returns the single instance of the `Singleton` class. It creates a new instance if one doesn't exist, otherwise, it returns the existing instance.
+- The constructor is private, ensuring that no other class can instantiate a `Library` object.
+- The `getInstance()` method is a static method that returns the single instance of the `Library` class. It creates a new instance if one doesn't exist, otherwise, it returns the existing instance.
 
 === Client
 
@@ -71,10 +75,10 @@ endif::[]
 ----
 
 - The `Client` class represents a user of the library in our analogy.
-- In the `main` method, it obtains an instance of the `Singleton` class using the `getInstance()` method.
+- In the `main` method, it obtains an instance of the `Library` class using the `getInstance()` method.
 
 === Explanation
-The `Singleton` class ensures that only one instance of itself exists throughout the application, just like the central library in our analogy. The `getInstance()` method serves as the main entrance to the library, allowing access to the `Singleton` instance. When a user (represented by the `Client` class) requests access to the library, the `getInstance()` method checks if an instance already exists. If it does, it returns the existing instance; otherwise, it creates a new instance. This way, all users interact with the same library instance, ensuring centralized access to its resources, akin to how all book borrowing and sharing in the town happen through the central library.
+The `Library` class ensures that only one instance of itself exists throughout the application, just like the central library in our analogy. The `getInstance()` method serves as the main entrance to the library, allowing access to the `Singleton` instance. When a user (represented by the `Client` class) requests access to the library, the `getInstance()` method checks if an instance already exists. If it does, it returns the existing instance; otherwise, it creates a new instance. This way, all users interact with the same library instance, ensuring centralized access to its resources, akin to how all book borrowing and sharing in the town happen through the central library.
 
 == Design Considerations
 When implementing the Singleton pattern, several considerations should be taken into account:

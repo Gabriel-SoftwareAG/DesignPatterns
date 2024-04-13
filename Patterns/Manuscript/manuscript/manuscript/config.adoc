@@ -1,3 +1,5 @@
 :lang: java
 :java_path: ../code/java/DesignPatterns/src/main/java
 :python_path: ../code/python
+:source-highlighter: rouge
+:already_included_config: true
