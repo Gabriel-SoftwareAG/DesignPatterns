@@ -43,53 +43,59 @@ In this sequence diagram, let's interpret the Strategy Pattern using the analogy
 
 In this example, we'll implement the Strategy Pattern in Java using the analogy of planning routes for a road trip. We'll have three main classes: `RoutePlanner` (Context), `RouteStrategy` (Strategy interface), and concrete strategy classes such as `FastestRouteStrategy` and `ShortestRouteStrategy`. The `RoutePlanner` class represents the road trip planner or navigation app, while the strategy classes represent different algorithms for planning routes.
 
-=== RoutePlanner (Context) Class
-
-[source,java]
-----
-public class RoutePlanner {
-    private RouteStrategy strategy;
-
-    public void setStrategy(RouteStrategy strategy) {
-        this.strategy = strategy;
-    }
-
-    public void executeStrategy() {
-        strategy.calculateRoute();
-    }
-}
-----
-
-The `RoutePlanner` class is the context that interacts with different route planning strategies. It holds a reference to the current strategy and delegates the route planning task to it.
-
 === RouteStrategy (Strategy) Interface
 
-[source,java]
+[source, {lang}]
 ----
-public interface RouteStrategy {
-    void calculateRoute();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/strategy/RouteStrategy.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/strategy/RouteStrategy.py[lines=3..]
+endif::[]
 ----
 
 The `RouteStrategy` interface defines the contract for all route planning strategies. It specifies the `calculateRoute()` method that each strategy must implement.
 
+=== RoutePlanner (Context) Class
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/strategy/RoutePlanner.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/strategy/RoutePlanner.py[lines=3..]
+endif::[]
+----
+
+The `RoutePlanner` class is the context that interacts with different route planning strategies. It holds a reference to the current strategy and delegates the route planning task to it.
+
+
 === FastestRouteStrategy and ShortestRouteStrategy (Concrete Strategies) Classes
 
-[source,java]
+[source, {lang}]
 ----
-public class FastestRouteStrategy implements RouteStrategy {
-    public void calculateRoute() {
-        System.out.println("Calculating the fastest route...");
-        // Implementation for calculating the fastest route
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/strategy/FastestRouteStrategy.java[lines=3..]
+endif::[]
 
-public class ShortestRouteStrategy implements RouteStrategy {
-    public void calculateRoute() {
-        System.out.println("Calculating the shortest route...");
-        // Implementation for calculating the shortest route
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/strategy/FastestRouteStrategy.py[lines=3..]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/strategy/ShortestRouteStrategy.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/strategy/ShortestRouteStrategy.py[lines=3..]
+endif::[]
 ----
 
 The `FastestRouteStrategy` and `ShortestRouteStrategy` classes are concrete implementations of the `RouteStrategy` interface. They represent different algorithms for planning routes, such as finding the fastest or shortest route.
@@ -98,21 +104,15 @@ The `FastestRouteStrategy` and `ShortestRouteStrategy` classes are concrete impl
 
 Now, let's see how the classes are used together:
 
-[source,java]
+[source, {lang}]
 ----
-public class Main {
-    public static void main(String[] args) {
-        RoutePlanner planner = new RoutePlanner();
+ifeval::["{lang}" == "java"]
+include::{java_path}/strategy/Client.java[lines=3..]
+endif::[]
 
-        // Set the strategy to calculate the fastest route
-        planner.setStrategy(new FastestRouteStrategy());
-        planner.executeStrategy();
-
-        // Set the strategy to calculate the shortest route
-        planner.setStrategy(new ShortestRouteStrategy());
-        planner.executeStrategy();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/strategy/Client.py[lines=3..]
+endif::[]
 ----
 
 In this example, we create a `RoutePlanner` object representing the road trip planner. We then set the strategy to calculate the fastest route and execute it. After that, we set the strategy to calculate the shortest route and execute it. Each time, the context delegates the route planning task to the selected strategy, resulting in different route calculations based on the chosen strategy.
