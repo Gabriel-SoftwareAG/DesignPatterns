@@ -7,8 +7,8 @@ endif::[]
 
 :imagesdir: ../images/ch02_Builder
 
-== Introduction
 
+== Introduction
 [cols="2", frame="none", grid="none"]
 |===
 |Let's say you're at a sandwich shop, and you want to order a custom sandwich. You have many options like choosing the type of bread, the filling, the toppings, and the sauce.
@@ -21,27 +21,33 @@ The sandwich maker, like a builder in the builder pattern, follows these instruc
 
 This way, you can create a wide variety of sandwiches with different combinations without the need for predefined sandwich types cluttering up the menu. The builder pattern simplifies the process of creating complex objects step by step, just like ordering a custom sandwich.
 
+
 == Key Components
-- _Director_: In this scenario, the sandwich maker acts as the director. They take the step-by-step instructions from the customer and oversee the construction process of the sandwich.
-- _Builder Interface_: The builder interface defines the steps involved in sandwich construction, such as choosing the type of bread, filling, toppings, and sauce. Each step is abstracted, allowing for different implementations depending on the specific sandwich.
-- _Concrete Builders_: These are the specific implementations of the builder interface. For each type of sandwich or combination, there would be a concrete builder defining how to construct that particular sandwich, ensuring flexibility and customization.
-- _Product_: The end result of the construction process, in this case, the custom sandwich. It's the object that's gradually built up according to the step-by-step instructions provided by the customer.
+In the Builder pattern, let's imagine a sandwich stand where customers can customize their sandwiches step by step. Here's how each component relates to our sandwich example:
+
+- _Director_: In this scenario, the customer takes on the role of the director at the sandwich stand. They provide step-by-step instructions to the sandwich maker, overseeing the construction process of their custom sandwich.
+- _Builder Interface_: The builder interface outlines the steps involved in sandwich construction, such as selecting the type of bread, filling, toppings, and sauce. Each step is abstracted, allowing for different implementations depending on the specific sandwich requirements.
+- _Concrete Builders_: These are the specific implementations of the builder interface. The sandwich maker serves as the concrete builder, following the customer's instructions to construct the sandwich according to their preferences. For each type of sandwich or combination, there is a concrete builder defining how to construct that particular sandwich. This approach ensures flexibility and customization based on customer preferences.
+- _Product_: The end result of the construction process, in this case, is the custom sandwich. It represents the object that's gradually built up according to the step-by-step instructions provided by the customer.
+
 
 == UML Diagrams 
 Next, we will explain the concept of the Builder design pattern using UML.
+
 
 === Class Diagram
 image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram", align=center]
 In the sandwich analogy depicted by the class diagram, the Director corresponds to the sandwich shop customer who provides instructions for constructing a custom sandwich. The Builder interface represents the step-by-step process of making the sandwich, where each method (buildPartA, buildPartB, buildPartC) corresponds to choosing the type of bread, filling, toppings, and sauce, respectively. ConcreteBuilder is akin to the sandwich maker who implements the Builder interface to construct the sandwich. It manages the assembly of the sandwich parts (partA, partB, partC) to create the final product, which corresponds to the completed custom sandwich. Through this process, the Director (customer) controls the construction process, ensuring flexibility and customization, just like ordering a custom sandwich at a sandwich shop.
 
+
 === Sequence Diagram
 image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram", align=center]
-In the sandwich analogy depicted by the sequence diagram, the Client represents the customer at the sandwich shop, initiating the construction process by interacting with the Director. The Director acts as the mediator between the Client and the ConcreteBuilder, orchestrating the steps involved in making the custom sandwich. The ConcreteBuilder corresponds to the sandwich maker who sequentially builds each part of the sandwich (Part A, Part B, Part C) according to the Director's instructions. The Product represents the partially constructed sandwich at each stage, gradually adding parts until the final sandwich is assembled. Through this sequence, the Client receives the completed custom sandwich from the Director, mirroring the process of ordering and receiving a custom sandwich at a sandwich shop.
+In the sequence diagram, the Client represents the customer at the sandwich shop, initiating the construction process by interacting with the Director. The Director acts as the mediator between the Client and the ConcreteBuilder, orchestrating the steps involved in making the custom sandwich. The ConcreteBuilder corresponds to the sandwich maker who sequentially builds each part of the sandwich (Part A, Part B, Part C) according to the Director's instructions. The Product represents the partially constructed sandwich at each stage, gradually adding parts until the final sandwich is assembled. Through this sequence, the Client receives the completed custom sandwich from the Director, mirroring the process of ordering and receiving a custom sandwich at a sandwich shop.
 
 == Implementation Walkthrough
 
-=== Interface Definition: Builder
 
+=== Interface Definition: Builder
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -55,8 +61,8 @@ endif::[]
 
 The `Builder` interface defines the steps involved in constructing a custom sandwich. Each method corresponds to a step in the sandwich-making process: selecting the type of bread, filling, toppings, and sauce.
 
-=== Concrete Builder Implementation: ConcreteBuilder
 
+=== Concrete Builder Implementation: ConcreteBuilder (The Sandwich Maker)
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -70,8 +76,8 @@ endif::[]
 
 The `ConcreteBuilder` class implements the `Builder` interface to provide specific implementations for constructing a custom sandwich. Each method adds a specific part to the product (sandwich) being constructed.
 
-=== Product Representation: Product
 
+=== Product Representation: Product
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -85,8 +91,8 @@ endif::[]
 
 The `Product` class represents the custom sandwich being constructed. It contains methods for adding parts (ingredients) to the sandwich and displaying the final sandwich ingredients.
 
-=== Director: Director
 
+=== Director: The Customer
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -100,8 +106,8 @@ endif::[]
 
 The `Director` class controls the construction process of the custom sandwich. It takes a `Builder` instance and orchestrates the sequence of steps required to construct the sandwich.
 
-=== Client Interaction: Client
 
+=== Usage Example
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -113,25 +119,31 @@ include::{python_path}/builder/Client.py[lines=3..]
 endif::[]
 ----
 
-The `Client` class represents the customer at the sandwich shop. It creates instances of the `ConcreteBuilder` and `Director` classes, initiates the construction process, retrieves the final sandwich from the builder, and displays the custom sandwich ingredients.
+In the usage example, we create instances of the `ConcreteBuilder` and `Director` classes, initiate the construction process, retrieve the final sandwich from the builder, and display the custom sandwich ingredients.
+
+
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Custom Sandwich Ingredients:
+- Whole Wheat Bread
+- Turkey
+- Lettuce, Tomato, Onion
+----
 
 
 == Design Considerations
+When implementing the Builder Pattern for constructing complex objects, several design considerations should be taken into account:
 
-When implementing the Builder Pattern for constructing complex objects like the custom sandwich example, several design considerations should be taken into account:
+- _Flexibility and Extensibility_: The pattern should allow for easy addition or modification of parts/components of the complex object without affecting the client code. This flexibility ensures that new types of sandwiches or variations can be added in the future without requiring changes to existing code.
 
-* **Flexibility and Extensibility**: The pattern should allow for easy addition or modification of parts/components of the complex object without affecting the client code. This flexibility ensures that new types of sandwiches or variations can be added in the future without requiring changes to existing code.
+- _Separation of Concerns_: The pattern should ensure clear separation between the construction process (handled by the Director and Builder) and the final object representation (the Product). This separation simplifies maintenance and allows for changes in the construction process without impacting the final object's structure.
 
-* **Separation of Concerns**: The pattern should ensure clear separation between the construction process (handled by the Director and Builder) and the final object representation (the Product). This separation simplifies maintenance and allows for changes in the construction process without impacting the final object's structure.
+- _Consistency and Reusability_: The pattern should promote consistency in the construction process across different implementations of the Builder interface. Additionally, it should encourage the reuse of existing builders for constructing similar types of objects, reducing code duplication and improving maintainability.
 
-* **Consistency and Reusability**: The pattern should promote consistency in the construction process across different implementations of the Builder interface. Additionally, it should encourage the reuse of existing builders for constructing similar types of objects, reducing code duplication and improving maintainability.
+- _Performance_: Depending on the complexity of the object being constructed, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the construction process while maintaining readability and flexibility.
 
-* **Error Handling**: Considerations should be made for error handling during the construction process. For example, handling exceptions or invalid input gracefully to prevent the creation of incomplete or incorrect objects.
-
-* **Performance**: Depending on the complexity of the object being constructed, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the construction process while maintaining readability and flexibility.
-
-* **Documentation and Communication**: Clear documentation of the Builder interface and its implementations is crucial for ensuring that developers understand how to use and extend the pattern effectively. Communication between the client code, Director, Builder, and Product should be well-documented to facilitate collaboration and maintainability.
 
 == Conclusion
-
-The Builder Pattern provides an elegant solution for constructing complex objects step by step, allowing for flexible customization while maintaining a clear separation of concerns. By encapsulating the construction process within the Director and Builder components, the pattern promotes code reuse, extensibility, and maintainability. Through the analogy of constructing a custom sandwich, we've seen how the pattern simplifies the creation of diverse variations of objects without cluttering the client code with intricate construction details. By adhering to design considerations such as flexibility, separation of concerns, and documentation, developers can leverage the Builder Pattern to efficiently construct complex objects in their software projects.
+The Builder Pattern provides an elegant solution for constructing complex objects step by step, allowing for flexible customization while maintaining a clear separation of concerns. By encapsulating the construction process within the Director and Builder components, the pattern promotes code reuse, extensibility, and maintainability. By adhering to design considerations such as flexibility, separation of concerns, and documentation, developers can leverage the Builder Pattern to efficiently construct complex objects in their software projects.

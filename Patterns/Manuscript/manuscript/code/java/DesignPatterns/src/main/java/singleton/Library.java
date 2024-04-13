@@ -7,6 +7,7 @@ public class Library {
         if (uniqueInstance == null) {
             uniqueInstance = new Library();
         }
+        System.out.println("Granting access to the central library");
         return uniqueInstance;
     }
 

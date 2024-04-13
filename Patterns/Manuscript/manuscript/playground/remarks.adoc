@@ -2,3 +2,5 @@
 - How to put the cover image in front of the book name?
 - How to make the java edition with a capital J
 - Table of content should be centered
+- Add a table summary for all design patterns
+- font in the table is different
