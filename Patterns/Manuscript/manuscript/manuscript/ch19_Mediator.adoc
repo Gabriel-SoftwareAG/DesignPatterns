@@ -56,126 +56,86 @@ The Mediator Pattern facilitates interaction between objects, reducing the direc
 
 The `Team` interface acts as the mediator, outlining the methods for communication that the scrum master will facilitate among team members.
 
-[source,java]
+[source, {lang}]
 ----
-public interface Team {
-    void request(String message, Colleague colleague);
-    void response(String message, Colleague colleague);
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/mediator/Team.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/mediator/Team.py[lines=3..]
+endif::[]
 ----
 
-== ConcreteMediator Class: ScrumMaster
+== Concrete Mediator Class: ScrumMaster
 
 `ScrumMaster` implements the `Team` interface, coordinating communication between different team members. It holds references to the team members to be able to forward messages between them.
 
-[source,java]
+[source, {lang}]
 ----
-public class ScrumMaster implements Team {
-    private Developer developer;
-    private Tester tester;
+ifeval::["{lang}" == "java"]
+include::{java_path}/mediator/ScrumMaster.java[lines=3..]
+endif::[]
 
-    public void setDeveloper(Developer developer) {
-        this.developer = developer;
-    }
-
-    public void setTester(Tester tester) {
-        this.tester = tester;
-    }
-
-    @Override
-    public void request(String message, Colleague colleague) {
-        if (colleague == developer) {
-            tester.receive(message);
-        } else if (colleague == tester) {
-            developer.receive(message);
-        }
-    }
-
-    @Override
-    public void response(String message, Colleague colleague) {
-        System.out.println("Scrum Master handling response: " + message);
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/mediator/ScrumMaster.py[lines=3..]
+endif::[]
 ----
 
 === Colleague Abstract Class
 
 The `Colleague` abstract class represents team members, providing a link to the `Team` mediator for communication.
 
-[source,java]
+[source, {lang}]
 ----
-public abstract class Colleague {
-    protected Team team;
+ifeval::["{lang}" == "java"]
+include::{java_path}/mediator/Colleague.java[lines=3..]
+endif::[]
 
-    public Colleague(Team team) {
-        this.team = team;
-    }
-
-    abstract void send(String message);
-    abstract void receive(String message);
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/mediator/Colleague.py[lines=3..]
+endif::[]
 ----
 
-=== ConcreteColleague Classes: Developer and Tester
+=== Concrete Colleague Classes: Developer and Tester
 
 `Developer` and `Tester` are concrete classes that extend `Colleague`, representing specific roles within the agile team. They implement the send and receive methods for communication through the `ScrumMaster`.
 
-[source,java]
+[source, {lang}]
 ----
-public class Developer extends Colleague {
-    public Developer(Team team) {
-        super(team);
-    }
+ifeval::["{lang}" == "java"]
+include::{java_path}/mediator/Developer.java[lines=3..]
+endif::[]
 
-    @Override
-    public void send(String message) {
-        System.out.println("Developer sending message: " + message);
-        team.request(message, this);
-    }
+ifeval::["{lang}" == "python"]
+include::{python_path}/mediator/Developer.py[lines=3..]
+endif::[]
+----
 
-    @Override
-    public void receive(String message) {
-        System.out.println("Developer received task: " + message);
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/mediator/Tester.java[lines=3..]
+endif::[]
 
-public class Tester extends Colleague {
-    public Tester(Team team) {
-        super(team);
-    }
-
-    @Override
-    public void send(String message) {
-        System.out.println("Tester sending message: " + message);
-        team.request(message, this);
-    }
-
-    @Override
-    public void receive(String message) {
-        System.out.println("Tester received task: " + message);
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/mediator/Tester.py[lines=3..]
+endif::[]
 ----
 
 === Client Class: AgileTeam
 
 The `AgileTeam` class simulates the interaction between the scrum master and the team members, showcasing the mediator pattern in action.
 
-[source,java]
+[source, {lang}]
 ----
-public class AgileTeam {
-    public static void main(String[] args) {
-        ScrumMaster scrumMaster = new ScrumMaster();
-        Developer developer = new Developer(scrumMaster);
-        Tester tester = new Tester(scrumMaster);
+ifeval::["{lang}" == "java"]
+include::{java_path}/mediator/AgileTeam.java[lines=3..]
+endif::[]
 
-        scrumMaster.setDeveloper(developer);
-        scrumMaster.setTester(tester);
-
-        developer.send("Feature development complete. Need testing.");
-        tester.send("Testing complete. Feature ready for production.");
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/mediator/AgileTeam.py[lines=3..]
+endif::[]
 ----
 
 In this setup, the `Developer` and `Tester` communicate their progress and requests through the `ScrumMaster`, who coordinates the workflow. This implementation encapsulates the mediator pattern within the context of an agile software development team, streamlining communication and collaboration.
