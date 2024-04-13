@@ -56,11 +56,15 @@ In our analogy:
 
 === State Interface
 
-[source,java]
+[source, {lang}]
 ----
-public interface State {
-    void handleRequest();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/state/State.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/state/State.py[lines=3..]
+endif::[]
 ----
 
 This interface defines the `handleRequest()` method, which is implemented by all concrete state classes. It represents an action that occurs when transitioning from one state to another, such as changing the light from green to yellow.
@@ -68,89 +72,77 @@ This interface defines the `handleRequest()` method, which is implemented by all
 
 === GreenState
 
-[source,java]
+[source, {lang}]
 ----
-public class GreenState implements State {
-    public void handleRequest() {
-        System.out.println("Green light - Go!");
-        // Logic to switch to the yellow light
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/state/GreenState.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/state/GreenState.py[lines=3..]
+endif::[]
 ----
 
 `GreenState` indicates the traffic light is green. The `handleRequest()` method would contain logic to transition to `YellowState`.
 
 === YellowState
 
-[source,java]
+[source, {lang}]
 ----
-public class YellowState implements State {
-    public void handleRequest() {
-        System.out.println("Yellow light - Caution!");
-        // Logic to switch to the red light
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/state/YellowState.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/state/YellowState.py[lines=3..]
+endif::[]
 ----
 
 `YellowState` signals caution. The method implementation here transitions the light to red.
 
 === RedState
 
-[source,java]
+[source, {lang}]
 ----
-public class RedState implements State {
-    public void handleRequest() {
-        System.out.println("Red light - Stop!");
-        // Logic to switch to the green light
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/state/RedState.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/state/RedState.py[lines=3..]
+endif::[]
 ----
 
 In `RedState`, the traffic must stop. The `handleRequest()` method would switch the state back to `GreenState`, completing the cycle.
 
-=== Context (TrafficLight)
+=== TrafficLight (Context)
 
 The `TrafficLight` class uses State objects to change its current state based on external interactions, such as the passage of time.
 
-[source,java]
+[source, {lang}]
 ----
-public class TrafficLight {
-    private State currentState;
+ifeval::["{lang}" == "java"]
+include::{java_path}/state/TrafficLight.java[lines=3..]
+endif::[]
 
-    public TrafficLight(State state) {
-        this.currentState = state;
-    }
-
-    public void change() {
-        currentState.handleRequest();
-        // Logic to change the current state
-    }
-
-    public void setState(State state) {
-        this.currentState = state;
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/state/TrafficLight.py[lines=3..]
+endif::[]
 ----
 
 `TrafficLight` starts with an initial state and changes it through the `change()` method. The `setState()` method updates the current state.
 
-=== Client Usage
+=== Usage Exmaple
 
-[source,java]
+[source, {lang}]
 ----
-public class TrafficSystem {
-    public static void main(String[] args) {
-        TrafficLight light = new TrafficLight(new GreenState());
+ifeval::["{lang}" == "java"]
+include::{java_path}/state/TrafficSystem.java[lines=3..]
+endif::[]
 
-        light.change(); // Green to Yellow
-        light.setState(new YellowState());
-
-        light.change(); // Yellow to Red
-        light.setState(new RedState());
-
-        light.change(); // Red to Green
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/state/TrafficSystem.py[lines=3..]
+endif::[]
 ----
 
 The `TrafficSystem` class simulates the traffic light system's operation, transitioning through green, yellow, and red states, showcasing how the State design pattern facilitates state management in a straightforward and flexible manner.
