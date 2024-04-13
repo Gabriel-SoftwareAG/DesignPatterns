@@ -1,5 +1,10 @@
 
 = Chapter 14: The Observer Pattern
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch14_Observer
 
 == Introduction

@@ -1,6 +1,10 @@
 
 = Part 3: Behavioral
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 As we reach the final leg of our journey through the world of design patterns, we arrive at Part 3: Behavioral. Just as a conductor orchestrates a symphony, behavioral design patterns harmonize the interactions between objects, guiding them to work together seamlessly to achieve common goals.
 
 Behavioral patterns focus on the communication and collaboration between objects, facilitating the implementation of algorithms, workflows, and state management within software systems. These patterns enable developers to design software that is not only robust and scalable but also flexible and responsive to changing requirements and user interactions.

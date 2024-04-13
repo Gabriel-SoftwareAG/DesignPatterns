@@ -1,6 +1,10 @@
 
 = Chapter 6: The Adapter Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch06_Adapter
 
 == Introduction

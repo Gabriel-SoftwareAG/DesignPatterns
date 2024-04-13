@@ -1,6 +1,10 @@
 
 = Chapter 18: The Template Method Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch18_TemplateMethod
 
 == Introduction

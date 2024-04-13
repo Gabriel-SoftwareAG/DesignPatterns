@@ -1,6 +1,10 @@
 
 = Chapter 2: The Builder Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch02_Builder
 
 == Introduction

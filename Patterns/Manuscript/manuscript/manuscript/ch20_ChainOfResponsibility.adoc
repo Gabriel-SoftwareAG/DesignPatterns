@@ -1,6 +1,10 @@
 
 = Chapter 20: The Chain of Responsibility Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch20_ChainOfResponsibility
 
 == Introduction

@@ -1,6 +1,10 @@
 
 = Chapter 9: The Flyweight Patther
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch09_Flyweight
 
 == Introduction

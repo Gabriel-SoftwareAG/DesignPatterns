@@ -1,6 +1,10 @@
 
 = Chapter 8: The Proxy Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch08_Proxy
 
 == Introduction

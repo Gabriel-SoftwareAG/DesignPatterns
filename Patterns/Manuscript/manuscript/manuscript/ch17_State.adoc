@@ -1,6 +1,10 @@
 
 = Chapter 17: The State Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch17_State
 
 == Introduction

@@ -1,6 +1,10 @@
 
 = Chapter 21: The Interpreter Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch21_Interpreter
 
 == Introduction

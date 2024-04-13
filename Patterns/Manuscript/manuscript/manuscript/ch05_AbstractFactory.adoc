@@ -1,6 +1,10 @@
 
 = Chapter 5: The Abstract Factory Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch05_AbstractFactory
 
 == Introduction

@@ -1,6 +1,10 @@
 
 = Chapter 3: The Prototype Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch03_Prototype
 
 == Introduction

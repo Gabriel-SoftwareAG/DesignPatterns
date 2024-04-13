@@ -1,6 +1,10 @@
 
 = Chapter 15: Command Design Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch15_Command
 
 == Introduction

@@ -1,6 +1,10 @@
 
 = Part 1: Creational
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 Creational patterns serve as the foundation upon which the rest of the system is built, much like the cornerstone of a grand structure. They offer structured and efficient ways to instantiate objects, ensuring consistency, flexibility, and maintainability throughout the software lifecycle.
 
 In this part of the book, we will embark on a journey akin to exploring various architectural styles. Each creational pattern will be likened to a distinct architectural masterpiece, with its own unique characteristics, use cases, and implementation strategies.

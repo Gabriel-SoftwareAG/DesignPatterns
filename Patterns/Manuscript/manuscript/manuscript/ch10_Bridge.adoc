@@ -1,6 +1,10 @@
 
 = Chapter 10: The Bridge Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch10_Bridge
 
 == Introduction
@@ -45,145 +49,101 @@ In this sequence diagram, let's interpret the Bridge Pattern using the analogy o
 
 == Implementation Walkthrough
 
-In this example, we'll implement the Bridge Pattern in Java using the analogy of a universal remote control system. We'll have four main classes: `RemoteControl`, `AdvancedRemoteControl`, `Device`, and `RemoteImplementation`. The `RemoteControl` represents the basic functionalities of the remote control, the `AdvancedRemoteControl` extends the functionalities with additional features, the `Device` represents electronic devices controlled by the remote, and the `RemoteImplementation` encapsulates device-specific communication protocols.
-
+In this example, we'll implement the Bridge Pattern in Java using the analogy of a universal remote control system. We'll have four main classes: `RemoteControl`, `AdvancedRemoteControl`, `Device`, and concrete device implementations such as `Television` and `SoundSystem`. The `RemoteControl` represents the basic functionalities of the remote control, the `AdvancedRemoteControl` extends the functionalities with additional features, and the `Device` represents electronic devices controlled by the remote.
 
 === Device Interface
 
-[source,java]
+The `Device` interface defines the common operations that can be performed on electronic devices, such as powering on/off, adjusting volume, and changing channels. In our analogy, it represents the devices controlled by the remote control.
+
+[source, {lang}]
 ----
-public interface Device {
-    void powerOn();
-    void powerOff();
-    void adjustVolume(int volume);
-    void changeChannel(int channel);
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/bridge/Device.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/bridge/Device.py[lines=3..]
+endif::[]
 ----
 
-The `Device` interface defines the common operations that can be performed on electronic devices, such as powering on/off, adjusting volume, and changing channels. In our analogy, it represents the devices controlled by the remote control.
+=== Television Class
+
+The `Television` class implements the `Device` interface. It represents a television device that can be controlled by the remote.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/bridge/Television.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/bridge/Television.py[lines=3..]
+endif::[]
+----
+
+=== SoundSystem Class
+
+The `SoundSystem` class implements the `Device` interface. It represents a sound system device that can be controlled by the remote.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/bridge/SoundSystem.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/bridge/SoundSystem.py[lines=3..]
+endif::[]
+----
 
 === RemoteControl Class
 
-[source,java]
-----
-public class RemoteControl {
-    protected Device device;
-
-    public RemoteControl(Device device) {
-        this.device = device;
-    }
-
-    public void powerOn() {
-        device.powerOn();
-    }
-
-    public void powerOff() {
-        device.powerOff();
-    }
-
-    public void adjustVolume(int volume) {
-        device.adjustVolume(volume);
-    }
-
-    public void changeChannel(int channel) {
-        device.changeChannel(channel);
-    }
-}
-----
-
 The `RemoteControl` class represents the basic functionalities of the remote control. It holds a reference to a `Device` object and delegates operations to it. It includes methods for powering on/off, adjusting volume, and changing channels.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/bridge/RemoteControl.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/bridge/RemoteControl.py[lines=3..]
+endif::[]
+----
 
 === AdvancedRemoteControl Class
 
-[source,java]
-----
-public class AdvancedRemoteControl extends RemoteControl {
-    public AdvancedRemoteControl(Device device) {
-        super(device);
-    }
-
-    public void mute() {
-        device.adjustVolume(0);
-    }
-}
-----
-
 The `AdvancedRemoteControl` class extends the functionalities of the basic remote control by adding additional features. It inherits from the `RemoteControl` class and includes a method for muting the device by setting the volume to zero.
 
-=== RemoteImplementation Interface
-
-[source,java]
+[source, {lang}]
 ----
-public interface RemoteImplementation {
-    void implementationOperation();
-}
-----
+ifeval::["{lang}" == "java"]
+include::{java_path}/bridge/AdvancedRemoteControl.java[lines=3..]
+endif::[]
 
-The `RemoteImplementation` interface defines the methods that encapsulate device-specific communication protocols. In our analogy, it represents the different ways the remote control communicates with electronic devices.
-
-=== ConcreteRemoteImplementation Classes
-
-[source,java]
-----
-public class ConcreteRemoteImplementationA implements RemoteImplementation {
-    private Device device;
-
-    public ConcreteRemoteImplementationA(Device device) {
-        this.device = device;
-    }
-
-    @Override
-    public void implementationOperation() {
-        // Implement communication protocol for device A
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/bridge/AdvancedRemoteControl.py[lines=3..]
+endif::[]
 ----
 
-[source,java]
+=== Client Class
+
+The `Client` class demonstrates how the remote control system is used. It creates instances of `Television` and `SoundSystem`, associates them with remote controls, and performs operations such as powering on/off, adjusting volume, changing channels, and muting.
+
+[source, {lang}]
 ----
-public class ConcreteRemoteImplementationB implements RemoteImplementation {
-    private Device device;
+ifeval::["{lang}" == "java"]
+include::{java_path}/bridge/Client.java[lines=3..]
+endif::[]
 
-    public ConcreteRemoteImplementationB(Device device) {
-        this.device = device;
-    }
-
-    @Override
-    public void implementationOperation() {
-        // Implement communication protocol for device B
-    }
-}
-----
-
-The `ConcreteRemoteImplementationA` and `ConcreteRemoteImplementationB` classes implement the `RemoteImplementation` interface, providing device-specific communication protocols. They hold a reference to a `Device` object and implement the `implementationOperation` method to communicate with the device using the specific protocol.
-
-=== Usage Example
-
-Now, let's see how the classes are used together:
-
-[source,java]
-----
-public class Main {
-    public static void main(String[] args) {
-        Device tv = new Television();
-        RemoteImplementation remoteImplementationA = new ConcreteRemoteImplementationA(tv);
-        RemoteControl remoteControl = new RemoteControl(tv, remoteImplementationA);
-        
-        remoteControl.powerOn();
-        remoteControl.changeChannel(5);
-        
-        Device soundSystem = new SoundSystem();
-        RemoteImplementation remoteImplementationB = new ConcreteRemoteImplementationB(soundSystem);
-        AdvancedRemoteControl advancedRemoteControl = new AdvancedRemoteControl(soundSystem, remoteImplementationB);
-        
-        advancedRemoteControl.powerOn();
-        advancedRemoteControl.adjustVolume(20);
-        advancedRemoteControl.mute();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/bridge/Client.py[lines=3..]
+endif::[]
 ----
 
-In this example, we first create a television device and associate it with a `ConcreteRemoteImplementationA` object. We then create a basic remote control and use it to power on the TV and change the channel. Next, we create a sound system device and associate it with a `ConcreteRemoteImplementationB` object. We create an advanced remote control and use it to power on the sound system, adjust the volume, and mute it.
+== Conclusion
+
+This walkthrough provides a clear understanding of how the Bridge Pattern is implemented in Java to design a flexible and extensible remote control system. The separation of abstraction (`RemoteControl`) and implementation (`Device`) allows for easier extension and maintenance of the codebase.
 
 
 == Design Considerations

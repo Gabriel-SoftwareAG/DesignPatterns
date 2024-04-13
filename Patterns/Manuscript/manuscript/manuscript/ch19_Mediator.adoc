@@ -1,6 +1,10 @@
 
 = Chapter 19: The Mediator Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch19_Mediator
 
 == Introduction

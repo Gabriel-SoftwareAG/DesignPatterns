@@ -1,6 +1,10 @@
 
 = Chapter 11: The Facade Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch11_Facade
 
 == Introduction

@@ -1,6 +1,10 @@
 
 = Chapter 4: The Factory Method Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch04_FactoryMethod
 
 == Introduction

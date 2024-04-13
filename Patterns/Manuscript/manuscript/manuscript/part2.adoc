@@ -1,6 +1,10 @@
 
 = Part 2: Structural
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 As we journey deeper into the realm of design patterns, we now arrive at Part 2: Structural. Just as a skilled artisan meticulously arranges the bricks and mortar to create a sturdy framework for a building, structural design patterns provide the scaffolding upon which complex software architectures are built.
 
 Structural patterns focus on the composition of classes and objects, enabling developers to construct large-scale systems by organizing code in a cohesive and reusable manner. These patterns offer solutions to common challenges such as managing relationships between objects, ensuring flexibility and extensibility, and enhancing code readability and maintainability.

@@ -1,6 +1,10 @@
 
 = Chapter 7: The Composite Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch07_Composite
 
 == Introduction

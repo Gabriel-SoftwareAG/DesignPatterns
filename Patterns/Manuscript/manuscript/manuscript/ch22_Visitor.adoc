@@ -1,6 +1,10 @@
 
 = Chapter 22: The Visitor Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch22_Visitor
 
 == Introduction

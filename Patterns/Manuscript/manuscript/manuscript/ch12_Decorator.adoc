@@ -1,6 +1,10 @@
 
 = Chapter 12: The Decorator Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch12_Decorator
 
 == Introduction

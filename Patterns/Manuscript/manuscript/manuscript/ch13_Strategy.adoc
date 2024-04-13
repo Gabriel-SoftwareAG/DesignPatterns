@@ -1,6 +1,10 @@
 
 = Chapter 13: The Strategy Pattern
 
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
 :imagesdir: ../images/ch13_Strategy
 
 == Introduction
