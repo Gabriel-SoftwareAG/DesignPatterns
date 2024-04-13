@@ -43,70 +43,60 @@ In this example, we'll implement the Facade Pattern in Java using the analogy of
 
 === ControlPanel Class
 
-[source,java]
+[source, {lang}]
 ----
-public class ControlPanel {
-    private AutomaticParkingSystem parkingSystem;
-    private AdaptiveCruiseControlSystem cruiseControlSystem;
-    private CollisionAvoidanceSystem collisionSystem;
+ifeval::["{lang}" == "java"]
+include::{java_path}/facade/ControlPanel.java[lines=3..]
+endif::[]
 
-    public ControlPanel() {
-        this.parkingSystem = new AutomaticParkingSystem();
-        this.cruiseControlSystem = new AdaptiveCruiseControlSystem();
-        this.collisionSystem = new CollisionAvoidanceSystem();
-    }
-
-    public void park() {
-        parkingSystem.park();
-    }
-
-    public void activateCruiseControl() {
-        cruiseControlSystem.activate();
-    }
-
-    public void avoidCollision() {
-        collisionSystem.avoid();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/facade/ControlPanel.py[lines=3..]
+endif::[]
 ----
 
 The `ControlPanel` class acts as the facade, providing a simplified interface for interacting with the car's advanced features. It holds references to the subsystems: `AutomaticParkingSystem`, `AdaptiveCruiseControlSystem`, and `CollisionAvoidanceSystem`.
 
 === AutomaticParkingSystem Class
 
-[source,java]
+[source, {lang}]
 ----
-public class AutomaticParkingSystem {
-    public void park() {
-        // Implement automatic parking functionality
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/facade/AutomaticParkingSystem.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/facade/AutomaticParkingSystem.py[lines=3..]
+endif::[]
 ----
 
 The `AutomaticParkingSystem` class represents the subsystem responsible for automatic parking. It contains the logic for parking the car automatically.
 
 === AdaptiveCruiseControlSystem Class
 
-[source,java]
+[source, {lang}]
 ----
-public class AdaptiveCruiseControlSystem {
-    public void activate() {
-        // Implement adaptive cruise control activation
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/facade/AdaptiveCruiseControlSystem.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/facade/AdaptiveCruiseControlSystem.py[lines=3..]
+endif::[]
 ----
 
 The `AdaptiveCruiseControlSystem` class represents the subsystem responsible for adaptive cruise control. It contains the logic for activating the adaptive cruise control system.
 
 === CollisionAvoidanceSystem Class
 
-[source,java]
+[source, {lang}]
 ----
-public class CollisionAvoidanceSystem {
-    public void avoid() {
-        // Implement collision avoidance functionality
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/facade/CollisionAvoidanceSystem.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/facade/CollisionAvoidanceSystem.py[lines=3..]
+endif::[]
 ----
 
 The `CollisionAvoidanceSystem` class represents the subsystem responsible for collision avoidance. It contains the logic for avoiding collisions.
@@ -115,22 +105,15 @@ The `CollisionAvoidanceSystem` class represents the subsystem responsible for co
 
 Now, let's see how the classes are used together:
 
-[source,java]
+[source, {lang}]
 ----
-public class Main {
-    public static void main(String[] args) {
-        ControlPanel controlPanel = new ControlPanel();
-        
-        // Driver uses the control panel to park the car
-        controlPanel.park();
-        
-        // Driver activates adaptive cruise control
-        controlPanel.activateCruiseControl();
-        
-        // Driver activates collision avoidance system
-        controlPanel.avoidCollision();
-    }
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/facade/Client.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/facade/Client.py[lines=3..]
+endif::[]
 ----
 
 In this example, we create a `ControlPanel` object representing the control panel in the car. The driver uses the control panel to interact with the car's advanced features, such as parking the car automatically, activating adaptive cruise control, and avoiding collisions.
