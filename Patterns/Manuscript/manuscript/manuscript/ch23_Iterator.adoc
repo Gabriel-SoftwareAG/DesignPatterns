@@ -45,102 +45,107 @@ In this analogy, imagine you're a user interacting with a blog platform. The Cli
 
 In this example, we'll implement an iterator pattern in Java using a blog analogy to explain each component of the design. We'll simulate a blog platform where users can navigate through a collection of blog posts using an iterator.
 
-=== Aggregate Interface
-[source,java]
+=== Post Class
+
+The `Post` class represents a blog post with attributes such as title, author, and summary.
+
+[source, {lang}]
 ----
-public interface Blog {
-    Iterator createIterator();
-}
-----
+ifeval::["{lang}" == "java"]
+include::{java_path}/iterator/Post.java[lines=3..]
+endif::[]
 
-The `Blog` interface defines the `createIterator()` method, which allows users to obtain an iterator for traversing the collection of blog posts.
-
-=== ConcreteAggregate Class
-[source,java]
-----
-public class BlogPlatform implements Blog {
-    private List<Post> posts;
-
-    public BlogPlatform() {
-        this.posts = new ArrayList<>();
-    }
-
-    public void addPost(Post post) {
-        posts.add(post);
-    }
-
-    @Override
-    public Iterator createIterator() {
-        return new PostIterator(posts);
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/iterator/Post.py[lines=3..]
+endif::[]
 ----
 
-The `BlogPlatform` class implements the `Blog` interface and represents the blog platform itself. It maintains a collection of blog posts and provides a method to add posts. The `createIterator()` method creates a `PostIterator` instance for traversing the collection of blog posts.
+The `Post` class encapsulates the details of a blog post. It has a constructor to initialize the title, author, and summary, and getter methods to retrieve these attributes.
+
+=== Blog Interface (Aggregator)
+
+The `Blog` interface defines the `createIterator()` method to obtain an iterator for traversing the collection of blog posts, and the `addPost(Post post)` method to add a new post to the blog.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/iterator/Blog.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/iterator/Blog.py[lines=3..]
+endif::[]
+----
+
+The `Blog` interface provides an abstraction for a collection of blog posts. It includes methods to create an iterator for traversing the posts and to add a new post to the blog.
+
+=== ConcreteAggregate Class - BlogPlatform
+
+The `BlogPlatform` class implements the `Blog` interface and represents the blog platform itself. It maintains a collection of blog posts and provides methods to add posts and create iterators.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/iterator/BlogPlatform.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/iterator/BlogPlatform.py[lines=3..]
+endif::[]
+----
+
+The `BlogPlatform` class represents the blog platform and implements the `Blog` interface. It internally maintains a list of blog posts and provides methods to add posts and create iterators over the posts.
 
 === Iterator Interface
-[source,java]
-----
-public interface Iterator {
-    boolean hasNext();
-    Post next();
-}
-----
 
 The `Iterator` interface defines methods for iterating over the collection of blog posts. It includes `hasNext()` to check if there are more posts and `next()` to retrieve the next post.
 
-=== ConcreteIterator Class
-[source,java]
+[source, {lang}]
 ----
-public class PostIterator implements Iterator {
-    private List<Post> posts;
-    private int position;
+ifeval::["{lang}" == "java"]
+include::{java_path}/iterator/Iterator.java[lines=3..]
+endif::[]
 
-    public PostIterator(List<Post> posts) {
-        this.posts = posts;
-        this.position = 0;
-    }
-
-    @Override
-    public boolean hasNext() {
-        return position < posts.size();
-    }
-
-    @Override
-    public Post next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException("No more posts available");
-        }
-        Post post = posts.get(position);
-        position++;
-        return post;
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/iterator/Iterator.py[lines=3..]
+endif::[]
 ----
+
+The `Iterator` interface provides a standard way to access elements of a collection without exposing its underlying representation. It defines methods for checking the availability of the next element and retrieving the next element.
+
+=== Concrete Iterator Class - PostIterator
 
 The `PostIterator` class implements the `Iterator` interface and provides functionality for iterating over the collection of blog posts. It maintains a reference to the list of posts and keeps track of the current position in the list.
 
-=== Client Class
-[source,java]
+[source, {lang}]
 ----
-public class User {
-    public static void main(String[] args) {
-        Blog blog = new BlogPlatform();
-        blog.addPost(new Post("Title 1", "Author 1", "Summary 1"));
-        blog.addPost(new Post("Title 2", "Author 2", "Summary 2"));
+ifeval::["{lang}" == "java"]
+include::{java_path}/iterator/PostIterator.java[lines=3..]
+endif::[]
 
-        Iterator iterator = blog.createIterator();
-        while (iterator.hasNext()) {
-            Post post = iterator.next();
-            System.out.println(post.getTitle());
-            System.out.println(post.getAuthor());
-            System.out.println(post.getSummary());
-        }
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/iterator/PostIterator.py[lines=3..]
+endif::[]
 ----
+
+The `PostIterator` class implements the `Iterator` interface and provides methods to iterate over a collection of `Post` objects.
+
+=== Usage Example
 
 The `User` class represents a user interacting with the blog platform. It creates a `BlogPlatform` instance, adds posts to it, and obtains an iterator to traverse the collection of blog posts. It then iterates through the posts using the iterator, printing out details of each post.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/iterator/User.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/iterator/User.py[lines=3..]
+endif::[]
+----
+
+The `User` class demonstrates how a user interacts with the blog platform. It creates a `BlogPlatform` instance, adds posts, and iterates through the posts using an iterator.
 
 == Design Considerations
 
