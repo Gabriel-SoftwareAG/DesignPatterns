@@ -1,10 +1,6 @@
 
 = Chapter 15: Command Design Pattern
 
-ifndef::already_included_config[]
-include::config.adoc[]
-endif::[]
-
 :imagesdir: ../images/ch15_Command
 
 == Introduction
@@ -40,109 +36,86 @@ In this Command Pattern sequence diagram, we can relate the interactions to a sc
 
 The `Command` interface represents an abstract command that can be executed. In our restaurant analogy, this interface defines a contract for any order that can be placed.
 
-[source,java]
+[source, {lang}]
 ----
-interface Command {
-    void execute();
-}
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Command.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Command.py[lines=3..]
+endif::[]
 ----
 
-=== ConcreteCommand Classes
+=== Concrete Commands Classes (`PreparePizzaCommand` and `ServePastaCommand`)
 
-ConcreteCommand classes implement the `Command` interface and represent specific orders. Each ConcreteCommand corresponds to a particular dish or action that can be executed in the restaurant.
+`PreparePizzaCommand` and  `ServePastaCommand` classes implement the `Command` interface and represent specific orders. Each ConcreteCommand corresponds to a particular dish or action that can be executed in the restaurant.
 
-[source,java]
+[source, {lang}]
 ----
-class PreparePizzaCommand implements Command {
-    private Receiver receiver;
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/PreparePizzaCommand.java[lines=3..]
+endif::[]
 
-    PreparePizzaCommand(Receiver receiver) {
-        this.receiver = receiver;
-    }
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/PreparePizzaCommand.py[lines=3..]
+endif::[]
+----
 
-    @Override
-    public void execute() {
-        receiver.preparePizza();
-    }
-}
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/ServePastaCommand.java[lines=3..]
+endif::[]
 
-class ServePastaCommand implements Command {
-    private Receiver receiver;
-
-    ServePastaCommand(Receiver receiver) {
-        this.receiver = receiver;
-    }
-
-    @Override
-    public void execute() {
-        receiver.servePasta();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/ServePastaCommand.py[lines=3..]
+endif::[]
 ----
 
 === Receiver Class
 
 The `Receiver` class represents the entity responsible for carrying out the commands. In our restaurant analogy, the Receiver corresponds to the kitchen staff who execute the orders.
 
-[source,java]
+[source, {lang}]
 ----
-class Receiver {
-    void preparePizza() {
-        // Logic to prepare pizza
-    }
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Receiver.java[lines=3..]
+endif::[]
 
-    void servePasta() {
-        // Logic to serve pasta
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Receiver.py[lines=3..]
+endif::[]
 ----
 
-=== Invoker Class
+=== Waiter Class (Invoker)
 
-The `Invoker` class acts as an intermediary between the Client (customer) and the ConcreteCommand (order). It receives requests from the Client and invokes the corresponding ConcreteCommand to execute the order.
+The `Waiter` class acts as an intermediary between the Client (customer) and the ConcreteCommand (order). It receives requests from the Client and invokes the corresponding ConcreteCommand to execute the order.
 
-[source,java]
+[source, {lang}]
 ----
-class Waiter {
-    private Command command;
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Waiter.java[lines=3..]
+endif::[]
 
-    void setCommand(Command command) {
-        this.command = command;
-    }
-
-    void executeCommand() {
-        command.execute();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Waiter.py[lines=3..]
+endif::[]
 ----
 
-=== Client Class
+=== Usage Example
 
-The `Client` class represents the entity initiating the commands, in this case, the customer placing an order at the restaurant.
-
-[source,java]
+[source, {lang}]
 ----
-public class Customer {
-    public static void main(String[] args) {
-        // Create receiver (kitchen staff)
-        Receiver chef = new Receiver();
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Client.java[lines=3..]
+endif::[]
 
-        // Create concrete commands (orders)
-        Command preparePizzaCommand = new PreparePizzaCommand(chef);
-        Command servePastaCommand = new ServePastaCommand(chef);
-
-        // Create invoker (waiter)
-        Waiter waiter = new Waiter();
-
-        // Set and execute commands
-        waiter.setCommand(preparePizzaCommand);
-        waiter.executeCommand();
-
-        waiter.setCommand(servePastaCommand);
-        waiter.executeCommand();
-    }
-}
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Client.py[lines=3..]
+endif::[]
 ----
+
 
 == Design Considerations
 
