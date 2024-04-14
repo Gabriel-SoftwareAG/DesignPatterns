@@ -3,8 +3,8 @@ package prototype;
 public class Client {
     public static void main(String[] args) {
         // Create concrete prototype instances
-        Prototype teddyBear1 = new ConcretePrototype1();
-        Prototype teddyBear2 = new ConcretePrototype2();
+        Prototype teddyBear1 = new WhiteTeddyBearPrototype();
+        Prototype teddyBear2 = new BlackTeddyBearPrototype();
 
         // Clone teddy bears
         Prototype clonedTeddyBear1 = teddyBear1.clone();

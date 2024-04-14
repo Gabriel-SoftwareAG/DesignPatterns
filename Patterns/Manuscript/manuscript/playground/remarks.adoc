@@ -4,3 +4,5 @@
 - Table of content should be centered
 - Add a table summary for all design patterns
 - font in the table is different
+- how to keep togeter the h2 headlines of the uml
+- Add to the appendix the singleton multithread issue, and the java prototype

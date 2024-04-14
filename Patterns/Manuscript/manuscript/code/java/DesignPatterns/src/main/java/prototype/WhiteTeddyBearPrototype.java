@@ -1,9 +1,10 @@
 package prototype;
 
-public class ConcretePrototype1 extends Prototype {
+public class WhiteTeddyBearPrototype extends Prototype {
 
     @Override
     public Prototype clone() {
-        return new ConcretePrototype1();
+        System.out.println("Cloning White Teddy Bear");
+        return new WhiteTeddyBearPrototype();
     }
 }
