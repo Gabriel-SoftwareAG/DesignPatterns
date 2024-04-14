@@ -155,11 +155,11 @@ Ice cream served
 == Design Considerations
 When implementing the Factory Method Pattern for managing object creation in an amusement park food stall scenario, several design considerations should be taken into account:
 
-- _Abstraction and Encapsulation_: The abstract product and creator classes should provide a clear abstraction of the types of products and creators in the system. Encapsulating the creation process within the creator classes promotes separation of concerns and maintains a clean interface for clients.
+- **Abstraction and Encapsulation**: The abstract product and creator classes should provide a clear abstraction of the types of products and creators in the system. Encapsulating the creation process within the creator classes promotes separation of concerns and maintains a clean interface for clients.
 
-- _Flexibility and Extensibility_: The pattern should allow for easy addition of new types of products and creators without requiring changes to existing code. This flexibility ensures that the system can accommodate future changes and expansions, such as adding new food stalls or menu items to the amusement park.
+- **Flexibility and Extensibility**: The pattern should allow for easy addition of new types of products and creators without requiring changes to existing code. This flexibility ensures that the system can accommodate future changes and expansions, such as adding new food stalls or menu items to the amusement park.
 
-- _Consistency and Reusability_: Consistent naming conventions and design patterns should be followed across product and creator classes to ensure code readability and maintainability. Reusable components and modular design principles should be employed to maximize code reuse and minimize duplication.
+- **Consistency and Reusability**: Consistent naming conventions and design patterns should be followed across product and creator classes to ensure code readability and maintainability. Reusable components and modular design principles should be employed to maximize code reuse and minimize duplication.
 
 
 == Conclusion

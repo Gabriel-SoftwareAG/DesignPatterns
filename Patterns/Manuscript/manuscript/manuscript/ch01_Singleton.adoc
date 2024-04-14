@@ -89,11 +89,11 @@ Borrowing a book from the library...
 == Design Considerations
 When implementing the Singleton pattern, several considerations should be taken into account:
 
-- _Thread Safety_: If multiple threads may access the `getInstance()` method simultaneously, ensure thread safety to prevent race conditions. This can be achieved by using synchronization or by utilizing the double-checked locking pattern.
-- _Lazy Initialization_: Decide whether the Singleton instance should be lazily initialized (created only when requested) or eagerly initialized (created at application startup). Lazy initialization saves memory by only creating the instance when needed, but it may introduce overhead due to synchronization. In this chapter's code example, the lazy initialization approach was used.
-- _Serialization_: If the Singleton class needs to be serialized, ensure that the deserialization process does not create new instances, potentially violating the Singleton pattern. This can be achieved by implementing the `readResolve()` method to return the existing instance during deserialization.
-- _Testing_: Test the Singleton class thoroughly to ensure that it behaves as expected in different scenarios, including concurrency testing to verify thread safety.
-- _Dependency Injection_: Consider using dependency injection frameworks to manage Singleton instances, especially in larger applications where manual instantiation may lead to tight coupling and decreased maintainability.
+- **Thread Safety**: If multiple threads may access the `getInstance()` method simultaneously, ensure thread safety to prevent race conditions. This can be achieved by using synchronization or by utilizing the double-checked locking pattern.
+- **Lazy Initialization**: Decide whether the Singleton instance should be lazily initialized (created only when requested) or eagerly initialized (created at application startup). Lazy initialization saves memory by only creating the instance when needed, but it may introduce overhead due to synchronization. In this chapter's code example, the lazy initialization approach was used.
+- **Serialization**: If the Singleton class needs to be serialized, ensure that the deserialization process does not create new instances, potentially violating the Singleton pattern. This can be achieved by implementing the `readResolve()` method to return the existing instance during deserialization.
+- **Testing**: Test the Singleton class thoroughly to ensure that it behaves as expected in different scenarios, including concurrency testing to verify thread safety.
+- **Dependency Injection**: Consider using dependency injection frameworks to manage Singleton instances, especially in larger applications where manual instantiation may lead to tight coupling and decreased maintainability.
 
 By carefully considering these aspects during the design and implementation of the Singleton pattern, developers can create robust and efficient singleton classes that meet the requirements of their applications.
 

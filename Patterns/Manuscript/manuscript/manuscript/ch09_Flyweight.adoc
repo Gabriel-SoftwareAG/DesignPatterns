@@ -8,7 +8,6 @@ endif::[]
 :imagesdir: ../images/ch09_Flyweight
 
 == Introduction
-
 [cols="2", frame="none", grid="none"]
 |===
 |Imagine you're decorating a large party hall with hundreds of balloons. Instead of buying hundreds of unique balloons, which would be expensive and wasteful, you decide to use just a few designs repeated over and over. You have, let's say, five designs - stars, hearts, moons, suns, and clouds. Each design is used multiple times throughout the hall, creating a vibrant and cohesive decoration scheme without the need for hundreds of different designs. This approach saves you money and time, while still achieving a fantastic effect. The Flyweight Pattern in programming works on a similar principle. It's used when you need a large number of similar objects.
@@ -17,8 +16,8 @@ endif::[]
 
 Instead of creating a new object each time, the pattern reuses existing instances, just like reusing the balloon designs. This is particularly useful in software to save memory and improve performance, especially when dealing with a huge number of objects that have similar properties or data. By sharing common parts and only storing the unique parts separately, the Flyweight Pattern makes the application lighter (like a "flyweight") and more efficient.
 
-== Key Components
 
+== Key Components
 - _Object Reuse_: The Flyweight Pattern promotes the reuse of existing instances rather than creating new objects each time, akin to reusing balloon designs in decorating a party hall. This approach saves memory and improves performance by reducing the number of objects created and the associated memory overhead.
 - _Common Parts Sharing_: The pattern involves sharing common parts among multiple instances and storing unique parts separately, similar to how the repeated balloon designs are shared throughout the hall while unique decorations are added as needed. This sharing mechanism minimizes memory consumption and reduces the storage requirements for each object.
 - _Large Number of Similar Objects_: The Flyweight Pattern is particularly useful when dealing with a large number of objects that have similar properties or data, just like the hundreds of balloons needed for decorating the party hall. By reusing instances and sharing common parts, the pattern optimizes memory usage and enhances performance, making it ideal for scenarios with a high object count.
@@ -27,20 +26,22 @@ Instead of creating a new object each time, the pattern reuses existing instance
 == UML Diagrams 
 Next, we will explain the concept of the Flyweight design pattern using UML.
 
+
 === Class Diagram
 image::FlyweightPatternClassDiagram.png[title="The Flyweight Class Diagram", align=center]
 In this diagram, imagine a scenario where you're decorating a party hall with hundreds of balloons. The "Flyweight" interface represents a type of balloon, defining the operation to perform. The "ConcreteFlyweight" class represents a specific type of balloon, like a star or a heart, storing intrinsic state (such as color or size) that is shareable across many balloons. The "FlyweightFactory" class acts as a balloon factory, managing different types of balloons and creating them as needed to ensure they are shared properly. Finally, the "Client" class represents someone decorating the party hall, maintaining extrinsic state (unique for each balloon, like its position in the hall) and passing it to the balloon's operation. By using this pattern, you can achieve a cohesive decoration scheme with a variety of balloons while minimizing memory usage and improving performance by reusing common balloon types.
+
 
 === Sequence Diagram
 image::FlyweightPatternSequenceDiagram.png[title="The Flyweight Sequence Diagram", align=center]
 In this sequence diagram, think of a scenario where you're decorating a party hall with balloons using the Flyweight Pattern. The "Client" represents someone decorating the hall, while the "FlyweightFactory" acts as a balloon factory that manages different types of balloons. When the client requests a balloon with specific intrinsic state (such as color or shape), the factory checks if a balloon with that intrinsic state already exists. If it does, the factory returns the existing balloon to the client. If not, the factory creates a new balloon with the given intrinsic state and returns it to the client. The client then performs an operation on the balloon, potentially using both intrinsic and extrinsic state (unique to each balloon, like its position in the hall). This pattern allows for the efficient use of memory and resources by reusing existing balloons where possible and creating new ones only when needed.
 
-== Implementation Walkthrough
 
+== Implementation Walkthrough
 In this example, we'll implement the Flyweight Pattern in Java using the analogy of decorating a party hall with balloons. We'll have three main classes: `PartyDecorator`, `BalloonFactory`, and `Balloon`. The `PartyDecorator` represents someone decorating the hall, the `BalloonFactory` acts as a balloon factory, and the `Balloon` represents a type of balloon.
 
-=== Balloon Interface
 
+=== Balloon Interface
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -54,8 +55,8 @@ endif::[]
 
 The `Balloon` interface defines the operation that can be performed on a balloon, using both intrinsic and extrinsic state. In our analogy, it represents a type of balloon.
 
-=== ConcreteBalloon Class
 
+=== ConcreteBalloon Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -69,8 +70,8 @@ endif::[]
 
 The `ConcreteBalloon` class represents a specific type of balloon. It implements the `Balloon` interface and stores intrinsic state (such as color) that is shareable across many balloons. In our implementation, we initialize the color through the constructor and define the decorate method to perform an action on the balloon, using both intrinsic and extrinsic state.
 
-=== BalloonFactory Class
 
+=== BalloonFactory Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -84,8 +85,8 @@ endif::[]
 
 The `BalloonFactory` class acts as a balloon factory, managing different types of balloons. It maintains a map of balloons, where each key represents the color of a balloon, and each value is the corresponding balloon instance. The `getBalloon` method checks if a balloon with the given color already exists. If it does, it returns the existing balloon. If not, it creates a new balloon with the given color and returns it.
 
-=== PartyDecorator Class
 
+=== PartyDecorator Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -99,8 +100,8 @@ endif::[]
 
 The `PartyDecorator` class represents someone decorating the party hall. It holds a reference to the `BalloonFactory` and uses it to get balloon instances for decorating the hall. In the `decoratePartyHall` method, the decorator requests balloons with specific colors and performs operations on them, passing extrinsic state (unique to each balloon, like its position in the hall).
 
-=== Usage Example
 
+=== Usage Example
 Now, let's see how the classes are used together:
 
 [source, {lang}]
@@ -118,7 +119,6 @@ When the `Main` class is executed, it creates instances of the `BalloonFactory` 
 
 
 == Design Considerations
-
 When implementing the Flyweight Pattern in software development, several design considerations should be taken into account:
 
 * **Memory Efficiency**: The Flyweight Pattern aims to minimize memory usage by reusing existing instances and sharing common parts among multiple objects. Designers should carefully consider the trade-offs between memory efficiency and performance when deciding which parts of an object should be shared and which should be unique to each instance.
@@ -131,5 +131,4 @@ When implementing the Flyweight Pattern in software development, several design 
 
 
 == Conclusion
-
 The Flyweight Pattern is a powerful design pattern that enables efficient memory usage and improved performance by reusing existing instances and sharing common parts among multiple objects. By separating intrinsic and extrinsic state, the pattern allows for customization and variation in object behavior while minimizing memory overhead. Designers can use the Flyweight Pattern to build scalable and thread-safe software systems that can handle large numbers of objects efficiently. However, careful consideration should be given to the design and implementation to ensure proper synchronization, object identity, and performance optimization. Overall, the Flyweight Pattern is a valuable tool in the software architect's toolkit, offering a balance between memory efficiency, performance, and scalability.

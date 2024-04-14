@@ -136,13 +136,13 @@ Custom Sandwich Ingredients:
 == Design Considerations
 When implementing the Builder Pattern for constructing complex objects, several design considerations should be taken into account:
 
-- _Flexibility and Extensibility_: The pattern should allow for easy addition or modification of parts/components of the complex object without affecting the client code. This flexibility ensures that new types of sandwiches or variations can be added in the future without requiring changes to existing code.
+- **Flexibility and Extensibility**: The pattern should allow for easy addition or modification of parts/components of the complex object without affecting the client code. This flexibility ensures that new types of sandwiches or variations can be added in the future without requiring changes to existing code.
 
-- _Separation of Concerns_: The pattern should ensure clear separation between the construction process (handled by the Director and Builder) and the final object representation (the Product). This separation simplifies maintenance and allows for changes in the construction process without impacting the final object's structure.
+- **Separation of Concerns**: The pattern should ensure clear separation between the construction process (handled by the Director and Builder) and the final object representation (the Product). This separation simplifies maintenance and allows for changes in the construction process without impacting the final object's structure.
 
-- _Consistency and Reusability_: The pattern should promote consistency in the construction process across different implementations of the Builder interface. Additionally, it should encourage the reuse of existing builders for constructing similar types of objects, reducing code duplication and improving maintainability.
+- **Consistency and Reusability**: The pattern should promote consistency in the construction process across different implementations of the Builder interface. Additionally, it should encourage the reuse of existing builders for constructing similar types of objects, reducing code duplication and improving maintainability.
 
-- _Performance_: Depending on the complexity of the object being constructed, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the construction process while maintaining readability and flexibility.
+- **Performance**: Depending on the complexity of the object being constructed, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the construction process while maintaining readability and flexibility.
 
 
 == Conclusion

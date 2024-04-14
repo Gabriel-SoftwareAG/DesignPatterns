@@ -8,7 +8,6 @@ endif::[]
 :imagesdir: ../images/ch05_AbstractFactory
 
 == Introduction
-
 [cols="2", frame="none", grid="none"]
 |===
 |Remember our amusement park example from the factory method pattern chapter? Let's continue that analogy where we had different food stalls for pizza, ice cream, and burgers, let's take it a step further. Imagine now that the park is divided into different themed areas, each offering a unique experience: Adventure Land, Fantasy Land, and Future World. Each of these areas has its own set of food stalls, but they're specialized even further. For example, Adventure Land might have tropical-themed ice cream and exotic pizzas, Fantasy Land offers magical treats and enchanted pizzas, and Future World serves space-age ice cream and futuristic burgers. 
@@ -17,30 +16,34 @@ endif::[]
 
 The Abstract Factory Pattern is like the organizational system behind these themed areas. Instead of just going to any stall for ice cream or pizza, you first choose which themed area you're interested in based on the kind of experience you want. Then, within that area, you go to the specific stall for your food. This way, the type of food you get is not just about whether it's pizza or ice cream, but it's a pizza or ice cream that fits the theme of your chosen area.
 
-In programming, the Abstract Factory Pattern works similarly. It's not just about creating objects; it's about creating families of related objects without specifying their concrete classes. When your software needs a set of related objects (like all the food from Fantasy Land), it asks an abstract factory for them, and this factory ensures that all the objects work well together, adhering to the theme. This way, you can switch themes (or families of objects) easily, just like choosing to spend your day in a different area of the amusement park, and still get a coherent experience.
+In programming, the Abstract Factory Pattern works similarly. It’s not just about creating objects; it’s about creating families of related objects without specifying their concrete classes. For instance, consider a software application that supports both dark and light modes. The application uses an abstract factory to create buttons, which are part of the UI element family. Depending on the current theme (dark or light mode), the factory produces buttons that are styled appropriately—dark-colored buttons for dark mode and light-colored buttons for light mode. When your software needs a set of related objects (like all the food from Fantasy Land), it asks an abstract factory for them, and this factory ensures that all the objects work well together, adhering to the theme. This way, you can switch themes (or families of objects) easily, just like choosing to spend your day in a different area of the amusement park, and still get a coherent experience.
+
 
 == Key Components
-
 - _Abstract Factory_: In the amusement park analogy, the Abstract Factory represents the organizational system behind themed areas. It defines an interface for creating families of related objects (themed food), without specifying their concrete classes.
 - _Concrete Factory_: These are the specific implementations of the Abstract Factory, corresponding to themed areas in the amusement park (Adventure Land, Fantasy Land, Future World). Each concrete factory creates a set of related objects (themed food) that adhere to the theme of its respective area.
 - _Abstract Product_: The Abstract Product represents the general concept of a product (food) within a themed area. It defines an interface for creating specific types of products (e.g., ice cream or pizza) without specifying their concrete classes.
 - _Concrete Product_: These are the specific implementations of the Abstract Product, representing themed food items within each themed area. Each concrete product corresponds to a specific type of themed food and implements the behavior defined by the abstract product interface.
 
+
 == UML Diagrams 
 Next, we will explain the concept of the Abstract Factory design pattern using UML.
+
 
 === Class Diagram
 image::AbstractFactoryPatternClassDiagram.png[title="The Abstract Factory Class Diagram", align=center]
 In the Abstract Factory Pattern depicted by the class diagram, the analogy revolves around the organizational system of themed areas in an amusement park. The Abstract Factory represents the concept of themed areas, where each factory is responsible for creating a family of related objects (themed food items) that adhere to the theme of the area. Concrete factories (ConcreteFactory1 and ConcreteFactory2) correspond to specific themed areas, such as Adventure Land and Fantasy Land. Each concrete factory provides methods (createProductA() and createProductB()) to create themed food items (AbstractProductA and AbstractProductB). The Abstract Products (AbstractProductA and AbstractProductB) define the general concept of themed food items without specifying their concrete classes. Concrete products (ProductA1, ProductB1, ProductA2, and ProductB2) represent specific themed food items within each themed area, implementing the behavior defined by the abstract product interfaces. Through this pattern, themed areas can offer cohesive experiences to visitors by ensuring that all themed food items fit the theme of the area.
 
+
 === Sequence Diagram
 image::AbstractFactoryPatternSequenceDiagram.png[title="The Abstract Factory Sequence Diagram", align=center]
 In the Abstract Factory Pattern depicted by the sequence diagram, the analogy continues with the organizational system of themed areas in an amusement park. The Client represents a visitor at the park, interested in obtaining themed food items without knowing their specific types. When the Client requests a themed area (getFactory()), the AbstractFactory activates and selects a specific concrete factory (ConcreteFactory1) corresponding to the chosen area (e.g., Adventure Land). The Client then interacts with ConcreteFactory1 to create themed food items (ConcreteProductA1 and ConcreteProductB1) using the createProductA() and createProductB() methods. Each concrete product is created by the factory (ConcreteFactory1) and returned to the Client, who can use them without needing to know their concrete classes. Through this pattern, the amusement park ensures that visitors can enjoy themed food items that fit the theme of their chosen area without having to specify the exact types of food they desire.
 
+
 == Implementation Walkthrough
 
-=== Abstract Factory: AbstractFoodStallFactory
 
+=== Abstract Factory: AbstractFoodStallFactory
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -54,8 +57,8 @@ endif::[]
 
 The `AbstractFoodStallFactory` interface represents the concept of themed areas in the amusement park, where each factory is responsible for creating families of related themed food items. It declares methods for creating specific types of themed food items.
 
-=== Concrete Factories: AdventureLandFactory and FantasyLandFactory
 
+=== Concrete Factories: AdventureLandFactory and FantasyLandFactory
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -80,8 +83,8 @@ endif::[]
 
 The `AdventureLandFactory` and `FantasyLandFactory` classes represent specific themed areas in the amusement park. They implement the `AbstractFoodStallFactory` interface and provide methods to create themed food items (`AbstractProductA` and `AbstractProductB`) that adhere to the theme of their respective areas.
 
-=== Abstract Products: AbstractProductA and AbstractProductB
 
+=== Abstract Products: AbstractProductA and AbstractProductB
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -106,8 +109,8 @@ endif::[]
 
 The `AbstractProductA` and `AbstractProductB` interfaces define the general concept of themed food items within the amusement park. They declare methods for enjoying the themed food items.
 
-=== Concrete Products: TropicalIceCream, ExoticPizza, MagicalIceCream, and EnchantedPizza
 
+=== Concrete Products: TropicalIceCream, ExoticPizza, MagicalIceCream, and EnchantedPizza
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -154,8 +157,8 @@ endif::[]
 
 The `TropicalIceCream`, `ExoticPizza`, `MagicalIceCream`, and `EnchantedPizza` classes represent specific themed food items within the amusement park. They implement the `AbstractProductA` and `AbstractProductB` interfaces and provide methods for enjoying the themed food items.
 
-=== Client Interaction: ParkVisitor
 
+=== Client Interaction: ParkVisitor
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -171,7 +174,6 @@ The `ParkVisitor` class represents a visitor at the amusement park. It chooses t
 
 
 == Design Considerations
-
 When implementing the Abstract Factory Pattern for managing themed food stalls at an amusement park, several design considerations should be taken into account:
 
 * **Abstraction and Encapsulation**: The abstract factory and product interfaces should provide clear abstractions of themed areas and themed food items, respectively. Encapsulating the creation process within concrete factories ensures separation of concerns and maintains a clean interface for clients.
@@ -186,5 +188,4 @@ When implementing the Abstract Factory Pattern for managing themed food stalls a
 
 
 == Conclusion
-
 The Abstract Factory Pattern provides a flexible and extensible solution for managing themed food stalls at an amusement park, ensuring that themed food items adhere to the theme of their respective areas. By encapsulating the creation process within abstract factory interfaces and their concrete implementations, the pattern promotes abstraction, encapsulation, and separation of concerns. Through the amusement park analogy, we've seen how the pattern simplifies the process of ordering themed food items by allowing visitors to choose themed areas and order themed food items without needing to know their specific types. By adhering to design considerations such as abstraction, flexibility, consistency, error handling, and documentation, developers can leverage the Abstract Factory Pattern to efficiently manage themed food stalls and provide a cohesive experience for visitors at the amusement park.
