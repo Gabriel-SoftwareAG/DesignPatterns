@@ -1,7 +1,9 @@
 package factorymethod;
 
-public class PizzaStall extends FoodStall {
-    Product createProduct() {
-        return new ConcreteProductA();
+class PizzaStall extends FoodStall {
+    @Override
+    Product prepareFood() {
+        System.out.println("Pizza is being prepared");
+        return new Pizza();
     }
 }

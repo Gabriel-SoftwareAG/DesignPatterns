@@ -1,4 +1,5 @@
 package factorymethod;
 
-public abstract class Product {
+abstract class Product {
+    abstract Product serve();
 }
