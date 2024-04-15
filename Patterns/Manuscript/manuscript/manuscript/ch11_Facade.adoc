@@ -138,7 +138,6 @@ When implementing the Facade Pattern in software development for a control panel
 * **Subsystem Encapsulation**: Subsystems should encapsulate their specific functionalities and complexities, allowing the facade to delegate tasks to them seamlessly. Designers should carefully define the responsibilities and interfaces of each subsystem to maintain modularity and minimize dependencies between subsystems.
 * **Flexibility and Extensibility**: The Facade Pattern should allow for flexibility and extensibility in adding new features or modifying existing ones. Designers should ensure that the facade remains open for extension but closed for modification, enabling the addition of new subsystems or features without modifying the existing code.
 * **Performance Considerations**: While the Facade Pattern simplifies the interaction with a complex system, designers should consider the performance implications of using the pattern. Facade operations should be efficient and lightweight, minimizing overhead and latency to ensure optimal system performance.
-* **Error Handling**: The facade should handle errors gracefully and provide meaningful feedback to users in case of failures or exceptions. Designers should implement robust error-handling mechanisms within the facade to maintain system reliability and user satisfaction.
 
 
 [discrete%breakable]

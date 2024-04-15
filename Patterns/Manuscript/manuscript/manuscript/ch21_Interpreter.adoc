@@ -166,11 +166,6 @@ When implementing the interpreter pattern, several design considerations should 
 
 * **Separation of Concerns**: It's important to maintain separation between the interpreter logic and the application-specific functionality. This separation allows for easier maintenance, testing, and reuse of the interpreter components across different contexts or applications.
 
-* **Error Handling**: The interpreter should handle error conditions gracefully, such as unrecognized expressions or invalid context states. Clear error messages and fallback mechanisms can help improve the usability and robustness of the system.
-
-* **Documentation and Maintenance**: Proper documentation of the interpreter's grammar, supported expressions, and usage guidelines is essential for developers who interact with the system. Additionally, regular maintenance and updates to the interpreter should be planned to ensure compatibility with evolving requirements and technologies.
-
-
 
 [discrete%breakable]
 == Conclusion

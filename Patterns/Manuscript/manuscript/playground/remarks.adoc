@@ -3,8 +3,10 @@
 - Add a table summary for all design patterns
 - font in the table is different
 - Add to the appendix the singleton multithread issue, and the java prototype
+- Find the place to add comments verisoft.
 
 Future options:
 - To make it in a book style: :media: prepress in book.adoc
 - RTL: add in css - https://github.com/asciidoctor/asciidoctor/issues/1601
 - attributes: https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/
+- TypeScript: https://medium.com/vattenfall-tech/you-might-not-need-all-those-design-patterns-in-typescript-d5671b34410a

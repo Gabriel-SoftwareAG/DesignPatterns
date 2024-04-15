@@ -164,8 +164,6 @@ When implementing the visitor pattern, several design considerations should be t
 
 - **Extensibility**: The pattern should support the addition of new behaviors or operations on exhibits without requiring changes to existing visitor classes. This extensibility allows for the implementation of diverse visitor experiences and educational programs within the museum.
 
-- **Documentation and Maintenance**: Proper documentation of exhibit types, visitor behaviors, and their interactions is essential for developers who maintain and extend the system. Additionally, regular maintenance and updates to the visitor pattern implementation should be planned to ensure compatibility with evolving museum requirements and visitor expectations.
-
 
 [discrete%breakable]
 == Conclusion

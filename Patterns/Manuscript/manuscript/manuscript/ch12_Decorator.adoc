@@ -151,7 +151,6 @@ When implementing the Decorator Pattern in software development, several design 
 * **Flexibility and Extensibility**: Design the decorators to be easily extendable to accommodate new toppings or behaviors. This allows for dynamic customization of objects at runtime without modifying existing code, promoting flexibility and extensibility in the system design.
 * **Order of Decorators**: Consider the order in which decorators are applied to ensure the desired behavior is achieved. Depending on the application requirements, decorators can be applied in different orders to produce different results.
 * **Performance Overhead**: Be mindful of the performance overhead introduced by multiple layers of decorators, especially in scenarios where a large number of decorators are applied to objects. Minimize unnecessary overhead by keeping decorators lightweight and efficient.
-* **Error Handling**: Implement robust error-handling mechanisms in decorators to handle unexpected scenarios gracefully. Ensure that errors are handled transparently to the client, maintaining system reliability and user satisfaction.
 
 
 [discrete%breakable]

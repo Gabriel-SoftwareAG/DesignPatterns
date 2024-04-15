@@ -171,7 +171,6 @@ When implementing the iterator pattern, several design considerations should be 
 - **Separation of Concerns**: The iterator pattern separates the responsibility of iteration from the collection itself. This separation ensures that changes to the iteration logic do not affect the collection's structure, promoting a more modular and maintainable design.
 - **Flexibility**: The pattern should support various types of collections and iteration strategies. It should be adaptable to different scenarios and allow for easy extension and customization as requirements evolve.
 - **Performance**: Considerations should be made for the performance of iteration operations, especially for large collections. Efficient algorithms and data structures should be employed to minimize the overhead of iteration and ensure optimal performance.
-- **Documentation and Usability**: Clear documentation and intuitive interfaces are essential for users of the iterator pattern. Users should be able to understand how to use the iterator effectively and efficiently navigate through the collection without ambiguity.
 
 
 [discrete%breakable]
