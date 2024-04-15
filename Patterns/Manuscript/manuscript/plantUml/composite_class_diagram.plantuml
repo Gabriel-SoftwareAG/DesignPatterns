@@ -35,8 +35,9 @@ note right of Leaf
 end note
 
 note right of Composite
-  "Composite" stores child components and implements
-  child-related operations in the Component interface.
+  "Composite" stores child components 
+  and implements child-related operations 
+  in the Component interface.
 end note
 
 @enduml

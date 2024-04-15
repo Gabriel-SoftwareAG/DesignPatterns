@@ -19,11 +19,11 @@ class Playlist implements PlaylistComponent {
     }
 
     @Override
-    public void operation() {
+    public void playSong() {
         // Perform playlist-specific operation, such as playing all songs
         System.out.println("Playing playlist:");
         for (PlaylistComponent component : components) {
-            component.operation();
+            component.playSong();
         }
     }
 }

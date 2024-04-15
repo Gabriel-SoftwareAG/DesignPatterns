@@ -3,7 +3,7 @@ package adapter;
 public class Traveler {
     public static void main(String[] args) {
         // Create electronic device
-        ElectronicDevice device = new ElectronicDevice();
+        MobilePhone device = new MobilePhone();
 
         // Create universal adapter
         UniversalAdapter adapter = new UniversalAdapter(device);

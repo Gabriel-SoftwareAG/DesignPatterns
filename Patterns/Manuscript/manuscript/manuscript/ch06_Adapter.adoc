@@ -68,19 +68,19 @@ The `ElectricalOutlet` interface represents the common interface expected by ele
 
 
 [discrete%breakable]
-=== Adaptee: ElectronicDevice
+=== Adaptee: MobilePhone
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
-include::{java_path}/adapter/ElectronicDevice.java[lines=3..]
+include::{java_path}/adapter/MobilePhone.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/ElectronicDevice.py[lines=3..]
+include::{python_path}/adapter/MobilePhone.py[lines=3..]
 endif::[]
 ----
 
-The `ElectronicDevice` class represents the electronic device owned by the traveler. It has a specific interface with a `specificRequest()` method to initiate the charging process.
+The `MobilePhone` class represents the electronic device owned by the traveler. It has a specific interface with a `specificRequest()` method to initiate the charging process.
 
 
 [discrete%breakable]
@@ -100,7 +100,7 @@ The `UniversalAdapter` class acts as the universal adapter used by the traveler 
 
 
 [discrete%breakable]
-=== Client: Traveler
+=== Usage Example
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -112,22 +112,32 @@ include::{python_path}/adapter/Traveler.py[lines=3..]
 endif::[]
 ----
 
-The `Traveler` class represents the traveler who needs to charge their electronic device while traveling. In the `main()` method, the traveler creates an instance of the electronic device and the universal adapter. Then, the traveler connects the device to the electrical outlet using the adapter and initiates the charging process.
+In the example, the traveler creates an instance of the electronic device (`MobilePhone`) and the universal adapter. Then, the traveler connects the device to the electrical outlet using the adapter and initiates the charging process.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Converting electrical power to device
+Charging Mobile Phone
+----
 
 
 [discrete%breakable]
 == Design Considerations
-When implementing the Adapter Pattern for charging electronic devices, several design considerations should be taken into account:
+When implementing the Adapter Pattern, several design considerations should be taken into account:
 
-* **Interface Design**: The design of the Target Interface should be intuitive and flexible enough to accommodate different types of requests. It should define a common interface expected by the electrical outlets, allowing for seamless integration with different types of adapters.
+* **Interface Design**: The design of the `Target` Interface should be intuitive and flexible enough to accommodate different types of requests. It should define a common interface expected by the different objects (in our case, different electrical devices), allowing for seamless integration with different types of adapters.
 
-* **Adapter Implementation**: The Adapter class should encapsulate the logic for translating requests from the Target Interface to the specific interface of the Adaptee. Care should be taken to ensure that the adapter correctly adapts the requests and responses between the two interfaces, maintaining the integrity of the charging process.
+* **Adapter Implementation**: The `Adapter` class should encapsulate the logic for translating requests from the `Target` Interface to the specific interface of the `Adaptee`. Care should be taken to ensure that the adapter correctly adapts the requests and responses between the two interfaces, maintaining the integrity of the charging process.
 
-* **Adaptee Compatibility**: The Adaptee class representing the electronic device should be designed to accommodate the specific charging requirements of different types of devices. It should expose a specific interface with methods for initiating the charging process, allowing for easy integration with the Adapter class.
+* **Adaptee Compatibility**: The `Adaptee` class representing the electronic device should be designed to accommodate the specific charging requirements of different types of devices. It should expose a specific interface with methods for initiating the charging process, allowing for easy integration with the `Adapter` class.
 
 * **Flexibility and Extensibility**: The design should be flexible and extensible to accommodate future changes and additions to the system. This includes the ability to add support for new types of electronic devices and electrical outlets without requiring significant modifications to existing code.
 
 
 [discrete%breakable]
 == Conclusion
-The Adapter Pattern provides an elegant solution for connecting electronic devices to different types of electrical outlets, ensuring seamless charging functionality for travelers. By encapsulating the translation logic within the adapter, the pattern enables devices with different interfaces to work together without modifications to their existing codebase. Through the traveler analogy, we've seen how the Adapter Pattern facilitates the charging process by bridging the gap between the common interface expected by electrical outlets and the specific interface of electronic devices. By adhering to design considerations such as interface design, adapter implementation, adaptee compatibility, flexibility, error handling, documentation, and communication, developers can leverage the Adapter Pattern to create robust and flexible systems for charging electronic devices in various scenarios.
+This Adapter pattern provides an elegant solution by encapsulating the translation logic within an adapter, allowing different systems to communicate seamlessly without modifying their existing codebases. By acting as a bridge between a common interface and specific interfaces of devices, the Adapter Pattern enhances the flexibility of software applications. This flexibility is crucial when dealing with legacy systems, third-party libraries, or APIs where direct modification of the source code is impractical or impossible. By focusing on interface design, adapter implementation, and compatibility, developers can use the Adapter Pattern to ensure that disparate parts of a system work together harmoniously, thereby increasing the overall modularity and reusability of the code.

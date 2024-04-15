@@ -8,7 +8,7 @@ class Song implements PlaylistComponent {
     }
 
     @Override
-    public void operation() {
+    public void playSong() {
         // Perform song-specific operation, such as playing
         System.out.println("Playing song: " + title);
     }

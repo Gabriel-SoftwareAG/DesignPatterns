@@ -1,13 +1,14 @@
 package adapter;
 
 class UniversalAdapter implements ElectricalOutlet {
-    private ElectronicDevice device;
+    private MobilePhone device;
 
-    UniversalAdapter(ElectronicDevice device) {
+    UniversalAdapter(MobilePhone device) {
         this.device = device;
     }
 
     public void request() {
+        System.out.println("Converting electrical power to device");
         device.specificRequest();
     }
 }

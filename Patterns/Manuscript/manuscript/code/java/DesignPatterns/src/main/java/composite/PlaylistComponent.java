@@ -1,5 +1,5 @@
 package composite;
 
 interface PlaylistComponent {
-    void operation();
+    void playSong();
 }
