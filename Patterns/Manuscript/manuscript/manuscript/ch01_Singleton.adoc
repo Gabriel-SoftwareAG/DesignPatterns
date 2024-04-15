@@ -18,32 +18,32 @@ In the world of software, the Singleton Pattern is like having that one library 
 
 This unique instance then becomes the central point of access for the specified service or resource throughout the application. Like the town's single library, the Singleton Pattern provides a single, global reference point to the resource or service it represents, making sure that everyone goes through it to access the capabilities it offers.
 
-
+[discrete%breakable]
 == Key Components
 - _Unique Instance_: The Singleton Pattern ensures that only one instance of a particular class can exist within the program, mimicking the one and only library in the town scenario.
 - _Central Point of Access_: Similar to how the town's single library serves as the central hub for all book-related activities, the Singleton Pattern designates the instantiated object as the sole access point for the specified service or resource in the application.
 - _Global Reference Point_: Just as the town's library serves as the go-to spot for all book-related needs, the Singleton Pattern offers a single, global reference to the instantiated object, ensuring that all interactions with the service or resource go through it.
 - _Managed Place_: Like the centralized management of the town's library for book borrowing and sharing, the Singleton Pattern facilitates controlled access and usage of the instantiated object, promoting consistency and coordination within the application.
 
-
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Singleton design pattern using UML.
 
-
+[discrete%breakable]
 === Class Diagram
 image::SingletonPatternClassDiagram.png[title="The Singleton Class Diagram", align=center]
 In this class diagram, the Singleton class represents the central library in a town. Just like the library, the Singleton class ensures that only one instance of itself exists throughout the application. The private constructor and static instance variable function similarly to the library's unique status and limited physical presence, ensuring that no additional instances can be created. The getInstance() method serves as the main entrance to the library, allowing access to the Singleton instance and ensuring that all requests for the Singleton class are directed to the same instance, analogous to how all book borrowing and sharing in the town are managed through the central library.
 
-
+[discrete%breakable]
 === Sequence Diagram
 image::SingletonPatternSequenceDiagram.png[title="The Singleton Sequence Diagram", align=center]
 In the sequence diagram, the interaction between the Client and Singleton classes is illustrated, analogous to a person visiting the town's central library. When the Client sends a request to the Singleton class via the getInstance() method, it activates the Singleton class, symbolizing someone entering the library. If no instance of the Singleton class exists, represented by the absence of a library patron, the Singleton class creates a new instance, akin to a person entering the library for the first time and becoming its first visitor. However, if an instance already exists, indicated by the presence of a library visitor, the Singleton class simply returns the existing instance, mirroring how a person returning to the library is not issued a new library card but instead continues using their existing one. Finally, the Singleton class sends the instance back to the Client, symbolizing the library providing access to its resources.
 
-
+[discrete%breakable]
 == Implementation Walkthrough
 In this example, we'll implement the Singleton pattern using the library analogy. 
 
-
+[discrete%breakable]
 === The Library class (the Singleton)
 [source, {lang}]
 ----
@@ -62,6 +62,7 @@ endif::[]
 - The `getInstance()` method is a static method that returns the single instance of the `Library` class. It creates a new instance if one doesn't exist, otherwise, it returns the existing instance.
 
 
+[discrete%breakable]
 === Usage Example
 [source, {lang}]
 ----
@@ -77,8 +78,9 @@ endif::[]
 - In the example, it obtains an instance of the `Library` class using the `getInstance()` method.
 - After obtaining the object, it uses the `borrowABook()` method to use the `library` object.
 
-=== Code Output
 
+[discrete%breakable]
+=== Code Output
 The above code output is: 
 [source,plaintext]
 ----
@@ -86,6 +88,7 @@ Granting access to the central library
 Borrowing a book from the library...
 ----
 
+[discrete%breakable]
 == Design Considerations
 When implementing the Singleton pattern, several considerations should be taken into account:
 
@@ -98,5 +101,6 @@ When implementing the Singleton pattern, several considerations should be taken 
 By carefully considering these aspects during the design and implementation of the Singleton pattern, developers can create robust and efficient singleton classes that meet the requirements of their applications.
 
 
+[discrete%breakable]
 == Conclusion
 The Singleton pattern provides a simple and effective way to ensure that a class has only one instance throughout the application. By centralizing access to resources or services, it promotes consistency, efficiency, and ease of maintenance. However, it's important to carefully consider design considerations such as thread safety, lazy initialization, serialization, testing, and dependency injection to create a robust Singleton implementation. When used judiciously and in alignment with the application's requirements, the Singleton pattern can greatly enhance the design and architecture of software systems.

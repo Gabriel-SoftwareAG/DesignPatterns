@@ -7,8 +7,8 @@ endif::[]
 
 :imagesdir: ../images/ch16_Memento
 
-== Introduction
 
+== Introduction
 [cols="2", frame="none", grid="none"]
 |===
 |Let's imagine you're playing a video game where you can save your progress at certain points. When you save your game, it creates a snapshot of your current state, including things like your character's health, inventory, and progress through the game. Later on, if you encounter a tough enemy and lose some progress, you can load your saved game to return to a previous state and try again.
@@ -22,30 +22,38 @@ For example, let's say you're working on a text editor, and you want to implemen
 
 Overall, the memento pattern provides a way to capture and restore the state of an object, allowing you to implement features like undo/redo functionality or save/load mechanisms in software applications, similar to how saving and loading game progress works in video games.
 
-== Key Components
 
+[discrete%breakable]
+== Key Components
 - _Originator (e.g., Player)_: The Originator is the object whose state needs to be saved. In the video game example, the Player class represents the character whose state is being saved and restored.
 - _Memento (e.g., PlayerMemento)_: The Memento is an object that stores the state of the Originator at a specific point in time. In the video game example, the PlayerMemento class encapsulates the state of the player, including attributes like health, inventory, and progress.
 - _Caretaker (e.g., SaveManager)_: The Caretaker is responsible for keeping track of the Memento objects. In the video game example, the SaveManager class acts as a repository for storing and retrieving PlayerMemento objects. It manages the save/load functionality by maintaining a collection of mementos.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Memento design pattern using UML.
 
+
+[discrete%breakable]
 === Class Diagram
 image::MementoPatternClassDiagram.png[title="The Memento Class Diagram", align=center]
 In the video game analogy, the Originator class represents the player character whose state needs to be saved and restored. It has methods to set and get the current state, as well as methods to save the state to a Memento object and retrieve the state from a Memento object. The Memento class acts as a snapshot of the player character's state at a specific point in time. It encapsulates the state information and provides methods to retrieve the saved state. The Caretaker class is responsible for managing Memento objects. It maintains a list of Memento objects and provides methods to add new Mementos to the list and retrieve Mementos from the list. In the video game context, the Originator represents the player character, the Memento represents a saved game state, and the Caretaker manages the saved game states.
 
+
+[discrete%breakable]
 === Sequence Diagram
 image::MementoPatternSequenceDiagram.png[title="The Memento Sequence Diagram", align=center]
 In the video game analogy illustrated in the sequence diagram, the Player initiates the process by interacting with the Game. Initially, the Player reaches a certain checkpoint in the game, representing the state of progress as 'Checkpoint1'. Then, the Player requests the Game to save the current state to a saved game file, akin to creating a Memento. The Game creates a saved game file with the current state and returns it to the Player. The Player then passes this saved game file to the Console, which saves it to the storage device. Later, when the Player wants to return to 'Checkpoint1', they request the saved game file from the Console. The Console retrieves the desired saved game file and returns it to the Player, who then loads it into the Game. Finally, the Game restores the player's progress to 'Checkpoint1' using the saved game file provided by the Player.
 
-== Implementation Walkthrough
 
+[discrete%breakable]
+== Implementation Walkthrough
 In this example, we'll implement the Memento design pattern in Java using a video game analogy. We'll have three main classes: `Player` as the Originator, `GameState` as the Memento, and `SaveManager` as the Caretaker.
 
-=== GameState Class (Memento)
 
+[discrete%breakable]
+=== GameState Class (Memento)
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -59,8 +67,9 @@ endif::[]
 
 Explanation: The `GameState` class acts as a Memento, representing a snapshot of the player's state at a specific point in the game. It holds the state data and provides a method to access it.
 
-=== Player Class (Originator)
 
+[discrete%breakable]
+=== Player Class (Originator)
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -75,8 +84,8 @@ endif::[]
 Explanation: The `Player` class represents the player in the video game. It maintains its current state and provides methods to set and get the state. The `saveStateToMemento()` method creates a `GameState` object (Memento) representing the current game state. The `getStateFromMemento()` method restores the player's state from a given `GameState` object.
 
 
+[discrete%breakable]
 === SaveManager Class (Caretaker)
-
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -90,8 +99,9 @@ endif::[]
 
 Explanation: The `SaveManager` class serves as the Caretaker, responsible for managing the saved game states. It maintains a list of `GameState` objects and provides methods to add new states and retrieve states by index.
 
-=== Implementation Example
 
+[discrete%breakable]
+=== Implementation Example
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -106,8 +116,8 @@ endif::[]
 Explanation: In the implementation example, we demonstrate the usage of the Memento pattern. The `Player` progresses through the game, and at each checkpoint, the game state is saved using the `saveStateToMemento()` method and added to the `SaveManager`. Later, if the player needs to revert to a previous state, the desired state is retrieved from the `SaveManager` using the `get()` method and restored using `getStateFromMemento()`.
 
 
+[discrete%breakable]
 == Design Considerations
-
 The Memento pattern offers several benefits and considerations when designing software applications:
 
 * Encapsulation: The Memento pattern encapsulates the internal state of an object, preventing direct access by external components. This promotes data integrity and maintains the object's integrity by restricting access to its state.
@@ -125,5 +135,6 @@ The Memento pattern offers several benefits and considerations when designing so
 Overall, the Memento pattern offers a robust solution for managing object states while promoting encapsulation, flexibility, and separation of concerns. By carefully considering design considerations such as performance, memory management, and serialization, developers can effectively leverage the Memento pattern to enhance the maintainability and functionality of their software applications.
 
 
+[discrete%breakable]
 == Conclusion
 The Memento pattern is a powerful tool in software design, offering a flexible and encapsulated approach to managing object states. By capturing snapshots of an object's state and storing them externally, the pattern enables features like undo/redo functionality, checkpoint-based game saves, and state recovery in distributed systems. Through the separation of concerns between the Originator and Caretaker classes, the pattern promotes modularity and simplifies maintenance, while considerations such as performance, memory management, and serialization ensure scalability and interoperability. With its ability to enhance data integrity, flexibility, and maintainability, the Memento pattern stands as a valuable asset in the developer's toolkit for crafting robust and resilient software solutions.

@@ -10,7 +10,7 @@ endif::[]
 == Introduction
 [cols="2", frame="none", grid="none"]
 |===
-|Let's say you're traveling around the world and you have various electronic devices like phones, cameras, and laptops. These devices may come with different types of chargers: one might have a European plug, another might have an American plug, and so on.
+|Say you're traveling around the world and you have various electronic devices like phones, cameras, and laptops. These devices may come with different types of chargers: one might have a European plug, another might have an American plug, and so on.
 
 However, the electrical outlets in different countries might have different shapes and voltages. For instance, some countries have outlets with two flat prongs, while others have outlets with two round prongs or even three prongs in a triangular configuration.
 
@@ -23,6 +23,7 @@ This adapter has multiple types of prongs and sockets, allowing it to fit into d
 In this scenario, the universal adapter acts as an adapter pattern, bridging the gap between the different types of plugs on your devices and the various types of outlets you encounter during your travels. Just like how the adapter enables your devices to work with different outlets, the adapter pattern enables different classes or objects to work together despite having different interfaces.
 
 
+[discrete%breakable]
 == Key Components
 - _Client_: In the travel scenario, the client represents the traveler who owns various electronic devices and needs to charge them while traveling. The client interacts with the adapter to connect their devices to different types of electrical outlets.
 - _Adaptee_: The electronic devices, such as phones, cameras, and laptops, are the adaptees in the scenario. They have different types of plugs that need to be connected to various types of electrical outlets.
@@ -30,15 +31,18 @@ In this scenario, the universal adapter acts as an adapter pattern, bridging the
 - _Adapter_: The universal adapter acts as the adapter in the scenario, bridging the gap between the different types of plugs on the client's devices and the various types of outlets encountered during travel. It adapts the interface of the devices to the target interface defined by the universal adapter, enabling the devices to be connected to different types of electrical outlets seamlessly.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Adapter design pattern using UML.
 
 
+[discrete%breakable]
 === Class Diagram
 image::AdapterPatternClassDiagram.png[title="The Adapter Class Diagram", align=center]
 In the Adapter Pattern depicted by the class diagram, the analogy revolves around travelers needing to charge their electronic devices while traveling. The Target interface represents the universal adapter used by travelers to connect their devices to different types of electrical outlets. It defines a common interface with a request() method that travelers use to charge their devices. The Adaptee class represents the electronic devices owned by travelers, such as phones and cameras. These devices have their own specific interface with a specificRequest() method. The Adapter class acts as the universal adapter used by travelers, bridging the gap between the specific interface of the electronic devices (Adaptee) and the common interface expected by the electrical outlets (Target). It adapts the interface of the devices to the Target interface, enabling travelers to charge their devices seamlessly regardless of the type of electrical outlet available.
 
 
+[discrete%breakable]
 === Sequence Diagram
 image::AdapterPatternSequenceDiagram.png[title="The Adapter Sequence Diagram", align=center]
 In the Adapter Pattern depicted by the sequence diagram, the analogy involves a traveler needing to charge their electronic device while traveling. The Client represents the traveler who initiates the charging process by making a request to the electrical outlet, represented by the Target Interface. The Target Interface defines a common interface expected by the electrical outlet, with a request() method. The Adapter acts as the universal adapter used by the traveler, translating the request from the Target Interface to the specific interface of the electrical device, represented by the Adaptee. The Adaptee represents the electronic device owned by the traveler, which has its own specific interface with a specificRequest() method. The Adapter translates the request from the Target Interface to the specific specificRequest() method of the Adaptee, allowing the device to be charged seamlessly. Finally, the response from the Adaptee is translated back to the Target Interface by the Adapter and returned to the Client, completing the charging process.
@@ -47,6 +51,7 @@ In the Adapter Pattern depicted by the sequence diagram, the analogy involves a 
 == Implementation Walkthrough
 
 
+[discrete%breakable]
 === Target Interface: ElectricalOutlet
 [source, {lang}]
 ----
@@ -62,6 +67,7 @@ endif::[]
 The `ElectricalOutlet` interface represents the common interface expected by electrical outlets worldwide. It declares a method `request()` to initiate the charging process.
 
 
+[discrete%breakable]
 === Adaptee: ElectronicDevice
 [source, {lang}]
 ----
@@ -77,6 +83,7 @@ endif::[]
 The `ElectronicDevice` class represents the electronic device owned by the traveler. It has a specific interface with a `specificRequest()` method to initiate the charging process.
 
 
+[discrete%breakable]
 === Adapter: UniversalAdapter
 [source, {lang}]
 ----
@@ -92,6 +99,7 @@ endif::[]
 The `UniversalAdapter` class acts as the universal adapter used by the traveler to connect their electronic device to different types of electrical outlets. It implements the `ElectricalOutlet` interface and contains a reference to the electronic device. The `request()` method of the adapter translates the request from the common `ElectricalOutlet` interface to the specific `specificRequest()` method of the electronic device.
 
 
+[discrete%breakable]
 === Client: Traveler
 [source, {lang}]
 ----
@@ -107,6 +115,7 @@ endif::[]
 The `Traveler` class represents the traveler who needs to charge their electronic device while traveling. In the `main()` method, the traveler creates an instance of the electronic device and the universal adapter. Then, the traveler connects the device to the electrical outlet using the adapter and initiates the charging process.
 
 
+[discrete%breakable]
 == Design Considerations
 When implementing the Adapter Pattern for charging electronic devices, several design considerations should be taken into account:
 
@@ -119,5 +128,6 @@ When implementing the Adapter Pattern for charging electronic devices, several d
 * **Flexibility and Extensibility**: The design should be flexible and extensible to accommodate future changes and additions to the system. This includes the ability to add support for new types of electronic devices and electrical outlets without requiring significant modifications to existing code.
 
 
+[discrete%breakable]
 == Conclusion
 The Adapter Pattern provides an elegant solution for connecting electronic devices to different types of electrical outlets, ensuring seamless charging functionality for travelers. By encapsulating the translation logic within the adapter, the pattern enables devices with different interfaces to work together without modifications to their existing codebase. Through the traveler analogy, we've seen how the Adapter Pattern facilitates the charging process by bridging the gap between the common interface expected by electrical outlets and the specific interface of electronic devices. By adhering to design considerations such as interface design, adapter implementation, adaptee compatibility, flexibility, error handling, documentation, and communication, developers can leverage the Adapter Pattern to create robust and flexible systems for charging electronic devices in various scenarios.

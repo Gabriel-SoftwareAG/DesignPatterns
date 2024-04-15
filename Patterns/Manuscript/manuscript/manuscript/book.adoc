@@ -10,6 +10,7 @@ Nir Gallner
 :toc: preamble      // Generates the TOC in the preamble of the document
 :toc-title: Table of Contents
 :toclevels: 1       // Only include top-level sections in the TOC
+:media: print
 
 
 

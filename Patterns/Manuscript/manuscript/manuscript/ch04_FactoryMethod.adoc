@@ -7,8 +7,8 @@ endif::[]
 
 :imagesdir: ../images/ch04_FactoryMethod
 
-== Introduction
 
+== Introduction
 [cols="2", frame="none", grid="none"]
 |===
 |Imagine you're at a big amusement park with various food stalls. Each stall specializes in a different type of food: one makes pizza, another serves ice cream, and yet another offers burgers. You don't need to know how they prepare the food; you just tell them what you want, and they make it for you. Each stall has its own "recipe" and method for making its specialty, but from your perspective, the process is simple: you ask, and you receive. The Factory Method Pattern is similar to this idea but in the world of programming. 
@@ -19,29 +19,36 @@ It's like having different "stalls" (factories) in your software. When a part of
 
 Instead, it asks the corresponding "stall" (factory) for it. This factory knows how to create the object in a specific way. This setup makes it easy to add new types of objects without changing the way your program asks for them, just like how the amusement park can add a new food stall without changing how you order food.
 
-== Key Components
 
+[discrete%breakable]
+== Key Components
 * _Creator_: In this analogy, the Creator corresponds to the food stalls in the amusement park. It defines the interface for creating objects but delegates the actual creation to concrete subclasses (factories).
 * _Concrete Creator_: These are the specific implementations of the Creator interface, representing the different food stalls in the amusement park. Each concrete creator (factory) knows how to create a specific type of object (dish) in a particular way.
 * _Product_: The Product represents the objects (dishes) created by the factories. Each product may have different attributes or behaviors depending on the factory that created it.
 * _Concrete Product_: These are the actual objects (dishes) created by the factories. Each concrete product corresponds to a specific type of object (dish) and implements the behavior defined by the product interface.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Factory Method design pattern using UML.
 
-=== Class Diagram
 
+[discrete%breakable]
+=== Class Diagram
 image::FactoryMethodPatternClassDiagram.png[title="The Factory Method Class Diagram", align=center]
 In the class diagram, the abstract class Product represents the general idea of a dish, which can be customized into specific dishes like ConcreteProductA and ConcreteProductB, analogous to pizza or ice cream. The Creator acts as the manager of each food stall, defining an abstract factory method that specifies how dishes are prepared. Concrete creators (ConcreteCreatorA and ConcreteCreatorB) represent different food stalls in the amusement park, each responsible for creating a specific type of dish. They override the factory method to prepare their respective dishes (ConcreteProductA or ConcreteProductB). This pattern allows for the addition of new types of dishes to the amusement park without changing the way dishes are ordered, similar to adding new food stalls without altering the overall food ordering process.
 
-=== Sequence Diagram
 
+[discrete%breakable]
+=== Sequence Diagram
 image::FactoryMethodPatternSequenceDiagram.png[title="The Factory Method Sequence Diagram", align=center]
 In the Factory Method Pattern illustrated by the sequence diagram, the analogy is likened to the process of ordering food at an amusement park. The Client represents the customer placing an order for a dish without knowing the specifics of how it's prepared. The Creator corresponds to the food stall manager who oversees the creation of dishes. When the Client requests a dish, the Creator activates and delegates the creation process to the ConcreteCreator, representing a specific food stall. The ConcreteCreator then creates a new ConcreteProduct (dish) according to its own method, which is returned to the Creator and ultimately delivered to the Client. Through this pattern, the Client can order dishes without needing to know the details of how they're prepared, similar to ordering food at an amusement park without needing to know the specifics of each food stall's cooking process.
 
+
 == Implementation Walkthrough
 
+
+[discrete%breakable]
 === Abstract Product: Product
 [source, {lang}]
 ----
@@ -56,6 +63,8 @@ endif::[]
 
 The `Product` abstract class represents the general concept of a dish served at the amusement park food stalls. It serves as the base for concrete products representing specific dishes. The `serve()` method is a blueprint for how specific dishes, represented by concrete product classes like `IceCream` and `Pizza`, will be served. Being abstract, it outlines the general action of serving without specifying the exact implementation details. 
 
+
+[discrete%breakable]
 === Concrete Products: IceCream and Pizza
 [source, {lang}]
 ----
@@ -82,7 +91,7 @@ endif::[]
 The `IceCream` and `Pizza` classes represent specific dishes served at the amusement park food stalls. They extend the `Product` class to inherit its behavior and attributes. Each concrete product class inheriting from Product must provide its version of the `serve()` method, indicating how that particular dish is served. This method returns an instance of the same concrete product class (`Product`) to support method chaining if required. For instance, in the `IceCream` class, the `serve()` method prints "Ice cream served," while in the `Pizza` class, it prints "Pizza served," signifying the serving of the respective dishes. Thus, the `serve()` method ensures consistency in serving behavior across different types of dishes while allowing each dish to have its unique serving instructions.
 
 
-
+[discrete%breakable]
 === Creator Abstract Class: FoodStall
 [source, {lang}]
 ----
@@ -98,6 +107,7 @@ endif::[]
 The `FoodStall` abstract class serves as a template for organizing various food stalls within the amusement park, ensuring a standardized approach to their operation. It declares the abstract factory method `prepareFood()`, leaving the specifics of dish preparation to its concrete subclasses (`PizzaStall`, `IceCreamStall`). Additionally, the `FoodStall` class includes a method `takeOrder()`, simulating the process of a visitor placing an order at the stall. This method prints a message indicating the order placement at the specific stall and then delegates to `prepareFood()` to create and serve the ordered dish immediately. This structure provides flexibility for different types of food stalls while maintaining consistency in interaction with visitors. It also supports extensibility, allowing for the addition of new types of stalls in the future.
 
 
+[discrete%breakable]
 === Concrete Creators: PizzaStall and IceCreamStall
 [source, {lang}]
 ----
@@ -124,6 +134,7 @@ endif::[]
 The `PizzaStall` and `IceCreamStall` classes represent specific food stalls at the amusement park. They extend the `FoodStall` class and implement the `createProduct()` method to prepare specific dishes (`Pizza` or `IceCream`).
 
 
+[discrete%breakable]
 === Usage Example
 [source, {lang}]
 ----
@@ -139,6 +150,7 @@ endif::[]
 The visitor at the amusement park orders dishes from different food stalls. It creates instances of concrete creators (`PizzaStall` and `IceCreamStall`) representing different food stalls, orders dishes using their `takeOrder()` method, and enjoys the dishes without knowing their specific type.
 
 
+[discrete%breakable]
 === Code Output
 The above code output is: 
 [source,plaintext]
@@ -152,6 +164,7 @@ Ice cream served
 ----
 
 
+[discrete%breakable]
 == Design Considerations
 When implementing the Factory Method Pattern for managing object creation in an amusement park food stall scenario, several design considerations should be taken into account:
 
@@ -162,5 +175,6 @@ When implementing the Factory Method Pattern for managing object creation in an 
 - **Consistency and Reusability**: Consistent naming conventions and design patterns should be followed across product and creator classes to ensure code readability and maintainability. Reusable components and modular design principles should be employed to maximize code reuse and minimize duplication.
 
 
+[discrete%breakable]
 == Conclusion
 The Factory Method Pattern provides a flexible and extensible solution for managing object creation. By encapsulating the creation process within creator classes, the pattern promotes abstraction, encapsulation, and separation of concerns. By following design principles like abstraction, flexibility, and consistency, developers can effectively utilize the Factory Method Pattern to streamline object creation in their software projects

@@ -1,11 +1,14 @@
 package abstractfactory;
 
 public class FantasyLandFactory implements AbstractFoodStallFactory {
-    public AbstractProductA createProductA() {
+    public IceCream createIceCream() {
+
+        System.out.println("Creating magical-themed ice cream");
         return new MagicalIceCream();
     }
 
-    public AbstractProductB createProductB() {
+    public Pizza createPizza() {
+        System.out.println("Creating enchanted-themed pizza");
         return new EnchantedPizza();
     }
 }

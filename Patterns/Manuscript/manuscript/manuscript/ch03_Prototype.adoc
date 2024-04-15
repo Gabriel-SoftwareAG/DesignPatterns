@@ -18,7 +18,7 @@ That's where the prototype pattern comes in. It's like having a special machine 
 
 So, in simpler terms, the prototype pattern allows you to create new objects by copying an existing object. It's like making a photocopy of your favorite toy whenever you need a replacement. This saves time and effort because you don't have to start from scratch every time you want to create a similar object.
 
-
+[discrete%breakable]
 == Key Components
 - _Prototype_: In this analogy, the original teddy bear acts as the prototype. It represents the object that serves as a template for creating new copies.
 - _Cloneable Interface_: Similar to the special machine in the analogy, the Cloneable interface allows objects to specify that they support cloning, enabling the creation of exact copies.
@@ -26,15 +26,18 @@ So, in simpler terms, the prototype pattern allows you to create new objects by 
 - _Client_: The entity that requests the creation of new objects using the prototype. In the analogy, the client corresponds to the user who wants to create copies of their favorite teddy bear without going through the hassle of designing and sewing each one from scratch.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Prototype design pattern using UML.
 
 
+[discrete%breakable]
 === Class Diagram
 image::PrototypePatternClassDiagram.png[title="The Prototype Class Diagram", align=center]
 In  the class diagram, the abstract class Prototype serves as the blueprint for creating new teddy bears, declaring the clone() method that enables the creation of exact copies. The ConcretePrototype1 and ConcretePrototype2 classes represent specific types of teddy bears that implement the cloning mechanism defined by the Prototype class. Each concrete prototype class provides its own implementation of the clone() method, allowing for customization and variation in the cloning process. Through this pattern, users can create multiple copies of their favorite teddy bear without needing to recreate it from scratch, just like making duplicates of a beloved toy.
 
 
+[discrete%breakable]
 === Sequence Diagram
 image::PrototypePatternSequenceDiagram.png[title="The Prototype Sequence Diagram", align=center]
 In the sequence diagram, the Client interacts with the Prototype, which acts as the template for creating new teddy bears. When the Client requests a clone using the clone() method, the Prototype activates and delegates the cloning process to the ConcretePrototype, representing a specific type of teddy bear. The ConcretePrototype creates a copy of itself using the clone() method, which is then returned to the Prototype. Finally, the Prototype passes the cloned teddy bear back to the Client, who receives an exact duplicate of their favorite toy. 
@@ -43,6 +46,7 @@ In the sequence diagram, the Client interacts with the Prototype, which acts as 
 == Implementation Walkthrough
 
 
+[discrete%breakable]
 === Abstract Prototype Class: Prototype
 [source, {lang}]
 ----
@@ -58,6 +62,7 @@ endif::[]
 The `Prototype` abstract class declares the `clone()` method, which will be implemented by concrete subclasses to enable cloning. In the teddy bear analogy, this class represents the blueprint for creating new teddy bears.
 
 
+[discrete%breakable]
 === Concrete Prototype Classes: WhiteTeddyBearPrototype and BlackTeddyBearPrototype
 [source, {lang}]
 ----
@@ -84,6 +89,7 @@ endif::[]
 The `WhiteTeddyBearPrototype` and `BlackTeddyBearPrototype` classes extend the `Prototype` class and provide specific implementations of the `clone()` method. In the teddy bear analogy, these classes represent different types of teddy bears that can be duplicated.
 
 
+[discrete%breakable]
 === Usage Example
 [source, {lang}]
 ----
@@ -99,6 +105,7 @@ endif::[]
 In the usage example, the user creates instances of concrete prototypes (`BlackTeddyBearPrototype` and `WhiteTeddyBearPrototype`) and clones them using the `clone()` method. Finally, it displays information about the cloned teddy bears.
 
 
+[discrete%breakable]
 === Code Output
 The above code output is: 
 [source,plaintext]
@@ -110,6 +117,7 @@ Cloned Teddy Bear 2: BlackTeddyBearPrototype
 ----
 
 
+[discrete%breakable]
 == Design Considerations
 When implementing the Prototype Pattern for object cloning, several design considerations should be taken into account:
 
@@ -122,5 +130,6 @@ When implementing the Prototype Pattern for object cloning, several design consi
 * **Performance**: Depending on the complexity of the objects being cloned and the frequency of cloning operations, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the cloning process while maintaining accuracy and reliability.
 
 
+[discrete%breakable]
 == Conclusion
 The Prototype Pattern provides a powerful mechanism for object cloning, allowing for the creation of new objects by copying existing ones. By using a prototype as a template, the pattern enables the creation of exact replicas without the need to know the specific details of how the objects are constructed. By considering design considerations such as cloning mechanism, interface design, state handling and performance, developers can leverage the Prototype Pattern to efficiently manage object creation and cloning in their software projects.

@@ -3,20 +3,20 @@ package abstractfactory;
 public class ParkVisitor {
     public static void main(String[] args) {
         // Choose themed area (factory)
-        AbstractFoodStallFactory factory1 = new AdventureLandFactory();
-        AbstractFoodStallFactory factory2 = new FantasyLandFactory();
+        AbstractFoodStallFactory adventureLandFactory = new AdventureLandFactory();
+        AbstractFoodStallFactory fantasyLandFactory = new FantasyLandFactory();
 
         // Order themed food items
-        AbstractProductA iceCream1 = factory1.createProductA();
-        AbstractProductB pizza1 = factory1.createProductB();
+        IceCream tropicalIceCream = adventureLandFactory.createIceCream();
+        Pizza exoticPizza = adventureLandFactory.createPizza();
 
-        AbstractProductA iceCream2 = factory2.createProductA();
-        AbstractProductB pizza2 = factory2.createProductB();
+        IceCream magicalIceCream = fantasyLandFactory.createIceCream();
+        Pizza enchantedPizza = fantasyLandFactory.createPizza();
 
         // Enjoy themed food items
-        iceCream1.enjoy();
-        pizza1.enjoy();
-        iceCream2.enjoy();
-        pizza2.enjoy();
+        tropicalIceCream.enjoy();
+        exoticPizza.enjoy();
+        magicalIceCream.enjoy();
+        enchantedPizza.enjoy();
     }
 }

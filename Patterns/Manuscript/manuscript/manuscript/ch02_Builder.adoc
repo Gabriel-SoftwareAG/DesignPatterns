@@ -22,6 +22,7 @@ The sandwich maker, like a builder in the builder pattern, follows these instruc
 This way, you can create a wide variety of sandwiches with different combinations without the need for predefined sandwich types cluttering up the menu. The builder pattern simplifies the process of creating complex objects step by step, just like ordering a custom sandwich.
 
 
+[discrete%breakable]
 == Key Components
 In the Builder pattern, let's imagine a sandwich stand where customers can customize their sandwiches step by step. Here's how each component relates to our sandwich example:
 
@@ -31,22 +32,28 @@ In the Builder pattern, let's imagine a sandwich stand where customers can custo
 - _Product_: The end result of the construction process, in this case, is the custom sandwich. It represents the object that's gradually built up according to the step-by-step instructions provided by the customer.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Builder design pattern using UML.
 
 
+[discrete%breakable]
 === Class Diagram
 image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram", align=center]
 In the sandwich analogy depicted by the class diagram, the Director corresponds to the sandwich shop customer who provides instructions for constructing a custom sandwich. The Builder interface represents the step-by-step process of making the sandwich, where each method (buildPartA, buildPartB, buildPartC) corresponds to choosing the type of bread, filling, toppings, and sauce, respectively. ConcreteBuilder is akin to the sandwich maker who implements the Builder interface to construct the sandwich. It manages the assembly of the sandwich parts (partA, partB, partC) to create the final product, which corresponds to the completed custom sandwich. Through this process, the Director (customer) controls the construction process, ensuring flexibility and customization, just like ordering a custom sandwich at a sandwich shop.
 
 
+[discrete%breakable]
 === Sequence Diagram
 image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram", align=center]
 In the sequence diagram, the Client represents the customer at the sandwich shop, initiating the construction process by interacting with the Director. The Director acts as the mediator between the Client and the ConcreteBuilder, orchestrating the steps involved in making the custom sandwich. The ConcreteBuilder corresponds to the sandwich maker who sequentially builds each part of the sandwich (Part A, Part B, Part C) according to the Director's instructions. The Product represents the partially constructed sandwich at each stage, gradually adding parts until the final sandwich is assembled. Through this sequence, the Client receives the completed custom sandwich from the Director, mirroring the process of ordering and receiving a custom sandwich at a sandwich shop.
 
+
+[discrete%breakable]
 == Implementation Walkthrough
 
 
+[discrete%breakable]
 === Interface Definition: Builder
 [source, {lang}]
 ----
@@ -62,6 +69,7 @@ endif::[]
 The `Builder` interface defines the steps involved in constructing a custom sandwich. Each method corresponds to a step in the sandwich-making process: selecting the type of bread, filling, toppings, and sauce.
 
 
+[discrete%breakable]
 === Concrete Builder Implementation: ConcreteBuilder (The Sandwich Maker)
 [source, {lang}]
 ----
@@ -77,6 +85,7 @@ endif::[]
 The `ConcreteBuilder` class implements the `Builder` interface to provide specific implementations for constructing a custom sandwich. Each method adds a specific part to the product (sandwich) being constructed.
 
 
+[discrete%breakable]
 === Product Representation: Product
 [source, {lang}]
 ----
@@ -92,6 +101,7 @@ endif::[]
 The `Product` class represents the custom sandwich being constructed. It contains methods for adding parts (ingredients) to the sandwich and displaying the final sandwich ingredients.
 
 
+[discrete%breakable]
 === Director: The Customer
 [source, {lang}]
 ----
@@ -107,6 +117,7 @@ endif::[]
 The `Director` class controls the construction process of the custom sandwich. It takes a `Builder` instance and orchestrates the sequence of steps required to construct the sandwich.
 
 
+[discrete%breakable]
 === Usage Example
 [source, {lang}]
 ----
@@ -122,6 +133,7 @@ endif::[]
 In the usage example, we create instances of the `ConcreteBuilder` and `Director` classes, initiate the construction process, retrieve the final sandwich from the builder, and display the custom sandwich ingredients.
 
 
+[discrete%breakable]
 === Code Output
 The above code output is: 
 [source,plaintext]
@@ -133,6 +145,7 @@ Custom Sandwich Ingredients:
 ----
 
 
+[discrete%breakable]
 == Design Considerations
 When implementing the Builder Pattern for constructing complex objects, several design considerations should be taken into account:
 
@@ -145,5 +158,6 @@ When implementing the Builder Pattern for constructing complex objects, several 
 - **Performance**: Depending on the complexity of the object being constructed, performance considerations such as memory usage and processing time should be taken into account. Efforts should be made to optimize the construction process while maintaining readability and flexibility.
 
 
+[discrete%breakable]
 == Conclusion
 The Builder Pattern provides an elegant solution for constructing complex objects step by step, allowing for flexible customization while maintaining a clear separation of concerns. By encapsulating the construction process within the Director and Builder components, the pattern promotes code reuse, extensibility, and maintainability. By adhering to design considerations such as flexibility, separation of concerns, and documentation, developers can leverage the Builder Pattern to efficiently construct complex objects in their software projects.

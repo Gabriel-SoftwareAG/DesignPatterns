@@ -7,8 +7,8 @@ endif::[]
 
 :imagesdir: ../images/ch18_TemplateMethod
 
-== Introduction
 
+== Introduction
 [cols="2", frame="none", grid="none"]
 |===
 |Let's consider the process of building a house. There are several steps involved, such as laying the foundation, constructing the walls, installing the roof, and finishing the interior. While these steps are common to every house construction project, the specific materials, techniques, and designs may vary depending on factors like the location, budget, and architectural style.
@@ -21,8 +21,9 @@ For example, subclasses for building different types of houses, such as a modern
 
 Overall, the Template Method pattern provides a flexible and reusable way to define the overall structure of a complex process, allowing subclasses to customize specific steps to meet varying requirements or preferences, similar to how different types of houses can be built using a common construction framework with room for customization based on architectural style and design preferences.
 
-== Key Components
 
+[discrete%breakable]
+== Key Components
 * _HouseBuilder Class (Abstract Base Class)_: Represents the template method itself, defining the skeleton of the algorithm for building a house. It includes steps that are common and fixed in the process, such as laying the foundation, constructing the walls, and installing the roof. These steps are implemented as individual methods within the class, some of which may be defined as abstract methods to force subclasses to provide specific implementations.
 
 * _ConcreteHouseBuilder Subclasses_: These are specific implementations of the HouseBuilder class, such as ModernHouseBuilder or TraditionalHouseBuilder. Each subclass overrides the abstract methods or hooks provided by the HouseBuilder class to implement steps in the construction process that vary between different types of houses. For instance, the material selection for walls, roof designs, and interior finishing techniques can differ significantly between a modern and a traditional house.
@@ -32,13 +33,18 @@ Overall, the Template Method pattern provides a flexible and reusable way to def
 * _Customizable Steps (Hooks/Abstract Methods)_: Within the HouseBuilder class, certain steps are left intentionally undefined (abstract) or minimally defined (hooks) to allow subclasses to tailor these steps according to specific requirements. This design allows for flexibility and customization in the construction process, enabling the creation of houses with different architectural styles and features while adhering to a standard construction sequence.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Template Method design pattern using UML.
 
+
+[discrete%breakable]
 === Class Diagram
 image::TemplateMethodPatternClassDiagram.png[title="The Template Method Class Diagram", align=center]
 In the given UML diagram, we see the Template Method design pattern represented through classes that resemble the process of constructing a house, using an analogy to explain each class's role. The AbstractClass acts as the blueprint or the general contractor for building a house, defining the overall sequence of construction steps (templateMethod()) and specifying that certain tasks (like laying the foundation primitiveOperation1() and installing the roof primitiveOperation2()) need customization but does not dictate how to perform these tasks. This class mandates that any specific construction project (house) must define how these tasks are carried out. The ConcreteClass1 and ConcreteClass2 are akin to specialized builders or construction teams for different styles of houses, say a modern-style home and a traditional-style home, respectively. These classes provide concrete implementations for the foundation-laying and roof-installing steps (primitiveOperation1() and primitiveOperation2()) according to the requirements or design specifics of the house they are tasked to build. The relationship arrows indicate that both specialized builders inherit the overall construction plan from the general contractor but tailor specific steps based on the architectural style and construction techniques suitable for the type of house being constructed.
 
+
+[discrete%breakable]
 === Sequence Diagram
 image::TemplateMethodPatternSequenceDiagram.png[title="The Template Method Sequence Diagram", align=center]
 This sequence diagram illustrates the interaction between different components in the Template Method design pattern through the analogy of constructing a house. The Client represents the homeowner or project manager, initiating the construction process by calling the templateMethod() on the AbstractClass, which acts as the general blueprint or construction guideline for building a house. This blueprint outlines the necessary steps for construction but delegates the specifics of some steps to its subclasses.
@@ -51,12 +57,14 @@ Following the foundation work, the AbstractClass then orchestrates both teams to
 
 The sequence of calls and responses between the AbstractClass and the concrete classes demonstrates the template method pattern's power to outline a standard process while accommodating customization in the execution of certain steps, ensuring that regardless of the style or specific techniques employed by the construction teams, the overall process adheres to a unified construction plan set forth by the AbstractClass.
 
-== Implementation Walkthrough
 
+[discrete%breakable]
+== Implementation Walkthrough
 This example demonstrates how to use the Template Method Pattern to model a house construction process. The process is outlined in an abstract `HouseBuilder` class (analogous to `AbstractClass` in the UML diagrams), which defines the template method for building a house. Specific steps like laying the foundation and installing the roof are implemented by concrete classes (`ConcreteClass1` and `ConcreteClass2`), representing different styles of houses or construction teams with unique expertise.
 
-=== Abstract Class: HouseBuilder
 
+[discrete%breakable]
+=== Abstract Class: HouseBuilder
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -70,8 +78,9 @@ endif::[]
 
 `HouseBuilder` is the abstract base class defining the template method `buildHouse()`. It includes a mix of methods: a concrete implementation for laying the foundation (a step common to all houses) and abstract methods for steps that vary depending on the type of house being built.
 
-=== ConcreteClass 1: ModernHouseBuilder
 
+[discrete%breakable]
+=== ConcreteClass 1: ModernHouseBuilder
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -85,8 +94,9 @@ endif::[]
 
 `ModernHouseBuilder` represents a construction team specializing in modern houses. It provides concrete implementations for the abstract methods defined in `HouseBuilder`, applying techniques and materials characteristic of modern architecture.
 
-=== ConcreteClass 2: TraditionalHouseBuilder
 
+[discrete%breakable]
+=== ConcreteClass 2: TraditionalHouseBuilder
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -100,8 +110,9 @@ endif::[]
 
 `TraditionalHouseBuilder` is akin to a team expert in traditional-style houses. It overrides the abstract methods from `HouseBuilder` to reflect the construction techniques, materials, and design preferences typical of traditional architecture.
 
-=== Example Usage
 
+[discrete%breakable]
+=== Example Usage
 In the context of our analogy, the `Client` could be the project manager or the homeowner who initiates the building process. The client code decides which type of house to build and then calls the `buildHouse()` method.
 
 [source, {lang}]
@@ -118,8 +129,8 @@ endif::[]
 This client demonstrates how the construction process for both a modern and a traditional house can be initiated using the same `buildHouse()` method, showcasing the Template Method Pattern's ability to standardize a sequence of steps while allowing for customization in the implementation of those steps.
 
 
+[discrete%breakable]
 == Design Considerations
-
 When applying the Template Method Pattern, several design considerations should be taken into account to ensure its effective use and integration into your software design. Firstly, it's crucial to distinguish between steps that are invariant (fixed) and those that are variant (subject to change) across different implementations. The invariant steps are implemented directly within the template method in the abstract class, ensuring a consistent process flow. In contrast, the variant steps are abstracted out, allowing subclasses to provide specific implementations.
 
 Another important consideration is the use of hooks. Hooks are optional steps defined in the abstract class, providing a default implementation that subclasses may override. This technique allows for greater flexibility, enabling subclasses to extend the algorithm's behavior without altering its structure.
@@ -133,8 +144,8 @@ Lastly, consider the principle of least knowledge (also known as Demeter's Law) 
 These considerations are pivotal in leveraging the Template Method Pattern effectively, enabling the development of flexible, reusable, and maintainable software systems that encapsulate complex algorithms or processes.
 
 
+[discrete%breakable]
 == Conclusion
-
 The Template Method Pattern offers a robust framework for encapsulating the skeleton of an algorithm, process, or workflow within a base class while allowing subclasses to customize specific steps without changing the overall structure. This pattern is particularly useful in scenarios where the sequence of operations is fixed, but the actual implementation of one or more steps can vary. By defining invariant parts of the algorithm once and allowing variant behaviors to be implemented by subclasses, the Template Method Pattern promotes code reuse and adherence to the DRY (Don't Repeat Yourself) principle.
 
 In the context of our house construction analogy, the Template Method Pattern allows us to define a universal construction process while accommodating variations that arise from different architectural styles or construction techniques. This not only simplifies the management of complex processes but also enhances flexibility and scalability in software design.

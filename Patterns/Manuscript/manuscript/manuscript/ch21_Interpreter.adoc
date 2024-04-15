@@ -7,8 +7,9 @@ endif::[]
 
 :imagesdir: ../images/ch21_Interpreter
 
-== Introduction
 
+
+== Introduction
 [cols="2", frame="none", grid="none"]
 |===
 |Imagine you're traveling to a foreign country where you don't speak the language. To communicate with locals, you hire an interpreter who translates your words into the local language and vice versa.
@@ -26,8 +27,9 @@ Similarly, interpreters can be used in other domains, such as parsing and evalua
 
 Overall, the interpreter pattern enables the processing of expressions or commands written in a specific language or format within a computer program, similar to how a human interpreter translates between languages to facilitate communication between people.
 
-== Key Components
 
+[discrete%breakable]
+== Key Components
 - _AbstractExpression (Interface)_: This component represents the expression interface that declares an interpret operation. Just like a human interpreter who understands and translates languages, the AbstractExpression in the interpreter pattern provides the foundation for interpreting various expressions in a specific language or format. Each concrete expression in the program must implement this interface.
 
 - _TerminalExpression (Class)_: A class that implements the AbstractExpression interface for interpreting terminal expressions in the language. In the analogy, this would be akin to interpreting basic words or phrases that don't need further decomposition. For a calculator application, TerminalExpression might interpret individual numbers or simple operands.
@@ -39,21 +41,29 @@ Overall, the interpreter pattern enables the processing of expressions or comman
 - _Client (Class)_: The client utilizes the interpreter. It constructs the necessary expressions and calls the interpret method to evaluate or process the expression. Just like a traveler who forms sentences to communicate a message and relies on the interpreter to translate, the Client in the pattern constructs expressions using the language or format understood by the interpreter to achieve a specific outcome, such as calculating the result of a mathematical expression.
 
 
+[discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Interpreter design pattern using UML.
 
+
+[discrete%breakable]
 === Class Diagram
 image::InterpreterPatternClassDiagram.png[title="The Interpreter Class Diagram", align=center]
 In this analogy, imagine you're in a foreign country trying to communicate with locals using a language you don't understand. The AbstractExpression class represents the concept of language itself, providing a template for interpreting expressions within a specific context. It's akin to the framework of language rules and grammar. The TerminalExpression class embodies simple phrases or words in the language that can be directly translated, much like basic vocabulary. On the other hand, the NonterminalExpression class represents more complex language constructs, akin to compound sentences or idiomatic expressions that require interpretation beyond literal translation. The Context class serves as the environment or setting in which expressions are interpreted, analogous to the cultural or situational context affecting language usage. Finally, the Client class acts as the traveler or communicator, utilizing the AbstractExpression to convey messages within the given context. It's as if the traveler employs the language framework to communicate effectively with locals.
 
+
+[discrete%breakable]
 === Sequence Diagram
 image::InterpreterPatternSequenceDiagram.png[title="The Interpreter Sequence Diagram", align=center]
 In this analogy, imagine you're a traveler trying to communicate with locals in a foreign country using a language you're unfamiliar with. The Client represents you, the traveler, attempting to convey a message. The Context is the immediate environment or situation in which you're communicating, influencing how your message is interpreted. The Interpreter acts as the intermediary, much like a language interpreter hired to translate between you and the locals. It coordinates the interpretation process. When the Client requests interpretation, the Context activates and passes the expression to the Interpreter. The Interpreter then determines whether the expression is a TerminalExpression—a simple phrase—or a NonterminalExpression—a more complex statement. It delegates interpretation accordingly, activating the appropriate class to process the expression. Once interpreted, the Interpreter sends the result back to the Context, which then delivers it to the Client, completing the communication loop.
 
-== Implementation Walkthrough
 
+[discrete%breakable]
+== Implementation Walkthrough
 In this example, we'll implement an interpreter pattern in Java to demonstrate how a language analogy can be applied to software design. We'll use the analogy of a traveler communicating in a foreign country to explain each component of the design.
 
+
+[discrete%breakable]
 === Classes Overview
 The implementation consists of several classes:
 - `Client`: Represents the traveler who wants to communicate.
@@ -62,6 +72,8 @@ The implementation consists of several classes:
 - `TerminalExpression`: Represents simple phrases or words in the language.
 - `NonterminalExpression`: Represents more complex language constructs.
 
+
+[discrete%breakable]
 === Context Class
 
 [source, {lang}]
@@ -77,8 +89,9 @@ endif::[]
 
 The `Context` class represents the environment or situation in which communication occurs. It holds any relevant information affecting interpretation, such as the language being spoken.
 
-=== Interpreter Class
 
+[discrete%breakable]
+=== Interpreter Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -92,8 +105,9 @@ endif::[]
 
 The `Interpreter` class manages translation between expressions. It holds a mapping of expressions to `TerminalExpression` objects and provides a method to interpret expressions within a given context.
 
-=== TerminalExpression Class
 
+[discrete%breakable]
+=== TerminalExpression Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -107,8 +121,9 @@ endif::[]
 
 The `TerminalExpression` class represents simple phrases or words in the language. It holds the translation of the expression and provides a method to interpret it within a given context.
 
-=== NonterminalExpression Class
 
+[discrete%breakable]
+=== NonterminalExpression Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -122,8 +137,9 @@ endif::[]
 
 The `NonterminalExpression` class represents more complex language constructs. It contains the logic to interpret these expressions based on the provided context.
 
-== Client Class
 
+[discrete%breakable]
+== Client Class
 [source, {lang}]
 ----
 ifeval::["{lang}" == "java"]
@@ -139,8 +155,9 @@ The `Client` class initializes a `Context` and an `Interpreter`. It then sends a
 This `Main` class acts as the entry point of the program and runs the `Client` class to demonstrate the usage of the interpreter pattern.
 
 
-== Design Considerations
 
+[discrete%breakable]
+== Design Considerations
 When implementing the interpreter pattern, several design considerations should be taken into account:
 
 * **Flexibility**: The pattern should allow for easy addition or modification of language expressions without requiring extensive changes to the existing codebase. This flexibility ensures that the system can accommodate new language constructs or variations in expression formats.
@@ -154,7 +171,7 @@ When implementing the interpreter pattern, several design considerations should 
 * **Documentation and Maintenance**: Proper documentation of the interpreter's grammar, supported expressions, and usage guidelines is essential for developers who interact with the system. Additionally, regular maintenance and updates to the interpreter should be planned to ensure compatibility with evolving requirements and technologies.
 
 
+
+[discrete%breakable]
 == Conclusion
-
 In conclusion, the interpreter pattern provides a powerful solution for implementing language interpretation and expression evaluation within software systems. By leveraging the analogy of human communication in a foreign language context, the pattern allows for the translation of expressions between different languages or formats. Through careful design considerations such as flexibility, scalability, separation of concerns, error handling, and documentation, the interpreter pattern enables the development of robust and maintainable systems capable of interpreting a wide range of expressions. Whether used in parsing programming languages, querying databases, or processing markup languages, the interpreter pattern remains a valuable tool for facilitating communication between different components of a software system.
-

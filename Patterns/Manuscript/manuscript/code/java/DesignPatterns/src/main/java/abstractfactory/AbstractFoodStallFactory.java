@@ -1,7 +1,7 @@
 package abstractfactory;
 
 public interface AbstractFoodStallFactory {
-    AbstractProductA createProductA();
+    IceCream createIceCream();
 
-    AbstractProductB createProductB();
+    Pizza createPizza();
 }

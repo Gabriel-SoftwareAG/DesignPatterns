@@ -1,11 +1,13 @@
 package abstractfactory;
 
 public class AdventureLandFactory implements AbstractFoodStallFactory {
-    public AbstractProductA createProductA() {
+    public IceCream createIceCream() {
+        System.out.println("Creating tropical-themed ice cream");
         return new TropicalIceCream();
     }
 
-    public AbstractProductB createProductB() {
+    public Pizza createPizza() {
+        System.out.println("Creating exotic-themed pizza");
         return new ExoticPizza();
     }
 }

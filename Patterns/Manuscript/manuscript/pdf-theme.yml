@@ -65,3 +65,8 @@ footer:
     center: '{page-number}'
   verso_content:
     center: '{page-number}'
+cover:
+  front:
+    image: ./images/cover/cover_option2_building_blocks.pdf
+  back:
+    image: ./images/cover/cover_option2_building_blocks.pdf 
