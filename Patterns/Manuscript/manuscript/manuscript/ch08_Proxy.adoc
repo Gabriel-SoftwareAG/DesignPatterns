@@ -37,15 +37,18 @@ Next, we will explain the concept of the Proxy design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::ProxyPatternClassDiagram.png[title="The Proxy Class Diagram", align=center]
-In the Proxy Pattern class diagram, we have three main classes represented by entities in the legal analogy. Firstly, the Subject interface corresponds to the legal services that both the real lawyer (proxy) and the legal system (real object) provide. Secondly, the RealSubject class represents the real lawyer who directly interacts with the legal system to provide legal services to the client. This class implements the Subject interface and defines the actual actions taken in response to requests from the client. Lastly, the Proxy class acts as an intermediary between the client and the real lawyer. It maintains a reference to the RealSubject (the real lawyer) and controls access to it. The proxy may defer making a request to the real lawyer until necessary, perform additional operations before or after forwarding the request, or even deny access to the real lawyer under certain conditions. In summary, the Proxy Pattern allows the client to interact with the legal system (represented by the real lawyer) through the proxy, providing additional control and functionality while maintaining the same interface as the real object.
+In the Proxy Pattern class diagram, we have three main classes represented by entities in the legal analogy. Firstly, the `Subject` interface corresponds to the legal services that both the real lawyer (proxy) and the legal system (real object) provide. Secondly, the `RealSubject` class represents the real lawyer who directly interacts with the legal system to provide legal services to the client. This class implements the `Subject` interface and defines the actual actions taken in response to requests from the client. Lastly, the `Proxy` class acts as an intermediary between the client and the real lawyer. It maintains a reference to the `RealSubject` (the real lawyer) and controls access to it. The proxy may defer making a request to the real lawyer until necessary, perform additional operations before or after forwarding the request, or even deny access to the real lawyer under certain conditions. In summary, the Proxy Pattern allows the client to interact with the legal system (represented by the real lawyer) through the proxy, providing additional control and functionality while maintaining the same interface as the real object.
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::ProxyPatternSequenceDiagram.png[title="The Proxy Sequence Diagram", align=center]
-In the Proxy Pattern sequence diagram, we have two main participants represented by entities in the legal analogy. Firstly, the Client initiates a request by interacting with the Proxy, which acts as the intermediary between the client and the real lawyer (represented by RealSubject). Upon receiving the request from the client, the Proxy forwards the request to the RealSubject (the real lawyer) to handle it. The real lawyer then performs the necessary actions in response to the request and returns the response to the proxy. The proxy may perform additional operations, such as preprocessing or postprocessing, before or after forwarding the request to the real lawyer. Finally, the proxy communicates the response back to the client. This setup allows the proxy to control access to the real lawyer and add functionality or security measures without the client's direct involvement, similar to how a legal proxy may handle legal matters on behalf of a client.
+In the Proxy Pattern sequence diagram, we have two main participants represented by entities in the legal analogy. Firstly, the Client initiates a request by interacting with the `Proxy`, which acts as the intermediary between the client and the real lawyer (represented by `RealSubject`). Upon receiving the request from the client, the `Proxy` forwards the request to the `RealSubject` (the real lawyer) to handle it. The real lawyer then performs the necessary actions in response to the request and returns the response to the proxy. The proxy may perform additional operations, such as preprocessing or postprocessing, before or after forwarding the request to the real lawyer. Finally, the proxy communicates the response back to the client. This setup allows the proxy to control access to the real lawyer and add functionality or security measures without the client's direct involvement, similar to how a legal proxy may handle legal matters on behalf of a client.
 
-In this example, we'll implement the Proxy Pattern in Java using the analogy of accessing legal services through a proxy legal service provider. We'll have three main classes: `Client`, `ProxyLegalService`, and `RealLegalService`. The `Client` represents someone in need of legal assistance, the `ProxyLegalService` acts as an intermediary legal service provider, and the `RealLegalService` is the actual legal expert who provides legal services.
+
+[discrete%breakable]
+== Implementation Walkthrough
+In this example, we'll implement the Proxy Pattern using the analogy of accessing legal services through a proxy legal service provider. We'll have three two main classes: `ProxyLegalService`, and `RealLegalService`. We will also include a usage example, a client, represents someone in need of legal assistance, the `ProxyLegalService` acts as an intermediary legal service provider, and the `RealLegalService` is the actual legal expert who provides legal services.
 
 
 [discrete%breakable]
@@ -109,7 +112,17 @@ include::{python_path}/proxy/Client.py[lines=3..]
 endif::[]
 ----
 
-When the `Client` class is executed, it creates an instance of the `ProxyLegalService` class and calls its `requestLegalAssistance` method. The `ProxyLegalService` class, in turn, forwards the request to the `RealLegalService` class, which provides legal assistance. Finally, the real legal service provider executes the legal actions required.
+When the example code is executed, it creates an instance of the `ProxyLegalService` class and calls its `requestLegalAssistance` method. The `ProxyLegalService` class, in turn, forwards the request to the `RealLegalService` class, which provides legal assistance. Finally, the real legal service provider executes the legal actions required.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Proxy legal service is requesting legal assistance.
+Real legal service is providing legal assistance.
+----
 
 
 [discrete%breakable]

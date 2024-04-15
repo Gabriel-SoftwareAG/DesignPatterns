@@ -8,6 +8,9 @@ class ProxyLegalService implements LegalService {
         if (realLegalService == null) {
             realLegalService = new RealLegalService();
         }
+
+        // Add additional logic done by the proxy
+        System.out.println("Proxy legal service is requesting legal assistance.");
         realLegalService.provideLegalAssistance();
     }
 }

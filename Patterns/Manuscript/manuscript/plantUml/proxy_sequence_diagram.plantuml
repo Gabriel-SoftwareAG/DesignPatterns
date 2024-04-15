@@ -17,7 +17,9 @@ Proxy --> Client : response
 deactivate Proxy
 
 note right of Proxy
-  Proxy may perform additional\noperations before or after\nforwarding the request.
+  Proxy may perform additional
+  operations before or after
+  forwarding the request.
 end note
 
 @enduml
