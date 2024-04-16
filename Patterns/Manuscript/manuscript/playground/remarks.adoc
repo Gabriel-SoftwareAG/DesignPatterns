@@ -4,6 +4,7 @@
 - font in the table is different
 - Add to the appendix the singleton multithread issue, and the java prototype
 - Find the place to add comments verisoft.
+- Need to support epub and html also
 
 Future options:
 - To make it in a book style: :media: prepress in book.adoc
