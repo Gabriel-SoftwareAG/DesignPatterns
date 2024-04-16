@@ -1,6 +1,6 @@
 package bridge;
 
-public interface Device {
+interface Device {
     void powerOn();
 
     void powerOff();

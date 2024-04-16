@@ -1,12 +1,12 @@
 package bridge;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         // Creating a television device
         Device tv = new Television();
 
         // Using a basic remote control for the television
-        RemoteControl remoteControl = new RemoteControl(tv);
+        RemoteControl remoteControl = new AdvancedRemoteControl(tv);
 
         // Powering on the TV and changing the channel
         remoteControl.powerOn();

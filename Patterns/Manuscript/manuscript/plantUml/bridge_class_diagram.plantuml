@@ -27,8 +27,6 @@ class ConcreteImplementorB implements Implementor {
 
 ' Relationships
 Abstraction o-- Implementor : composition >
-RefinedAbstraction -|> Abstraction
-ConcreteImplementorA .|> Implementor
-ConcreteImplementorB .|> Implementor
+
 
 @enduml

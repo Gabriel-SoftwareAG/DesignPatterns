@@ -1,6 +1,6 @@
 package bridge;
 
-class RemoteControl {
+abstract class RemoteControl {
     protected Device device;
 
     public RemoteControl(Device device) {

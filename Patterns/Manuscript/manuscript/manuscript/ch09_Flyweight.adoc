@@ -51,143 +51,142 @@ In this sequence diagram, the Client represents a library patron, while the `Fly
 == Implementation Walkthrough
 In this example, we demonstate the use of the Flyweight Pattern in a library book management system. The system is designed to efficiently manage and share library books among multiple patrons, minimizing memory usage and optimizing resource allocation.
 
-= Library Book Management System: Flyweight Pattern with Return Functionality
 
-== Overview
-This document describes the implementation of the Flyweight Pattern with added functionality for returning books in a library book management system. This system is designed to manage books efficiently, allowing multiple patrons to borrow and return books, thus optimizing resource allocation and minimizing memory usage.
+// == Overview
+// This document describes the implementation of the Flyweight Pattern with added functionality for returning books in a library book management system. This system is designed to manage books efficiently, allowing multiple patrons to borrow and return books, thus optimizing resource allocation and minimizing memory usage.
 
-== Classes and Interfaces
+// == Classes and Interfaces
 
-=== Flyweight Interface (Book)
-The `Book` interface is essential in our implementation. It outlines the necessary methods that all book types in the system must implement, focusing on operations related to checking out and returning books.
+// === Flyweight Interface (Book)
+// The `Book` interface is essential in our implementation. It outlines the necessary methods that all book types in the system must implement, focusing on operations related to checking out and returning books.
 
-[source,java]
-----
-public interface Book {
-    boolean isAvailable();
-    void checkOut(String borrowerId, String dueDate);
-    void returnBook();
-}
-----
+// [source,java]
+// ----
+// public interface Book {
+//     boolean isAvailable();
+//     void checkOut(String borrowerId, String dueDate);
+//     void returnBook();
+// }
+// ----
 
-=== ConcreteFlyweight Class (GenreBook)
-The `GenreBook` class implements the `Book` interface and is responsible for a specific genre of books. It manages intrinsic state details like title, author, and genre and tracks the availability of the book.
+// === ConcreteFlyweight Class (GenreBook)
+// The `GenreBook` class implements the `Book` interface and is responsible for a specific genre of books. It manages intrinsic state details like title, author, and genre and tracks the availability of the book.
 
-[source,java]
-----
-public class GenreBook implements Book {
-    private final String title;
-    private final String author;
-    private final String genre; // Intrinsic state
-    private boolean isAvailable = true; // Availability status
+// [source,java]
+// ----
+// public class GenreBook implements Book {
+//     private final String title;
+//     private final String author;
+//     private final String genre; // Intrinsic state
+//     private boolean isAvailable = true; // Availability status
 
-    public GenreBook(String title, String author, String genre) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-    }
+//     public GenreBook(String title, String author, String genre) {
+//         this.title = title;
+//         this.author = author;
+//         this.genre = genre;
+//     }
 
-    @Override
-    public boolean isAvailable() {
-        return isAvailable;
-    }
+//     @Override
+//     public boolean isAvailable() {
+//         return isAvailable;
+//     }
 
-    @Override
-    public void checkOut(String borrowerId, String dueDate) {
-        if (isAvailable) {
-            System.out.println("Book: " + title + " checked out by " + borrowerId + " due on " + dueDate);
-            isAvailable = false;
-        } else {
-            System.out.println("Book: " + title + " is currently unavailable for checkout.");
-        }
-    }
+//     @Override
+//     public void checkOut(String borrowerId, String dueDate) {
+//         if (isAvailable) {
+//             System.out.println("Book: " + title + " checked out by " + borrowerId + " due on " + dueDate);
+//             isAvailable = false;
+//         } else {
+//             System.out.println("Book: " + title + " is currently unavailable for checkout.");
+//         }
+//     }
 
-    @Override
-    public void returnBook() {
-        isAvailable = true;
-        System.out.println("Book: " + title + " has been returned and is now available.");
-    }
-}
-----
+//     @Override
+//     public void returnBook() {
+//         isAvailable = true;
+//         System.out.println("Book: " + title + " has been returned and is now available.");
+//     }
+// }
+// ----
 
-=== FlyweightFactory Class (Library)
-The `Library` class functions as the `FlyweightFactory`. It oversees the creation and distribution of `GenreBook` instances and ensures that books are created and reused appropriately, incorporating functionality to manage both borrowing and returning books.
+// === FlyweightFactory Class (Library)
+// The `Library` class functions as the `FlyweightFactory`. It oversees the creation and distribution of `GenreBook` instances and ensures that books are created and reused appropriately, incorporating functionality to manage both borrowing and returning books.
 
-[source,java]
-----
-import java.util.HashMap;
-import java.util.Map;
+// [source,java]
+// ----
+// import java.util.HashMap;
+// import java.util.Map;
 
-public class Library {
-    private Map<String, Book> booksByGenre = new HashMap<>();
+// public class Library {
+//     private Map<String, Book> booksByGenre = new HashMap<>();
 
-    public Book getBook(String genre, String title, String author) {
-        String key = genre + "|" + title + "|" + author;
-        if (!booksByGenre.containsKey(key)) {
-            booksByGenre.put(key, new GenreBook(title, author, genre));
-            System.out.println("A new copy of the book has been ordered: " + title);
-        }
-        return booksByGenre.get(key);
-    }
-}
-----
+//     public Book getBook(String genre, String title, String author) {
+//         String key = genre + "|" + title + "|" + author;
+//         if (!booksByGenre.containsKey(key)) {
+//             booksByGenre.put(key, new GenreBook(title, author, genre));
+//             System.out.println("A new copy of the book has been ordered: " + title);
+//         }
+//         return booksByGenre.get(key);
+//     }
+// }
+// ----
 
-=== Client Class (LibraryPatron)
-The `LibraryPatron` class represents the client, handling interactions with the `Library` for checking out and returning books. This class manages extrinsic states such as the borrower's ID and due dates.
+// === Client Class (LibraryPatron)
+// The `LibraryPatron` class represents the client, handling interactions with the `Library` for checking out and returning books. This class manages extrinsic states such as the borrower's ID and due dates.
 
-[source,java]
-----
-public class LibraryPatron {
-    private String patronId;
+// [source,java]
+// ----
+// public class LibraryPatron {
+//     private String patronId;
 
-    public LibraryPatron(String patronId) {
-        this.patronId = patronId;
-    }
+//     public LibraryPatron(String patronId) {
+//         this.patronId = patronId;
+//     }
 
-    public void borrowBook(Library library, String genre, String title, String author, String dueDate) {
-        Book book = library.getBook(genre, title, author);
-        book.checkOut(patronId, dueDate);
-    }
+//     public void borrowBook(Library library, String genre, String title, String author, String dueDate) {
+//         Book book = library.getBook(genre, title, author);
+//         book.checkOut(patronId, dueDate);
+//     }
 
-    public void returnBook(Library library, String genre, String title, String author) {
-        Book book = library.getBook(genre, title, author);
-        book.returnBook();
-    }
-}
-----
+//     public void returnBook(Library library, String genre, String title, String author) {
+//         Book book = library.getBook(genre, title, author);
+//         book.returnBook();
+//     }
+// }
+// ----
 
-== Example Usage
+// == Example Usage
 
-This example demonstrates a sequence where a library patron orders a book, another copy is ordered, one copy is returned, and then the returned copy is borrowed again:
+// This example demonstrates a sequence where a library patron orders a book, another copy is ordered, one copy is returned, and then the returned copy is borrowed again:
 
-[source,java]
-----
-public class Main {
-    public static void main(String[] args) {
-        Library library = new Library();
-        LibraryPatron patron1 = new LibraryPatron("12345");
-        LibraryPatron patron2 = new LibraryPatron("67890");
+// [source,java]
+// ----
+// public class Main {
+//     public static void main(String[] args) {
+//         Library library = new Library();
+//         LibraryPatron patron1 = new LibraryPatron("12345");
+//         LibraryPatron patron2 = new LibraryPatron("67890");
 
-        // Patron1 orders a copy of the book
-        patron1.borrowBook(library, "Mystery", "The Hound of the Baskervilles", "Arthur Conan Doyle", "2024-04-30");
-        // Patron2 orders another copy of the same book
-        patron2.borrowBook(library, "Mystery", "The Hound of the Baskervilles", "Arthur Conan Doyle",
-
-
-
-[discrete%breakable]
-== Design Considerations
-When implementing the Flyweight Pattern in software development, several design considerations should be taken into account:
-
-* **Memory Efficiency**: The Flyweight Pattern aims to minimize memory usage by reusing existing instances and sharing common parts among multiple objects. Designers should carefully consider the trade-offs between memory efficiency and performance when deciding which parts of an object should be shared and which should be unique to each instance.
-* **Intrinsic vs. Extrinsic State**: It's essential to distinguish between intrinsic state (shared across multiple instances) and extrinsic state (unique to each instance) when designing flyweight objects. By separating these states, designers can maximize memory savings while still allowing for customization and variation in object behavior.
-* **Thread Safety**: If flyweight objects are accessed concurrently by multiple threads, designers should ensure that access to shared resources is synchronized to prevent data corruption or race conditions. Proper synchronization mechanisms, such as locks or atomic operations, should be used to ensure thread safety in multithreaded environments.
-* **Scalability**: The design should be scalable to accommodate a growing number of flyweight objects and clients. Designers should consider how easily the flyweight factory can be extended to support new types of flyweight objects and how well the system performs under increasing workload or user demand.
-* **Performance Overhead**: While the Flyweight Pattern can improve memory efficiency, it may introduce performance overhead due to the additional complexity of managing shared resources and synchronizing access to them. Designers should carefully profile and optimize the implementation to minimize overhead and ensure acceptable performance.
-* **Object Identity**: It's important to maintain object identity when reusing flyweight objects. Designers should ensure that clients can reliably distinguish between different instances of flyweight objects, even if they share some common parts or properties.
-* **Immutable State**: Flyweight objects should ideally have immutable intrinsic state to prevent unintended modifications and ensure consistency across multiple instances. Designers should carefully design the interface of flyweight objects to enforce immutability and prevent accidental changes to shared state.
+//         // Patron1 orders a copy of the book
+//         patron1.borrowBook(library, "Mystery", "The Hound of the Baskervilles", "Arthur Conan Doyle", "2024-04-30");
+//         // Patron2 orders another copy of the same book
+//         patron2.borrowBook(library, "Mystery", "The Hound of the Baskervilles", "Arthur Conan Doyle",
+// ---
 
 
-[discrete%breakable]
-== Conclusion
-The Flyweight Pattern is a powerful design pattern that enables efficient memory usage and improved performance by reusing existing instances and sharing common parts among multiple objects. By separating intrinsic and extrinsic state, the pattern allows for customization and variation in object behavior while minimizing memory overhead. Designers can use the Flyweight Pattern to build scalable and thread-safe software systems that can handle large numbers of objects efficiently. However, careful consideration should be given to the design and implementation to ensure proper synchronization, object identity, and performance optimization. Overall, the Flyweight Pattern is a valuable tool in the software architect's toolkit, offering a balance between memory efficiency, performance, and scalability.
+// [discrete%breakable]
+// == Design Considerations
+// When implementing the Flyweight Pattern in software development, several design considerations should be taken into account:
+
+// * **Memory Efficiency**: The Flyweight Pattern aims to minimize memory usage by reusing existing instances and sharing common parts among multiple objects. Designers should carefully consider the trade-offs between memory efficiency and performance when deciding which parts of an object should be shared and which should be unique to each instance.
+// * **Intrinsic vs. Extrinsic State**: Its essential to distinguish between intrinsic state (shared across multiple instances) and extrinsic state (unique to each instance) when designing flyweight objects. By separating these states, designers can maximize memory savings while still allowing for customization and variation in object behavior.
+// * **Thread Safety**: If flyweight objects are accessed concurrently by multiple threads, designers should ensure that access to shared resources is synchronized to prevent data corruption or race conditions. Proper synchronization mechanisms, such as locks or atomic operations, should be used to ensure thread safety in multithreaded environments.
+// * **Scalability**: The design should be scalable to accommodate a growing number of flyweight objects and clients. Designers should consider how easily the flyweight factory can be extended to support new types of flyweight objects and how well the system performs under increasing workload or user demand.
+// * **Performance Overhead**: While the Flyweight Pattern can improve memory efficiency, it may introduce performance overhead due to the additional complexity of managing shared resources and synchronizing access to them. Designers should carefully profile and optimize the implementation to minimize overhead and ensure acceptable performance.
+// * **Object Identity**: Its important to maintain object identity when reusing flyweight objects. Designers should ensure that clients can reliably distinguish between different instances of flyweight objects, even if they share some common parts or properties.
+// * **Immutable State**: Flyweight objects should ideally have immutable intrinsic state to prevent unintended modifications and ensure consistency across multiple instances. Designers should carefully design the interface of flyweight objects to enforce immutability and prevent accidental changes to shared state.
+
+
+// [discrete%breakable]
+// == Conclusion
+// The Flyweight Pattern is a powerful design pattern that enables efficient memory usage and improved performance by reusing existing instances and sharing common parts among multiple objects. By separating intrinsic and extrinsic state, the pattern allows for customization and variation in object behavior while minimizing memory overhead. Designers can use the Flyweight Pattern to build scalable and thread-safe software systems that can handle large numbers of objects efficiently. However, careful consideration should be given to the design and implementation to ensure proper synchronization, object identity, and performance optimization. Overall, the Flyweight Pattern is a valuable tool in the software architect's toolkit, offering a balance between memory efficiency, performance, and scalability.

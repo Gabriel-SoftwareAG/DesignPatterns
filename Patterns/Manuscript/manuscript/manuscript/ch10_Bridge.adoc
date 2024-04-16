@@ -33,7 +33,6 @@ By using the bridge pattern, the remote control can have a unified interface for
 - _Device Communication_: Behind the scenes, the remote control needs to communicate with each device differently. The bridge pattern separates the specific way these operations are carried out for each device, forming the implementation. This includes the different commands or protocols needed to communicate with each brand and model of device, ensuring compatibility and flexibility.
 - _Abstraction_: The abstraction defines the core functionalities of the remote control, serving as a bridge between the user interface and the device-specific implementations. It allows users to interact with the remote control using common operations without needing to know the details of how these operations are carried out for each device.
 - _Implementation_: The implementation encapsulates the specific way each operation is executed for different devices. It provides concrete implementations for turning devices on and off, adjusting volume, and changing channels or tracks, tailored to the requirements of each device brand and model.
-- _Versatility and Ease of Use_: By using the bridge pattern, the remote control achieves versatility and ease of use. It maintains a unified interface for users while still being able to communicate with different devices in their own specific way. This versatility allows users to control all their devices with just one remote, simplifying the user experience and enhancing convenience.
 
 
 [discrete%breakable]
@@ -44,22 +43,22 @@ Next, we will explain the concept of the Bridge design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::BridgePatternClassDiagram.png[title="The Bridge Class Diagram", align=center]
-In this diagram, let's interpret the Bridge Pattern through the analogy of a universal remote control system. The "Abstraction" class symbolizes the core functionalities of the remote control, such as turning devices on and off, adjusting volume, and changing channels. It holds a composition relationship with the "Implementor" interface, which represents the diverse communication protocols and commands required to interact with different electronic devices. The "RefinedAbstraction" class extends the functionality of the remote control, introducing specific features or enhancements while still relying on the underlying implementation provided by the "Implementor". Meanwhile, the "ConcreteImplementorA" and "ConcreteImplementorB" classes denote distinct device-specific communication protocols or commands, such as those for Samsung and LG TVs, respectively, adhering to the "Implementor" interface. Thus, the Bridge Pattern enables a unified interface for users (the core functionalities of the remote control) while accommodating various device-specific communication methods, enhancing the versatility and usability of the remote control system.
+In this class diagram, let's interpret the Bridge Pattern through the analogy of a universal remote control system. The `Abstraction` class symbolizes the core functionalities of the remote control, such as turning devices on and off, adjusting volume, and changing channels. It holds a composition relationship with the `Implementor` interface, which represents the diverse communication protocols and commands required to interact with different electronic devices. The `RefinedAbstraction` class extends the functionality of the remote control, introducing specific features or enhancements while still relying on the underlying implementation provided by the `Implementor`. Meanwhile, the `ConcreteImplementorA` and `ConcreteImplementorB` classes denote distinct device-specific communication protocols or commands, such as those for Samsung and LG TVs, respectively, adhering to the `Implementor` interface. Thus, the Bridge Pattern enables a unified interface for users (the core functionalities of the remote control) while accommodating various device-specific communication methods, enhancing the versatility and usability of the remote control system.
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::BridgePatternSequenceDiagram.png[title="The Bridge Sequence Diagram", align=center]
-In this sequence diagram, let's interpret the Bridge Pattern using the analogy of a universal remote control system. The "Client" represents a user interacting with the remote control. When the user initiates an operation, such as changing channels, the request is forwarded to the "RefinedAbstraction" class, which extends the core functionalities of the remote control. The "RefinedAbstraction" then delegates the operation to the "Implementor" interface, which encapsulates the device-specific communication protocols and commands. In this scenario, the "Implementor" communicates with a specific device, represented by the "ConcreteImplementorA" class, to execute the operation. After the operation is completed, the result is returned to the client. This sequence demonstrates how the Bridge Pattern allows the remote control to support different devices with their own communication methods, ensuring compatibility and flexibility in controlling various electronic devices.
+In this sequence diagram, the Client represents a user interacting with the remote control. When the user initiates an operation, such as changing channels, the request is forwarded to the `RefinedAbstraction` class, which extends the core functionalities of the remote control. The `RefinedAbstraction` then delegates the operation to the `Implementor` interface, which encapsulates the device-specific communication protocols and commands. In this scenario, the `Implementor` communicates with a specific device, represented by the `ConcreteImplementorA` class, to execute the operation. After the operation is completed, the result is returned to the client. This sequence demonstrates how the Bridge Pattern allows the remote control to support different devices with their own communication methods, ensuring compatibility and flexibility in controlling various electronic devices.
 
 
 [discrete%breakable]
 == Implementation Walkthrough
-In this example, we'll implement the Bridge Pattern in Java using the analogy of a universal remote control system. We'll have four main classes: `RemoteControl`, `AdvancedRemoteControl`, `Device`, and concrete device implementations such as `Television` and `SoundSystem`. The `RemoteControl` represents the basic functionalities of the remote control, the `AdvancedRemoteControl` extends the functionalities with additional features, and the `Device` represents electronic devices controlled by the remote.
+In this example, we'll implement the Bridge Pattern using the analogy of a universal remote control system. We'll have four main classes: `RemoteControl`, `AdvancedRemoteControl`, `Device`, and concrete device implementations such as `Television` and `SoundSystem`. The `RemoteControl` represents the basic functionalities of the remote control, the `AdvancedRemoteControl` extends the functionalities with additional features, and the `Device` represents electronic devices controlled by the remote.
 
 
 [discrete%breakable]
-=== Device Interface
+=== Device Interface (Implementor)
 The `Device` interface defines the common operations that can be performed on electronic devices, such as powering on/off, adjusting volume, and changing channels. In our analogy, it represents the devices controlled by the remote control.
 
 [source, {lang}]
@@ -75,7 +74,7 @@ endif::[]
 
 
 [discrete%breakable]
-=== Television Class
+=== Television Class (ConcreteImplementorA)
 The `Television` class implements the `Device` interface. It represents a television device that can be controlled by the remote.
 
 [source, {lang}]
@@ -91,7 +90,7 @@ endif::[]
 
 
 [discrete%breakable]
-=== SoundSystem Class
+=== SoundSystem Class (ConcreteImplementorA)
 The `SoundSystem` class implements the `Device` interface. It represents a sound system device that can be controlled by the remote.
 
 [source, {lang}]
@@ -107,8 +106,8 @@ endif::[]
 
 
 [discrete%breakable]
-=== RemoteControl Class
-The `RemoteControl` class represents the basic functionalities of the remote control. It holds a reference to a `Device` object and delegates operations to it. It includes methods for powering on/off, adjusting volume, and changing channels.
+=== RemoteControl Class (Abstraction)
+The `RemoteControl` abstract class represents the basic functionalities of the remote control. It holds a reference to a `Device` object and delegates operations to it. It includes methods for powering on/off, adjusting volume, and changing channels.
 
 [source, {lang}]
 ----
@@ -123,7 +122,7 @@ endif::[]
 
 
 [discrete%breakable]
-=== AdvancedRemoteControl Class
+=== AdvancedRemoteControl Class (RefinedAbstraction)
 The `AdvancedRemoteControl` class extends the functionalities of the basic remote control by adding additional features. It inherits from the `RemoteControl` class and includes a method for muting the device by setting the volume to zero.
 
 [source, {lang}]
@@ -139,8 +138,8 @@ endif::[]
 
 
 [discrete%breakable]
-=== Client Class
-The `Client` class demonstrates how the remote control system is used. It creates instances of `Television` and `SoundSystem`, associates them with remote controls, and performs operations such as powering on/off, adjusting volume, changing channels, and muting.
+=== Usage Example
+In the usage example, the user creates instances of `Television` and `SoundSystem`, associates them with remote controls, and performs operations such as powering on/off, adjusting volume, changing channels, and muting.
 
 [source, {lang}]
 ----
@@ -151,6 +150,19 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/Client.py[lines=3..]
 endif::[]
+----
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Television powered on
+Changing television channel to 5
+Sound system powered on
+Adjusting sound system volume to 20
+Adjusting sound system volume to 0
 ----
 
 
@@ -168,4 +180,4 @@ When implementing the Bridge Pattern in software development, several design con
 
 [discrete%breakable]
 == Conclusion
-The Bridge Pattern is a valuable design pattern for developing flexible and extensible software systems, as demonstrated in our implementation walkthrough example with a universal remote control system. By separating the abstraction of remote control functionalities from the implementation of device-specific communication protocols, the pattern promotes modularity, maintainability, and scalability. It allows for the easy addition of new devices and features to the remote control system without impacting existing code, making it adaptable to changing requirements and technological advancements. Overall, the Bridge Pattern is a powerful tool for building versatile and user-friendly software systems that can efficiently interact with diverse electronic devices.
+The Bridge Pattern is a valuable design pattern for developing flexible and extensible software systems, as demonstrated in our implementation walkthrough example with a universal remote control system. By separating the abstraction of remote control functionalities from the implementation of device-specific communication protocols, the pattern promotes modularity, maintainability, and scalability. It allows for the easy addition of new devices and features to the remote control system without impacting existing code, making it adaptable to changing requirements and technological advancements. 
