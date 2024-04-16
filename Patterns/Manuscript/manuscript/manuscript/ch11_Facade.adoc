@@ -23,7 +23,6 @@ So, just like the facade of a building hides its inner complexities, the control
 == Key Components
 - _Facade_: The facade acts as a simplified interface to a complex system, providing a unified and straightforward access point for interacting with multiple subsystems. In our analogy, the control panel facade hides the complexities of the car's advanced features, such as automatic parking, adaptive cruise control, and collision avoidance systems, from the driver.
 - _Subsystem_: Subsystems are individual components or systems that make up the larger, complex system. In our example, the automatic parking system, adaptive cruise control, and collision avoidance systems represent subsystems of the high-tech car.
-- _Client_: The client is the entity that interacts with the facade to access the functionalities provided by the subsystems. In our analogy, the driver of the car interacts with the control panel facade to activate features like park assist, cruise control, and collision avoidance.
 
 
 [discrete%breakable]
@@ -34,18 +33,18 @@ Next, we will explain the concept of the Facade design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::FacadePatternClassDiagram.png[title="The Facade Class Diagram", align=center]
-In this diagram, let's interpret the Facade Pattern using the analogy of a control panel in a high-tech car. The "Facade" class represents the control panel, which provides a simplified interface for accessing the functionalities of the car's advanced features. It holds references to three subsystems: "SubsystemClassA," "SubsystemClassB," and "SubsystemClassC," which represent the automatic parking, adaptive cruise control, and collision avoidance systems, respectively. Each subsystem encapsulates the complex functionalities of its corresponding feature. The control panel facade delegates operations to these subsystems as needed. For example, when the driver presses the "Park Assist" button on the control panel, the facade invokes the appropriate operation in "SubsystemClassA" to activate the automatic parking system. Similarly, the facade interacts with "SubsystemClassB" and "SubsystemClassC" to control the adaptive cruise control and collision avoidance systems, respectively. Overall, the Facade Pattern simplifies the interaction between the driver and the car's advanced features by providing a unified and straightforward interface, similar to how a control panel hides the complexities of a high-tech car's functionalities.
+In this class diagram, the `Facade` class represents the control panel, which provides a simplified interface for accessing the functionalities of the car's advanced features. It holds references to three subsystems: `SubsystemClassA`, `SubsystemClassB`, and `SubsystemClassC`, which represent the automatic parking, adaptive cruise control, and collision avoidance systems, respectively. Each subsystem encapsulates the complex functionalities of its corresponding feature. The control panel facade delegates operations to these subsystems as needed. For example, when the driver presses the "Park Assist" button on the control panel, the facade invokes the appropriate operation in `SubsystemClassA` to activate the automatic parking system. Similarly, the facade interacts with `SubsystemClassB` and `SubsystemClassC` to control the adaptive cruise control and collision avoidance systems, respectively. 
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::FacadePatternSequenceDiagram.png[title="The Facade Sequence Diagram", align=center]
-In this sequence diagram, let's interpret the Facade Pattern using the analogy of a control panel in a high-tech car. The "Client" represents the driver interacting with the control panel to perform actions. When the driver initiates an action, such as activating a feature like automatic parking or adaptive cruise control, the request is forwarded to the "Facade" class, which represents the control panel. The facade then delegates the action to the appropriate subsystems: "SubsystemClassA," "SubsystemClassB," and "SubsystemClassC," which represent the automatic parking, adaptive cruise control, and collision avoidance systems, respectively. Each subsystem performs its specific action and returns the result to the facade. Finally, the facade aggregates the results and sends the action result back to the client. Overall, the Facade Pattern simplifies the interaction between the driver and the car's advanced features by providing a unified and straightforward interface, similar to how a control panel simplifies the interaction between the driver and the car's functionalities
+In this sequence diagram, the Client represents the driver interacting with the control panel to perform actions. When the driver initiates an action, such as activating a feature like automatic parking or adaptive cruise control, the request is forwarded to the `Facade` class, which represents the control panel. The facade then delegates the action to the appropriate subsystems: `SubsystemClassA`, `SubsystemClassB`, and `SubsystemClassC`, which represent the automatic parking, adaptive cruise control, and collision avoidance systems, respectively. Each subsystem performs its specific action and returns the result to the facade. Finally, the facade aggregates the results and sends the action result back to the client.
 
 
 [discrete%breakable]
 == Implementation Walkthrough
-In this example, we'll implement the Facade Pattern in Java using the analogy of a control panel in a high-tech car. We'll have four main classes: `ControlPanel`, `AutomaticParkingSystem`, `AdaptiveCruiseControlSystem`, and `CollisionAvoidanceSystem`. The `ControlPanel` class represents the facade, providing a simplified interface for interacting with the car's advanced features, while the subsystems represent the automatic parking, adaptive cruise control, and collision avoidance systems.
+In this example, we'll implement the Facade Pattern using our analogy of a control panel. We'll have four main classes: `ControlPanel`, `AutomaticParkingSystem`, `AdaptiveCruiseControlSystem`, and `CollisionAvoidanceSystem`. The `ControlPanel` class represents the facade, providing a simplified interface for interacting with the car's advanced features, while the subsystems represent the automatic parking, adaptive cruise control, and collision avoidance systems.
 
 
 [discrete%breakable]
@@ -131,8 +130,19 @@ In this example, we create a `ControlPanel` object representing the control pane
 
 
 [discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Parking the car...
+Activating the adaptive cruise control system...
+Avoiding collision...
+----
+
+
+[discrete%breakable]
 == Design Considerations
-When implementing the Facade Pattern in software development for a control panel in a high-tech car, several design considerations should be taken into account:
+When implementing the Facade Pattern, several design considerations should be taken into account:
 
 * **Simplicity and Usability**: The primary goal of the Facade Pattern is to provide a simplified interface for interacting with a complex system. Designers should prioritize simplicity and usability when designing the facade, ensuring that it hides the complexity of the underlying subsystems and presents a straightforward interface for users.
 * **Subsystem Encapsulation**: Subsystems should encapsulate their specific functionalities and complexities, allowing the facade to delegate tasks to them seamlessly. Designers should carefully define the responsibilities and interfaces of each subsystem to maintain modularity and minimize dependencies between subsystems.
@@ -142,4 +152,4 @@ When implementing the Facade Pattern in software development for a control panel
 
 [discrete%breakable]
 == Conclusion
-The Facade Pattern is a valuable design pattern for simplifying the interaction with complex systems. By providing a unified and straightforward interface, the pattern enhances usability and reduces the cognitive load for users, making it easier to operate and manage the system's advanced features. Additionally, the pattern promotes modularity, maintainability, and flexibility by encapsulating subsystem complexities and minimizing dependencies between components. Overall, the Facade Pattern is a powerful tool for designing intuitive and user-friendly software systems, enabling users to interact with complex functionalities with ease and efficiency.
+The Facade Pattern simplifies interactions with complex systems by offering a unified and straightforward interface. This approach not only enhances usability but also lowers the cognitive load for users, facilitating easier management of the system's advanced features. It also improves modularity, maintainability, and flexibility by hiding the complexities of subsystems and reducing component dependencies. As a powerful tool in software design, the Facade Pattern enables intuitive and user-friendly system interactions, allowing users to efficiently handle complex functionalities.

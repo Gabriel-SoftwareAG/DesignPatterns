@@ -1,6 +1,6 @@
 package facade;
 
-public class CollisionAvoidanceSystem {
+class CollisionAvoidanceSystem {
     public void avoid() {
         System.out.println("Avoiding collision...");
     }
