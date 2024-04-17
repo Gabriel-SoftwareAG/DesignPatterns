@@ -18,18 +18,16 @@ In software design, the state pattern works similarly. It allows an object to ch
 |image:state_traffic_light.jpg[width=300, scale=50%]
 |===
 
-Here is another another example. let's say you're building a vending machine. It can be in different states: idle, waiting for selection, dispensing, or out of stock. Each state corresponds to a different behavior: idle means it's ready for use, waiting for selection means it's waiting for the user to make a choice, dispensing means it's giving out the selected item, and out of stock means it can't fulfill any requests.
-
-Using the state pattern, you can encapsulate each state and its corresponding behavior in separate objects. When the state of the vending machine changes, it switches to the appropriate state object, which determines how it should behave in that state.
+Using the state pattern, you can encapsulate each state and its corresponding behavior in separate objects. When the state of the traffic light changes, it switches to the appropriate state object, which determines how it should behave in that state.
 
 Overall, the state pattern provides a way to model objects that can change their behavior dynamically based on their internal state, similar to how a traffic light changes its behavior depending on its current state.
 
 
 [discrete%breakable]
 == Key Components
-- _Context_: The Context represents the object whose behavior can change dynamically based on its internal state. In the traffic light analogy, the traffic light itself serves as the Context, while in the vending machine example, the vending machine is the Context.
-- _State_: The State interface defines a common interface for all concrete state classes, encapsulating the behavior associated with a particular state. For instance, in the traffic light scenario, the State interface defines methods like `stop()`, `prepareToStop()`, and `go()`, implemented by concrete state classes like `RedState`, `YellowState`, and `GreenState`. Similarly, in the vending machine example, the State interface would define methods like `selectItem()`, `dispenseItem()`, etc.
-- _Concrete State_: Concrete State classes implement the State interface and encapsulate the behavior associated with a specific state of the Context. For instance, the `RedState`, `YellowState`, and `GreenState` classes in the traffic light analogy, and `IdleState`, `SelectionState`, `DispensingState`, and `OutOfStockState` classes in the vending machine example.
+- _Context_: The Context represents the object whose behavior can change dynamically based on its internal state. In the traffic light analogy, the traffic light itself serves as the Context.
+- _State_: The State interface defines a common interface for all concrete state classes, encapsulating the behavior associated with a particular state. For instance, in the traffic light scenario, the State interface defines methods like stop(), prepareToStop(), and go(), implemented by concrete state classes like RedState, YellowState, and GreenState.
+- _Concrete State_: Concrete State classes implement the State interface and encapsulate the behavior associated with a specific state of the Context. For instance, the RedState, YellowState, and GreenState classes in the traffic light analogy.
 
 
 [discrete%breakable]
@@ -40,13 +38,13 @@ Next, we will explain the concept of the State design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::StatePatternClassDiagram.png[title="The State Class Diagram", align=center]
-The diagram illustrates the State design pattern using a traffic light analogy. The `Context` class represents the traffic light, which has a state attribute representing its current state. Analogous to the traffic light, the `Context` class can setState(state: State) to change its behavior and `request()` to trigger actions based on its current state. The `State` interface acts as the blueprint for different states of the traffic light, defining a `handle()` method. Concrete state classes such as `ConcreteStateA` and ConcreteStateB correspond to different states of the traffic light, such as red, yellow, and green. Each concrete state class implements the `handle()` method, specifying the behavior of the traffic light in that state. Through this design, the traffic light can dynamically change its behavior based on its internal state, just like how objects in software applications can change their behavior based on their state.
+The diagram illustrates the State design pattern. Using a traffic light analogy, the `Context` class represents the traffic light, which has a state attribute representing its current state. Analogous to the traffic light, the `Context` class can setState(state: State) to change its behavior and `request()` to trigger actions based on its current state. The `State` interface acts as the blueprint for different states of the traffic light, defining a `handle()` method. Concrete state classes such as `ConcreteStateA` and `ConcreteStateB` correspond to different states of the traffic light, such as red, yellow, and green. Each concrete state class implements the `handle()` method, specifying the behavior of the traffic light in that state. Through this design, the traffic light can dynamically change its behavior based on its internal state, just like how objects in software applications can change their behavior based on their state.
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::StatePatternSequenceDiagram.png[title="The State Sequence Diagram", align=center]
-This sequence diagram illustrates the State design pattern in action, akin to how a traffic light operates. Here, the "Client" can be thought of as a driver at an intersection, making a request to the traffic light system (the "Context") to change its state. The "Context" represents the traffic light control system itself, which manages the current state of the traffic light. The "State" interface is analogous to the general concept of a traffic light state, with methods that define actions like changing from green to red. "ConcreteStateA" and "ConcreteStateB" represent specific states of the traffic light, such as green and red, respectively. Initially, the traffic light is in "ConcreteStateA" (green), allowing traffic to move. Upon a request (perhaps a timer signaling change), the control system invokes the handle method on the current state, which performs an action (like transitioning from green to yellow) and notifies the control system to switch to "ConcreteStateB" (red), halting traffic flow. This process exemplifies how the State design pattern allows an object (the traffic light system) to change its behavior dynamically by switching between different states (green, yellow, red) in response to external interactions (the passage of time or a manual switch).
+This sequence diagram illustrates the State design pattern in action. Here, the "Client" can be thought of as an "invoker" at an intersection (e.g. timer event, sensor or a police officer), making a request to the traffic light system (the "Context") to change its state. The "Context" represents the traffic light control system itself, which manages the current state of the traffic light. The "State" interface is analogous to the general concept of a traffic light state, with methods that define actions like changing from green to red. "ConcreteStateA" and "ConcreteStateB" represent specific states of the traffic light, such as green and red, respectively. Initially, the traffic light is in "ConcreteStateA" (green), allowing traffic to move. Upon a request (perhaps a timer signaling change), the control system invokes the handle method on the current state, which performs an action (like transitioning from green to yellow) and notifies the control system to switch to "ConcreteStateB" (red), halting traffic flow. This process exemplifies how the State design pattern allows an object (the traffic light system) to change its behavior dynamically by switching between different states (green, yellow, red) in response to external interactions (the passage of time or a manual switch).
 
 
 [discrete%breakable]
@@ -158,7 +156,18 @@ include::{python_path}/state/TrafficSystem.py[lines=3..]
 endif::[]
 ----
 
-The `TrafficSystem` class simulates the traffic light system's operation, transitioning through green, yellow, and red states, showcasing how the State design pattern facilitates state management in a straightforward and flexible manner.
+In our example, this part would be the traffic light system's operation, transitioning through green, yellow, and red states, showcasing how the State design pattern facilitates state management in a straightforward and flexible manner.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Green light - Go!
+Yellow light - Caution!
+Red light - Stop!
+----
 
 
 [discrete%breakable]
