@@ -37,18 +37,18 @@ Next, we will explain the concept of the Strategy design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::StrategyPatternClassDiagram.png[title="The Strategy Class Diagram", align=center]
-In this diagram, let's interpret the Strategy Pattern using the analogy of planning routes for a road trip. The `Context` class represents the road trip planner or navigation app, which selects the appropriate `strategy (route)` for the journey. The `Strategy` interface defines the contract for all strategies, specifying the method `algorithmInterface()` that each strategy must implement. Concrete strategies are represented by classes such as `ConcreteStrategyA`, `ConcreteStrategyB`, and `ConcreteStrategyC`, each implementing the `Strategy` interface with its unique algorithm for planning a route. For example, `ConcreteStrategyA` could represent the fastest route, `ConcreteStrategyB` the shortest route, and `ConcreteStrategyC` the most scenic route. The `Context` class holds a reference to the selected strategy and delegates the route planning task to it. Overall, the Strategy Pattern allows for flexibility and adaptability in selecting the best route for a road trip based on specific conditions or preferences.
+In this diagram, the `Context` class represents the road trip planner or navigation app, which selects the appropriate strategy (route) for the journey. The `Strategy` interface defines the contract for all strategies, specifying the method `algorithmInterface()` that each strategy must implement. Concrete strategies are represented by classes such as `ConcreteStrategyA`, `ConcreteStrategyB`, and `ConcreteStrategyC`, each implementing the `Strategy` interface with its unique algorithm for planning a route. For example, `ConcreteStrategyA` could represent the fastest route, `ConcreteStrategyB` the shortest route, and `ConcreteStrategyC` the most scenic route. The `Context` class holds a reference to the selected strategy and delegates the route planning task to it. 
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::StrategyPatternSequenceDiagram.png[title="The Strategy Sequence Diagram"]
-In this sequence diagram, let's interpret the Strategy Pattern using the analogy of planning routes for a road trip. The Client represents the user or system interacting with the road trip planner or navigation app, the `Context`. The `Context` class holds a reference to the selected strategy (route) and delegates the route planning task to it. Initially, the client sets the strategy to `ConcreteStrategyA` (e.g., the fastest route). The `Context` then creates an instance of `ConcreteStrategyA` and executes its `algorithmInterface()`, which represents calculating the fastest route. Once completed, the context returns the result to the client. Later, the client changes the strategy to `ConcreteStrategyB` (e.g., the shortest route). Again, the `Context` creates an instance of `ConcreteStrategyB` and executes its `algorithmInterface()` to calculate the shortest route before returning the result to the client. Overall, the Strategy Pattern allows for dynamic selection and execution of different algorithms (strategies) for solving a problem (planning routes) at runtime.
+In this sequence diagram, the Client represents the user or system interacting with the road trip planner or navigation app, the `Context`. The `Context` class holds a reference to the selected strategy (route) and delegates the route planning task to it. Initially, the client sets the strategy to `ConcreteStrategyA` (e.g., the fastest route). The `Context` then creates an instance of `ConcreteStrategyA` and executes its `algorithmInterface()`, which represents calculating the fastest route. Once completed, the context returns the result to the client. Later, the client changes the strategy to `ConcreteStrategyB` (e.g., the shortest route). Again, the `Context` creates an instance of `ConcreteStrategyB` and executes its `algorithmInterface()` to calculate the shortest route before returning the result to the client. The Strategy Pattern allows for dynamic selection and execution of different algorithms (strategies) for solving a problem (planning routes) at runtime.
 
 
 [discrete%breakable]
 == Implementation Walkthrough
-In this example, we'll implement the Strategy Pattern in Java using the analogy of planning routes for a road trip. We'll have three main classes: `RoutePlanner` (Context), `RouteStrategy` (Strategy interface), and concrete strategy classes such as `FastestRouteStrategy` and `ShortestRouteStrategy`. The `RoutePlanner` class represents the road trip planner or navigation app, while the strategy classes represent different algorithms for planning routes.
+In this example, we'll implement the Strategy Pattern using the analogy of planning routes for a road trip. We'll have three main classes: `RoutePlanner` (Context), `RouteStrategy` (Strategy interface), and concrete strategy classes such as `FastestRouteStrategy` and `ShortestRouteStrategy`. The `RoutePlanner` class represents the road trip planner or navigation app, while the strategy classes represent different algorithms for planning routes.
 
 
 [discrete%breakable]
@@ -129,6 +129,19 @@ In this example, we create a `RoutePlanner` object representing the road trip pl
 
 
 [discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Setting the strategy to calculate the route: FastestRouteStrategy
+Executing the strategy to calculate the route for FastestRouteStrategy
+Calculating the fastest route...
+Setting the strategy to calculate the route: ShortestRouteStrategy
+Executing the strategy to calculate the route for ShortestRouteStrategy
+Calculating the shortest route...
+----
+
+[discrete%breakable]
 == Design Considerations
 When implementing the Strategy Pattern in software development, several design considerations should be taken into account:
 
@@ -141,4 +154,4 @@ When implementing the Strategy Pattern in software development, several design c
 
 [discrete%breakable]
 == Conclusion
-The Strategy Pattern is a versatile and powerful design pattern that provides flexibility and adaptability in software design. By encapsulating each algorithm in separate strategy classes and allowing the context to switch between strategies at runtime, the pattern enables dynamic selection and execution of different algorithms for solving a problem. This promotes modularity, maintainability, and extensibility in software systems, allowing strategies to be added, removed, or modified independently without affecting the overall system architecture. Overall, the Strategy Pattern is a valuable tool for managing algorithmic variations and promoting code reuse in object-oriented programming.
+The Strategy Pattern is a robust and adaptable design pattern that enhances flexibility in software design. It achieves this by encapsulating each algorithm within distinct strategy classes and enabling the context to switch strategies at runtime. This design allows for the dynamic application and switching of various algorithms to address different problems. It fosters modularity, maintainability, and extensibility in software systems by permitting strategies to be independently added, removed, or modified without impacting the core system architecture. Overall, the Strategy Pattern is an essential tool for handling variations in algorithms and encouraging code reuse within object-oriented programming.

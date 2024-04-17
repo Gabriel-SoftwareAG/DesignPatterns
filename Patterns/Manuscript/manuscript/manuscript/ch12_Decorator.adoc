@@ -140,19 +140,32 @@ include::{python_path}/decorator/Client.py[lines=3..]
 endif::[]
 ----
 
-In this example, we create a `PlainCheesePizza` object representing the base pizza. We then use decorators to add tomatoes, mushrooms, or both toppings to customize the pizza. Each decorator dynamically adds the specified topping to the base pizza, resulting in a customized pizza with the desired toppings.
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Baking plain cheese pizza
+Adding tomatoes
+Baking plain cheese pizza
+Adding mushrooms
+Baking plain cheese pizza
+Adding tomatoes
+Adding mushrooms
+----
 
 
 [discrete%breakable]
 == Design Considerations
 When implementing the Decorator Pattern in software development, several design considerations should be taken into account:
 
-* **Separation of Concerns**: Ensure that the base component (pizza) and decorators (toppings) each have a single responsibility and are not tightly coupled. This promotes modularity and maintainability by allowing components to be added, removed, or modified independently.
-* **Flexibility and Extensibility**: Design the decorators to be easily extendable to accommodate new toppings or behaviors. This allows for dynamic customization of objects at runtime without modifying existing code, promoting flexibility and extensibility in the system design.
+* **Separation of Concerns**: Ensure that the base component and decorators each have a single responsibility and are not tightly coupled. This promotes modularity and maintainability by allowing components to be added, removed, or modified independently.
+* **Flexibility and Extensibility**: Design the decorators to be easily extendable to accommodate new behaviors. This allows for dynamic customization of objects at runtime without modifying existing code, promoting flexibility and extensibility in the system design.
 * **Order of Decorators**: Consider the order in which decorators are applied to ensure the desired behavior is achieved. Depending on the application requirements, decorators can be applied in different orders to produce different results.
 * **Performance Overhead**: Be mindful of the performance overhead introduced by multiple layers of decorators, especially in scenarios where a large number of decorators are applied to objects. Minimize unnecessary overhead by keeping decorators lightweight and efficient.
 
 
 [discrete%breakable]
 == Conclusion
-The Decorator Pattern is a powerful design pattern for dynamically customizing objects at runtime, as demonstrated in our implementation walkthrough example with customizing pizzas. By allowing objects to be extended with multiple layers of decorators, the pattern promotes flexibility, maintainability, and reusability in software design. Decorators can be added, removed, or modified independently, enabling dynamic customization of objects without altering their core structure. This approach enhances the scalability and extensibility of software systems, allowing for easy adaptation to changing requirements and preferences. Overall, the Decorator Pattern is a valuable tool for enhancing the functionality and versatility of objects in object-oriented programming.
+The Decorator Pattern is an effective design pattern for dynamically enhancing objects at runtime. It supports the extension of objects through multiple decorator layers, enhancing software flexibility, maintainability, and reusability. Decorators can be independently added, removed, or adjusted, facilitating dynamic modifications to objects without changing their fundamental structure. This method improves software scalability and extensibility, making it easier to adapt to evolving needs and preferences. Overall, the Decorator Pattern is a crucial technique for boosting the functionality and adaptability of objects in object-oriented programming.
