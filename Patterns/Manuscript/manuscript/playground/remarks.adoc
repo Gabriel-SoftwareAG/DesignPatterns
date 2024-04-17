@@ -1,13 +1,13 @@
 = Remarks
 - How to make the java edition with a capital J
-- Add a table summary for all design patterns
+- **Add a table summary for all design patterns**
 - font in the table is different
 - Add to the appendix the singleton multithread issue, and the java prototype
 - Find the place to add comments verisoft.
 - Need to support epub and html also
-- Go over all the class diagrams and fix duplicate arrows
+- **Go over all the class diagrams and fix duplicate arrows**
 - Facade car imgae is not in the right scale
-- Go over all the descriptions of class and sequence diagrams and put the class names within ``
+- **Fix the Flyweight pattern**
 
 Future options:
 - To make it in a book style: :media: prepress in book.adoc

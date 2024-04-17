@@ -8,6 +8,7 @@ class Waiter {
     }
 
     void executeCommand() {
+        System.out.println("Waiter.executeCommand(): Delegating to Command.execute() for " + command.getClass().getSimpleName());
         command.execute();
     }
 }

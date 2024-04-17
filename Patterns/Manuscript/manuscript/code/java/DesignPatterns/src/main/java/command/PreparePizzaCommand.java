@@ -9,6 +9,7 @@ class PreparePizzaCommand implements Command {
 
     @Override
     public void execute() {
+        System.out.println("PreparePizzaCommand.execute(): Delegating to Receiver.preparePizza()");
         receiver.preparePizza();
     }
 }

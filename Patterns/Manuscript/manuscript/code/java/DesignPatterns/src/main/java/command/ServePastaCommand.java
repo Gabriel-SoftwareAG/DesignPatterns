@@ -9,6 +9,7 @@ class ServePastaCommand implements Command {
 
     @Override
     public void execute() {
+        System.out.println("ServePastaCommand.execute(): Delegating to Receiver.servePasta()");
         receiver.servePasta();
     }
 }
