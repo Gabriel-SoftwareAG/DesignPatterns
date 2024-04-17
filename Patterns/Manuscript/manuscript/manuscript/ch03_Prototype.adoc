@@ -57,6 +57,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/prototype/Prototype.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/prototype/Prototype.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/prototype/Prototype.ts[lines=3..]
+endif::[]
 ----
 
 The `Prototype` abstract class declares the `clone()` method, which will be implemented by concrete subclasses to enable cloning. In the teddy bear analogy, this class represents the blueprint for creating new teddy bears.
@@ -73,6 +81,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/prototype/WhiteTeddyBearPrototype.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/prototype/WhiteTeddyBearPrototype.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/prototype/WhiteTeddyBearPrototype.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -83,6 +99,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/prototype/BlackTeddyBearPrototype.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/prototype/BlackTeddyBearPrototype.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/prototype/BlackTeddyBearPrototype.ts[lines=3..]
 endif::[]
 ----
 
@@ -99,6 +123,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/prototype/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/prototype/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/prototype/Client.ts[lines=3..]
 endif::[]
 ----
 

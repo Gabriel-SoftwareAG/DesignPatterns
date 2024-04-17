@@ -54,6 +54,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/singleton/Library.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/singleton/Library.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/singleton/Library.ts[lines=3..]
+endif::[]
 ----
 
 - The `Library` class represents the central library.
@@ -72,6 +80,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/singleton/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/singleton/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/singleton/Client.ts[lines=3..]
 endif::[]
 ----
 

@@ -67,6 +67,6 @@ footer:
     center: '{page-number}'
 cover:
   front:
-    image: ./images/cover/cover_option2_building_blocks_cover_name.jpg
+    image: ../images/cover/cover_option2_building_blocks_cover_name.jpg
   back:
-    image: ./images/cover/cover_option1_building_blocks.jpg 
+    image: ../images/cover/cover_option1_building_blocks.jpg 

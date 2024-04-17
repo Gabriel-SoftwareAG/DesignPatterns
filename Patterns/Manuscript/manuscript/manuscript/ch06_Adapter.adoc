@@ -62,6 +62,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/adapter/ElectricalOutlet.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/ElectricalOutlet.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/ElectricalOutlet.ts[lines=3..]
+endif::[]
 ----
 
 The `ElectricalOutlet` interface represents the common interface expected by electrical outlets worldwide. It declares a method `request()` to initiate the charging process.
@@ -77,6 +85,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/adapter/MobilePhone.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/MobilePhone.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/MobilePhone.ts[lines=3..]
 endif::[]
 ----
 
@@ -94,6 +110,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/adapter/UniversalAdapter.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/UniversalAdapter.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/UniversalAdapter.ts[lines=3..]
+endif::[]
 ----
 
 The `UniversalAdapter` class acts as the universal adapter used by the traveler to connect their electronic device to different types of electrical outlets. It implements the `ElectricalOutlet` interface and contains a reference to the electronic device. The `request()` method of the adapter translates the request from the common `ElectricalOutlet` interface to the specific `specificRequest()` method of the electronic device.
@@ -109,6 +133,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/adapter/Traveler.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/Traveler.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/Traveler.ts[lines=3..]
 endif::[]
 ----
 

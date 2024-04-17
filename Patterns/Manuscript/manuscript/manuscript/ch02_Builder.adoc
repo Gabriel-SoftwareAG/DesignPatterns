@@ -64,6 +64,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/builder/Builder.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/builder/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/builder/Client.ts[lines=3..]
+endif::[]
 ----
 
 The `Builder` interface defines the steps involved in constructing a custom sandwich. Each method corresponds to a step in the sandwich-making process: selecting the type of bread, filling, toppings, and sauce.
@@ -79,6 +87,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/builder/ConcreteBuilder.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/builder/ConcreteBuilder.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/builder/ConcreteBuilder.ts[lines=3..]
 endif::[]
 ----
 
@@ -96,6 +112,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/builder/Product.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/builder/Product.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/builder/Product.ts[lines=3..]
+endif::[]
 ----
 
 The `Product` class represents the custom sandwich being constructed. It contains methods for adding parts (ingredients) to the sandwich and displaying the final sandwich ingredients.
@@ -112,6 +136,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/builder/Director.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/builder/Director.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/builder/Director.ts[lines=3..]
+endif::[]
 ----
 
 The `Director` class controls the construction process of the custom sandwich. It takes a `Builder` instance and orchestrates the sequence of steps required to construct the sandwich.
@@ -127,6 +159,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/builder/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/builder/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/builder/Client.ts[lines=3..]
 endif::[]
 ----
 

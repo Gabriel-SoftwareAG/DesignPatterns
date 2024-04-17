@@ -64,6 +64,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/composite/PlaylistComponent.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/PlaylistComponent.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/PlaylistComponent.ts[lines=3..]
+endif::[]
 ----
 
 The `PlaylistComponent` interface represents both individual songs and collections of songs in the music playlist. It defines common operations that can be performed on both leaf objects (individual songs) and composite objects (collections of songs). Specifically, it includes the operation `playSong()` to be applied to either individual song or an enrire playlist.
@@ -79,6 +87,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/composite/Song.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/Song.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/Song.ts[lines=3..]
 endif::[]
 ----
 
@@ -96,6 +112,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/composite/Playlist.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/Playlist.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/Playlist.ts[lines=3..]
+endif::[]
 ----
 
 The `Playlist` class represents collections of songs in the music playlist. It implements the `PlaylistComponent` interface and contains a list of child components, which can be either individual songs (Leaf) or other playlists (Composite). The `addComponent()` and `removeComponent()` methods allow adding and removing songs or playlists from the collection. The `operation()` method plays all songs in the playlist.
@@ -111,6 +135,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/composite/MusicPlayer.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/adapter/MusicPlayer.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/adapter/MusicPlayer.ts[lines=3..]
 endif::[]
 ----
 

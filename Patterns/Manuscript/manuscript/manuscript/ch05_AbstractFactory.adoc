@@ -58,6 +58,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/AbstractFoodStallFactory.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/AbstractFoodStallFactory.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/AbstractFoodStallFactory.ts[lines=3..]
+endif::[]
 ----
 
 The `AbstractFoodStallFactory` interface represents the concept of themed areas in the amusement park, where each factory is responsible for creating families of related themed food items. It declares methods for creating specific types of themed food items.
@@ -74,6 +82,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/AdventureLandFactory.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/AdventureLandFactory.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/AdventureLandFactory.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -84,6 +100,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/FantasyLandFactory.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/FantasyLandFactory.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/FantasyLandFactory.ts[lines=3..]
 endif::[]
 ----
 
@@ -101,6 +125,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/IceCream.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/IceCream.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/IceCream.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -111,6 +143,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/Pizza.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/Pizza.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/Pizza.ts[lines=3..]
 endif::[]
 ----
 
@@ -128,6 +168,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/TropicalIceCream.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/TropicalIceCream.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/TropicalIceCream.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -138,6 +186,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/ExoticPizza.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/ExoticPizza.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/ExoticPizza.ts[lines=3..]
 endif::[]
 ----
 
@@ -150,6 +206,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/MagicalIceCream.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/MagicalIceCream.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/MagicalIceCream.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -160,6 +224,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/abstractfactory/EnchantedPizza.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/abstractfactory/EnchantedPizza.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/abstractfactory/EnchantedPizza.ts[lines=3..]
 endif::[]
 ----
 
