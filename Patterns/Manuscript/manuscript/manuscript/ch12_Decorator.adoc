@@ -142,7 +142,7 @@ ifeval::["{lang}" == "typescript"]
 include::{typescript_path}/decorator/TomatoDecorator.ts[lines=3..]
 endif::[]
 ----
-----
+
 
 [source, {lang}]
 ----
