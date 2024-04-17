@@ -4,7 +4,8 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Singleton.RunSingleton();
-        Visitor.RunVisitor();
+        ParkVisitor.VisitPark();
+        //Singleton.RunSingleton();
+        //Visitor.RunVisitor();
     }
 }
