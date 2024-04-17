@@ -1,14 +1,14 @@
 package mediator;
 
 class Tester extends Colleague {
-    public Tester(Team team) {
-        super(team);
+    public Tester(Mediator mediator) {
+        super(mediator);
     }
 
     @Override
     public void send(String message) {
         System.out.println("Tester sending message: " + message);
-        team.request(message, this);
+        mediator.request(message, this);
     }
 
     @Override

@@ -1,14 +1,14 @@
 package mediator;
 
 class Developer extends Colleague {
-    public Developer(Team team) {
-        super(team);
+    public Developer(Mediator mediator) {
+        super(mediator);
     }
 
     @Override
     public void send(String message) {
         System.out.println("Developer sending message: " + message);
-        team.request(message, this);
+        mediator.request(message, this);
     }
 
     @Override

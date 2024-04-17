@@ -1,10 +1,10 @@
 package mediator;
 
 abstract class Colleague {
-    protected Team team;
+    protected Mediator mediator;
 
-    public Colleague(Team team) {
-        this.team = team;
+    public Colleague(Mediator team) {
+        this.mediator = team;
     }
 
     abstract void send(String message);

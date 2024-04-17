@@ -1,6 +1,6 @@
 package mediator;
 
-interface Team {
+interface Mediator {
     void request(String message, Colleague colleague);
     void response(String message, Colleague colleague);
 }

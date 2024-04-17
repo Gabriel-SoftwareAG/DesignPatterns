@@ -1,6 +1,6 @@
 package mediator;
 
-class ScrumMaster implements Team {
+class ScrumMaster implements Mediator {
     private Developer developer;
     private Tester tester;
 
