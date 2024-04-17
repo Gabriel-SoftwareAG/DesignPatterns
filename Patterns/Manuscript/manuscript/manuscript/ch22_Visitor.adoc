@@ -47,18 +47,18 @@ Next, we will explain the concept of the Visitor design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::VisitorPatternClassDiagram.png[title="The Visitor Class Diagram", align=center]
-In this analogy, imagine you're exploring a museum with different types of exhibits. The `Visitor` interface represents the visitor's role, defining the actions they can perform on each exhibit. Just like a museum visitor might have different interests in various exhibits, the ConcreteVisitor class implements specific actions for each type of exhibit. The `Element` interface represents the exhibits themselves, providing a method for accepting visitors. Similarly, in the museum, each exhibit allows visitors to interact with it in some way. The `ConcreteElementA` and `ConcreteElementB` classes represent specific types of exhibits, each implementing the accept method to accommodate visitors. Finally, the relationships between `Visitor` and `Element` indicate that visitors can visit and interact with the exhibits, with the visitor implementing actions specific to each exhibit type.
+In the Visitor Pattern class diagram, The `Visitor` interface represents the visitor's role, defining the actions they can perform on each exhibit. Just like a museum visitor might have different interests in various exhibits, the `ConcreteVisitor` class implements specific actions for each type of exhibit. The `Element` interface represents the exhibits themselves, providing a method for accepting visitors. Similarly, in the museum, each exhibit allows visitors to interact with it in some way. The `ConcreteElementA` and `ConcreteElementB` classes represent specific types of exhibits, each implementing the accept method to accommodate visitors. Finally, the relationships between `Visitor` and `Element` indicate that visitors can visit and interact with the exhibits, with the visitor implementing actions specific to each exhibit type.
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::VisitorPatternSequenceDiagram.png[title="The Visitor Sequence Diagram", align=center]
-In this analogy, imagine you're a museum visitor exploring different exhibits. The Client represents you, initiating the visit to each exhibit. The `Element` represents each exhibit in the museum, and the `ConcreteElementA` and `ConcreteElementB` are specific types of exhibits you encounter. As you visit each exhibit, you interact with a Visitor, which represents your actions or interests related to that exhibit. The ConcreteVisitor class represents different roles you might assume during your visit, such as a historian or an art enthusiast. As you interact with each exhibit, you trigger specific actions defined by the Visitor. For example, when you visit ConcreteElementA, you trigger the `performOperationA()` action implemented by the ConcreteVisitor. Similarly, when you visit `ConcreteElementB`, you trigger the `performOperationB()` action. The sequence diagram illustrates how you, as the client, interact with different exhibits and trigger specific actions via the visitor pattern.
+In the Visitor Pattern sequence diagram, the Client represents you, initiating the visit to each exhibit. The `Element` represents each exhibit in the museum, and the `ConcreteElementA` and `ConcreteElementB` are specific types of exhibits you encounter. As you visit each exhibit, you interact with a `Visitor`, which represents your actions or interests related to that exhibit. The `ConcreteVisitor` class represents different roles you might assume during your visit, such as a historian or an art enthusiast. As you interact with each exhibit, you trigger specific actions defined by the `Visitor`. For example, when you visit ConcreteElementA, you trigger the `performOperationA()` action implemented by the `ConcreteVisitor`. Similarly, when you visit `ConcreteElementB`, you trigger the `performOperationB()` action. The sequence diagram illustrates how you, as the client, interact with different exhibits and trigger specific actions via the `visitor` pattern.
 
 
 [discrete%breakable]
 == Implementation Walkthrough
-In this example, we'll implement a visitor pattern in Java using a museum analogy to explain each component of the design. We'll simulate a museum with different types of exhibits and visitors who interact with them.
+In this example, we'll implement a visitor pattern using the museum analogy to explain each component of the design. We'll simulate a museum with different types of exhibits and visitors who interact with them.
 
 
 [discrete%breakable]
@@ -149,7 +149,17 @@ include::{python_path}/visitor/Museum.py[lines=3..]
 endif::[]
 ----
 
-The `Museum` class initiates the visit to each exhibit by creating exhibit instances and a visitor object, then calling the accept method on each exhibit to trigger visitor interaction.
+The usage example code initiates the visit to each exhibit by creating exhibit instances and a visitor object, then calling the accept method on each exhibit to trigger visitor interaction.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Patron admires the painting
+Patron examines the sculpture
+----
 
 
 [discrete%breakable]
@@ -167,4 +177,4 @@ When implementing the visitor pattern, several design considerations should be t
 
 [discrete%breakable]
 == Conclusion
-In conclusion, the visitor pattern provides a flexible and extensible solution for implementing interactions between exhibits and visitors in a museum setting. By using the analogy of a museum, the pattern allows for easy addition of new exhibit types and visitor behaviors without modifying existing classes. This separation of concerns and extensibility make the pattern well-suited for managing diverse collections and visitor experiences within a museum. Through careful design considerations such as flexibility, separation of concerns, scalability, extensibility, documentation, and maintenance, the visitor pattern enables the development of robust and maintainable museum systems capable of accommodating changes in exhibit collections and visitor demographics over time.
+The visitor pattern offers a versatile and adaptable approach to facilitating interactions between elements and visitors. It enables the seamless integration of new element types and visitor behaviors without the need to alter existing classes. By separating concerns and providing extensibility, this pattern is adept at managing a wide range of elements and visitor interactions. With careful attention to design aspects such as flexibility, separation of concerns, scalability, and extensibility, the visitor pattern empowers the creation of resilient and easily maintainable software systems. These systems can effortlessly adapt to changes in collections and visitor types as they evolve over time.

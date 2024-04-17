@@ -21,7 +21,7 @@ For example, the scroll bar allows users to scroll up and down the list of blog 
 
 Similarly, pagination controls allow users to navigate between different pages of blog posts, with each page displaying a fixed number of posts. Users can click on the pagination controls to move forward or backward through the list of pages, accessing different subsets of blog posts as they navigate through the collection.
 
-In both cases, the iterator pattern provides a way to iterate over the elements of the list of blog posts sequentially, abstracting away the details of how the list is implemented and allowing users to focus on navigating through the collection of posts effortlessly.
+In both cases, the iterator pattern provides a way to iterate over the elements of the list sequentially, abstracting away the details of how the list is implemented and allowing users to focus on navigating through the collection effortlessly.
 
 
 [discrete%breakable]
