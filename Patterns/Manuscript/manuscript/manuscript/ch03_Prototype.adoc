@@ -34,13 +34,13 @@ Next, we will explain the concept of the Prototype design pattern using UML.
 [discrete%breakable]
 === Class Diagram
 image::PrototypePatternClassDiagram.png[title="The Prototype Class Diagram", align=center]
-In  the class diagram, the abstract class Prototype serves as the blueprint for creating new teddy bears, declaring the clone() method that enables the creation of exact copies. The ConcretePrototype1 and ConcretePrototype2 classes represent specific types of teddy bears that implement the cloning mechanism defined by the Prototype class. Each concrete prototype class provides its own implementation of the clone() method, allowing for customization and variation in the cloning process. Through this pattern, users can create multiple copies of their favorite teddy bear without needing to recreate it from scratch, just like making duplicates of a beloved toy.
+In  the class diagram, the abstract class `Prototype` serves as the blueprint for creating new teddy bears, declaring the `clone()` method that enables the creation of exact copies. The `ConcretePrototype1` and `ConcretePrototype2` classes represent specific types of teddy bears that implement the cloning mechanism defined by the `Prototype` class. Each concrete `prototype` class provides its own implementation of the `clone()` method, allowing for customization and variation in the cloning process. Through this pattern, users can create multiple copies of their favorite teddy bear without needing to recreate it from scratch, just like making duplicates of a beloved toy.
 
 
 [discrete%breakable]
 === Sequence Diagram
 image::PrototypePatternSequenceDiagram.png[title="The Prototype Sequence Diagram", align=center]
-In the sequence diagram, the Client interacts with the Prototype, which acts as the template for creating new teddy bears. When the Client requests a clone using the clone() method, the Prototype activates and delegates the cloning process to the ConcretePrototype, representing a specific type of teddy bear. The ConcretePrototype creates a copy of itself using the clone() method, which is then returned to the Prototype. Finally, the Prototype passes the cloned teddy bear back to the Client, who receives an exact duplicate of their favorite toy. 
+In the sequence diagram, the Client interacts with the `Prototype`, which acts as the template for creating new teddy bears. When the Client requests a clone using the `clone()` method, the `Prototype` activates and delegates the cloning process to the `ConcretePrototype`, representing a specific type of teddy bear. The `ConcretePrototype` creates a copy of itself using the `clone()` method, which is then returned to the `Prototype`. Finally, the `Prototype` passes the cloned teddy bear back to the Client, who receives an exact duplicate of their favorite toy. 
 
 
 == Implementation Walkthrough

@@ -7,6 +7,7 @@
 - Need to support epub and html also
 - Go over all the class diagrams and fix duplicate arrows
 - Facade car imgae is not in the right scale
+- Go over all the descriptions of class and sequence diagrams and put the class names within ``
 
 Future options:
 - To make it in a book style: :media: prepress in book.adoc

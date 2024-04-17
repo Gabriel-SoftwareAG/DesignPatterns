@@ -41,13 +41,13 @@ In the class diagram the `Component` interface represents both individual songs 
 === Sequence Diagram
 image::CompositePatternSequenceDiagram.png[title="The Composite Sequence Diagram", align=center]
 
-In the sequence diagram, the Client adds individual songs (represented by Leaf1 and Leaf2) and a collection of songs (represented by SubComposite) to the main playlist composite (Composite). This main Composite serves as the aggregate container for the playlist.
+In the sequence diagram, the Client adds individual songs (represented by `Leaf1` and `Leaf2`) and a collection of songs (represented by `SubComposite`) to the main playlist composite (`Composite`). This main `Composite` serves as the aggregate container for the playlist.
 
-When the Client triggers the operation() method on the playlist, the Component interface—which abstracts both individual songs and song collections—routes this operation to the Composite. The Composite then propagates the operation to all its child components. This includes forwarding the operation to both individual song components (Leaf1 and Leaf2) where each song component may perform actions like playing the song. Additionally, the operation is passed to the SubComposite, which itself could contain other songs or sub-playlists, thereby illustrating the recursive capability of the Composite Pattern.
+When the Client triggers the `operation()` method on the playlist, the `Component` interface—which abstracts both individual songs and song collections—routes this operation to the `Composite`. The Compo`site then propagates the operation to all its child components. This includes forwarding the operation to both individual song components (`Leaf1` and `Leaf2`) where each song component may perform actions like playing the song. Additionally, the operation is passed to the `SubComposite`, which itself could contain other songs or sub-playlists, thereby illustrating the recursive capability of the `Composite` Pattern.
 
-Each leaf component and sub-composite completes its specific operation and hands control back to the main Composite. Ultimately, the main Composite returns control to the Component interface, which in turn signals the completion of the operation back to the Client.
+Each leaf component and sub-composite completes its specific operation and hands control back to the main `Composite`. Ultimately, the main `Composite` returns control to the `Component` interface, which in turn signals the completion of the operation back to the Client.
 
-This sequence exemplifies how the Composite Pattern facilitates a uniform approach to handling both individual songs and collections of songs within a playlist. This capability allows for the seamless management and execution of operations on complex structures, simplifying the user interaction with varying levels of aggregation in the playlist.
+This sequence exemplifies how the `Composite` Pattern facilitates a uniform approach to handling both individual songs and collections of songs within a playlist. This capability allows for the seamless management and execution of operations on complex structures, simplifying the user interaction with varying levels of aggregation in the playlist.
 
 
 == Implementation Walkthrough
