@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Interpreter {
-    private Map<String, TerminalExpression> expressions;
+    private Map<String, Expression> expressions;
 
     public Interpreter() {
         expressions = new HashMap<>();
@@ -14,7 +14,7 @@ class Interpreter {
 
     public void interpret(String expression, Context context) {
         if (expressions.containsKey(expression)) {
-            TerminalExpression terminalExpression = expressions.get(expression);
+            Expression terminalExpression = expressions.get(expression);
             String translation = terminalExpression.interpret(context);
             System.out.println("Interpreter: Translated expression - " + translation);
         } else {
@@ -22,3 +22,4 @@ class Interpreter {
         }
     }
 }
+
