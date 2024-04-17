@@ -84,6 +84,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/chainofresponsibility/SupportLevel.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/chainofresponsibility/SupportLevel.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/chainofresponsibility/SupportLevel.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -100,6 +108,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/chainofresponsibility/LevelOneSupport.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/chainofresponsibility/LevelOneSupport.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/chainofresponsibility/LevelOneSupport.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -110,6 +126,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/chainofresponsibility/LevelTwoSupport.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/chainofresponsibility/LevelTwoSupport.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/chainofresponsibility/LevelTwoSupport.ts[lines=3..]
 endif::[]
 ----
 
@@ -127,6 +151,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/chainofresponsibility/SupportTicket.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/chainofresponsibility/SupportTicket.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/chainofresponsibility/SupportTicket.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -142,6 +174,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/chainofresponsibility/HelpDesk.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/chainofresponsibility/HelpDesk.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/chainofresponsibility/HelpDesk.ts[lines=3..]
 endif::[]
 ----
 

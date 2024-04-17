@@ -14,6 +14,7 @@
 - Create a new .net project
 - Creaet a typescript project. But add a remark about the fact this is a different language, based on JS. maybe consult tal about it?
 - Front and back cover
+- Finish assignments
 
 Future options:
 - To make it in a book style: :media: prepress in book.adoc

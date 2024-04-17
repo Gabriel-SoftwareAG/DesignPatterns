@@ -59,6 +59,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/observer/Student.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/Student.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/Student.ts[lines=3..]
+endif::[]
 ----
 
 The `Student` interface defines the contract for all students (observers) interested in receiving updates. It specifies the `receiveUpdate()` method that each student must implement.
@@ -75,6 +83,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/observer/MathStudent.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/MathStudent.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/MathStudent.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -85,6 +101,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/observer/ScienceStudent.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/ScienceStudent.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/ScienceStudent.ts[lines=3..]
 endif::[]
 ----
 
@@ -102,6 +126,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/observer/Teacher.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/Teacher.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/Teacher.ts[lines=3..]
+endif::[]
 ----
 
 The `Teacher` class represents the teacher who holds important information or updates. It maintains a list of students interested in receiving updates and provides methods to add, remove, and notify students.
@@ -117,6 +149,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/observer/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/Client.ts[lines=3..]
 endif::[]
 ----
 

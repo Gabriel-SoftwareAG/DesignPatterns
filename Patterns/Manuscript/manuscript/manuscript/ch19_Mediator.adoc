@@ -74,6 +74,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/mediator/Mediator.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/mediator/Mediator.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/mediator/Mediator.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -89,6 +97,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/mediator/ScrumMaster.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/mediator/ScrumMaster.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/mediator/ScrumMaster.ts[lines=3..]
 endif::[]
 ----
 
@@ -106,6 +122,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/mediator/Colleague.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/mediator/Colleague.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/mediator/Colleague.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -122,6 +146,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/mediator/Developer.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/mediator/Developer.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/mediator/Developer.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -132,6 +164,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/mediator/Tester.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/mediator/Tester.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/mediator/Tester.ts[lines=3..]
 endif::[]
 ----
 
@@ -148,6 +188,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/mediator/AgileTeam.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/mediator/AgileTeam.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/mediator/AgileTeam.ts[lines=3..]
 endif::[]
 ----
 

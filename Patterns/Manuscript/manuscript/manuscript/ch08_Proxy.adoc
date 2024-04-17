@@ -64,11 +64,11 @@ include::{python_path}/proxy/LegalService.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/LegalService.cs[lines=3..]
+include::{csharp_path}/proxy/LegalService.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/LegalService.ts[lines=3..]
+include::{typescript_path}/proxy/LegalService.ts[lines=3..]
 endif::[]
 ----
 
@@ -86,11 +86,11 @@ include::{python_path}/proxy/ProxyLegalService.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/ProxyLegalService.cs[lines=3..]
+include::{csharp_path}/proxy/ProxyLegalService.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/ProxyLegalService.ts[lines=3..]
+include::{typescript_path}/proxy/ProxyLegalService.ts[lines=3..]
 endif::[]
 ----
 
@@ -110,11 +110,11 @@ include::{python_path}/proxy/RealLegalService.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/RealLegalService.cs[lines=3..]
+include::{csharp_path}/proxy/RealLegalService.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/RealLegalService.ts[lines=3..]
+include::{typescript_path}/proxy/RealLegalService.ts[lines=3..]
 endif::[]
 ----
 
@@ -136,11 +136,11 @@ include::{python_path}/proxy/Client.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/Client.cs[lines=3..]
+include::{csharp_path}/proxy/Client.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/Client.ts[lines=3..]
+include::{typescript_path}/proxy/Client.ts[lines=3..]
 endif::[]
 ----
 

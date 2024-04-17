@@ -75,6 +75,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/interpreter/Context.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/interpreter/Context.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/interpreter/Context.ts[lines=3..]
+endif::[]
 ----
 
 The `Context` class represents the environment or situation in which communication occurs. It holds any relevant information affecting interpretation, such as the language being spoken.
@@ -93,6 +101,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/interpreter/Expression.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/interpreter/Expression.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/interpreter/Expression.ts[lines=3..]
+endif::[]
 ----
 
 `Expression` has a single method, `interpret(Context context)` which is responsible for interpreting the expression within the given context and returning the result.
@@ -108,6 +124,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/interpreter/Interpreter.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/interpreter/Interpreter.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/interpreter/Interpreter.ts[lines=3..]
 endif::[]
 ----
 
@@ -125,6 +149,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/interpreter/TerminalExpression.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/interpreter/TerminalExpression.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/interpreter/TerminalExpression.ts[lines=3..]
+endif::[]
 ----
 
 The `TerminalExpression` class represents simple phrases or words in the language. It implements the `Expression` interface and holds the translation of the expression and provides a method to interpret it within a given context.
@@ -141,6 +173,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/interpreter/NonterminalExpression.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/interpreter/NonterminalExpression.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/interpreter/NonterminalExpression.ts[lines=3..]
+endif::[]
 ----
 
 The `NonterminalExpression` class represents more complex language constructs. It also implements the `Expression` interface, and contains the logic to interpret these expressions based on the provided context.
@@ -156,6 +196,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/interpreter/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/interpreter/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/interpreter/Client.ts[lines=3..]
 endif::[]
 ----
 

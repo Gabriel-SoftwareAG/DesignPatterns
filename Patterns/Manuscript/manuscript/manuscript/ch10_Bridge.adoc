@@ -70,6 +70,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/Device.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/bridge/Device.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/bridge/Device.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -85,6 +93,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/Television.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/bridge/Television.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/bridge/Television.ts[lines=3..]
 endif::[]
 ----
 
@@ -102,6 +118,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/SoundSystem.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/bridge/SoundSystem.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/bridge/SoundSystem.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -117,6 +141,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/RemoteControl.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/bridge/RemoteControl.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/bridge/RemoteControl.ts[lines=3..]
 endif::[]
 ----
 
@@ -134,6 +166,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/AdvancedRemoteControl.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/bridge/AdvancedRemoteControl.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/bridge/AdvancedRemoteControl.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -149,6 +189,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/bridge/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/bridge/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/bridge/Client.ts[lines=3..]
 endif::[]
 ----
 

@@ -53,6 +53,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/command/Command.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Command.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Command.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -69,6 +77,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/command/PreparePizzaCommand.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/PreparePizzaCommand.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/PreparePizzaCommand.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -79,6 +95,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/command/ServePastaCommand.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/ServePastaCommand.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/ServePastaCommand.ts[lines=3..]
 endif::[]
 ----
 
@@ -96,6 +120,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/command/Receiver.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Receiver.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Receiver.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -112,6 +144,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/command/Waiter.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Waiter.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Waiter.ts[lines=3..]
+endif::[]
 ----
 
 
@@ -125,6 +165,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/command/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Client.ts[lines=3..]
 endif::[]
 ----
 

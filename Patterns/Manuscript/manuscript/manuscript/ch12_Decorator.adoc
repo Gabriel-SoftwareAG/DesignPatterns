@@ -61,6 +61,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/decorator/Pizza.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/decorator/Pizza.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/decorator/Pizza.ts[lines=3..]
+endif::[]
 ----
 
 The `Pizza` interface defines the base pizza functionality.
@@ -76,6 +84,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/decorator/PlainCheesePizza.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/decorator/PlainCheesePizza.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/decorator/PlainCheesePizza.ts[lines=3..]
 endif::[]
 ----
 
@@ -93,6 +109,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/decorator/PizzaDecorator.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/decorator/PizzaDecorator.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/decorator/PizzaDecorator.ts[lines=3..]
+endif::[]
 ----
 
 The `PizzaDecorator` abstract class serves as the base decorator, implementing the `Pizza` interface and holding a reference to the base pizza component.
@@ -109,6 +133,15 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/decorator/TomatoDecorator.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/decorator/TomatoDecorator.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/decorator/TomatoDecorator.ts[lines=3..]
+endif::[]
+----
 ----
 
 [source, {lang}]
@@ -119,6 +152,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/decorator/MushroomDecorator.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/decorator/MushroomDecorator.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/decorator/MushroomDecorator.ts[lines=3..]
 endif::[]
 ----
 
@@ -137,6 +178,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/decorator/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/decorator/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/decorator/Client.ts[lines=3..]
 endif::[]
 ----
 

@@ -63,6 +63,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/memento/GameState.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/GameState.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/GameState.ts[lines=3..]
+endif::[]
 ----
 
 Explanation: The `GameState` class acts as a Memento, representing a snapshot of the player's state at a specific point in the game. It holds the state data and provides a method to access it.
@@ -78,6 +86,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/memento/Player.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/Player.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/Player.ts[lines=3..]
 endif::[]
 ----
 
@@ -95,6 +111,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/memento/SaveManager.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/SaveManager.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/SaveManager.ts[lines=3..]
+endif::[]
 ----
 
 Explanation: The `SaveManager` class serves as the Caretaker, responsible for managing the saved game states. It maintains a list of `GameState` objects and provides methods to add new states and retrieve states by index.
@@ -110,6 +134,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/memento/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/Client.ts[lines=3..]
 endif::[]
 ----
 

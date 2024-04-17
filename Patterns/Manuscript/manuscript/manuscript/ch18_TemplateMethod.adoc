@@ -74,6 +74,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/templatemethod/HouseBuilder.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/templatemethod/HouseBuilder.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/templatemethod/HouseBuilder.ts[lines=3..]
+endif::[]
 ----
 
 `HouseBuilder` is the abstract base class defining the template method `buildHouse()`. It includes a mix of methods: a concrete implementation for laying the foundation (a step common to all houses) and abstract methods for steps that vary depending on the type of house being built.
@@ -90,6 +98,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/templatemethod/ModernHouseBuilder.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/templatemethod/ModernHouseBuilder.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/templatemethod/ModernHouseBuilder.ts[lines=3..]
+endif::[]
 ----
 
 `ModernHouseBuilder` represents a construction team specializing in modern houses. It provides concrete implementations for the abstract methods defined in `HouseBuilder`, applying techniques and materials characteristic of modern architecture.
@@ -105,6 +121,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/templatemethod/TraditionalHouseBuilder.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/templatemethod/TraditionalHouseBuilder.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/templatemethod/TraditionalHouseBuilder.ts[lines=3..]
 endif::[]
 ----
 
@@ -123,6 +147,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/templatemethod/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/templatemethod/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/templatemethod/Client.ts[lines=3..]
 endif::[]
 ----
 

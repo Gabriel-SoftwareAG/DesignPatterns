@@ -66,11 +66,11 @@ include::{python_path}/composite/PlaylistComponent.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/PlaylistComponent.cs[lines=3..]
+include::{csharp_path}/composite/PlaylistComponent.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/PlaylistComponent.ts[lines=3..]
+include::{typescript_path}/composite/PlaylistComponent.ts[lines=3..]
 endif::[]
 ----
 
@@ -90,11 +90,11 @@ include::{python_path}/composite/Song.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/Song.cs[lines=3..]
+include::{csharp_path}/composite/Song.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/Song.ts[lines=3..]
+include::{typescript_path}/composite/Song.ts[lines=3..]
 endif::[]
 ----
 
@@ -114,11 +114,11 @@ include::{python_path}/composite/Playlist.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/Playlist.cs[lines=3..]
+include::{csharp_path}/composite/Playlist.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/Playlist.ts[lines=3..]
+include::{typescript_path}/composite/Playlist.ts[lines=3..]
 endif::[]
 ----
 
@@ -138,11 +138,11 @@ include::{python_path}/composite/MusicPlayer.py[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/MusicPlayer.cs[lines=3..]
+include::{csharp_path}/composite/MusicPlayer.cs[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/MusicPlayer.ts[lines=3..]
+include::{typescript_path}/composite/MusicPlayer.ts[lines=3..]
 endif::[]
 ----
 

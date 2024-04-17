@@ -72,6 +72,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/state/State.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/State.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/State.ts[lines=3..]
+endif::[]
 ----
 
 This interface defines the `handleRequest()` method, which is implemented by all concrete state classes. It represents an action that occurs when transitioning from one state to another, such as changing the light from green to yellow.
@@ -87,6 +95,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/state/GreenState.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/GreenState.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/GreenState.ts[lines=3..]
 endif::[]
 ----
 
@@ -104,6 +120,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/state/YellowState.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/YellowState.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/YellowState.ts[lines=3..]
+endif::[]
 ----
 
 `YellowState` signals caution. The method implementation here transitions the light to red.
@@ -119,6 +143,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/state/RedState.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/RedState.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/RedState.ts[lines=3..]
 endif::[]
 ----
 
@@ -138,6 +170,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/state/TrafficLight.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/TrafficLight.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/TrafficLight.ts[lines=3..]
+endif::[]
 ----
 
 `TrafficLight` starts with an initial state and changes it through the `change()` method. The `setState()` method updates the current state.
@@ -153,6 +193,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/state/TrafficSystem.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/memento/TrafficSystem.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/memento/TrafficSystem.ts[lines=3..]
 endif::[]
 ----
 

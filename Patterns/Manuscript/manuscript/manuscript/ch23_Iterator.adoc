@@ -68,6 +68,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/iterator/Post.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/iterator/Post.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/iterator/Post.ts[lines=3..]
+endif::[]
 ----
 
 The `Post` class encapsulates the details of a blog post. It has a constructor to initialize the title, author, and summary, and getter methods to retrieve these attributes.
@@ -85,6 +93,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/iterator/Blog.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/iterator/Blog.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/iterator/Blog.ts[lines=3..]
 endif::[]
 ----
 
@@ -104,6 +120,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/iterator/BlogPlatform.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/iterator/BlogPlatform.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/iterator/BlogPlatform.ts[lines=3..]
+endif::[]
 ----
 
 The `BlogPlatform` class represents the blog platform and implements the `Blog` interface. It internally maintains a list of blog posts and provides methods to add posts and create iterators over the posts.
@@ -121,6 +145,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/iterator/Iterator.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/iterator/Iterator.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/iterator/Iterator.ts[lines=3..]
 endif::[]
 ----
 
@@ -140,6 +172,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/iterator/PostIterator.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/iterator/PostIterator.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/iterator/PostIterator.ts[lines=3..]
+endif::[]
 ----
 
 The `PostIterator` class implements the `Iterator` interface and provides methods to iterate over a collection of `Post` objects.
@@ -157,6 +197,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/iterator/User.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/iterator/User.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/iterator/User.ts[lines=3..]
 endif::[]
 ----
 

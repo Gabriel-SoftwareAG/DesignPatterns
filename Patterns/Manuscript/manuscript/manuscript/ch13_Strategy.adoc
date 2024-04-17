@@ -62,6 +62,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/strategy/RouteStrategy.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/RouteStrategy.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/RouteStrategy.ts[lines=3..]
+endif::[]
 ----
 
 The `RouteStrategy` interface defines the contract for all route planning strategies. It specifies the `calculateRoute()` method that each strategy must implement.
@@ -77,6 +85,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/strategy/RoutePlanner.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/RoutePlanner.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/RoutePlanner.ts[lines=3..]
 endif::[]
 ----
 
@@ -94,6 +110,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/strategy/FastestRouteStrategy.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/FastestRouteStrategy.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/FastestRouteStrategy.ts[lines=3..]
+endif::[]
 ----
 
 [source, {lang}]
@@ -104,6 +128,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/strategy/ShortestRouteStrategy.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/ShortestRouteStrategy.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/ShortestRouteStrategy.ts[lines=3..]
 endif::[]
 ----
 
@@ -122,6 +154,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/strategy/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/strategy/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/strategy/Client.ts[lines=3..]
 endif::[]
 ----
 

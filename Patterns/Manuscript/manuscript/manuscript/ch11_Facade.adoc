@@ -58,6 +58,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/facade/ControlPanel.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/facade/ControlPanel.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/facade/ControlPanel.ts[lines=3..]
+endif::[]
 ----
 
 The `ControlPanel` class acts as the facade, providing a simplified interface for interacting with the car's advanced features. It holds references to the subsystems: `AutomaticParkingSystem`, `AdaptiveCruiseControlSystem`, and `CollisionAvoidanceSystem`.
@@ -73,6 +81,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/facade/AutomaticParkingSystem.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/facade/AutomaticParkingSystem.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/facade/AutomaticParkingSystem.ts[lines=3..]
 endif::[]
 ----
 
@@ -90,6 +106,14 @@ endif::[]
 ifeval::["{lang}" == "python"]
 include::{python_path}/facade/AdaptiveCruiseControlSystem.py[lines=3..]
 endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/facade/AdaptiveCruiseControlSystem.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/facade/AdaptiveCruiseControlSystem.ts[lines=3..]
+endif::[]
 ----
 
 The `AdaptiveCruiseControlSystem` class represents the subsystem responsible for adaptive cruise control. It contains the logic for activating the adaptive cruise control system.
@@ -105,6 +129,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/facade/CollisionAvoidanceSystem.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/facade/CollisionAvoidanceSystem.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/facade/CollisionAvoidanceSystem.ts[lines=3..]
 endif::[]
 ----
 
@@ -123,6 +155,14 @@ endif::[]
 
 ifeval::["{lang}" == "python"]
 include::{python_path}/facade/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/facade/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/facade/Client.ts[lines=3..]
 endif::[]
 ----
 
