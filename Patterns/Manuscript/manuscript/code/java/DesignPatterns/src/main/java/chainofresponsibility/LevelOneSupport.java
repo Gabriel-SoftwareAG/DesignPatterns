@@ -5,6 +5,8 @@ class LevelOneSupport implements SupportLevel {
 
     @Override
     public void setNext(SupportLevel next) {
+
+        System.out.println("Setting next level to " + next.getClass().getSimpleName() + " Support");
         this.next = next;
     }
 

@@ -18,7 +18,7 @@ In software design, the Chain of Responsibility pattern works similarly. It allo
 |image:chain_of_responsibility_helpdesk.jpg[width=370, scale=50%]
 |===
 
-For example, let's say you're building a helpdesk ticketing system for an IT department. When a user submits a ticket for assistance, it's first routed to the level 1 support team. If the level 1 support team can't resolve the issue, they escalate the ticket to the level 2 support team. If the level 2 support team can't resolve it either, they escalate it to the level 3 support team, and so on.
+For example, let's drill down to the tech department, and say you're building a helpdesk ticketing system for an IT department. When a user submits a ticket for assistance, it's first routed to the level 1 support team. If the level 1 support team can't resolve the issue, they escalate the ticket to the level 2 support team. If the level 2 support team can't resolve it either, they escalate it to the level 3 support team, and so on.
 
 Using the Chain of Responsibility pattern in this context allows for flexible and dynamic handling of tickets. Each support team can focus on their area of expertise, and tickets are automatically routed through the appropriate levels until they're resolved. This helps streamline the support process and ensures that tickets are handled efficiently and effectively.
 
@@ -27,7 +27,7 @@ Using the Chain of Responsibility pattern in this context allows for flexible an
 == Key Components
 - _Handler Interface_: This component defines an interface for handling requests. Similar to the various departments in a customer service center, each handler in the Chain of Responsibility pattern can either handle the request or pass it on to the next handler in the chain. This interface typically includes a method for handling requests and a method for setting the next handler.
 
-- _Concrete Handlers_: These are specific implementations of the Handler interface, such as billing, technical support, and customer complaints departments in the analogy. Each concrete handler decides whether to process the request or to pass it on to the next handler. For a helpdesk ticketing system, these could be the level 1, level 2, and level 3 support teams, each equipped to handle different types of issues.
+- _Concrete Handlers_: These are specific implementations of the Handler interface, such as level 1, level 2, and level 3 support teams, each equipped to handle different types of issues.
 
 - _Client_: This component initiates the request that needs to be handled. In the analogy, the client would be the customer calling the service center with a request or issue. In a software context, this could be a user submitting a helpdesk ticket. The client is responsible for passing the request to the first handler in the chain.
 
@@ -42,7 +42,7 @@ Next, we will explain the concept of the Chain Of Responsibility design pattern 
 [discrete%breakable]
 === Class Diagram
 image::ChainOfResponsibilityPatternClassDiagram.png[title="The Chain Of Responsibility Class Diagram", align=center]
-The diagram presents the Chain of Responsibility design pattern, illustrated through the analogy of a helpdesk system in an IT department. In this scenario, the `Handler` interface represents the general protocol for handling helpdesk tickets, akin to various levels of support within the helpdesk system. It defines two primary operations: setting the next level of support (setSuccessor(handler: `Handler`)) and handling the ticket itself (handleRequest(request: `Request`)).
+In the Chain of Responsibility Pattern class diagrm, the `Handler` interface represents the general protocol for handling helpdesk tickets, akin to various levels of support within the helpdesk system. It defines two primary operations: setting the next level of support (`setSuccessor(handler: Handler)`) and handling the ticket itself (`handleRequest(request: Request)`).
 
 `ConcreteHandler1` and `ConcreteHandler2` symbolize specific levels of support, such as level 1 and level 2 technical support teams. Each of these classes implements the Handler interface, allowing them to receive a ticket (or Request), attempt to resolve it, and if unable to do so, pass it on to the next level of support specified by their successor. This passing along of the ticket mimics escalating a ticket from level 1 to level 2 support when the issue cannot be resolved at the initial level.
 
@@ -56,9 +56,9 @@ In essence, this diagram depicts a structured approach to handling helpdesk tick
 image::ChainOfResponsibilityPatternSequenceDiagram.png[title="The Chain Of Responsibility Sequence Diagram", align=center]
 The sequence diagram illustrates the Chain of Responsibility pattern's flow of communication, using the analogy of a help desk system for IT support. In this scenario, the Client represents a user or employee facing an issue, seeking assistance from the help desk. The Client initiates the process by submitting a request to the help desk, which is first received by `ConcreteHandler1`, symbolizing the level 1 support team within the IT help desk structure.
 
-`ConcreteHandler1` evaluates the request to determine if it can handle it based on its expertise or predefined criteria. In this instance, `ConcreteHandler1` decides it cannot resolve the issue on its own and escalates the request to ConcreteHandler2, representing the level 2 support team, which possesses a broader or more specialized set of skills for handling more complex issues.
+`ConcreteHandler1` evaluates the request to determine if it can handle it based on its expertise or predefined criteria. In this instance, `ConcreteHandler1` decides it cannot resolve the issue on its own and escalates the request to `ConcreteHandler2`, representing the level 2 support team, which possesses a broader or more specialized set of skills for handling more complex issues.
 
-Upon receiving the request, ConcreteHandler2 interacts directly with the Request itself, executing the `handleRequest()` method to apply its problem-solving techniques. This step indicates that ConcreteHandler2 actively works on resolving the issue represented by the Request. Once ConcreteHandler2 processes the request, it sends a response back to `ConcreteHandler1`, indicating the outcome of its efforts, which could be either a resolution to the problem or an acknowledgment that the issue has been addressed.
+Upon receiving the request, `ConcreteHandler2` interacts directly with the Request itself, executing the `handleRequest()` method to apply its problem-solving techniques. This step indicates that `ConcreteHandler2` actively works on resolving the issue represented by the Request. Once `ConcreteHandler2` processes the request, it sends a response back to `ConcreteHandler1`, indicating the outcome of its efforts, which could be either a resolution to the problem or an acknowledgment that the issue has been addressed.
 
 Finally, `ConcreteHandler1` forwards this response back to the Client, closing the loop. This response could inform the Client that their issue has been resolved or provide further instructions if necessary.
 
@@ -67,9 +67,7 @@ This diagram showcases the Chain of Responsibility pattern in action, where each
 
 [discrete%breakable]
 == Implementation Walkthrough
-The Chain of Responsibility pattern is a behavioral design pattern that allows an object to pass a request along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain. This pattern is particularly useful for creating a pipeline of processing units where a request can be handled at any stage, depending on the handler's capability or criteria.
-
-In the context of a help desk system, this pattern can streamline the process of handling support tickets, allowing each level of support to attempt to resolve the ticket before escalating it to a higher level if necessary.
+Next, we demonstarte the implementation of the Chain of Responsibility pattern in the context of a help desk system. this pattern can streamline the process of handling support tickets, allowing each level of support to attempt to resolve the ticket before escalating it to a higher level if necessary.
 
 
 [discrete%breakable]
@@ -134,7 +132,7 @@ endif::[]
 
 [discrete%breakable]
 === Usage Example
-The `HelpDesk` class demonstrates how a support ticket is processed through the chain of responsibility.
+Nesxt, we demostrate how a support ticket is processed through the chain of responsibility.
 
 [source, {lang}]
 ----
@@ -148,6 +146,17 @@ endif::[]
 ----
 
 In this example, when the `HelpDesk` receives a support ticket, it starts with Level One Support. If Level One Support cannot handle the ticket (based on its level), it is escalated to Level Two Support. This implementation allows for a flexible and efficient processing of support tickets, ensuring that each ticket is addressed at the appropriate level of support within the help desk system.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Setting next level to LevelTwoSupport Support
+Level One Support handling ticket: Cannot connect to the internet.
+Level Two Support handling ticket: Computer does not start.
+----
 
 
 [discrete%breakable]
@@ -165,7 +174,7 @@ Lastly, while the Chain of Responsibility pattern can significantly reduce coupl
 
 [discrete%breakable]
 == Conclusion
-The Chain of Responsibility pattern offers a flexible and dynamic approach to handling requests by passing them through a series of handlers until one is found that can deal with the request. This pattern is particularly valuable in scenarios where the exact handler necessary to process a request might vary according to the request's context or content, akin to routing customer service inquiries to the appropriate department within a call center or escalating technical support tickets through various levels of expertise.
+The Chain of Responsibility pattern offers a flexible and dynamic approach to handling requests by passing them through a series of handlers until one is found that can deal with the request. This pattern is particularly valuable in scenarios where the exact handler necessary to process a request might vary according to the request's context or content.
 
 By decoupling the sender of a request from its receivers, the Chain of Responsibility pattern allows for a high degree of flexibility in assigning responsibilities to various objects. It simplifies object interconnections and enhances the modularity of code, making it easier to extend and maintain. Furthermore, it promotes adherence to the Single Responsibility Principle by ensuring that each handler is tasked with processing requests of a certain kind only.
 
