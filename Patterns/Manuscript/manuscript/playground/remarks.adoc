@@ -8,7 +8,7 @@
 - Facade car imgae is not in the right scale
 - Change the structure of the directories
 - CHange the mvn project to regular project
-- Translate to python
+- Translate to python, TS, C#
 - Creaet a typescript project. But add a remark about the fact this is a different language, based on JS. maybe consult tal about it?
 - Front and back cover
 - Finish assignments
