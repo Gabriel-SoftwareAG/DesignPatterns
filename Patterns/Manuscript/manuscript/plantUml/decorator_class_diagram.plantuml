@@ -28,11 +28,4 @@ class ConcreteDecoratorB extends Decorator {
   +addedBehaviorB() : void
 }
 
-' Relationships
-Component <|.. ConcreteComponent
-Component <|.. Decorator
-Decorator o-- Component : decorates
-Decorator <|-- ConcreteDecoratorA
-Decorator <|-- ConcreteDecoratorB
-
 @enduml

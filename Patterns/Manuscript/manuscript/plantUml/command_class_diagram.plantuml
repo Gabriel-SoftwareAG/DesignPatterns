@@ -39,8 +39,6 @@ class Client {
 Client -down-> Invoker : sets command >
 Invoker -down-> Command : invokes >
 Command .left.> Receiver : commands >
-ConcreteCommandA .up.|> Command : implements
-ConcreteCommandB .up.|> Command : implements
 ConcreteCommandA -right-> Receiver : acts on
 ConcreteCommandB -right-> Receiver : acts on
 

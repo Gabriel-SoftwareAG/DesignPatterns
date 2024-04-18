@@ -19,7 +19,6 @@ class Adapter implements Target {
 
 ' Relationships
 Adapter .right.> Adaptee : adapts
-Target <|.. Adapter
 
 note right of Target
   Target defines the domain-specific

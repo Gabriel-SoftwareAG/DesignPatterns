@@ -24,7 +24,6 @@ class Client {
 }
 
 ' Relationships
-Flyweight <|.. ConcreteFlyweight
 FlyweightFactory o-- Flyweight : Creates >
 Client --> Flyweight : Uses >
 

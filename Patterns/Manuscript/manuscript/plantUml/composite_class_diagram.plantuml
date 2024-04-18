@@ -19,8 +19,6 @@ class Composite implements Component {
 }
 
 ' Relations
-Component <|.. Leaf
-Component <|.. Composite
 Composite o-- Component : contains
 
 note left of Component

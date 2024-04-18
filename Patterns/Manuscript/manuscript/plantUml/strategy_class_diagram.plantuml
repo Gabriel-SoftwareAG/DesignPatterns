@@ -27,8 +27,5 @@ class ConcreteStrategyC implements Strategy {
 
 ' Relationships
 Context o-- Strategy : has-a
-Strategy <|.. ConcreteStrategyA
-Strategy <|.. ConcreteStrategyB
-Strategy <|.. ConcreteStrategyC
 
 @enduml

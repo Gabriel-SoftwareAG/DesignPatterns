@@ -26,10 +26,6 @@ class ConcreteCreatorB extends Creator {
   +factoryMethod() : Product
 }
 
-Creator <|-- ConcreteCreatorA
-Creator <|-- ConcreteCreatorB
-Product <|-- ConcreteProductA
-Product <|-- ConcreteProductB
 ConcreteCreatorA ..> ConcreteProductA : creates
 ConcreteCreatorB ..> ConcreteProductB : creates
 

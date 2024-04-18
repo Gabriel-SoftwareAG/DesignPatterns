@@ -17,8 +17,6 @@ class Proxy implements Subject {
 }
 
 ' Relations
-Subject <|.. RealSubject
-Subject <|.. Proxy
 Proxy --> RealSubject : controls
 
 note right of RealSubject

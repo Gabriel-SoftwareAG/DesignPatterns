@@ -28,7 +28,6 @@ class Product {
 }
 
 Director .down.> Builder : uses
-Builder <|-down- ConcreteBuilder : implements
 ConcreteBuilder -right-> Product : builds
 
 note right of Director
