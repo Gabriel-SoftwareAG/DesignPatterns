@@ -1,6 +1,6 @@
 package memento;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         Player player = new Player();
         SaveManager saveManager = new SaveManager();

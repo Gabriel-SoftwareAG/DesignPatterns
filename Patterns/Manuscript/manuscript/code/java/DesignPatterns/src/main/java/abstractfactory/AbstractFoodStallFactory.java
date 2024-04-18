@@ -1,6 +1,6 @@
 package abstractfactory;
 
-public interface AbstractFoodStallFactory {
+interface AbstractFoodStallFactory {
     IceCream createIceCream();
 
     Pizza createPizza();

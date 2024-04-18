@@ -1,6 +1,6 @@
 package builder;
 
-public class Director {
+class Director {
     private Builder builder;
 
     public Director(Builder builder) {

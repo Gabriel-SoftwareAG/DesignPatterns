@@ -7,6 +7,7 @@ abstract class PizzaDecorator implements Pizza {
         this.pizza = pizza;
     }
 
+    @Override
     public void bake() {
         pizza.bake();
     }

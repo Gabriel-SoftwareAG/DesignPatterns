@@ -5,6 +5,7 @@ class TomatoDecorator extends PizzaDecorator {
         super(pizza);
     }
 
+    @Override
     public void bake() {
         super.bake();
         System.out.println("Adding tomatoes");

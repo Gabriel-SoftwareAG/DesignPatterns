@@ -1,5 +1,5 @@
 package abstractfactory;
 
-public interface Pizza {
+interface Pizza {
     void enjoy();
 }

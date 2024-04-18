@@ -1,6 +1,6 @@
 package proxy;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         ProxyLegalService proxyLegalService = new ProxyLegalService();
         proxyLegalService.requestLegalAssistance();

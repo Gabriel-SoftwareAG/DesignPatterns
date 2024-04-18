@@ -8,9 +8,12 @@ participant ConcreteIterator
 
 Client -> Aggregate: createIterator()
 activate Aggregate
-Aggregate -> ConcreteIterator: createIterator()
+Aggregate -> ConcreteAggregate: createIterator()
+activate ConcreteAggregate
+ConcreteAggregate -> ConcreteIterator: createIterator()
 activate ConcreteIterator
 ConcreteIterator --> Client: iterator
+deactivate ConcreteAggregate
 deactivate ConcreteIterator
 deactivate Aggregate
 

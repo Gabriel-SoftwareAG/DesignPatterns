@@ -1,6 +1,6 @@
 package chainofresponsibility;
 
-public class HelpDesk {
+class HelpDesk {
     public static void main(String[] args) {
         LevelOneSupport levelOne = new LevelOneSupport();
         LevelTwoSupport levelTwo = new LevelTwoSupport();

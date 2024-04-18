@@ -1,6 +1,7 @@
 package abstractfactory;
 
-public class ExoticPizza implements Pizza {
+class ExoticPizza implements Pizza {
+    @Override
     public void enjoy() {
         System.out.println("Enjoy exotic-themed pizza");
     }

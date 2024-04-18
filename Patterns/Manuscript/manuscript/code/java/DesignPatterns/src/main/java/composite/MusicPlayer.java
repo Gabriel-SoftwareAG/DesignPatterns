@@ -1,6 +1,6 @@
 package composite;
 
-public class MusicPlayer {
+class MusicPlayer {
     public static void main(String[] args) {
         // Create individual songs
         Song song1 = new Song("Song 1");

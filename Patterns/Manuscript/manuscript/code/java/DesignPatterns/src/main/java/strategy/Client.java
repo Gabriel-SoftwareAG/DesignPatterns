@@ -1,6 +1,6 @@
 package strategy;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         RoutePlanner planner = new RoutePlanner();
 

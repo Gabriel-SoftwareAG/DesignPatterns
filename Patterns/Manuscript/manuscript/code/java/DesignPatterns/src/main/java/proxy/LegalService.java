@@ -1,5 +1,5 @@
 package proxy;
 
-public interface LegalService {
+interface LegalService {
     void requestLegalAssistance();
 }

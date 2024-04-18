@@ -7,6 +7,7 @@ class UniversalAdapter implements ElectricalOutlet {
         this.device = device;
     }
 
+    @Override
     public void request() {
         System.out.println("Converting electrical power to device");
         device.specificRequest();

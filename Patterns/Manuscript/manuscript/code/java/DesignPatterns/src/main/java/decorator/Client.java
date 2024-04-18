@@ -1,6 +1,6 @@
 package decorator;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         Pizza plainCheesePizza = new PlainCheesePizza();
 

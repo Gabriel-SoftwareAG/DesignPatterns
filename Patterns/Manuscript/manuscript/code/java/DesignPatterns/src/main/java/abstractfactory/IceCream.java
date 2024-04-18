@@ -1,5 +1,5 @@
 package abstractfactory;
 
-public interface IceCream {
+interface IceCream {
     void enjoy();
 }

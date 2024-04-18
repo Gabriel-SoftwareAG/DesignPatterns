@@ -10,6 +10,7 @@ class BlogPlatform implements Blog {
         this.posts = new ArrayList<>();
     }
 
+    @Override
     public void addPost(Post post) {
         posts.add(post);
     }

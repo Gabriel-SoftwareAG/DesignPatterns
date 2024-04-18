@@ -1,6 +1,6 @@
 package adapter;
 
-public class Traveler {
+class Traveler {
     public static void main(String[] args) {
         // Create electronic device
         MobilePhone device = new MobilePhone();

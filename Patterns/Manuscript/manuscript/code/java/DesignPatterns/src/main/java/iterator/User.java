@@ -12,7 +12,6 @@ class User {
             System.out.print(" Title: " + post.getTitle());
             System.out.print(" Author: " + post.getAuthor());
             System.out.println(" Summary: " + post.getSummary());
-            System.out.println(" ---------- ");
         }
     }
 }

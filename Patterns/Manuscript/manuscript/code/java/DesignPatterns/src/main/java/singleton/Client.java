@@ -1,6 +1,6 @@
 package singleton;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         Library library = Library.getInstance();
 

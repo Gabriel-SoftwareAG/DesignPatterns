@@ -1,6 +1,6 @@
 package prototype;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         // Create concrete prototype instances
         Prototype teddyBear1 = new WhiteTeddyBearPrototype();

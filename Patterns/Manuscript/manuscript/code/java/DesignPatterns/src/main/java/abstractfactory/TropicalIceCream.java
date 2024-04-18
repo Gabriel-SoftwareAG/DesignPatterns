@@ -1,6 +1,7 @@
 package abstractfactory;
 
-public class TropicalIceCream implements IceCream {
+class TropicalIceCream implements IceCream {
+    @Override
     public void enjoy() {
         System.out.println("Enjoy tropical-themed ice cream");
     }

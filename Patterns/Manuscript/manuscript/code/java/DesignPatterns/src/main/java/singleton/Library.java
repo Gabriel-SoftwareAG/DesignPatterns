@@ -1,6 +1,6 @@
 package singleton;
 
-public class Library {
+class Library {
     private static Library uniqueInstance;
     private Library() {}
     public static synchronized Library getInstance() {

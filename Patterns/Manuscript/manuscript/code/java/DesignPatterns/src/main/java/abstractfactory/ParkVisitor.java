@@ -1,6 +1,6 @@
 package abstractfactory;
 
-public class ParkVisitor {
+class ParkVisitor {
     public static void main(String[] args) {
         // Choose themed area (factory)
         AbstractFoodStallFactory adventureLandFactory = new AdventureLandFactory();

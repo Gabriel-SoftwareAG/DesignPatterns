@@ -1,6 +1,6 @@
 package command;
 
-public class Client {
+class Client {
     public static void main(String[] args) {
         // Create receiver (kitchen staff)
         Receiver chef = new Receiver();
