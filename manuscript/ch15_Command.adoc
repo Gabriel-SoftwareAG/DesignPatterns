@@ -1,0 +1,206 @@
+
+= Chapter 15: Command Design Pattern
+
+:imagesdir: ../images/ch15_Command
+
+
+== Introduction
+[cols="2", frame="none", grid="none"]
+|===
+|The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object. This allows request parameters to be saved, queued, and executed at different times according to the application's needs. Imagine you're at a restaurant. You (the `Client`) give your order (`Command`) to a waiter (`Invoker`), who then delivers the order to the kitchen (`Receiver`). The kitchen prepares your meal and eventually, the waiter delivers the meal back to you. In this analogy, your order is encapsulated as a command and handled independently of the initial request.
+|image:command_kitchen.jpg[width=280, scale=50%]
+|===
+
+
+[discrete%breakable]
+== Key Components
+- _Client_: Represents the entity that initiates requests or commands. In the restaurant analogy, the client corresponds to the customer who places an order.
+- _Command_: Encapsulates a request as an object, allowing it to be parameterized and passed as an argument. In the restaurant scenario, the command represents the customer's order, which contains details of the requested meal.
+- _Invoker_: Sends commands to execute requests, but it doesn't know how the request is handled. It acts as an intermediary between the client and the receiver. In the restaurant context, the invoker is akin to the waiter who takes the customer's order and relays it to the kitchen.
+- _Receiver_: Handles the request specified by the command. It knows how to perform the action associated with the command. In the restaurant example, the receiver is the kitchen staff responsible for preparing the meal according to the order received.
+
+
+[discrete%breakable]
+== UML Diagrams 
+Next, we will explain the concept of the Command design pattern using UML.
+
+
+[discrete%breakable]
+=== Class Diagram
+image::CommandPatternClassDiagram.png[title="The Command Class Diagram", align=center]
+In this Command Pattern class diagram, we can relate the elements to roles in the restaurant scenario. The `Command` interface represents the order placed by a customer, which is abstracted as an executable command. ConcreteCommand classes, such as `ConcreteCommandA` and `ConcreteCommandB`, correspond to specific orders like "Prepare Pizza" or "Serve Pasta," each associated with a particular receiver, represented by the `Receiver` class. The `Receiver` class embodies the kitchen staff responsible for executing the commands by performing actions like `actionA()` or `actionB()`, which could be preparing specific dishes. The `Invoker` class acts as the waiter who takes orders from customers (Client) and relays them to the kitchen staff (`Receiver`) to execute (`invokeCommand()`). The `Client` class represents the entity initiating the commands, akin to a customer placing an order at the restaurant. Overall, the Command Pattern decouples the sender (`Client`) from the receiver (`Receiver`) by encapsulating requests as objects, providing flexibility and extensibility in handling commands.
+
+
+[discrete%breakable]
+=== Sequence Diagram
+image::CommandPatternSequenceDiagram.png[title="The Command Sequence Diagram", align=center]
+In this Command Pattern sequence diagram, we can relate the interactions to the scenario in a restaurant. The Client represents a customer who places an order, specifying the command to be executed. This order is passed to the `Invoker`, who acts as the waiter taking the customer's request. The `Invoker` then triggers the execution of the command (`executeCommand()`), which is represented by the `ConcreteCommand`. In our analogy, the `ConcreteCommand` corresponds to a specific dish order, such as "Prepare Pizza" or "Serve Pasta." The `ConcreteCommand` delegates the actual execution of the command to the `Receiver`, symbolizing the kitchen staff responsible for preparing the meal. Once the action is completed, the `Receiver` notifies the `ConcreteCommand`, which then reports back to the Invoker that the execution is completed. Finally, the `Invoker` communicates the status back to the `Client`, informing them that their request has been fulfilled. This sequence illustrates how the Command Pattern facilitates decoupling between the sender (`Client`) and receiver (`Receiver`) by encapsulating requests as objects and enabling their execution at different times.
+
+
+== Implementation Walkthrough
+
+
+[discrete%breakable]
+=== Command Interface
+The `Command` interface represents an abstract command that can be executed. In our restaurant analogy, this interface defines a contract for any order that can be placed.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Command.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Command.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Command.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Command.ts[lines=3..]
+endif::[]
+----
+
+
+[discrete%breakable]
+=== Concrete Commands Classes (`PreparePizzaCommand` and `ServePastaCommand`)
+`PreparePizzaCommand` and  `ServePastaCommand` classes implement the `Command` interface and represent specific orders. Each ConcreteCommand corresponds to a particular dish or action that can be executed in the restaurant.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/PreparePizzaCommand.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/PreparePizzaCommand.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/PreparePizzaCommand.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/PreparePizzaCommand.ts[lines=3..]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/ServePastaCommand.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/ServePastaCommand.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/ServePastaCommand.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/ServePastaCommand.ts[lines=3..]
+endif::[]
+----
+
+
+[discrete%breakable]
+=== Receiver Class
+The `Receiver` class represents the entity responsible for carrying out the commands. In our restaurant analogy, the Receiver corresponds to the kitchen staff who execute the orders.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Receiver.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Receiver.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Receiver.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Receiver.ts[lines=3..]
+endif::[]
+----
+
+
+[discrete%breakable]
+=== Waiter Class (Invoker)
+The `Waiter` class acts as an intermediary between the Client (customer) and the ConcreteCommand (order). It receives requests from the Client and invokes the corresponding ConcreteCommand to execute the order.
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Waiter.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Waiter.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Waiter.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Waiter.ts[lines=3..]
+endif::[]
+----
+
+
+[discrete%breakable]
+=== Usage Example
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/command/Client.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/command/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/command/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/command/Client.ts[lines=3..]
+endif::[]
+----
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Waiter.executeCommand(): Delegating to Command.execute() for PreparePizzaCommand
+PreparePizzaCommand.execute(): Delegating to Receiver.preparePizza()
+Pizza is being prepared
+Waiter.executeCommand(): Delegating to Command.execute() for ServePastaCommand
+ServePastaCommand.execute(): Delegating to Receiver.servePasta()
+Pasta is being served
+----
+
+
+[discrete%breakable]
+== Design Considerations
+When implementing the Command Pattern, consider the following design considerations:
+
+* **Separation of Concerns**: The pattern helps in separating the sender of a request (Client) from the object that executes the request (Receiver). This separation promotes loose coupling and allows for more flexible and maintainable code.
+* **Scalability**: The Command Pattern supports scalability by allowing new commands to be easily added without modifying existing client code. This makes it straightforward to extend the functionality of an application with minimal impact on existing components.
+* **Command Composition**: Commands can be composed of multiple smaller commands, enabling complex actions to be constructed from simpler ones. This composability enhances code reuse and promotes modular design.
+* **Performance Considerations**: While the Command Pattern offers flexibility and decoupling, it may introduce overhead, especially in scenarios with a large number of commands or frequent command invocations. Careful consideration should be given to performance implications, and optimizations may be necessary in performance-critical applications.
+
+
+[discrete%breakable]
+== Conclusion
+The Command Pattern emerges as a robust mechanism for disentangling the initiator of a request from its recipient, fostering flexibility, scalability, and maintainability in software architecture. Through encapsulating requests as objects, this pattern facilitates the parameterization of clients with diverse requests, enables the queuing of requests, and supports the organization without inclusion of undo operations. Its division of responsibilities and capacity for composition empower developers to construct intricate systems while upholding clarity and modularity. When employed judiciously, the Command Pattern elevates code comprehension, extensibility, and resilience, rendering it a valuable asset within the repertoire of design patterns.

@@ -1,0 +1,48 @@
+@startuml BuilderPatternClassDiagram
+
+class Director {
+  +construct(builder : Builder) : void
+}
+
+interface Builder {
+  +buildPartA() : void
+  +buildPartB() : void
+  +buildPartC() : void
+  +getProduct() : Product
+}
+
+class ConcreteBuilder implements Builder {
+  -product : Product
+  +ConcreteBuilder()
+  +buildPartA() : void
+  +buildPartB() : void
+  +buildPartC() : void
+  +getProduct() : Product
+}
+
+class Product {
+  -partA : String
+  -partB : String
+  -partC : String
+  +addPart(part : String) : void
+}
+
+Director .down.> Builder : uses
+ConcreteBuilder -right-> Product : builds
+
+note right of Director
+  Director controls the building
+  process using a Builder instance.
+end note
+
+note right of ConcreteBuilder
+  ConcreteBuilder constructs parts
+  of the product and assembles them.
+end note
+
+note right of Product
+  Product represents the complex object
+  being constructed.
+end note
+
+@enduml

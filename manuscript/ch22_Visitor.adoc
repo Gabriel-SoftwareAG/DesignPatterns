@@ -1,0 +1,228 @@
+
+= Chapter 22: The Visitor Pattern
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
+:imagesdir: ../images/ch22_Visitor
+
+
+== Introduction
+[cols="2", frame="none", grid="none"]
+|===
+| Let's imagine you're visiting different rooms in a museum, and each room has different exhibits on display. As you move from room to room, you want to learn more about each exhibit and maybe even interact with some of them.
+
+In software design, the visitor pattern works similarly. It allows you to visit, or traverse, different elements of a complex data structure, such as a collection of objects, and perform actions or operations on them without modifying their internal structure.
+
+For example, let's say you have a collection of objects representing different shapes in a drawing application. You can use the visitor pattern to define a visitor object that knows how to visit each type of shape and perform specific operations, such as calculating the area or perimeter of a shape.
+|image:visitor_museum.jpg[width=400, scale=50%]
+|===
+
+As you traverse the collection of shapes, you can apply the visitor to each shape, which then executes the appropriate operation based on the type of shape being visited. This allows you to perform complex operations on the shapes without needing to modify their individual classes.
+
+Overall, the visitor pattern provides a way to separate the algorithm for traversing a data structure from the operations performed on the elements within that structure, similar to how you visit different exhibits in a museum and interact with them without changing their displays.
+
+
+[discrete%breakable]
+== Key Components
+- _Visitor_: In the museum analogy, the visitor represents the entity traversing the rooms and interacting with exhibits. In software design, the visitor encapsulates the operations or algorithms to be performed on elements of a data structure. It defines visit methods for each type of element, allowing for polymorphic behavior when traversing the structure.
+
+- _ConcreteVisitor_: Just as different visitors may have unique interests or actions in the museum, concrete visitor classes in software design implement specific operations on the elements of the data structure. These classes provide the actual implementation of visit methods for each element type, allowing for customization of behavior based on the type of element being visited.
+
+- _Element_: In the museum scenario, an exhibit represents an element that can be visited by the visitor. Similarly, in software design, an element is an abstract representation of an object within the data structure. It defines an accept method that allows visitors to traverse the structure and perform operations on the element.
+
+- _ConcreteElement_: Each exhibit in the museum corresponds to a concrete element class in software design. These classes implement the accept method to allow visitors to traverse and interact with the element. They may also provide additional methods or properties specific to the element type.
+
+- _ObjectStructure_: The museum itself serves as the object structure in the analogy, housing the collection of exhibits that visitors can traverse. In software design, the object structure represents the collection of elements that visitors can visit. It provides methods for adding, removing, or iterating over elements, as well as accepting visitors to traverse the structure.
+
+- _Client_: The visitor pattern is initiated and utilized by the client, much like a museum visitor exploring the exhibits. In software design, the client creates visitor objects and passes them to the object structure to initiate traversal and perform operations on the elements.
+
+
+[discrete%breakable]
+== UML Diagrams 
+Next, we will explain the concept of the Visitor design pattern using UML.
+
+
+[discrete%breakable]
+=== Class Diagram
+image::VisitorPatternClassDiagram.png[title="The Visitor Class Diagram", align=center]
+In the Visitor Pattern class diagram, The `Visitor` interface represents the visitor's role, defining the actions they can perform on each exhibit. Just like a museum visitor might have different interests in various exhibits, the `ConcreteVisitor` class implements specific actions for each type of exhibit. The `Element` interface represents the exhibits themselves, providing a method for accepting visitors. Similarly, in the museum, each exhibit allows visitors to interact with it in some way. The `ConcreteElementA` and `ConcreteElementB` classes represent specific types of exhibits, each implementing the accept method to accommodate visitors. Finally, the relationships between `Visitor` and `Element` indicate that visitors can visit and interact with the exhibits, with the visitor implementing actions specific to each exhibit type.
+
+
+[discrete%breakable]
+=== Sequence Diagram
+image::VisitorPatternSequenceDiagram.png[title="The Visitor Sequence Diagram", align=center]
+In the Visitor Pattern sequence diagram, the Client represents you, initiating the visit to each exhibit. The `Element` represents each exhibit in the museum, and the `ConcreteElementA` and `ConcreteElementB` are specific types of exhibits you encounter. As you visit each exhibit, you interact with a `Visitor`, which represents your actions or interests related to that exhibit. The `ConcreteVisitor` class represents different roles you might assume during your visit, such as a historian or an art enthusiast. As you interact with each exhibit, you trigger specific actions defined by the `Visitor`. For example, when you visit ConcreteElementA, you trigger the `performOperationA()` action implemented by the `ConcreteVisitor`. Similarly, when you visit `ConcreteElementB`, you trigger the `performOperationB()` action. The sequence diagram illustrates how you, as the client, interact with different exhibits and trigger specific actions via the `visitor` pattern.
+
+
+[discrete%breakable]
+== Implementation Walkthrough
+In this example, we'll implement a visitor pattern using the museum analogy to explain each component of the design. We'll simulate a museum with different types of exhibits and visitors who interact with them.
+
+
+[discrete%breakable]
+=== Exhibit Interface
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Exhibit.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Exhibit.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/visitor/Exhibit.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/visitor/Exhibit.ts[lines=3..]
+endif::[]
+----
+
+The `Exhibit` interface defines the accept method that allows exhibits to accept visitors.
+
+
+[discrete%breakable]
+=== Artifacts Classes
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Painting.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Painting.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/visitor/Painting.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/visitor/Painting.ts[lines=3..]
+endif::[]
+----
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Sculpture.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Sculpture.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/visitor/Sculpture.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/visitor/Sculpture.ts[lines=3..]
+endif::[]
+----
+
+The `Painting` and `Sculpture` classes represent specific types of exhibits. They implement the accept method to trigger the visit method specific to their exhibit type.
+
+
+[discrete%breakable]
+=== Visitor Interface
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Visitor.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Visitor.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/visitor/Visitor.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/visitor/Visitor.ts[lines=3..]
+endif::[]
+----
+
+The `Visitor` interface defines visit methods for each type of exhibit, allowing visitors to perform actions on exhibits.
+
+
+[discrete%breakable]
+=== Patron Class
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Patron.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Patron.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/visitor/Patron.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/visitor/Patron.ts[lines=3..]
+endif::[]
+----
+
+The `Patron` class represents a museum visitor. It implements visit methods to perform specific actions on each type of exhibit.
+
+
+[discrete%breakable]
+=== Museum Class
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/visitor/Museum.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/visitor/Museum.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/visitor/Museum.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/visitor/Museum.ts[lines=3..]
+endif::[]
+----
+
+The usage example code initiates the visit to each exhibit by creating exhibit instances and a visitor object, then calling the accept method on each exhibit to trigger visitor interaction.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Patron admires the painting
+Patron examines the sculpture
+----
+
+
+[discrete%breakable]
+== Design Considerations
+When implementing the visitor pattern, several design considerations should be taken into account:
+
+- **Flexibility**: The pattern should allow for easy addition of new types of exhibits and visitors without requiring modifications to existing classes. This flexibility ensures that the system can accommodate changes in the museum's collection or visitor demographics over time.
+
+- **Separation of Concerns**: It's important to maintain separation between the exhibit classes and the visitor classes. This separation allows for easier maintenance, testing, and reuse of both exhibit and visitor components.
+
+- **Scalability**: As the museum's collection grows, the system should be able to handle a larger number of exhibits and visitors efficiently. Considerations should be made to optimize the performance of visitor interactions, especially when dealing with complex exhibits or high visitor traffic.
+
+- **Extensibility**: The pattern should support the addition of new behaviors or operations on exhibits without requiring changes to existing visitor classes. This extensibility allows for the implementation of diverse visitor experiences and educational programs within the museum.
+
+
+[discrete%breakable]
+== Conclusion
+The visitor pattern offers a versatile and adaptable approach to facilitating interactions between elements and visitors. It enables the seamless integration of new element types and visitor behaviors without the need to alter existing classes. By separating concerns and providing extensibility, this pattern is adept at managing a wide range of elements and visitor interactions. With careful attention to design aspects such as flexibility, separation of concerns, scalability, and extensibility, the visitor pattern empowers the creation of resilient and easily maintainable software systems. These systems can effortlessly adapt to changes in collections and visitor types as they evolve over time.

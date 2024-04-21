@@ -1,0 +1,34 @@
+@startuml BuilderPatternSequenceDiagram
+
+actor Client
+participant Director
+participant "Builder" as Builder
+participant "ConcreteBuilder" as ConcreteBuilder
+participant "Product" as Product
+
+Client -> Director : new Director()
+Client -> ConcreteBuilder : new ConcreteBuilder()
+Client -> Director : construct(ConcreteBuilder)
+
+Director -> ConcreteBuilder : buildPartA()
+activate ConcreteBuilder
+ConcreteBuilder -> Product : new Product()
+activate Product
+Product --> ConcreteBuilder : <<create>>
+deactivate Product
+ConcreteBuilder --> Director : <<part A built>>
+
+Director -> ConcreteBuilder : buildPartB()
+ConcreteBuilder -> Product : addPart("Part B")
+ConcreteBuilder --> Director : <<part B built>>
+
+Director -> ConcreteBuilder : buildPartC()
+ConcreteBuilder -> Product : addPart("Part C")
+ConcreteBuilder --> Director : <<part C built>>
+
+Director -> ConcreteBuilder : getProduct()
+ConcreteBuilder -> Product : return product
+ConcreteBuilder --> Director : product
+Director --> Client : product
+
+@enduml

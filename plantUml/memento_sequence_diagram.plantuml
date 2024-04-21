@@ -1,0 +1,42 @@
+@startuml MementoPatternSequenceDiagram
+
+actor Client
+participant "Originator" as Originator
+participant "Memento" as Memento
+participant "Caretaker" as Caretaker
+
+Client -> Originator : set state to 'State1'
+activate Originator
+Originator --> Client : state is 'State1'
+deactivate Originator
+
+Client -> Originator : saveStateToMemento()
+activate Originator
+Originator -> Memento : Memento('State1')
+activate Memento
+Memento --> Originator : return memento
+deactivate Memento
+Originator --> Client : memento
+deactivate Originator
+
+Client -> Caretaker : add(memento)
+activate Caretaker
+Caretaker --> Client
+deactivate Caretaker
+
+Client -> Originator : set state to 'State2'
+activate Originator
+Originator --> Client : state is 'State2'
+deactivate Originator
+
+Client -> Caretaker : get(index)
+activate Caretaker
+Caretaker --> Client : memento
+deactivate Caretaker
+
+Client -> Originator : getStateFromMemento(memento)
+activate Originator
+Originator --> Client : state restored to 'State1'
+deactivate Originator
+
+@enduml

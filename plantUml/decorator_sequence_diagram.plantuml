@@ -1,0 +1,30 @@
+@startuml DecoratorPatternSequenceDiagram
+
+actor Client
+participant "Component" as Component
+participant "ConcreteComponent" as ConcreteComponent
+participant "DecoratorA" as DecoratorA
+participant "DecoratorB" as DecoratorB
+
+Client -> DecoratorB : operation()
+activate DecoratorB
+
+DecoratorB -> DecoratorA : operation()
+activate DecoratorA
+
+DecoratorA -> ConcreteComponent : operation()
+activate ConcreteComponent
+
+ConcreteComponent --> DecoratorA : operationResult
+deactivate ConcreteComponent
+
+DecoratorA --> DecoratorB : operationResultDecoratedA
+deactivate DecoratorA
+
+DecoratorB --> Client : operationResultDecoratedAB
+deactivate DecoratorB
+
+note over ConcreteComponent : Core functionality
+note over DecoratorA, DecoratorB : Additional behaviors are added by decorators
+
+@enduml

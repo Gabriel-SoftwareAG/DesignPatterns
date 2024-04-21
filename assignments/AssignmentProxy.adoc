@@ -1,0 +1,51 @@
+= Home Assignment: Implementing the Proxy Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Proxy design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of providing a surrogate or placeholder for another object to control access to it.
+
+== Instructions
+
+1. Imagine you are the owner of a high-end art gallery that displays valuable artworks.
+2. Create a Java project named "ArtGallery" using your preferred IDE or command-line tools.
+3. Implement the Proxy design pattern with the following components:
+
+=== Artwork
+An interface representing an artwork, with methods for viewing and purchasing the artwork.
+
+=== RealArtwork
+A concrete class representing a real artwork in the gallery. It implements the Artwork interface and contains the actual implementation of viewing and purchasing the artwork.
+
+=== ArtworkProxy
+A proxy class that acts as a placeholder for the real artwork. It implements the Artwork interface and controls access to the real artwork by adding extra functionality such as access control or logging.
+
+4. Write clean, modular, and well-documented code following Java coding conventions.
+5. Implement unit tests to ensure the correctness of your implementation.
+6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+7. Create a Git repository for your project and initialize it with a README.md file.
+8. Commit your initial project setup to Git.
+9. Implement the Proxy pattern in Java according to the following scenario:
+
+=== Scenario
+- As the owner of the art gallery, you want to protect your valuable artworks from unauthorized access and track viewing and purchasing activities.
+- Implement an Artwork interface with methods for viewing and purchasing the artwork.
+- Create a RealArtwork class representing a real artwork in the gallery, with actual implementations of viewing and purchasing methods.
+- Implement an ArtworkProxy class that acts as a proxy for the real artwork, controlling access to it by adding extra functionality such as access control and logging.
+
+10. Test your implementation by creating instances of ArtworkProxy and accessing real artworks through the proxy.
+11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+
+== Submission
+
+- Share the link to your Git repository with your instructor for evaluation.
+- Ensure that your repository is publicly accessible and well-documented to facilitate review.
+
+== Note
+
+- Feel free to consult online resources, textbooks, or other references while working on the assignment.
+- Remember to adhere to academic integrity guidelines and avoid plagiarism.
+- Enjoy the process of designing and implementing an ArtGallery using the Proxy pattern in Java with a real-life example!

@@ -1,0 +1,31 @@
+@startuml StatePatternSequenceDiagram
+
+actor Client
+participant "Context" as Context
+participant "State" as StateInterface
+participant "ConcreteStateA" as StateA
+participant "ConcreteStateB" as StateB
+
+Client -> Context : request()
+activate Context
+
+Context -> StateInterface : handle()
+activate StateInterface
+
+StateInterface -> StateA : action()
+activate StateA
+StateA --> StateInterface : actionCompleted
+deactivate StateA
+
+StateInterface --> Context : setState(StateB)
+deactivate StateInterface
+
+Context -> StateB : handle()
+activate StateB
+StateB --> Context : actionCompleted
+deactivate StateB
+
+Context --> Client
+deactivate Context
+
+@enduml

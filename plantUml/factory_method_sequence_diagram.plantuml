@@ -1,0 +1,29 @@
+@startuml FactoryMethodPatternSequenceDiagram
+
+participant Client
+participant "Creator" as Creator
+participant "ConcreteCreator" as ConcreteCreator
+participant "Product" as Product
+participant "ConcreteProduct" as ConcreteProduct
+
+Client -> Creator : createProduct()
+activate Creator
+
+Creator -> ConcreteCreator : factoryMethod()
+activate ConcreteCreator
+
+ConcreteCreator -> ConcreteProduct : new()
+activate ConcreteProduct
+
+ConcreteProduct --> ConcreteCreator : product
+deactivate ConcreteProduct
+
+ConcreteCreator --> Creator : product
+deactivate ConcreteCreator
+
+Creator --> Client : product
+deactivate Creator
+
+note over Client, Product : Client uses the product\nwithout knowing its concrete class
+
+@enduml

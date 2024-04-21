@@ -1,0 +1,49 @@
+@startuml FlyweightPatternClassDiagram
+
+' Define the Flyweight interface
+interface Flyweight {
+  +operation(extrinsicState) : void
+}
+
+' Define the ConcreteFlyweight class
+class ConcreteFlyweight implements Flyweight {
+  -intrinsicState : String
+  +operation(extrinsicState) : void
+}
+
+' Define the FlyweightFactory class
+class FlyweightFactory {
+  -flyweights : Map<String, Flyweight>
+  +getFlyweight(key : String) : Flyweight
+}
+
+' Define the Client class
+class Client {
+  -flyweight : Flyweight
+  +operation() : void
+}
+
+' Relationships
+FlyweightFactory o-- Flyweight : Creates >
+Client --> Flyweight : Uses >
+
+note right of ConcreteFlyweight
+  "ConcreteFlyweight" stores intrinsic
+  state that is shareable across many
+  objects and implements the operation
+  using both intrinsic and extrinsic state.
+end note
+
+note right of FlyweightFactory
+  "FlyweightFactory" manages flyweight
+  objects and creates them as needed,
+  ensuring that flyweights are shared properly.
+end note
+
+note right of Client
+  "Client" maintains extrinsic state
+  (unique for each flyweight) and
+  passes it to flyweight's operations.
+end note
+
+@enduml

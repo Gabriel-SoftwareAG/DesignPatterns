@@ -1,0 +1,43 @@
+
+= Assignment: Implement the Abstract Factory Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Abstract Factory design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of providing an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+== Instructions
+
+1. Imagine you are the owner of a fashion design studio specializing in custom-made outfits.
+2. Create a Java project named "FashionDesignStudio" using your preferred IDE or command-line tools.
+3. Implement the Abstract Factory design pattern with the following components:
+
+=== OutfitFactory
+An abstract class or interface defining methods for creating different types of outfits, such as tops and bottoms.
+
+=== CasualOutfitFactory, FormalOutfitFactory
+Concrete subclasses of OutfitFactory that implement methods to create specific types of outfits suitable for casual and formal occasions, respectively.
+
+=== Top, Bottom
+Abstract classes or interfaces representing different components of an outfit, with methods for designing and customizing the outfit.
+
+=== CasualTop, CasualBottom, FormalTop, FormalBottom
+Concrete subclasses of Top and Bottom representing specific types of casual and formal tops and bottoms.
+
+- Write clean, modular, and well-documented code following Java coding conventions.
+- Implement unit tests to ensure the correctness of your implementation.
+- Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Create a Git repository for your project and initialize it with a README.md file.
+- Commit your initial project setup to Git.
+- Implement the Abstract Factory pattern in Java according to the following scenario:
+
+=== Scenario
+- As the owner of the fashion design studio, you cater to clients with different preferences for outfits, including casual and formal wear.
+- Implement concrete factories such as CasualOutfitFactory and FormalOutfitFactory that create specific types of outfits suitable for casual and formal occasions, respectively.
+- Use the Abstract Factory pattern to create instances of these outfits, consisting of tops and bottoms, designed according to the client's specifications.
+
+- Test your implementation by creating instances of different types of outfits using the respective factories.
+- Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+- Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+- Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
