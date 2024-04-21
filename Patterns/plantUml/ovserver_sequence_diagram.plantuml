@@ -1,0 +1,32 @@
+@startuml ObserverPatternSequenceDiagram
+
+participant "Subject" as subject
+participant "ObserverA" as observerA
+participant "ObserverB" as observerB
+
+activate subject
+subject -> observerA : attach()
+activate observerA
+deactivate observerA
+
+subject -> observerB : attach()
+activate observerB
+deactivate observerB
+
+subject -> subject : setState(newState)
+activate subject
+deactivate subject
+
+subject -> observerA : notify()
+activate observerA
+observerA -> observerA : update(newState)
+deactivate observerA
+
+subject -> observerB : notify()
+activate observerB
+observerB -> observerB : update(newState)
+deactivate observerB
+
+deactivate subject
+
+@enduml

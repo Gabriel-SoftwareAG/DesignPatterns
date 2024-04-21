@@ -1,0 +1,24 @@
+@startuml ObserverPatternClassDiagram
+
+interface Observer {
+  +update() : void
+}
+
+class ConcreteObserverA implements Observer {
+  +update() : void
+}
+
+class ConcreteObserverB implements Observer {
+  +update() : void
+}
+
+class Subject {
+  -observers : List<Observer>
+  +attach(observer : Observer) : void
+  +detach(observer : Observer) : void
+  +notifyObservers() : void
+}
+
+Subject -right-> Observer : notifies >
+
+@enduml

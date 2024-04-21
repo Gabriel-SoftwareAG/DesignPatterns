@@ -1,0 +1,29 @@
+@startuml StatePatternClassDiagram
+
+' Context class
+class Context {
+  -state: State
+  +setState(state: State): void
+  +request(): void
+}
+
+' State interface
+interface State {
+  +handle(): void
+}
+
+' Concrete State classes
+class ConcreteStateA {
+  +handle(): void
+}
+
+class ConcreteStateB {
+  +handle(): void
+}
+
+' Relationships
+Context *-- State : contains
+State <|.. ConcreteStateA : implements
+State <|.. ConcreteStateB : implements
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml FlyweightPatternSequenceDiagram
+
+actor Client
+participant "FlyweightFactory" as Factory
+participant "Flyweight" as Flyweight
+
+Client -> Factory : getFlyweight(intrinsicState)
+activate Factory
+
+alt if Flyweight exists
+    Factory -> Factory : Lookup(intrinsicState)
+    note right : Returns an existing Flyweight\nbased on the intrinsic state.
+    Factory --> Client : return existing Flyweight
+else Flyweight does not exist
+    Factory -> Flyweight : new Flyweight(intrinsicState)
+    activate Flyweight
+    note right : Creates a new Flyweight\nwith the given intrinsic state.
+    Flyweight --> Factory : return new Flyweight
+    Factory --> Client : return new Flyweight
+    deactivate Flyweight
+end
+
+Client -> Flyweight : operation(extrinsicState)
+activate Flyweight
+note over Flyweight : Performs operation, potentially\nusing both intrinsic and extrinsic state.
+deactivate Flyweight
+
+@enduml

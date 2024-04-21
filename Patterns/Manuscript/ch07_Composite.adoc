@@ -1,0 +1,183 @@
+
+= Chapter 7: The Composite Pattern
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
+:imagesdir: ../images/ch07_Composite
+
+== Introduction
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you're putting together a music playlist for a party. You start by selecting individual songs, each a single piece of music that stands alone. As you organize your playlist, you also decide to include entire albums or collections of songs by specific artists. Now, your playlist is a mix of individual songs (simple objects) and whole albums (composite objects). When you play the playlist at the party, it doesn't matter whether a track is from an album or a single release; each piece of music contributes to the party atmosphere. Furthermore, if you wanted, you could group several albums and songs into a themed collection, like "80s Hits" or "Summer Vibes," which then also becomes part of the playlist.  
+|image:composite_music.jpg[width=320, scale=50%]
+|===
+
+This way, your playlist can handle both individual songs and collections of songs, with the flexibility to include larger collections that are composites of composites, all contributing to the overall experience seamlessly.
+
+In software, the Composite Pattern allows similar flexibility. It lets you treat individual objects and compositions of objects (composites) uniformly. Just like with the playlist, where both individual songs and entire albums are part of the lineup, in software, simple objects and composite objects can be treated the same way. This pattern enables a tree structure, nodes (composites) can contain other nodes, or leaves (individual objects). It simplifies working with complex structures, allowing you to apply operations over both individual elements and groups of elements, including groups that contain other groups, much like playing a single song or an entire album from your party playlist.
+
+
+[discrete%breakable]
+== Key Components
+- _Component_: In the music playlist analogy, the component represents the interface for both individual songs and collections of songs. It defines common operations that can be performed on both simple objects (individual songs) and composite objects (collections of songs), such as playing or adding to the playlist.
+- _Leaf_: The leaf represents the individual objects in the playlist, such as single songs. These are the simplest elements that cannot be further subdivided. They implement the Component interface and perform specific operations relevant to their type, such as playing the song.
+- _Composite_: The composite represents the collections of objects in the playlist, such as albums or themed collections. These are composed of one or more leaf objects or other composite objects. They implement the Component interface and can perform operations on their child components, such as playing all songs in the collection.
+
+
+[discrete%breakable]
+== UML Diagrams 
+Next, we will explain the concept of the Composite design pattern using UML.
+
+
+[discrete%breakable]
+=== Class Diagram
+image::CompositePatternClassDiagram.png[title="The Composite Class Diagram", align=center]
+In the class diagram the `Component` interface represents both individual songs and collections of songs in the playlist, defining common operations that can be performed on them. The `Leaf` class represents individual songs in the playlist, implementing the `Component` interface and performing specific operations by implementing the `operation()` method (e.g playing a song). On the other hand, the `Composite` class represents collections of songs, such as albums or themed playlists. It contains child components (either `Leaf` or other `Composite` objects) and implements operations to manage these children, such as adding or removing songs from the collection. The relations between `Component` and `Leaf`, as well as `Component` and `Composite`, illustrate that both `Leaf` and `Composite` objects are treated uniformly as components in the playlist.
+
+
+[discrete%breakable]
+=== Sequence Diagram
+image::CompositePatternSequenceDiagram.png[title="The Composite Sequence Diagram", align=center]
+
+In the sequence diagram, the Client adds individual songs (represented by `Leaf1` and `Leaf2`) and a collection of songs (represented by `SubComposite`) to the main playlist composite (`Composite`). This main `Composite` serves as the aggregate container for the playlist.
+
+When the Client triggers the `operation()` method on the playlist, the `Component` interface—which abstracts both individual songs and song collections—routes this operation to the `Composite`. The Compo`site then propagates the operation to all its child components. This includes forwarding the operation to both individual song components (`Leaf1` and `Leaf2`) where each song component may perform actions like playing the song. Additionally, the operation is passed to the `SubComposite`, which itself could contain other songs or sub-playlists, thereby illustrating the recursive capability of the `Composite` Pattern.
+
+Each leaf component and sub-composite completes its specific operation and hands control back to the main `Composite`. Ultimately, the main `Composite` returns control to the `Component` interface, which in turn signals the completion of the operation back to the Client.
+
+This sequence exemplifies how the `Composite` Pattern facilitates a uniform approach to handling both individual songs and collections of songs within a playlist. This capability allows for the seamless management and execution of operations on complex structures, simplifying the user interaction with varying levels of aggregation in the playlist.
+
+
+== Implementation Walkthrough
+
+
+[discrete%breakable]
+=== Component Interface: PlaylistComponent (Component)
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/PlaylistComponent.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/PlaylistComponent.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/composite/PlaylistComponent.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/composite/PlaylistComponent.ts[lines=3..]
+endif::[]
+----
+
+The `PlaylistComponent` interface represents both individual songs and collections of songs in the music playlist. It defines common operations that can be performed on both leaf objects (individual songs) and composite objects (collections of songs). Specifically, it includes the operation `playSong()` to be applied to either individual song or an enrire playlist.
+
+
+[discrete%breakable]
+=== Leaf: Song
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/Song.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/Song.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/composite/Song.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/composite/Song.ts[lines=3..]
+endif::[]
+----
+
+The `Song` class represents individual songs in the music playlist. It implements the `PlaylistComponent` interface and performs song-specific operations, such as playing the song.
+
+
+[discrete%breakable]
+=== Composite: Playlist
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/Playlist.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/Playlist.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/composite/Playlist.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/composite/Playlist.ts[lines=3..]
+endif::[]
+----
+
+The `Playlist` class represents collections of songs in the music playlist. It implements the `PlaylistComponent` interface and contains a list of child components, which can be either individual songs (Leaf) or other playlists (Composite). The `addComponent()` and `removeComponent()` methods allow adding and removing songs or playlists from the collection. The `operation()` method plays all songs in the playlist.
+
+
+[discrete%breakable]
+=== Usage Example
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/composite/MusicPlayer.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/composite/MusicPlayer.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/composite/MusicPlayer.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/composite/MusicPlayer.ts[lines=3..]
+endif::[]
+----
+
+In the example, individual songs are created using the `Song` class. Then, a playlist is created using the `Playlist` class, and songs are added to the playlist using the `addComponent()` method. Finally, the `playSong()` method is called on the playlist to play all songs in the playlist.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Playing playlist:
+Playing song: Song 1
+Playing song: Song 2
+Playing playlist:
+Playing song: Song 3
+Playing song: Song 4
+----
+
+
+[discrete%breakable]
+== Design Considerations
+When implementing the Composite Pattern for managing a music playlist, several design considerations should be taken into account:
+
+* **Interface Design**: The design of the `PlaylistComponent` interface should be intuitive and flexible enough to accommodate both individual songs and collections of songs. It should define common operations that can be performed on both leaf objects (individual songs) and composite objects (playlists), allowing for seamless integration and uniform treatment of components.
+
+* **Leaf Implementation**: The implementation of the leaf class (e.g., `Song`) should encapsulate the behavior specific to individual objects. It should provide methods for performing song-specific operations.
+
+* **Composite Implementation**: The implementation of the composite class (e.g., `Playlist`) should manage a collection of child components (leaf objects or other composite objects). It should provide methods for adding, removing, and iterating over child components, as well as performing operations on the entire collection.
+
+* **Client Usage**: Clients interacting with the music playlist should treat individual songs and playlists uniformly, regardless of their actual type. They should use the common interface to perform operations on both leaf and composite objects seamlessly.
+
+* **Scalability and Extensibility**: The design should be scalable and extensible to accommodate future changes and additions to the playlist. This includes the ability to add support for new types of components (e.g., podcasts, audiobooks) or additional functionality (e.g., shuffling, searching) without requiring significant modifications to existing code.
+
+
+[discrete%breakable]
+== Conclusion
+The Composite Pattern offers a streamlined approach for handling hierarchical object structures. It achieves this by enabling individual objects and their compositions to be managed uniformly via a common interface. This approach greatly simplifies interactions with and navigation through intricate, tree-like structures. By focusing on thoughtful interface design, careful implementation, and considerations for scalability and extensibility, developers can effectively utilize the Composite Pattern. This facilitates the creation of flexible and durable systems that efficiently manage hierarchical data across different domains.

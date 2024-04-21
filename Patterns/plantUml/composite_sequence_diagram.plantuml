@@ -1,0 +1,56 @@
+@startuml CompositePatternSequenceDiagram
+
+actor Client
+participant "Component" as Component
+participant "Composite" as Composite
+participant "Leaf1" as Leaf1
+participant "Leaf2" as Leaf2
+participant "SubComposite" as SubComposite
+
+Client -> Composite : add(Leaf1)
+activate Composite
+Composite --> Client : void
+deactivate Composite
+
+Client -> Composite : add(Leaf2)
+activate Composite
+Composite --> Client : void
+deactivate Composite
+
+Client -> Composite : add(SubComposite)
+activate Composite
+Composite --> Client : void
+deactivate Composite
+
+Client -> Component : operation()
+activate Component
+
+Component -> Composite : operation()
+activate Composite
+Composite -> Leaf1 : operation()
+activate Leaf1
+Leaf1 --> Composite : void
+deactivate Leaf1
+
+Composite -> Leaf2 : operation()
+activate Leaf2
+Leaf2 --> Composite : void
+deactivate Leaf2
+
+Composite -> SubComposite : operation()
+activate SubComposite
+SubComposite --> Composite : void
+deactivate SubComposite
+
+Composite --> Component : void
+deactivate Composite
+
+Component --> Client : void
+deactivate Component
+
+note right of Composite
+  Composite forwards operation to all children:
+  Leaf1, Leaf2, and SubComposite here.
+end note
+
+@enduml

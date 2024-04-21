@@ -1,0 +1,18 @@
+@startuml PrototypePatternSequenceDiagram
+
+participant Client
+participant "Prototype" as Prototype
+participant "ConcretePrototype" as ConcretePrototype
+
+Client -> Prototype : clone()
+activate Prototype
+Prototype -> ConcretePrototype : clone()
+activate ConcretePrototype
+ConcretePrototype --> Prototype : return copy
+deactivate ConcretePrototype
+Prototype --> Client : return copy
+deactivate Prototype
+
+note right of Client : Client receives a clone\nof the ConcretePrototype.
+
+@enduml

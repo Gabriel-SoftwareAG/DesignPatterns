@@ -1,0 +1,175 @@
+
+= Chapter 8: The Proxy Pattern
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
+:imagesdir: ../images/ch08_Proxy
+
+
+== Introduction
+[cols="2", frame="none", grid="none"]
+|===
+|Imagine you have a legal question or need to handle a legal matter, but you're not familiar with the laws or how to proceed. Instead of trying to figure it out yourself, you hire a lawyer. This lawyer acts as your representative, using their knowledge and expertise to advise you, speak on your behalf, and navigate the legal system for you. Essentially, the lawyer is a go-between for you and the legal world, making sure your needs are met without you having to dive into the 
+complexities of law yourself. 
+
+The Proxy Pattern in software development is quite similar to hiring a lawyer. In this pattern, a proxy object acts as an intermediary between the client (you) and another system or resource (the legal system, in our analogy).
+|image:proxy_lawyer.jpg[width=360, scale=50%]
+|===
+
+Just as a lawyer translates your needs into legal actions, manages the process, and communicates results back to you, a proxy object in software takes requests from its client, does the necessary work to interact with the underlying system or resource, and then returns the results. This setup helps manage complexity, control access, and even optimize performance, all without the client needing to know the intricacies of the system they're interacting with.
+
+
+[discrete%breakable]
+== Key Components
+- _Client_: The client is the entity that needs to interact with the underlying system or resource but may not have direct access or knowledge of its intricacies. In the analogy, the client is the individual seeking legal advice or assistance with a legal matter.
+- _Proxy_: The proxy object acts as an intermediary between the client and the underlying system or resource. It receives requests from the client, performs any necessary preprocessing or validation, interacts with the system on behalf of the client, and returns the results. In the legal analogy, the proxy is analogous to the lawyer who represents the client, interacts with the legal system, and communicates outcomes back to the client.
+- _Subject_: The subject interface defines the common interface that both the proxy and the real object (the underlying system or resource) implement. This allows the client to interact with the proxy and the real object interchangeably. In the legal analogy, the subject interface represents the legal services or expertise that both the lawyer (proxy) and the legal system (real object) provide.
+- _Real Subject_: The real subject represents the underlying system or resource that the proxy interacts with on behalf of the client. It implements the subject interface and performs the actual work requested by the client. In the legal analogy, the real subject is the legal system itself, which the lawyer interacts with to provide legal services to the client.
+
+
+[discrete%breakable]
+== UML Diagrams 
+Next, we will explain the concept of the Proxy design pattern using UML.
+
+
+[discrete%breakable]
+=== Class Diagram
+image::ProxyPatternClassDiagram.png[title="The Proxy Class Diagram", align=center]
+In the Proxy Pattern class diagram, we have three main classes represented by entities in the legal analogy. Firstly, the `Subject` interface corresponds to the legal services that both the real lawyer (proxy) and the legal system (real object) provide. Secondly, the `RealSubject` class represents the real lawyer who directly interacts with the legal system to provide legal services to the client. This class implements the `Subject` interface and defines the actual actions taken in response to requests from the client. Lastly, the `Proxy` class acts as an intermediary between the client and the real lawyer. It maintains a reference to the `RealSubject` (the real lawyer) and controls access to it. The proxy may defer making a request to the real lawyer until necessary, perform additional operations before or after forwarding the request, or even deny access to the real lawyer under certain conditions. In summary, the Proxy Pattern allows the client to interact with the legal system (represented by the real lawyer) through the proxy, providing additional control and functionality while maintaining the same interface as the real object.
+
+
+[discrete%breakable]
+=== Sequence Diagram
+image::ProxyPatternSequenceDiagram.png[title="The Proxy Sequence Diagram", align=center]
+In the Proxy Pattern sequence diagram, we have two main participants represented by entities in the legal analogy. Firstly, the Client initiates a request by interacting with the `Proxy`, which acts as the intermediary between the client and the real lawyer (represented by `RealSubject`). Upon receiving the request from the client, the `Proxy` forwards the request to the `RealSubject` (the real lawyer) to handle it. The real lawyer then performs the necessary actions in response to the request and returns the response to the proxy. The proxy may perform additional operations, such as preprocessing or postprocessing, before or after forwarding the request to the real lawyer. Finally, the proxy communicates the response back to the client. This setup allows the proxy to control access to the real lawyer and add functionality or security measures without the client's direct involvement, similar to how a legal proxy may handle legal matters on behalf of a client.
+
+
+[discrete%breakable]
+== Implementation Walkthrough
+In this example, we'll implement the Proxy Pattern using the analogy of accessing legal services through a proxy legal service provider. We'll have three two main classes: `ProxyLegalService`, and `RealLegalService`. We will also include a usage example, a client, represents someone in need of legal assistance, the `ProxyLegalService` acts as an intermediary legal service provider, and the `RealLegalService` is the actual legal expert who provides legal services.
+
+
+[discrete%breakable]
+=== LegalService Interface
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/proxy/LegalService.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/proxy/LegalService.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/proxy/LegalService.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/proxy/LegalService.ts[lines=3..]
+endif::[]
+----
+
+
+[discrete%breakable]
+=== ProxyLegalService Class
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/proxy/ProxyLegalService.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/proxy/ProxyLegalService.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/proxy/ProxyLegalService.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/proxy/ProxyLegalService.ts[lines=3..]
+endif::[]
+----
+
+The `ProxyLegalService` class acts as an intermediary legal service provider between the client and the real legal service. It implements the `LegalService` interface, which defines the actions that can be taken. In the `requestLegalAssistance` method, the proxy checks if the real legal service instance exists. If not, it creates a new instance of the `RealLegalService` class. Then, it forwards the request to the real legal service by calling the `provideLegalAssistance` method.
+
+
+[discrete%breakable]
+=== RealLegalService Class
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/proxy/RealLegalService.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/proxy/RealLegalService.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/proxy/RealLegalService.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/proxy/RealLegalService.ts[lines=3..]
+endif::[]
+----
+
+The `RealLegalService` class represents the actual legal expert who provides legal services. It implements the `LegalService` interface and defines the `requestLegalAssistance` method, which represents the legal actions taken by the legal service provider. The `provideLegalAssistance` method is used by the `ProxyLegalService` class to forward the request to the real legal service.
+
+
+[discrete%breakable]
+=== Usage Example
+Now, let's see how the classes are used together:
+
+[source, {lang}]
+----
+ifeval::["{lang}" == "java"]
+include::{java_path}/proxy/Client.java[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+include::{python_path}/proxy/Client.py[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+include::{csharp_path}/proxy/Client.cs[lines=3..]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+include::{typescript_path}/proxy/Client.ts[lines=3..]
+endif::[]
+----
+
+When the example code is executed, it creates an instance of the `ProxyLegalService` class and calls its `requestLegalAssistance` method. The `ProxyLegalService` class, in turn, forwards the request to the `RealLegalService` class, which provides legal assistance. Finally, the real legal service provider executes the legal actions required.
+
+
+[discrete%breakable]
+=== Code Output
+The above code output is: 
+[source,plaintext]
+----
+Proxy legal service is requesting legal assistance.
+Real legal service is providing legal assistance.
+----
+
+
+[discrete%breakable]
+== Design Considerations
+When applying the Proxy Pattern in software development, several design considerations should be taken into account:
+
+* **Client Transparency**: The proxy should provide a transparent interface to the client, ensuring that the client is unaware of whether it is interacting with the real subject or the proxy object. This transparency allows for seamless substitution of the proxy for the real subject without impacting the client's functionality.
+* **Security and Access Control**: Proxy objects can be used to enforce access control policies, such as authentication and authorization, before forwarding requests to the real subject. It's essential to carefully design and implement these security measures to protect sensitive resources and ensure that only authorized clients can access them.
+* **Performance Overhead**: Introducing a proxy layer can introduce performance overhead due to the additional layer of indirection and potential overhead associated with managing the proxy object. Designers should consider the performance implications of using proxies, especially in latency-sensitive or high-throughput systems, and optimize the proxy implementation where possible.
+* **Resource Management**: Proxies may be responsible for managing shared or expensive resources, such as database connections or network connections, on behalf of the real subject. It's crucial to ensure that resources are allocated and released appropriately to prevent resource leaks or contention issues.
+* **Caching and Optimization**: Proxies can implement caching mechanisms to improve performance by storing and reusing results from previous requests. Designers should carefully consider the caching strategy, including cache expiration policies and cache coherence mechanisms, to balance performance gains with the risk of serving stale data.
+* **Synchronization and Thread Safety**: In multi-threaded environments, proxies may need to synchronize access to shared resources or ensure thread safety to prevent race conditions and data corruption. Designers should carefully design and implement concurrency controls, such as locking mechanisms or atomic operations, to ensure the correctness of concurrent proxy operations.
+* **Scalability and Extensibility**: The design should be scalable and extensible to accommodate future changes and additions to the system. Designers should consider how easily the proxy pattern can be extended to support new features, accommodate changes in requirements, or scale to handle increased workload or user demand.
+
+
+[discrete%breakable]
+== Conclusion
+The Proxy Pattern provides a flexible and powerful mechanism for controlling access to objects and managing their interactions. By introducing an intermediary proxy object, the pattern allows for transparent substitution of the proxy for the real subject, enabling additional functionality such as access control, performance optimization, and resource management. With careful design and implementation, the Proxy Pattern can enhance the security, performance, and scalability of software systems while also improving maintainability and extensibility. However, designers should be mindful of the potential overhead introduced by proxies and carefully consider trade-offs between transparency, security, and performance. Overall, the Proxy Pattern is a valuable tool in the software architect's toolkit, offering a versatile solution to a wide range of design challenges.

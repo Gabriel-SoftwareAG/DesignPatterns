@@ -1,0 +1,37 @@
+= Assignment: Implement the Composite Pattern in Java with Real-life Example
+
+== Objective
+
+- To understand and implement the Composite design pattern in Java.
+- To practice object-oriented design principles and design patterns.
+- To develop a clear understanding of composing objects into tree structures to represent part-whole hierarchies.
+
+== Instructions
+
+1. Imagine you are a landscape architect designing a park with various types of vegetation.
+2. Create a Java project named "ParkDesign" using your preferred IDE or command-line tools.
+3. Implement the Composite design pattern with the following components:
+
+=== ParkElement
+An interface or abstract class representing an element in the park, such as a tree or a flower bed. It should include methods for adding and removing child elements.
+
+=== Tree, FlowerBed
+Concrete classes representing specific types of park elements, such as trees and flower beds. They should implement the ParkElement interface and provide their own implementation of adding and removing child elements.
+
+4. Write clean, modular, and well-documented code following Java coding conventions.
+5. Implement unit tests to ensure the correctness of your implementation.
+6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+7. Create a Git repository for your project and initialize it with a README.md file.
+8. Commit your initial project setup to Git.
+9. Implement the Composite pattern in Java according to the following scenario:
+
+=== Scenario
+- As the landscape architect, you are designing a park with various types of vegetation, including trees and flower beds.
+- Implement a ParkElement interface with methods for adding and removing child elements.
+- Create concrete classes such as Tree and FlowerBed that represent specific types of vegetation and implement the ParkElement interface.
+- Use the Composite pattern to compose these elements into a tree structure, where a park can contain trees and flower beds, and each flower bed can contain additional flowers.
+
+10. Test your implementation by creating instances of different park elements and composing them into a tree structure.
+11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.

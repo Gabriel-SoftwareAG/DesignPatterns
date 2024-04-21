@@ -1,0 +1,41 @@
+@startuml MediatorPatternClassDiagram
+
+' Mediator interface
+interface Mediator {
+  +mediate(colleague: Colleague, message: String): void
+}
+
+' ConcreteMediator class
+class ConcreteMediator {
+  -colleague1: Colleague
+  -colleague2: Colleague
+  +mediate(colleague: Colleague, message: String): void
+}
+
+' Colleague class
+abstract class Colleague {
+  -mediator: Mediator
+  +Colleague(mediator: Mediator)
+  {abstract} +receive(message: String): void
+  {abstract} +send(message: String): void
+}
+
+' ConcreteColleague1 class
+class ConcreteColleague1 {
+  +receive(message: String): void
+  +send(message: String): void
+}
+
+' ConcreteColleague2 class
+class ConcreteColleague2 {
+  +receive(message: String): void
+  +send(message: String): void
+}
+
+' Relationships
+Mediator <|.. ConcreteMediator : implements
+Colleague <|.. ConcreteColleague1 : extends
+Colleague <|.. ConcreteColleague2 : extends
+Mediator --> Colleague : collaborates
+
+@enduml

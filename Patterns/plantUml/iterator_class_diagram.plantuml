@@ -1,0 +1,34 @@
+@startuml IteratorPatternClassDiagram
+
+' Iterator interface
+interface Iterator {
+  +hasNext(): boolean
+  +next(): Object
+}
+
+' Aggregate interface
+interface Aggregate {
+  +createIterator(): Iterator
+}
+
+' ConcreteIterator class
+class ConcreteIterator {
+  -index: int
+  -aggregate: Aggregate
+  +hasNext(): boolean
+  +next(): Object
+}
+
+' ConcreteAggregate class
+class ConcreteAggregate {
+  -collection: Object[]
+  +createIterator(): Iterator
+}
+
+' Relationships
+Aggregate <|.. ConcreteAggregate : implements
+Iterator <|.. ConcreteIterator : implements
+ConcreteAggregate --> ConcreteIterator : creates
+ConcreteIterator --> ConcreteAggregate : uses
+
+@enduml

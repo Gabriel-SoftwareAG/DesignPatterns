@@ -1,0 +1,49 @@
+@startuml FactoryMethodPatternClassDiagram
+
+' Abstract Product
+abstract class Product {
+}
+
+' Concrete Products
+class ConcreteProductA extends Product {
+}
+
+class ConcreteProductB extends Product {
+}
+
+' Creator Interface or Abstract Class
+abstract class Creator {
+  +abstract factoryMethod() : Product
+  +anOperation() : void
+}
+
+' Concrete Creators
+class ConcreteCreatorA extends Creator {
+  +factoryMethod() : Product
+}
+
+class ConcreteCreatorB extends Creator {
+  +factoryMethod() : Product
+}
+
+ConcreteCreatorA ..> ConcreteProductA : creates
+ConcreteCreatorB ..> ConcreteProductB : creates
+
+note right of Creator
+  The Creator class declares the 
+  factory method that returns new product instances.
+  The 'anOperation()' method calls the factory 
+  method to create a product.
+end note
+
+note right of ConcreteCreatorA
+  Overrides the factory method 
+  to return an instance of ConcreteProductA.
+end note
+
+note right of ConcreteCreatorB
+  Overrides the factory method to 
+  return an instance of ConcreteProductB.
+end note
+
+@enduml

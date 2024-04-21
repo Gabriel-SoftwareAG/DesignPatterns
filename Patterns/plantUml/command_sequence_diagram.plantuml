@@ -1,0 +1,29 @@
+@startuml CommandPatternSequenceDiagram
+
+actor Client
+participant "Invoker" as Invoker
+participant "Command" as CommandInterface
+participant "ConcreteCommand" as ConcreteCommand
+participant "Receiver" as Receiver
+
+Client -> Invoker : setCommand(ConcreteCommand)
+activate Invoker
+
+Client -> Invoker : executeCommand()
+activate Invoker
+
+Invoker -> ConcreteCommand : execute()
+activate ConcreteCommand
+
+ConcreteCommand -> Receiver : action()
+activate Receiver
+Receiver --> ConcreteCommand : Action completed
+deactivate Receiver
+
+ConcreteCommand --> Invoker : Execution completed
+deactivate ConcreteCommand
+
+Invoker --> Client
+deactivate Invoker
+
+@enduml

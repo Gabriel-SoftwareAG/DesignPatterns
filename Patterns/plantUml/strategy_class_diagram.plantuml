@@ -1,0 +1,31 @@
+@startuml StrategyPatternClassDiagram
+
+' Context class
+class Context {
+  -strategy: Strategy
+  +Context(strategy: Strategy)
+  +contextInterface(): void
+}
+
+' Strategy interface
+interface Strategy {
+  +algorithmInterface(): void
+}
+
+' Concrete Strategies
+class ConcreteStrategyA implements Strategy {
+  +algorithmInterface(): void
+}
+
+class ConcreteStrategyB implements Strategy {
+  +algorithmInterface(): void
+}
+
+class ConcreteStrategyC implements Strategy {
+  +algorithmInterface(): void
+}
+
+' Relationships
+Context o-- Strategy : has-a
+
+@enduml
