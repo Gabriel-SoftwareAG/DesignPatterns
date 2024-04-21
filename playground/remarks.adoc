@@ -3,14 +3,11 @@
 - **Add a table summary for all design patterns** - 2
 - font in the table is different - 2
 - Add to the appendix the singleton multithread issue, and the java prototype - 3
-- Add about VeriSoft and about the author chapters. - 1
 - Need to support epub and html also - 3
 - Facade car imgae is not in the right scale - 3
-- Change the structure of the directories - 1
 - CHange the mvn project to regular project - 2
 - Translate to python, TS, C# - 2
 - Creaet a typescript project. But add a remark about the fact this is a different language, based on JS. maybe consult tal about it? - 2
-- Front and back cover - 1
 - Finish assignments - 2
 
 Future options:
