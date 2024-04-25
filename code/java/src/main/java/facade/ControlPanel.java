@@ -27,6 +27,7 @@ class ControlPanel {
     }
 
     public void driveToHomeAndPark() {
+        System.out.println("Taking you home...");
         activateCruiseControl();
         avoidCollision();
         park();

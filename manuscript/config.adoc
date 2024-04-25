@@ -1,5 +1,5 @@
 :lang: java
-:java_path: ../code/java/DesignPatterns/src/main/java
+:java_path: ../code/java/src/main/java
 :python_path: ../code/python
 :csharp_path: ../code/csharp/DesignPatterns
 :typescript_path: ../code/typescript
