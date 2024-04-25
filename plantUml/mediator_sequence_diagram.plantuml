@@ -1,6 +1,6 @@
 @startuml MediatorPatternSequenceDiagram
 
-participant Client
+actor Client
 participant Mediator
 participant Colleague1
 participant Colleague2

@@ -1,6 +1,6 @@
 @startuml FactoryMethodPatternSequenceDiagram
 
-participant Client
+actor Client
 participant "Creator" as Creator
 participant "ConcreteCreator" as ConcreteCreator
 participant "Product" as Product

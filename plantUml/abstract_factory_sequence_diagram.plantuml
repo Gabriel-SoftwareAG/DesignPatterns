@@ -1,6 +1,6 @@
 @startuml AbstractFactoryPatternSequenceDiagram
 
-participant Client
+actor Client
 participant "AbstractFactory" as AbstractFactory
 participant "ConcreteFactory1" as ConcreteFactory1
 participant "AbstractProductA" as AbstractProductA

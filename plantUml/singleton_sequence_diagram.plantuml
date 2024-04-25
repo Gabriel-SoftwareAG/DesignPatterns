@@ -1,6 +1,6 @@
 @startuml SingletonPatternSequenceDiagram
 
-participant Client
+actor Client
 participant Singleton
 
 Client -> Singleton : getInstance()

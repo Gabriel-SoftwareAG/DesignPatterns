@@ -1,6 +1,6 @@
 @startuml PrototypePatternSequenceDiagram
 
-participant Client
+actor Client
 participant "Prototype" as Prototype
 participant "ConcretePrototype" as ConcretePrototype
 
