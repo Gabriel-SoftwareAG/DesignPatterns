@@ -166,7 +166,7 @@ include::{typescript_path}/facade/Client.ts[lines=3..]
 endif::[]
 ----
 
-In this example, we create a `ControlPanel` object representing the control panel in the car. The driver uses the control panel to interact with the car's advanced features, such as parking the car automatically, activating adaptive cruise control, and avoiding collisions.
+In this example, we create a `ControlPanel` object representing the control panel in the car. The driver uses the control panel to interact with the car's advanced features, such as parking the car automatically, activating adaptive cruise control, and avoiding collisions. The driver can also tie all these activities together, when using the `driveToHomeAndPark()` method, which interacts between all the different subsystem, while simplifying it's use to the driver.
 
 
 [discrete%breakable]
