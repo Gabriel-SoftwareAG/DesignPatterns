@@ -1,4 +1,4 @@
-package $org.example;
+package $ai.verisoft;
 
 /**
  * Hello world!

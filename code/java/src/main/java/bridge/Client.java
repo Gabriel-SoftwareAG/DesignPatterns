@@ -6,7 +6,7 @@ class Client {
         Device tv = new Television();
 
         // Using a basic remote control for the television
-        RemoteControl remoteControl = new AdvancedRemoteControl(tv);
+        RemoteControl remoteControl = new RegularRemoteControl(tv);
 
         // Powering on the TV and changing the channel
         remoteControl.powerOn();

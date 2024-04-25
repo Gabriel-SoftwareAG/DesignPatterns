@@ -1,4 +1,4 @@
-package $org.example;
+package $ai.verisoft;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
