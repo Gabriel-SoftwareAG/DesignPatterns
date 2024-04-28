@@ -8,7 +8,7 @@ endif::[]
 :imagesdir: ../images/ch06_Adapter
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Say you're traveling around the world and you have various electronic devices like phones, cameras, and laptops. These devices may come with different types of chargers: one might have a European plug, another might have an American plug, and so on.
 

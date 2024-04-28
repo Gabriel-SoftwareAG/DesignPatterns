@@ -10,7 +10,7 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Imagine you're traveling to a foreign country where you don't speak the language. To communicate with locals, you hire an interpreter who translates your words into the local language and vice versa.
 

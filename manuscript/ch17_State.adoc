@@ -9,13 +9,13 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Imagine you have a traffic light at an intersection. It can be in one of three states: red, yellow, or green. Each state represents a different behavior for the traffic light: red means stop, yellow means prepare to stop, and green means go.
 
 In software design, the state pattern works similarly. It allows an object to change its behavior when its internal state changes. Just like how the behavior of the traffic light changes depending on its current state, objects in a software application can behave differently based on their current state.
 
-|image:state_traffic_light.jpg[width=300, scale=50%]
+|image:state_traffic_light.jpg[width=270, height=270]
 |===
 
 Using the state pattern, you can encapsulate each state and its corresponding behavior in separate objects. When the state of the traffic light changes, it switches to the appropriate state object, which determines how it should behave in that state.

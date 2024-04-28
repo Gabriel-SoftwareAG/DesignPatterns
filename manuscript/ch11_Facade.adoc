@@ -8,12 +8,12 @@ endif::[]
 :imagesdir: ../images/ch11_Facade
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 | Let's say you have a high-tech car with lots of advanced features like automatic parking, adaptive cruise control, and collision avoidance systems. Now, instead of having to understand how each of these systems works under the hood, you have a simplified control panel with buttons labeled "Park Assist," "Cruise Control," and "Collision Avoidance."
 
 This control panel acts as a facade, providing you with a straightforward interface to interact with these complex systems without needing to understand all the intricate details of how they function.  
-|image:facade_car.jpg[width=300, scale=50%]
+|image:facade_car.jpg[width=280, height=280]
 |===
 
 So, just like the facade of a building hides its inner complexities, the control panel facade hides the complexities of the car's advanced features, making them more accessible and easier to use for the driver.

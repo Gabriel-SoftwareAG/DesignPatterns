@@ -9,7 +9,7 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Imagine you're part of an agile software development team working on a project. The team consists of developers, testers, and designers, each responsible for different aspects of the project. To ensure effective collaboration and communication among team members, you appoint a scrum master as a mediator.
 

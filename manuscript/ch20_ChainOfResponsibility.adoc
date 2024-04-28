@@ -10,7 +10,7 @@ endif::[]
 
 [discrete%breakable]
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Let's imagine you're working at a customer service center where customers call in with various requests or issues. There are different departments in the center, such as billing, technical support, and customer complaints. When a customer calls in, their request or issue is passed through these departments until it's resolved.
 

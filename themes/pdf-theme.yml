@@ -31,17 +31,17 @@ code:
   line_height: 1.4
   margin_bottom: 15
 table:
-  border_style: solid
-  border_width: 1
-  border_color: EEEEEE
-  font_size: 9
+  border_style: dashed
+  border_width: 0
+  border_color: FFFFFF
+  font_size: 10
   heading:
     font_style: bold
     background_color: F9F9F9
   cell:
-    padding: [5, 10, 5, 10]
-    border_width: 0.5
-    border_color: EEEEEE
+    padding: [0, 0, 0, 0]
+  frame: none
+  grid: none
 admonition:
   label:
     font_style: bold

@@ -8,7 +8,7 @@ endif::[]
 :imagesdir: ../images/ch10_Bridge
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Imagine you have a universal remote control that can operate different types of electronic devices in your home, like TVs, DVD players, and sound systems. Now, think about how this remote control works.
 

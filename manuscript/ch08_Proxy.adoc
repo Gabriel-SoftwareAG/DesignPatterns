@@ -9,7 +9,7 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Imagine you have a legal question or need to handle a legal matter, but you're not familiar with the laws or how to proceed. Instead of trying to figure it out yourself, you hire a lawyer. This lawyer acts as your representative, using their knowledge and expertise to advise you, speak on your behalf, and navigate the legal system for you. Essentially, the lawyer is a go-between for you and the legal world, making sure your needs are met without you having to dive into the 
 complexities of law yourself. 

@@ -9,7 +9,7 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 | Let's imagine you're visiting different rooms in a museum, and each room has different exhibits on display. As you move from room to room, you want to learn more about each exhibit and maybe even interact with some of them.
 

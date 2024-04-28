@@ -9,7 +9,7 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Imagine you're planning a road trip, and you have different options for getting to your destination. You could take the highway, which is the fastest but may have tolls. Alternatively, you could take scenic routes, which are slower but offer beautiful views. Depending on factors like time, budget, and personal preferences, you might choose different strategies for your journey.
 

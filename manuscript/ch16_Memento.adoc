@@ -9,7 +9,7 @@ endif::[]
 
 
 == Introduction
-[cols="2", frame="none", grid="none"]
+[cols="<1,>m"]
 |===
 |Let's imagine you're playing a video game where you can save your progress at certain points. When you save your game, it creates a snapshot of your current state, including things like your character's health, inventory, and progress through the game. Later on, if you encounter a tough enemy and lose some progress, you can load your saved game to return to a previous state and try again.
 
