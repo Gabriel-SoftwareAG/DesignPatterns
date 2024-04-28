@@ -51,7 +51,7 @@ include::{java_path}/command/Command.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/command/Command.py[lines=3..]
+include::{python_path}/command/Command.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -75,7 +75,7 @@ include::{java_path}/command/PreparePizzaCommand.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/command/PreparePizzaCommand.py[lines=3..]
+include::{python_path}/command/PreparePizzaCommand.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -94,7 +94,7 @@ include::{java_path}/command/ServePastaCommand.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/command/ServePastaCommand.py[lines=3..]
+include::{python_path}/command/ServePastaCommand.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -118,7 +118,7 @@ include::{java_path}/command/Receiver.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/command/Receiver.py[lines=3..]
+include::{python_path}/command/Receiver.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -142,7 +142,7 @@ include::{java_path}/command/Waiter.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/command/Waiter.py[lines=3..]
+include::{python_path}/command/Waiter.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -164,7 +164,7 @@ include::{java_path}/command/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/command/Client.py[lines=3..]
+include::{python_path}/command/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

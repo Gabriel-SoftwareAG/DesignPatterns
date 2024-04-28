@@ -59,7 +59,7 @@ include::{java_path}/decorator/Pizza.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/decorator/Pizza.py[lines=3..]
+include::{python_path}/decorator/Pizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -83,7 +83,7 @@ include::{java_path}/decorator/PlainCheesePizza.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/decorator/PlainCheesePizza.py[lines=3..]
+include::{python_path}/decorator/PlainCheesePizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -107,7 +107,7 @@ include::{java_path}/decorator/PizzaDecorator.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/decorator/PizzaDecorator.py[lines=3..]
+include::{python_path}/decorator/PizzaDecorator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -131,7 +131,7 @@ include::{java_path}/decorator/TomatoDecorator.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/decorator/TomatoDecorator.py[lines=3..]
+include::{python_path}/decorator/TomatoDecorator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -151,7 +151,7 @@ include::{java_path}/decorator/MushroomDecorator.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/decorator/MushroomDecorator.py[lines=3..]
+include::{python_path}/decorator/MushroomDecorator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -177,7 +177,7 @@ include::{java_path}/decorator/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/decorator/Client.py[lines=3..]
+include::{python_path}/decorator/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -60,7 +60,7 @@ include::{java_path}/strategy/RouteStrategy.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/strategy/RouteStrategy.py[lines=3..]
+include::{python_path}/strategy/RouteStrategy.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -84,7 +84,7 @@ include::{java_path}/strategy/RoutePlanner.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/strategy/RoutePlanner.py[lines=3..]
+include::{python_path}/strategy/RoutePlanner.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -108,7 +108,7 @@ include::{java_path}/strategy/FastestRouteStrategy.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/strategy/FastestRouteStrategy.py[lines=3..]
+include::{python_path}/strategy/FastestRouteStrategy.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -127,7 +127,7 @@ include::{java_path}/strategy/ShortestRouteStrategy.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/strategy/ShortestRouteStrategy.py[lines=3..]
+include::{python_path}/strategy/ShortestRouteStrategy.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -153,7 +153,7 @@ include::{java_path}/strategy/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/strategy/Client.py[lines=3..]
+include::{python_path}/strategy/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -62,7 +62,7 @@ include::{java_path}/composite/PlaylistComponent.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/PlaylistComponent.py[lines=3..]
+include::{python_path}/composite/PlaylistComponent.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -86,7 +86,7 @@ include::{java_path}/composite/Song.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/Song.py[lines=3..]
+include::{python_path}/composite/Song.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -110,7 +110,7 @@ include::{java_path}/composite/Playlist.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/Playlist.py[lines=3..]
+include::{python_path}/composite/Playlist.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -134,7 +134,7 @@ include::{java_path}/composite/MusicPlayer.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/composite/MusicPlayer.py[lines=3..]
+include::{python_path}/composite/MusicPlayer.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

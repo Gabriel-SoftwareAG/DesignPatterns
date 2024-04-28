@@ -68,7 +68,7 @@ include::{java_path}/bridge/Device.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/bridge/Device.py[lines=3..]
+include::{python_path}/bridge/Device.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -92,7 +92,7 @@ include::{java_path}/bridge/Television.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/bridge/Television.py[lines=3..]
+include::{python_path}/bridge/Television.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -116,7 +116,7 @@ include::{java_path}/bridge/SoundSystem.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/bridge/SoundSystem.py[lines=3..]
+include::{python_path}/bridge/SoundSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -140,7 +140,7 @@ include::{java_path}/bridge/RemoteControl.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/bridge/RemoteControl.py[lines=3..]
+include::{python_path}/bridge/RemoteControl.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -164,7 +164,7 @@ include::{java_path}/bridge/AdvancedRemoteControl.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/bridge/AdvancedRemoteControl.py[lines=3..]
+include::{python_path}/bridge/AdvancedRemoteControl.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -188,7 +188,7 @@ include::{java_path}/bridge/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/bridge/Client.py[lines=3..]
+include::{python_path}/bridge/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

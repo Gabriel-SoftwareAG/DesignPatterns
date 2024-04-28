@@ -52,7 +52,7 @@ include::{java_path}/singleton/Library.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/singleton/Library.py[lines=3..]
+include::{python_path}/singleton/Library.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -79,7 +79,7 @@ include::{java_path}/singleton/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/singleton/Client.py[lines=3..]
+include::{python_path}/singleton/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -63,7 +63,7 @@ include::{java_path}/flyweight/Book.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/flyweight/Book.py[lines=3..]
+include::{python_path}/flyweight/Book.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -88,7 +88,7 @@ include::{java_path}/flyweight/ConcreteBook.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/flyweight/ConcreteBook.py[lines=3..]
+include::{python_path}/flyweight/ConcreteBook.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -112,7 +112,7 @@ include::{java_path}/flyweight/Library.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/flyweight/Library.py[lines=3..]
+include::{python_path}/flyweight/Library.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -136,7 +136,7 @@ include::{java_path}/flyweight/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/flyweight/Client.py[lines=3..]
+include::{python_path}/flyweight/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -60,7 +60,7 @@ include::{java_path}/adapter/ElectricalOutlet.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/ElectricalOutlet.py[lines=3..]
+include::{python_path}/adapter/ElectricalOutlet.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -84,7 +84,7 @@ include::{java_path}/adapter/MobilePhone.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/MobilePhone.py[lines=3..]
+include::{python_path}/adapter/MobilePhone.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -108,7 +108,7 @@ include::{java_path}/adapter/UniversalAdapter.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/UniversalAdapter.py[lines=3..]
+include::{python_path}/adapter/UniversalAdapter.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -132,7 +132,7 @@ include::{java_path}/adapter/Traveler.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/adapter/Traveler.py[lines=3..]
+include::{python_path}/adapter/Traveler.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -56,7 +56,7 @@ include::{java_path}/abstractfactory/AbstractFoodStallFactory.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/AbstractFoodStallFactory.py[lines=3..]
+include::{python_path}/abstractfactory/AbstractFoodStallFactory.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -80,7 +80,7 @@ include::{java_path}/abstractfactory/AdventureLandFactory.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/AdventureLandFactory.py[lines=3..]
+include::{python_path}/abstractfactory/AdventureLandFactory.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -99,7 +99,7 @@ include::{java_path}/abstractfactory/FantasyLandFactory.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/FantasyLandFactory.py[lines=3..]
+include::{python_path}/abstractfactory/FantasyLandFactory.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -123,7 +123,7 @@ include::{java_path}/abstractfactory/IceCream.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/IceCream.py[lines=3..]
+include::{python_path}/abstractfactory/IceCream.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -142,7 +142,7 @@ include::{java_path}/abstractfactory/Pizza.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/Pizza.py[lines=3..]
+include::{python_path}/abstractfactory/Pizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -166,7 +166,7 @@ include::{java_path}/abstractfactory/TropicalIceCream.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/TropicalIceCream.py[lines=3..]
+include::{python_path}/abstractfactory/TropicalIceCream.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -185,7 +185,7 @@ include::{java_path}/abstractfactory/ExoticPizza.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/ExoticPizza.py[lines=3..]
+include::{python_path}/abstractfactory/ExoticPizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -204,7 +204,7 @@ include::{java_path}/abstractfactory/MagicalIceCream.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/MagicalIceCream.py[lines=3..]
+include::{python_path}/abstractfactory/MagicalIceCream.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -223,7 +223,7 @@ include::{java_path}/abstractfactory/EnchantedPizza.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/EnchantedPizza.py[lines=3..]
+include::{python_path}/abstractfactory/EnchantedPizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -247,7 +247,7 @@ include::{java_path}/abstractfactory/ParkVisitor.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/abstractfactory/ParkVisitor.py[lines=3..]
+include::{python_path}/abstractfactory/ParkVisitor.py[]
 endif::[]
 ----
 

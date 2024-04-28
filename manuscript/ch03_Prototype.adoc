@@ -55,7 +55,7 @@ include::{java_path}/prototype/Prototype.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/Prototype.py[lines=3..]
+include::{python_path}/prototype/Prototype.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -79,7 +79,7 @@ include::{java_path}/prototype/WhiteTeddyBearPrototype.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/WhiteTeddyBearPrototype.py[lines=3..]
+include::{python_path}/prototype/WhiteTeddyBearPrototype.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -98,7 +98,7 @@ include::{java_path}/prototype/BlackTeddyBearPrototype.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/BlackTeddyBearPrototype.py[lines=3..]
+include::{python_path}/prototype/BlackTeddyBearPrototype.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -122,7 +122,7 @@ include::{java_path}/prototype/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/prototype/Client.py[lines=3..]
+include::{python_path}/prototype/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

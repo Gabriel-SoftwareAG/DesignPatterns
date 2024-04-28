@@ -56,7 +56,7 @@ include::{java_path}/facade/ControlPanel.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/facade/ControlPanel.py[lines=3..]
+include::{python_path}/facade/ControlPanel.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -80,7 +80,7 @@ include::{java_path}/facade/AutomaticParkingSystem.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/facade/AutomaticParkingSystem.py[lines=3..]
+include::{python_path}/facade/AutomaticParkingSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -104,7 +104,7 @@ include::{java_path}/facade/AdaptiveCruiseControlSystem.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/facade/AdaptiveCruiseControlSystem.py[lines=3..]
+include::{python_path}/facade/AdaptiveCruiseControlSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -128,7 +128,7 @@ include::{java_path}/facade/CollisionAvoidanceSystem.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/facade/CollisionAvoidanceSystem.py[lines=3..]
+include::{python_path}/facade/CollisionAvoidanceSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -154,7 +154,7 @@ include::{java_path}/facade/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/facade/Client.py[lines=3..]
+include::{python_path}/facade/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

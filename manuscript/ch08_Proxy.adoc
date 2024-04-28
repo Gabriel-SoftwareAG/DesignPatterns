@@ -60,7 +60,7 @@ include::{java_path}/proxy/LegalService.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/LegalService.py[lines=3..]
+include::{python_path}/proxy/LegalService.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -82,7 +82,7 @@ include::{java_path}/proxy/ProxyLegalService.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/ProxyLegalService.py[lines=3..]
+include::{python_path}/proxy/ProxyLegalService.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -106,7 +106,7 @@ include::{java_path}/proxy/RealLegalService.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/RealLegalService.py[lines=3..]
+include::{python_path}/proxy/RealLegalService.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -132,7 +132,7 @@ include::{java_path}/proxy/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/proxy/Client.py[lines=3..]
+include::{python_path}/proxy/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -70,7 +70,7 @@ include::{java_path}/state/State.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/state/State.py[lines=3..]
+include::{python_path}/state/State.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -94,7 +94,7 @@ include::{java_path}/state/GreenState.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/state/GreenState.py[lines=3..]
+include::{python_path}/state/GreenState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -118,7 +118,7 @@ include::{java_path}/state/YellowState.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/state/YellowState.py[lines=3..]
+include::{python_path}/state/YellowState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -142,7 +142,7 @@ include::{java_path}/state/RedState.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/state/RedState.py[lines=3..]
+include::{python_path}/state/RedState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -168,7 +168,7 @@ include::{java_path}/state/TrafficLight.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/state/TrafficLight.py[lines=3..]
+include::{python_path}/state/TrafficLight.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -192,7 +192,7 @@ include::{java_path}/state/TrafficSystem.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/state/TrafficSystem.py[lines=3..]
+include::{python_path}/state/TrafficSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

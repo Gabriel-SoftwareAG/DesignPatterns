@@ -57,7 +57,7 @@ include::{java_path}/factorymethod/Product.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/Product.py[lines=3..]
+include::{python_path}/factorymethod/Product.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -81,7 +81,7 @@ include::{java_path}/factorymethod/IceCream.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/IceCream.py[lines=3..]
+include::{python_path}/factorymethod/IceCream.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -100,7 +100,7 @@ include::{java_path}/factorymethod/Pizza.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/Pizza.py[lines=3..]
+include::{python_path}/factorymethod/Pizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -124,7 +124,7 @@ include::{java_path}/factorymethod/FoodStall.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/FoodStall.py[lines=3..]
+include::{python_path}/factorymethod/FoodStall.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -148,7 +148,7 @@ include::{java_path}/factorymethod/PizzaStall.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/PizzaStall.py[lines=3..]
+include::{python_path}/factorymethod/PizzaStall.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -167,7 +167,7 @@ include::{java_path}/factorymethod/IceCreamStall.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/IceCreamStall.py[lines=3..]
+include::{python_path}/factorymethod/IceCreamStall.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -191,7 +191,7 @@ include::{java_path}/factorymethod/ParkVisitor.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/factorymethod/ParkVisitor.py[lines=3..]
+include::{python_path}/factorymethod/ParkVisitor.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

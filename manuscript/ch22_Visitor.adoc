@@ -70,7 +70,7 @@ include::{java_path}/visitor/Exhibit.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/visitor/Exhibit.py[lines=3..]
+include::{python_path}/visitor/Exhibit.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -94,7 +94,7 @@ include::{java_path}/visitor/Painting.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/visitor/Painting.py[lines=3..]
+include::{python_path}/visitor/Painting.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -113,7 +113,7 @@ include::{java_path}/visitor/Sculpture.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/visitor/Sculpture.py[lines=3..]
+include::{python_path}/visitor/Sculpture.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -137,7 +137,7 @@ include::{java_path}/visitor/Visitor.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/visitor/Visitor.py[lines=3..]
+include::{python_path}/visitor/Visitor.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -161,7 +161,7 @@ include::{java_path}/visitor/Patron.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/visitor/Patron.py[lines=3..]
+include::{python_path}/visitor/Patron.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -185,7 +185,7 @@ include::{java_path}/visitor/Museum.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/visitor/Museum.py[lines=3..]
+include::{python_path}/visitor/Museum.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

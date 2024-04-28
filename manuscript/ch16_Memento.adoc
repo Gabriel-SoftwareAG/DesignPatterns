@@ -61,7 +61,7 @@ include::{java_path}/memento/GameState.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/memento/GameState.py[lines=3..]
+include::{python_path}/memento/GameState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -85,7 +85,7 @@ include::{java_path}/memento/Player.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/memento/Player.py[lines=3..]
+include::{python_path}/memento/Player.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -109,7 +109,7 @@ include::{java_path}/memento/SaveManager.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/memento/SaveManager.py[lines=3..]
+include::{python_path}/memento/SaveManager.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -133,7 +133,7 @@ include::{java_path}/memento/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/memento/Client.py[lines=3..]
+include::{python_path}/memento/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

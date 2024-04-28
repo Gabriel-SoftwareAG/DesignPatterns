@@ -57,7 +57,7 @@ include::{java_path}/observer/Student.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/observer/Student.py[lines=3..]
+include::{python_path}/observer/Student.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -81,7 +81,7 @@ include::{java_path}/observer/MathStudent.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/observer/MathStudent.py[lines=3..]
+include::{python_path}/observer/MathStudent.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -100,7 +100,7 @@ include::{java_path}/observer/ScienceStudent.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/observer/ScienceStudent.py[lines=3..]
+include::{python_path}/observer/ScienceStudent.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -124,7 +124,7 @@ include::{java_path}/observer/Teacher.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/observer/Teacher.py[lines=3..]
+include::{python_path}/observer/Teacher.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -148,7 +148,7 @@ include::{java_path}/observer/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/observer/Client.py[lines=3..]
+include::{python_path}/observer/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

@@ -73,7 +73,7 @@ include::{java_path}/interpreter/Context.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/interpreter/Context.py[lines=3..]
+include::{python_path}/interpreter/Context.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -99,7 +99,7 @@ include::{java_path}/interpreter/Expression.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/interpreter/Expression.py[lines=3..]
+include::{python_path}/interpreter/Expression.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -123,7 +123,7 @@ include::{java_path}/interpreter/Interpreter.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/interpreter/Interpreter.py[lines=3..]
+include::{python_path}/interpreter/Interpreter.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -147,7 +147,7 @@ include::{java_path}/interpreter/TerminalExpression.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/interpreter/TerminalExpression.py[lines=3..]
+include::{python_path}/interpreter/TerminalExpression.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -171,7 +171,7 @@ include::{java_path}/interpreter/NonterminalExpression.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/interpreter/NonterminalExpression.py[lines=3..]
+include::{python_path}/interpreter/NonterminalExpression.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -195,7 +195,7 @@ include::{java_path}/interpreter/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/interpreter/Client.py[lines=3..]
+include::{python_path}/interpreter/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

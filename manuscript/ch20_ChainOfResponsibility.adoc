@@ -82,7 +82,7 @@ include::{java_path}/chainofresponsibility/SupportLevel.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/chainofresponsibility/SupportLevel.py[lines=3..]
+include::{python_path}/chainofresponsibility/SupportLevel.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -106,7 +106,7 @@ include::{java_path}/chainofresponsibility/LevelOneSupport.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/chainofresponsibility/LevelOneSupport.py[lines=3..]
+include::{python_path}/chainofresponsibility/LevelOneSupport.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -125,7 +125,7 @@ include::{java_path}/chainofresponsibility/LevelTwoSupport.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/chainofresponsibility/LevelTwoSupport.py[lines=3..]
+include::{python_path}/chainofresponsibility/LevelTwoSupport.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -149,7 +149,7 @@ include::{java_path}/chainofresponsibility/SupportTicket.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/chainofresponsibility/SupportTicket.py[lines=3..]
+include::{python_path}/chainofresponsibility/SupportTicket.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -173,7 +173,7 @@ include::{java_path}/chainofresponsibility/HelpDesk.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/chainofresponsibility/HelpDesk.py[lines=3..]
+include::{python_path}/chainofresponsibility/HelpDesk.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

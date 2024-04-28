@@ -72,7 +72,7 @@ include::{java_path}/templatemethod/HouseBuilder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/templatemethod/HouseBuilder.py[lines=3..]
+include::{python_path}/templatemethod/HouseBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -96,7 +96,7 @@ include::{java_path}/templatemethod/ModernHouseBuilder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/templatemethod/ModernHouseBuilder.py[lines=3..]
+include::{python_path}/templatemethod/ModernHouseBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -120,7 +120,7 @@ include::{java_path}/templatemethod/TraditionalHouseBuilder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/templatemethod/TraditionalHouseBuilder.py[lines=3..]
+include::{python_path}/templatemethod/TraditionalHouseBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -146,7 +146,7 @@ include::{java_path}/templatemethod/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/templatemethod/Client.py[lines=3..]
+include::{python_path}/templatemethod/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

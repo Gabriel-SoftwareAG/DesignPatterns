@@ -72,7 +72,7 @@ include::{java_path}/mediator/Mediator.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/mediator/Mediator.py[lines=3..]
+include::{python_path}/mediator/Mediator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -96,7 +96,7 @@ include::{java_path}/mediator/ScrumMaster.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/mediator/ScrumMaster.py[lines=3..]
+include::{python_path}/mediator/ScrumMaster.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -120,7 +120,7 @@ include::{java_path}/mediator/Colleague.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/mediator/Colleague.py[lines=3..]
+include::{python_path}/mediator/Colleague.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -144,7 +144,7 @@ include::{java_path}/mediator/Developer.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/mediator/Developer.py[lines=3..]
+include::{python_path}/mediator/Developer.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -163,7 +163,7 @@ include::{java_path}/mediator/Tester.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/mediator/Tester.py[lines=3..]
+include::{python_path}/mediator/Tester.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -187,7 +187,7 @@ include::{java_path}/mediator/AgileTeam.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/mediator/AgileTeam.py[lines=3..]
+include::{python_path}/mediator/AgileTeam.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]

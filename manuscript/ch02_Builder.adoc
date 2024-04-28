@@ -62,7 +62,7 @@ include::{java_path}/builder/Builder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Builder.py[lines=3..]
+include::{python_path}/builder/Builder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -86,7 +86,7 @@ include::{java_path}/builder/ConcreteBuilder.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/ConcreteBuilder.py[lines=3..]
+include::{python_path}/builder/ConcreteBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -110,7 +110,7 @@ include::{java_path}/builder/Product.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Product.py[lines=3..]
+include::{python_path}/builder/Product.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -134,7 +134,7 @@ include::{java_path}/builder/Director.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Director.py[lines=3..]
+include::{python_path}/builder/Director.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
@@ -157,7 +157,7 @@ include::{java_path}/builder/Client.java[lines=3..]
 endif::[]
 
 ifeval::["{lang}" == "python"]
-include::{python_path}/builder/Client.py[lines=3..]
+include::{python_path}/builder/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
