@@ -1,43 +1,38 @@
 
-=  Assignment: Implementing the Interpreter Design Pattern in Java
+==  Interpreter Design Pattern Exercise
 
-== Objective
+=== Objectives
 
-* To understand and implement the Interpreter design pattern in Java.
+* To understand and implement the Interpreter design pattern.
 * To enhance skills in object-oriented programming and design patterns.
 * To develop a clear understanding of how to define a grammatical representation for a language and an interpreter that uses this representation to interpret sentences in the language.
 
-== Instructions
+=== Instructions
 
-. Create a Java project named "InterpreterPatternExample" using your preferred IDE or command-line tools.
-. Implement the Interpreter design pattern with the following components:
+- Create a project named "InterpreterPatternExample" using your preferred IDE or command-line tools.
+- Implement the Interpreter design pattern with the following components:
 
-=== Abstract Expression
+==== Abstract Expression
 An interface or abstract class defining the method `interpret(context)` that all specific expressions will implement.
 
-=== Terminal Expression
+==== Terminal Expression
 A class that implements the Abstract Expression and interprets the terminal symbols of the grammar.
 
-=== Nonterminal Expression
+==== Nonterminal Expression
 Classes that implement the Abstract Expression to interpret non-terminal symbols. They typically store instances of the Expression class.
 
-=== Context
+===== Context
 A class containing information that's global to the interpreter.
 
-=== Client
+==== Client
 The class that builds or is given a parse tree of Abstract Expression instances configured to interpret a particular context.
 
-. Write clean, modular, and well-documented code following Java coding conventions.
-. Implement unit tests to ensure the correctness of your implementation.
-. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-. Create a Git repository for your project and initialize it with a README.md file.
-. Commit your initial project setup to Git.
-. Implement the Interpreter pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Implement unit tests to ensure the correctness of your implementation.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Interpreter pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 Implement a `RomanNumeralsInterpreter` to convert Roman numeral strings into their decimal representations. The interpreter should handle basic Roman numerals (I, V, X, L, C, D, M) and combinations thereof.
 
-. Test your implementation by using the `RomanNumeralsInterpreter` in a simple application to convert Roman numerals to numbers.
-. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+- Test your implementation by using the `RomanNumeralsInterpreter` in a simple application to convert Roman numerals to numbers.

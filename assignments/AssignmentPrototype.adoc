@@ -1,47 +1,31 @@
-= Home Assignment: Implementing the Prototype Pattern in Java with Real-life Example
 
-== Objective
+== Prototype Design Pattern Exercise
 
-- To understand and implement the Prototype design pattern in Java.
+=== Objectives
+
+- To understand and implement the Prototype design pattern.
 - To practice object-oriented design principles and design patterns.
 - To develop a clear understanding of creating new objects by copying an existing object.
 
-== Instructions
+=== Instructions
 
-1. Imagine you are a toy manufacturer specializing in custom plush toys.
-2. Create a Java project named "PlushToyFactory" using your preferred IDE or command-line tools.
-3. Implement the Prototype design pattern with the following components:
+- Imagine you are a toy manufacturer specializing in custom plush toys.
+- Create a project named "PlushToyFactory" using your preferred IDE or command-line tools.
+- Implement the Prototype design pattern with the following components:
 
-=== Toy
+==== Toy
 An abstract class or interface representing a plush toy, with methods for cloning itself.
 
-=== PlushToy
+==== PlushToy
 A concrete class representing a specific type of plush toy, such as a teddy bear or a bunny, that implements the Toy interface and provides its own clone method to create copies of itself.
 
-4. Write clean, modular, and well-documented code following Java coding conventions.
-5. Implement unit tests to ensure the correctness of your implementation.
-6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-7. Create a Git repository for your project and initialize it with a README.md file.
-8. Commit your initial project setup to Git.
-9. Implement the Prototype pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Prototype pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 - As a plush toy manufacturer, you have various designs for plush toys, including teddy bears, bunnies, and kittens.
 - Create concrete classes such as TeddyBear, Bunny, and Kitten that implement the Toy interface and provide their own clone method to create copies of themselves.
 - Use the Prototype pattern to clone instances of these plush toys and create new instances with different variations (e.g., different colors, sizes).
 
-10. Test your implementation by creating instances of different plush toys and cloning them to create new instances with different variations.
-11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
-
-== Submission
-
-- Share the link to your Git repository with your instructor for evaluation.
-- Ensure that your repository is publicly accessible and well-documented to facilitate review.
-
-== Note
-
-- Feel free to consult online resources, textbooks, or other references while working on the assignment.
-- Remember to adhere to academic integrity guidelines and avoid plagiarism.
-- Enjoy the process of designing and implementing a PlushToyFactory using the Prototype pattern in Java with a real-life example!
+- Test your implementation by creating instances of different plush toys and cloning them to create new instances with different variations.

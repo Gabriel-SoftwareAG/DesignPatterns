@@ -9,5 +9,6 @@ class Museum {
 
         painting.accept(patron); // Patron interacts with a painting exhibit
         sculpture.accept(patron); // Patron interacts with a sculpture exhibit
+
     }
 }

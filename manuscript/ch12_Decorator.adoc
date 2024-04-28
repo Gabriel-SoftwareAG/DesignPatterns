@@ -47,7 +47,7 @@ In this sequence diagram, let's interpret the Decorator Pattern using the analog
 
 [discrete%breakable]
 == Implementation Walkthrough
-In this example, we'll implement the Decorator Pattern in Java using the analogy of customizing a pizza with various toppings. We'll have four main classes: `Pizza` (Component), `PlainCheesePizza` (ConcreteComponent), `PizzaDecorator` (Decorator), and concrete decorators such as `TomatoDecorator` and `MushroomDecorator`. The `Pizza` class represents the base pizza, while the decorators represent toppings that can be added to the pizza dynamically.
+In this example, we'll implement the Decorator pattern using the analogy of customizing a pizza with various toppings. We'll have four main classes: `Pizza` (Component), `PlainCheesePizza` (ConcreteComponent), `PizzaDecorator` (Decorator), and concrete decorators such as `TomatoDecorator` and `MushroomDecorator`. The `Pizza` class represents the base pizza, while the decorators represent toppings that can be added to the pizza dynamically.
 
 
 [discrete%breakable]

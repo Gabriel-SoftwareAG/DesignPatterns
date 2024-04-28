@@ -7,7 +7,7 @@ class TrafficLight {
         this.currentState = state;
     }
 
-    public void change() {
+    public void perform() {
         currentState.handleRequest();
         // Logic to change the current state
     }

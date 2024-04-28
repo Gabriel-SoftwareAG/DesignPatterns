@@ -1,31 +1,28 @@
 
-= Singleton Pattern Exercise
+== Singleton Design Pattern Exercise
 
-== Objective
+=== Objectives
 
-- To understand and implement the Singleton design pattern in Java.
+- To understand and implement the Singleton design pattern.
 - To practice object-oriented design principles and design patterns.
 - To develop a clear understanding of ensuring only one instance of a class is created.
 
-== Instructions
+=== Instructions
 
-- Create a Java project named "SingletonExample" using your preferred IDE or command-line tools.
+- Create a project named "SingletonExample" using your preferred IDE or command-line tools.
 - Implement the Singleton design pattern with the following components:
 
-== Singleton
+=== Singleton
 The class that ensures only one instance is created and provides a global point of access to it.
 
-- Write clean, modular, and well-documented code following Java coding conventions.
+- Write clean, modular, and well-documented code following best practices coding conventions.
 - Implement unit tests to ensure the correctness of your implementation.
-- Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
 - Create a Git repository for your project and initialize it with a README.md file.
 - Commit your initial project setup to Git.
-- Implement the Singleton pattern in Java according to the following scenario:
+- Implement the Singleton pattern according to the following scenario:
 
-== Scenario
+=== Scenario
 - Implement a Logger class as a Singleton to maintain a single log instance throughout the system.
 
 - Test your implementation by using the Logger class in a simple application to log messages.
-- Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-- Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-- Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.

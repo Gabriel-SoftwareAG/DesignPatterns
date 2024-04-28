@@ -3,7 +3,6 @@
 - Add to the appendix the singleton multithread issue, and the java prototype - 3
 - Need to support epub and html also - 3
 - Translate to python, TS, C# - 2
-- Finish assignments - 2
 
 Future options:
 - To make it in a book style: :media: prepress in book.adoc

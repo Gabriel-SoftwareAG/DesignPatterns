@@ -1,37 +1,31 @@
 
-=  Assignment: Implementing the Chain of Responsibility Design Pattern in Java
+==  Chain of Responsibility Design Pattern Exercise
 
-== Objective
+=== Objectives
 
-* To understand and implement the Chain of Responsibility design pattern in Java.
+* To understand and implement the Chain of Responsibility design pattern.
 * To enhance skills in object-oriented programming and design patterns.
 * To develop a clear understanding of how to pass a request along a chain of handlers without knowing which handler will process the request.
 
-== Instructions
+=== Instructions
 
-. Create a Java project named "ChainOfResponsibilityExample" using your preferred IDE or command-line tools.
-. Implement the Chain of Responsibility design pattern with the following components:
+- Create a project named "ChainOfResponsibilityExample" using your preferred IDE or command-line tools.
+- Implement the Chain of Responsibility design pattern with the following components:
 
-=== Handler Interface
+==== Handler Interface
 An interface with a method that defines how requests are handled and includes setting the next handler in the chain.
 
-=== Concrete Handlers
+==== Concrete Handlers
 Classes that implement the Handler interface. Each handler decides whether to process the request or to pass it to the next handler in the chain.
 
-=== Client
+==== Client
 The class that initiates the request to the chain of handlers.
 
-. Write clean, modular, and well-documented code following Java coding conventions.
-. Implement unit tests to ensure the correctness of your implementation.
-. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-. Create a Git repository for your project and initialize it with a README.md file.
-. Commit your initial project setup to Git.
-. Implement the Chain of Responsibility pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Chain of Responsibility pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 Implement a `DocumentHandler` chain where different handlers are responsible for opening different types of documents (e.g., `PDFHandler`, `DocHandler`, `TextHandler`). Each handler will attempt to open a document and pass it to the next handler in the chain if it is not the correct handler for the file type.
 
-. Test your implementation by using the `DocumentHandler` chain in a simple application to open various types of documents.
-. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+- Test your implementation by using the `DocumentHandler` chain in a simple application to open various types of documents.

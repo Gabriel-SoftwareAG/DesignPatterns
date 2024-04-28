@@ -1,34 +1,28 @@
 
-=  Assignment: Implementing the Template Method Design Pattern in Java
+==  Template Method Design Pattern Exercise
 
-== Objective
+=== Objectives
 
-* To understand and implement the Template Method design pattern in Java.
+* To understand and implement the Template Method design pattern.
 * To enhance skills in object-oriented programming and design patterns.
 * To develop a clear understanding of how to define the skeleton of an algorithm in a method, deferring some steps to subclasses.
 
-== Instructions
+=== Instructions
 
-. Create a Java project named "TemplateMethodExample" using your preferred IDE or command-line tools.
-. Implement the Template Method design pattern with the following components:
+- Create a project named "TemplateMethodExample" using your preferred IDE or command-line tools.
+- Implement the Template Method design pattern with the following components:
 
-=== Abstract Class
+==== Abstract Class
 An abstract class that defines the template method and the skeleton of an algorithm. This class should contain the template method which calls other methods, some of which may be abstract and implemented by subclasses.
 
-=== Concrete Classes
+==== Concrete Classes
 Subclasses that extend the abstract class and implement the abstract methods defined in the abstract class to complete the algorithm's steps.
 
-. Write clean, modular, and well-documented code following Java coding conventions.
-. Implement unit tests to ensure the correctness of your implementation.
-. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-. Create a Git repository for your project and initialize it with a README.md file.
-. Commit your initial project setup to Git.
-. Implement the Template Method pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Template Method pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 Implement a `Game` abstract class with a method `play()` that defines the steps to play a game. Create concrete classes like `Chess` and `Soccer` that implement these steps in different ways.
 
-. Test your implementation by using the `Game`, `Chess`, and `Soccer` classes in a simple application to demonstrate the flexibility of defining an algorithm structure while allowing subclasses to offer a different implementation for some steps.
-. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+- Test your implementation by using the `Game`, `Chess`, and `Soccer` classes in a simple application to demonstrate the flexibility of defining an algorithm structure while allowing subclasses to offer a different implementation for some steps.

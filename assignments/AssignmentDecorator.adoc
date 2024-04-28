@@ -1,37 +1,35 @@
-= Home Assignment: Implementing the Decorator Pattern in Java with Real-life Example
 
-== Objective
+== Decorator Design Pattern Exercise
 
-- To understand and implement the Decorator design pattern in Java.
+=== Objectives
+
+- To understand and implement the Decorator design pattern.
 - To practice object-oriented design principles and design patterns.
 - To develop a clear understanding of attaching additional responsibilities to an object dynamically.
 
-== Instructions
+=== Instructions
 
-1. Imagine you are a bakery owner who specializes in making custom cakes for special occasions.
-2. Create a Java project named "CustomCakes" using your preferred IDE or command-line tools.
-3. Implement the Decorator design pattern with the following components:
+- Imagine you are a bakery owner who specializes in making custom cakes for special occasions.
+- Create a project named "CustomCakes" using your preferred IDE or command-line tools.
+- Implement the Decorator design pattern with the following components:
 
-=== Cake
+==== Cake
 An interface representing a basic cake, with methods for describing and pricing the cake.
 
-=== BasicCake
+==== BasicCake
 A concrete class implementing the Cake interface, representing a simple, basic cake.
 
-=== CakeDecorator
+==== CakeDecorator
 An abstract decorator class that extends the Cake interface and acts as a base class for concrete decorators. It contains a reference to a Cake object.
 
-=== FlavorDecorator, ToppingDecorator
+==== FlavorDecorator, ToppingDecorator
 Concrete decorator classes representing different cake decorations such as flavors and toppings. They extend the CakeDecorator class and add additional functionality to the cake.
 
-4. Write clean, modular, and well-documented code following Java coding conventions.
-5. Implement unit tests to ensure the correctness of your implementation.
-6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-7. Create a Git repository for your project and initialize it with a README.md file.
-8. Commit your initial project setup to Git.
-9. Implement the Decorator pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Decorator pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 - As a bakery owner, you want to offer custom cakes with various flavors and toppings to your customers.
 - Implement a Cake interface with methods for describing and pricing the cake.
 - Create a BasicCake class representing a simple, basic cake.
@@ -39,18 +37,4 @@ Concrete decorator classes representing different cake decorations such as flavo
 - Create FlavorDecorator and ToppingDecorator classes representing different cake decorations such as flavors and toppings. They extend the CakeDecorator class and add additional functionality to the cake.
 - Use the Decorator pattern to dynamically add flavors and toppings to custom cakes while preserving the ability to mix and match decorations.
 
-10. Test your implementation by creating instances of BasicCake and decorating them with different flavors and toppings using decorator objects.
-11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
-
-== Submission
-
-- Share the link to your Git repository with your instructor for evaluation.
-- Ensure that your repository is publicly accessible and well-documented to facilitate review.
-
-== Note
-
-- Feel free to consult online resources, textbooks, or other references while working on the assignment.
-- Remember to adhere to academic integrity guidelines and avoid plagiarism.
-- Enjoy the process of designing and implementing CustomCakes using the Decorator pattern in Java with a real-life example!
+- Test your implementation by creating instances of BasicCake and decorating them with different flavors and toppings using decorator objects.

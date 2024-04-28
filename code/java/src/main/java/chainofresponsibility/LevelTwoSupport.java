@@ -13,5 +13,6 @@ class LevelTwoSupport implements SupportLevel {
     @Override
     public void handleRequest(SupportTicket ticket) {
         System.out.println("Level Two Support handling ticket: " + ticket.getDescription());
+        System.out.println("Ticket resolved.");
     }
 }

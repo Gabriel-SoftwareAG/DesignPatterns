@@ -1,48 +1,32 @@
-= Home Assignment: Implementing the Facade Pattern in Java with Real-life Example
 
-== Objective
+== Facade Design Pattern Exercise
 
-- To understand and implement the Facade design pattern in Java.
+=== Objectives
+
+- To understand and implement the Facade design pattern.
 - To practice object-oriented design principles and design patterns.
 - To develop a clear understanding of providing a simplified interface to a larger body of code.
 
-== Instructions
+=== Instructions
 
-1. Imagine you are a travel booking platform that provides various services for travelers.
-2. Create a Java project named "TravelBooking" using your preferred IDE or command-line tools.
-3. Implement the Facade design pattern with the following components:
+- Imagine you are a travel booking platform that provides various services for travelers.
+- Create a project named "TravelBooking" using your preferred IDE or command-line tools.
+- Implement the Facade design pattern with the following components:
 
-=== TravelBookingFacade
+==== TravelBookingFacade
 A facade class that provides a simplified interface for booking travel services, such as flights, hotels, and rental cars.
 
-=== FlightBookingSystem, HotelBookingSystem, RentalCarBookingSystem
+==== FlightBookingSystem, HotelBookingSystem, RentalCarBookingSystem
 Subsystem classes that handle specific aspects of booking travel services, such as flights, hotels, and rental cars.
 
-4. Write clean, modular, and well-documented code following Java coding conventions.
-5. Implement unit tests to ensure the correctness of your implementation.
-6. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-7. Create a Git repository for your project and initialize it with a README.md file.
-8. Commit your initial project setup to Git.
-9. Implement the Facade pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Facade pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 - As a travel booking platform, you want to provide travelers with a simple interface for booking flights, hotels, and rental cars.
 - Implement a TravelBookingFacade class that acts as a facade for the travel booking system, providing methods for booking flights, hotels, and rental cars.
 - Create FlightBookingSystem, HotelBookingSystem, and RentalCarBookingSystem classes representing subsystems that handle specific aspects of booking travel services.
 - Use the Facade pattern to hide the complexities of interacting with the subsystems and provide a simplified interface for travelers to book their travel services.
 
-10. Test your implementation by creating instances of TravelBookingFacade and booking flights, hotels, and rental cars using the facade methods.
-11. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-12. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-13. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
-
-== Submission
-
-- Share the link to your Git repository with your instructor for evaluation.
-- Ensure that your repository is publicly accessible and well-documented to facilitate review.
-
-== Note
-
-- Feel free to consult online resources, textbooks, or other references while working on the assignment.
-- Remember to adhere to academic integrity guidelines and avoid plagiarism.
-- Enjoy the process of designing and implementing TravelBooking using the Facade pattern in Java with a real-life example!
+- Test your implementation by creating instances of TravelBookingFacade and booking flights, hotels, and rental cars using the facade methods.

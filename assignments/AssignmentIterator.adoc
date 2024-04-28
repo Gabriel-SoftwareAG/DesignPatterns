@@ -1,40 +1,34 @@
 
-=  Assignment: Implementing the Iterator Design Pattern in Java
+==  Iterator Design Pattern Exercise
 
-== Objective
+=== Objectives
 
-* To understand and implement the Iterator design pattern in Java.
+* To understand and implement the Iterator design pattern.
 * To enhance skills in object-oriented programming and design patterns.
 * To develop a clear understanding of how to provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
-== Instructions
+=== Instructions
 
-. Create a Java project named "IteratorPatternExample" using your preferred IDE or command-line tools.
-. Implement the Iterator design pattern with the following components:
+- Create a project named "IteratorPatternExample" using your preferred IDE or command-line tools.
+- Implement the Iterator design pattern with the following components:
 
-=== Aggregate Interface
+==== Aggregate Interface
 An interface that creates an Iterator object.
 
-=== Concrete Aggregate
+==== Concrete Aggregate
 A class that implements the Aggregate interface and contains a collection or list of items over which to iterate.
 
-=== Iterator Interface
+==== Iterator Interface
 An interface that defines the methods necessary for iteration, such as `hasNext()`, `next()`, and possibly `remove()`.
 
-=== Concrete Iterator
+==== Concrete Iterator
 A class that implements the Iterator interface and is responsible for managing the current position of the iterator and the iteration logic over the collection.
 
-. Write clean, modular, and well-documented code following Java coding conventions.
-. Implement unit tests to ensure the correctness of your implementation.
-. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-. Create a Git repository for your project and initialize it with a README.md file.
-. Commit your initial project setup to Git.
-. Implement the Iterator pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Iterator pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 Implement a `BookCollection` class as the Concrete Aggregate that contains a collection of `Book` objects. Develop a `BookIterator` as the Concrete Iterator to allow traversal through the `BookCollection` without exposing the underlying structure (e.g., ArrayList, LinkedList).
 
-. Test your implementation by using the `BookCollection` and `BookIterator` in a simple application to iterate over a collection of books and print details of each book.
-. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+- Test your implementation by using the `BookCollection` and `BookIterator` in a simple application to iterate over a collection of books and print details of each book.

@@ -1,49 +1,33 @@
-= Home Assignment: Implementing the Observer Pattern in Java
 
-== Objective
+== Observer Pattern Exercise
 
-- To understand and implement the Observer design pattern in Java.
+=== Objectives
+
+- To understand and implement the Observer design pattern.
 - To practice object-oriented design principles and design patterns.
 - To develop a clear understanding of the relationship between subjects and observers.
 
-== Instructions
+=== Instructions
 
-1. Create a Java project named "WeatherStation" using your preferred IDE or command-line tools.
-2. Implement the Observer design pattern with the following components:
+- Create a project named "WeatherStation" using your preferred IDE or command-line tools.
+- Implement the Observer design pattern with the following components:
 
-=== WeatherStation
+==== WeatherStation
 The subject that provides temperature updates to various displays.
 
-=== WeatherDisplay
+==== WeatherDisplay
 The observer interface that defines the update method, which is called by the subject to notify displays of temperature changes.
 
-=== CurrentConditionsDisplay, StatisticsDisplay, and ForecastDisplay
+==== CurrentConditionsDisplay, StatisticsDisplay, and ForecastDisplay
 Concrete implementations of the WeatherDisplay interface that receive temperature updates from the WeatherStation and display them in different ways.
 
-3. Write clean, modular, and well-documented code following Java coding conventions.
-4. Implement unit tests to ensure the correctness of your implementation.
-5. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-6. Create a Git repository for your project and initialize it with a README.md file.
-7. Commit your initial project setup to Git.
-8. Implement the Observer pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following best practices coding conventions.
+- Add comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Implement the Observer pattern according to the following scenario:
 
-=== Scenario
+==== Scenario
 - Imagine a weather station that provides temperature updates to various displays.
 - The weather station is the subject, and the displays are observers.
 - Each display (observer) should receive temperature updates from the weather station (subject) and display them.
 
-9. Test your implementation by creating a simple application that simulates temperature updates and displays them on different types of displays.
-10. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-11. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-12. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
-
-== Submission
-
-- Share the link to your Git repository with your instructor for evaluation.
-- Ensure that your repository is publicly accessible and well-documented to facilitate review.
-
-== Note
-
-- Feel free to consult online resources, textbooks, or other references while working on the assignment.
-- Remember to adhere to academic integrity guidelines and avoid plagiarism.
-- Enjoy the process of designing and implementing a weather station using the Observer pattern in Java!
+- Test your implementation by creating a simple application that simulates temperature updates and displays them on different types of displays.
