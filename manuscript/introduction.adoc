@@ -18,12 +18,14 @@ Why should you care about design patterns? Well, think of them as shortcuts. The
 So, whether you're a coding newbie or a seasoned pro, this book is your new sidekick. We're here to make your coding journey smoother, one pattern at a time. Let's dive in and take our coding skills up a notch!
 
 == About me
-I am the founder and CEO of VeriSoft Testing Services, a boutique company specializing in AI-based software testing. With over 20 years of experience in test automation, I started my career in test automation in 2002 and have since led and participated in numerous testing projects across various industries including defense, telecommunications, and finance. Additionally, I spend my time sharing my knowledge as a lecturer in the field of software testing and test automation, helping others develop and implement reliable test automation strategies that not only minimize product risks but also reveal defects early in the development cycle.
+[cols="<1,>m"]
+|===
+|I am the founder and CEO of VeriSoft Testing Services, a boutique company specializing in AI-based software testing. With over 20 years of experience in test automation, I started my career in test automation in 2002 and have since led and participated in numerous testing projects across various industries including defense, telecommunications, and finance. Additionally, I spend my time sharing my knowledge as a lecturer in the field of software testing and test automation, helping others develop and implement reliable test automation strategies that not only minimize product risks but also reveal defects early in the development cycle.
+|image:nir.jpg[width=300, Height=300]
+|===
 
 I hope you find this book handy.
 
 If you have any questions or wish to discuss the topics covered in this book, please feel free to contact me at mailto:nir@verisoft.ai[]. I welcome your thoughts and feedback.
 
 Happy Coding!
-
-:image:nir.jpg[width=400, scale=35%]

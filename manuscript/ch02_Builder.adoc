@@ -149,7 +149,6 @@ endif::[]
 The `Director` class controls the construction process of the custom sandwich. It takes a `Builder` instance and orchestrates the sequence of steps required to construct the sandwich.
 
 
-[discrete%breakable]
 === Usage Example
 [source, {lang}]
 ----
