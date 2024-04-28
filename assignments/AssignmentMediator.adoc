@@ -1,0 +1,37 @@
+
+=  Assignment: Implementing the Mediator Design Pattern in Java
+
+== Objective
+
+* To understand and implement the Mediator design pattern in Java.
+* To enhance skills in object-oriented programming and design patterns.
+* To develop a clear understanding of how to centralize complex communications and control between related objects.
+
+== Instructions
+
+. Create a Java project named "MediatorPatternExample" using your preferred IDE or command-line tools.
+. Implement the Mediator design pattern with the following components:
+
+=== Mediator Interface
+An interface that defines the method for communicating with objects.
+
+=== Concrete Mediator
+A class that implements the Mediator interface and coordinates communication between Colleague objects. It knows and maintains its colleagues.
+
+=== Colleague Classes
+Classes that communicate with each other through the Mediator interface. These should not communicate directly with each other but instead through the mediator.
+
+. Write clean, modular, and well-documented code following Java coding conventions.
+. Implement unit tests to ensure the correctness of your implementation.
+. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+. Create a Git repository for your project and initialize it with a README.md file.
+. Commit your initial project setup to Git.
+. Implement the Mediator pattern in Java according to the following scenario:
+
+=== Scenario
+Implement a `ChatRoom` as the Concrete Mediator that facilitates communication between multiple `User` objects (Colleagues). Each `User` can send and receive messages to the chat room, which then forwards these messages to all other users.
+
+. Test your implementation by using the `ChatRoom` and `User` classes in a simple application to demonstrate the communication facilitated by the Mediator.
+. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.

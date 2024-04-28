@@ -1,0 +1,37 @@
+
+=  Assignment: Implementing the Memento Design Pattern in Java
+
+== Objective
+
+* To understand and implement the Memento design pattern in Java.
+* To enhance skills in object-oriented programming and design patterns.
+* To develop a clear understanding of how to capture and restore an object's state without violating encapsulation.
+
+== Instructions
+
+. Create a Java project named "MementoPatternExample" using your preferred IDE or command-line tools.
+. Implement the Memento design pattern with the following components:
+
+=== Memento
+A class that will store the state of the Originator. It should have methods for saving and retrieving the state.
+
+=== Originator
+The class whose state needs to be saved and restored at a later time. It should create and use Mementos to save and restore its state.
+
+=== Caretaker
+The class that keeps track of multiple mementos. It does not modify the mementos but keeps them available for the Originator.
+
+. Write clean, modular, and well-documented code following Java coding conventions.
+. Implement unit tests to ensure the correctness of your implementation.
+. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+. Create a Git repository for your project and initialize it with a README.md file.
+. Commit your initial project setup to Git.
+. Implement the Memento pattern in Java according to the following scenario:
+
+=== Scenario
+Implement a TextEditor class as the Originator, which can undo text changes using the Memento pattern. A History class will act as the Caretaker, managing mementos representing different states of the TextEditor's content.
+
+. Test your implementation by using the TextEditor and History classes in a simple application to demonstrate undo functionality.
+. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.

@@ -1,9 +1,7 @@
 = Remarks
-- How to make the java edition with a capital J - 2
 - **Add a table summary for all design patterns** - 2
 - Add to the appendix the singleton multithread issue, and the java prototype - 3
 - Need to support epub and html also - 3
-- Facade car imgae is not in the right scale - 3
 - Translate to python, TS, C# - 2
 - Finish assignments - 2
 

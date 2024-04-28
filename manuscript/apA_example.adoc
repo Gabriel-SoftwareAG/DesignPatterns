@@ -1,1 +1,127 @@
-= Example Appendix
+
+[discrete]
+[appendix]
+= List of Excersizes to Practice Design Patterns
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
+
+
+
+* <<Singleton>>
+* <<Builder>>
+* <<Prototype>>
+* <<FactoryMethod>>
+* <<AbstractFactory>>
+* <<Adapter>>
+* <<Composite>>
+* <<Proxy>>
+* <<Flyweight>>
+* <<Bridge>>
+* <<Facade>>
+* <<Decorator>>
+* <<Strategy>>
+* <<Observer>>
+* <<Command>>
+* <<Memento>>
+* <<State>>
+* <<TemplateMethod>>
+* <<Mediator>>
+* <<ChainOfResponsibility>>
+* <<Interpreter>>
+* <<Visitor>>
+* <<Iterator>>
+
+<<< 
+[[Singleton]]
+include::{assignments_path}/AssignmentSingleton.adoc[]
+
+<<<
+[[Builder]]
+include::{assignments_path}/AssignmentBuilder.adoc[]
+
+<<<
+[[Prototype]]
+include::{assignments_path}/AssignmentPrototype.adoc[]
+
+<<<
+[[FactoryMethod]]
+include::{assignments_path}/AssignmentFactoryMethod.adoc[]
+
+<<<
+[[AbstractFactory]]
+include::{assignments_path}/AssignmentAbstractFactory.adoc[]
+
+<<<
+[[Adapter]]
+include::{assignments_path}/AssignmentAdapter.adoc[]
+
+<<<
+[[Composite]]
+include::{assignments_path}/AssignmentComposite.adoc[]
+
+<<<
+[[Proxy]]
+include::{assignments_path}/AssignmentProxy.adoc[]
+
+<<<
+[[Flyweight]]
+include::{assignments_path}/AssignmentFlyweight.adoc[]
+
+<<<
+[[Bridge]]
+include::{assignments_path}/AssignmentBridge.adoc[]
+
+<<<
+[[Facade]]
+include::{assignments_path}/AssignmentFacade.adoc[]
+
+<<<
+[[Decorator]]
+include::{assignments_path}/AssignmentDecorator.adoc[]
+
+<<<
+[[Strategy]]
+include::{assignments_path}/AssignmentStrategy.adoc[]
+
+<<<
+[[Observer]]
+include::{assignments_path}/AssignmentObserver.adoc[]
+
+<<<
+[[Command]]
+include::{assignments_path}/AssignmentCommand.adoc[]
+
+<<<
+[[Memento]]
+include::{assignments_path}/AssignmentMemento.adoc[]
+
+<<<
+[[State]]
+include::{assignments_path}/AssignmentState.adoc[]
+
+<<<
+[[TemplateMethod]]
+include::{assignments_path}/AssignmentTemplateMethod.adoc[]
+
+<<<
+[[Mediator]]
+include::{assignments_path}/AssignmentMediator.adoc[]
+
+<<<
+[[ChainOfResponsibility]]
+include::{assignments_path}/AssignmentChainOfResponsibility.adoc[]
+
+<<<
+[[Interpreter]]
+include::{assignments_path}/AssignmentInterpreter.adoc[]
+
+<<<
+[[Visitor]]
+include::{assignments_path}/AssignmentVisitor.adoc[]
+
+<<<
+[[Iterator]]
+include::{assignments_path}/AssignmentIterator.adoc[]

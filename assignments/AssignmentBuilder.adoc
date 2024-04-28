@@ -1,5 +1,5 @@
 
-= Assignment: The Builder Pattern for API Requests
+= Builder Pattern for API Requests Exercise 
 
 == Objective
 
@@ -9,8 +9,8 @@
 
 == Instructions
 
-1. Create a Java project named "ApiRequestBuilder" using your preferred IDE or command-line tools.
-2. Implement the Builder design pattern with the following components:
+- Create a Java project named "ApiRequestBuilder" using your preferred IDE or command-line tools.
+- Implement the Builder design pattern with the following components:
 
 === ApiRequest
 The class that represents an API request object, containing fields such as:
@@ -23,12 +23,12 @@ The class that represents an API request object, containing fields such as:
 === ApiRequestBuilder
 The builder class that constructs and assembles parts of the ApiRequest object.
 
-3. Write clean, modular, and well-documented code following Java coding conventions.
-4. Implement unit tests to ensure the correctness of your implementation.
-5. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
-6. Create a Git repository for your project and initialize it with a README.md file.
-7. Commit your initial project setup to Git.
-8. Implement the Builder pattern in Java according to the following scenario:
+- Write clean, modular, and well-documented code following Java coding conventions.
+- Implement unit tests to ensure the correctness of your implementation.
+- Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+- Create a Git repository for your project and initialize it with a README.md file.
+- Commit your initial project setup to Git.
+- Implement the Builder pattern in Java according to the following scenario:
 
 === Scenario
 - Implement an ApiRequestBuilder class to construct API request objects with different properties such as:
@@ -38,7 +38,7 @@ The builder class that constructs and assembles parts of the ApiRequest object.
   - Setting query parameters for the request.
   - Providing a request body, if applicable.
 
-9. Test your implementation by using the ApiRequestBuilder to construct various API request objects with different configurations.
-10. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
-11. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
-12. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
+- Test your implementation by using the ApiRequestBuilder to construct various API request objects with different configurations.
+- Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+- Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+- Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.

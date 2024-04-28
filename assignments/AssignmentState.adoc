@@ -1,0 +1,37 @@
+
+= Assignment: Implementing the State Design Pattern in Java
+
+== Objective
+
+* To understand and implement the State design pattern in Java.
+* To enhance skills in object-oriented programming and design patterns.
+* To develop a clear understanding of managing state changes in an object without excessive use of conditional statements.
+
+== Instructions
+
+. Create a Java project named "StatePatternExample" using your preferred IDE or command-line tools.
+. Implement the State design pattern with the following components:
+
+=== State Interface
+An interface that defines methods for performing actions associated with a particular state of the Context.
+
+=== Concrete State Classes
+Classes that implement the State interface and provide the specific behavior associated with a state of the Context.
+
+=== Context
+The class that maintains an instance of a Concrete State object and delegates state-specific behavior to it.
+
+. Write clean, modular, and well-documented code following Java coding conventions.
+. Implement unit tests to ensure the correctness of your implementation.
+. Add Javadoc comments to all classes, interfaces, methods, and fields explaining their purpose and usage.
+. Create a Git repository for your project and initialize it with a README.md file.
+. Commit your initial project setup to Git.
+. Implement the State pattern in Java according to the following scenario:
+
+=== Scenario
+Implement a VendingMachine class as the Context, which changes its state based on operations like inserting coins, selecting products, or dispensing items.
+
+. Test your implementation by using the VendingMachine class in a simple application to demonstrate how it changes its behavior based on its state.
+. Commit your changes to Git regularly, and push them to a remote repository (e.g., GitHub, GitLab).
+. Ensure your project structure is clean and organized, with separate directories for source code, documentation, tests, and any additional resources.
+. Once you have completed the implementation, write a short reflection (README.md) on your experience, discussing any challenges you faced, how you addressed them, and what you learned from the assignment.
