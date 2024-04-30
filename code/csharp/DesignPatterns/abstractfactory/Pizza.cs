@@ -1,4 +1,6 @@
-public interface Pizza
+namespace AbstractFactory;
+
+interface Pizza
 {
     void Enjoy();
 }

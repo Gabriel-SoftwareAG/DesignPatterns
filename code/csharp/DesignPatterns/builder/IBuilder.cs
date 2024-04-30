@@ -1,4 +1,6 @@
-public interface IBuilder
+namespace Builder;
+
+interface IBuilder
 {
     void BuildPartA();
     void BuildPartB();

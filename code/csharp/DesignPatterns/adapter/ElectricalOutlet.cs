@@ -1,4 +1,6 @@
-public interface ElectricalOutlet
+namespace Adapter;
+
+interface ElectricalOutlet
 {
     void Request();
 }

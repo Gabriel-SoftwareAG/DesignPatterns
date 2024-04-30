@@ -1,10 +1,8 @@
-namespace Flyweight
+namespace Flyweight;
+public interface Book
 {
-    public interface Book
-    {
-        void BorrowBook();
-        void ReturnBook();
-        bool IsAvailable();
-        int GetId();
-    }
+    void BorrowBook();
+    void ReturnBook();
+    bool IsAvailable();
+    int GetId();
 }

@@ -1,4 +1,6 @@
-public class SupportTicket
+namespace ChainOfResponsibility;
+
+class SupportTicket
 {
     public int Level { get; }
     public string Description { get; }

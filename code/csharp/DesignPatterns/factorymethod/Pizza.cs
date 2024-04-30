@@ -1,5 +1,5 @@
 namespace FactoryMethod;
-public class Pizza : Product
+class Pizza : Product
 {
     public override Product Serve()
     {

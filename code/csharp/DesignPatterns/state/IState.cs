@@ -1,7 +1,6 @@
-namespace State
+namespace State;
+
+interface IState
 {
-    public interface IState
-    {
-        void HandleRequest();
-    }
+    void HandleRequest();
 }

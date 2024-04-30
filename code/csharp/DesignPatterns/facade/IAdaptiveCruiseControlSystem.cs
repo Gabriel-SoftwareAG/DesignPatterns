@@ -1,4 +1,6 @@
-public interface IAdaptiveCruiseControlSystem
+namespace facade;
+
+interface IAdaptiveCruiseControlSystem
 {
     void Activate();
 }

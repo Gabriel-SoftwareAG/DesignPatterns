@@ -1,7 +1,6 @@
-namespace Proxy
+namespace Proxy;
+
+interface ILegalService
 {
-    public interface ILegalService
-    {
-        void RequestLegalAssistance();
-    }
+    void RequestLegalAssistance();
 }

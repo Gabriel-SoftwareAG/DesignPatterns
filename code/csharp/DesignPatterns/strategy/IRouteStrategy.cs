@@ -1,7 +1,6 @@
-namespace Strategy
+namespace Strategy;
+
+interface IRouteStrategy
 {
-    public interface IRouteStrategy
-    {
-        void CalculateRoute();
-    }
+    void CalculateRoute();
 }

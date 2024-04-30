@@ -1,12 +1,10 @@
-namespace Interpreter
+namespace Interpreter;
+class Context
 {
-    public class Context
-    {
-        public string Language { get; }
+    public string Language { get; }
 
-        public Context(string language)
-        {
-            Language = language;
-        }
+    public Context(string language)
+    {
+        Language = language;
     }
 }

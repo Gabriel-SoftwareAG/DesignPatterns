@@ -1,20 +1,20 @@
+namespace Proxy;
 using System;
 
-namespace Proxy
+class ProxyLegalService : ILegalService
 {
-    public class ProxyLegalService : ILegalService
+    private RealLegalService _realLegalService;
+
+    public void RequestLegalAssistance()
     {
-        private RealLegalService _realLegalService;
-
-        public void RequestLegalAssistance()
+        if (_realLegalService == null)
         {
-            if (_realLegalService == null)
-            {
-                _realLegalService = new RealLegalService();
-            }
-
-            Console.WriteLine("Proxy legal service is requesting legal assistance.");
-            _realLegalService.ProvideLegalAssistance();
+            _realLegalService = new RealLegalService();
         }
+
+        Console
+            .WriteLine("Proxy legal service is requesting legal assistance.");
+        
+        _realLegalService.ProvideLegalAssistance();
     }
 }

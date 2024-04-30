@@ -1,8 +1,7 @@
-namespace Mediator
+namespace Mediator;
+
+interface IMediator
 {
-    public interface IMediator
-    {
-        void Request(string message, Colleague colleague);
-        void Response(string message, Colleague colleague);
-    }
+    void Request(string message, Colleague colleague);
+    void Response(string message, Colleague colleague);
 }

@@ -1,4 +1,6 @@
-public abstract class PizzaDecorator : IPizza
+namespace Composite;
+
+abstract class PizzaDecorator : IPizza
 {
     protected IPizza Pizza;
 

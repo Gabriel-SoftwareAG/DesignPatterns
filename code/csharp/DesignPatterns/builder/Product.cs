@@ -1,7 +1,8 @@
+namespace Builder;
 using System;
 using System.Collections.Generic;
 
-public class Product
+class Product
 {
     private List<string> _parts = new List<string>();
 

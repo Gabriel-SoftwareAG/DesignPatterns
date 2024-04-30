@@ -1,7 +1,6 @@
-namespace Observer
+namespace Observer;
+
+interface IStudent
 {
-    public interface IStudent
-    {
-        void ReceiveUpdate();
-    }
+    void ReceiveUpdate();
 }

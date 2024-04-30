@@ -1,4 +1,6 @@
-public class ExoticPizza : Pizza
+namespace AbstractFactory;
+
+class ExoticPizza : Pizza
 {
     public void Enjoy()
     {

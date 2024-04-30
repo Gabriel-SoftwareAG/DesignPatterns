@@ -2,7 +2,7 @@ namespace FactoryMethod;
 
 public class FactoryMethodClient
 {
-    public static void FactoryMethod()
+    public static void FactoryMethodExample()
     {
         FoodStall pizzaStall = new PizzaStall();
         FoodStall iceCreamStall = new IceCreamStall();

@@ -1,3 +1,4 @@
+namespace ChainOfResponsibility;
 using System;
 
 public class HelpDesk
@@ -9,10 +10,13 @@ public class HelpDesk
 
         levelOne.SetNext(levelTwo);
 
-        SupportTicket ticket = new SupportTicket(1, "Cannot connect to the internet.");
+        SupportTicket ticket = 
+                    new SupportTicket(1, "Cannot connect to the internet.");
+        
         levelOne.HandleRequest(ticket);
 
-        SupportTicket anotherTicket = new SupportTicket(2, "Computer does not start.");
+        SupportTicket anotherTicket = 
+                            new SupportTicket(2, "Computer does not start.");
         levelOne.HandleRequest(anotherTicket);
     }
 }

@@ -1,4 +1,6 @@
-public interface ICollisionAvoidanceSystem
+namespace facade;
+
+interface ICollisionAvoidanceSystem
 {
     void Avoid();
 }

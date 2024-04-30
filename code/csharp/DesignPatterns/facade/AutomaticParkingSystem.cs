@@ -1,4 +1,6 @@
-public class AutomaticParkingSystem : IAutomaticParkingSystem
+namespace facade;
+
+class AutomaticParkingSystem : IAutomaticParkingSystem
 {
     public void Park()
     {

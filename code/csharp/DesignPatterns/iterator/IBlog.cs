@@ -1,8 +1,7 @@
-namespace Iterator
+namespace Iterator;
+
+interface IBlog
 {
-    public interface IBlog
-    {
-        IIterator CreateIterator();
-        void AddPost(Post post);
-    }
+    IIterator CreateIterator();
+    void AddPost(Post post);
 }

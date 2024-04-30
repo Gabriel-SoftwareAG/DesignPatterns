@@ -1,4 +1,6 @@
-public class Director
+namespace Builder;
+
+class Director
 {
     private IBuilder _builder;
 

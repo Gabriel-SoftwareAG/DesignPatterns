@@ -1,17 +1,15 @@
+namespace Visitor;
 using System;
 
-namespace Visitor
+class Destroyer : IVisitor
 {
-    public class Destroyer : IVisitor
+    public void VisitPainting(Painting painting)
     {
-        public void VisitPainting(Painting painting)
-        {
-            Console.WriteLine("Destroyer destroys the painting");
-        }
+        Console.WriteLine("Destroyer destroys the painting");
+    }
 
-        public void VisitSculpture(Sculpture sculpture)
-        {
-            Console.WriteLine("Destroyer destroys the sculpture");
-        }
+    public void VisitSculpture(Sculpture sculpture)
+    {
+        Console.WriteLine("Destroyer destroys the sculpture");
     }
 }

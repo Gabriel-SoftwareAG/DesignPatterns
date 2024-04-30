@@ -1,4 +1,6 @@
-public class ConcreteBuilder : IBuilder
+namespace Builder;
+
+class ConcreteBuilder : IBuilder
 {
     private Product _product = new Product();
 

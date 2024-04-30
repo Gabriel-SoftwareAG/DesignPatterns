@@ -1,4 +1,6 @@
-public class PreparePizzaCommand : ICommand
+namespace Command;
+
+class PreparePizzaCommand : ICommand
 {
     private Receiver _receiver;
 
@@ -9,7 +11,8 @@ public class PreparePizzaCommand : ICommand
 
     public void Execute()
     {
-        System.Console.WriteLine("PreparePizzaCommand.Execute(): Delegating to Receiver.PreparePizza()");
+        System.Console.WriteLine("PreparePizzaCommand.Execute(): " + 
+                                    " Delegating to Receiver.PreparePizza()");
         _receiver.PreparePizza();
     }
 }

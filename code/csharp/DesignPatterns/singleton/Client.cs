@@ -1,15 +1,13 @@
+namespace Singleton;
 using System;
 
-namespace Singleton
+public class Client
 {
-    public class Client
+    public static void Singleton()
     {
-        public static void Singleton()
-        {
-            Library library = Library.GetInstance();
+        Library library = Library.GetInstance();
 
-            // Use the library instance
-            library.BorrowABook();
-        }
+        // Use the library instance
+        library.BorrowABook();
     }
 }

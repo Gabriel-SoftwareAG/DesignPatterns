@@ -1,13 +1,11 @@
+namespace Prototype;
 using System;
 
-namespace Prototype
+class WhiteTeddyBearPrototype : IPrototype
 {
-    public class WhiteTeddyBearPrototype : IPrototype
+    public IPrototype Clone()
     {
-        public IPrototype Clone()
-        {
-            Console.WriteLine("Cloning White Teddy Bear");
-            return new WhiteTeddyBearPrototype();
-        }
+        Console.WriteLine("Cloning White Teddy Bear");
+        return new WhiteTeddyBearPrototype();
     }
 }

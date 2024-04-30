@@ -1,4 +1,6 @@
-public class PlainCheesePizza : IPizza
+namespace Composite;
+
+class PlainCheesePizza : IPizza
 {
     public void Bake()
     {

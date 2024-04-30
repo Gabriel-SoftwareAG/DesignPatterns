@@ -1,4 +1,6 @@
-public class CollisionAvoidanceSystem : ICollisionAvoidanceSystem
+namespace facade;
+
+class CollisionAvoidanceSystem : ICollisionAvoidanceSystem
 {
     public void Avoid()
     {

@@ -1,10 +1,9 @@
-namespace Observer
+namespace Observer;
+class ScienceStudent : IStudent
 {
-    public class ScienceStudent : IStudent
+    public void ReceiveUpdate()
     {
-        public void ReceiveUpdate()
-        {
-            System.Console.WriteLine("Science student received an update from the teacher.");
-        }
+        System.Console
+            .WriteLine("Science student received an update from the teacher.");
     }
 }

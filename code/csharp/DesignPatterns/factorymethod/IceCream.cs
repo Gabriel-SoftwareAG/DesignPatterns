@@ -1,5 +1,5 @@
 namespace FactoryMethod;
-public class IceCream : Product
+class IceCream : Product
 {
     public override Product Serve()
     {

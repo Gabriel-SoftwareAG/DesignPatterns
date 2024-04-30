@@ -1,4 +1,6 @@
-public class AdventureLandFactory : AbstractFoodStallFactory
+namespace AbstractFactory;
+
+class AdventureLandFactory : AbstractFoodStallFactory
 {
     public IceCream CreateIceCream()
     {

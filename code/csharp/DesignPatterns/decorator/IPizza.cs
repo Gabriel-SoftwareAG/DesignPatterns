@@ -1,4 +1,6 @@
-public interface IPizza
+namespace Composite;
+
+interface IPizza
 {
     void Bake();
 }

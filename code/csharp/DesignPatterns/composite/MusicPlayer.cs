@@ -1,3 +1,5 @@
+namespace Composite;
+
 public class MusicPlayer
 {
     public static void CompositeExample()

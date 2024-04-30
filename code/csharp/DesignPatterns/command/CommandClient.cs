@@ -1,3 +1,5 @@
+namespace Command;
+
 using System;
 
 public class CommandClient

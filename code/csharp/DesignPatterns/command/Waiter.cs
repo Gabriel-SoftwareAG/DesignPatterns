@@ -1,4 +1,6 @@
-public class Waiter
+namespace Command;
+
+class Waiter
 {
     private ICommand _command;
 
@@ -9,8 +11,9 @@ public class Waiter
 
     public void ExecuteCommand()
     {
-        System.Console.WriteLine($"Waiter.ExecuteCommand(): Delegating to Command.Execute() for {_command.GetType().Name}");
+        System.Console.WriteLine($"Waiter.ExecuteCommand(): " +
+            "Delegating to Command.Execute() for " + _command.GetType().Name);
+
         _command.Execute();
     }
 }
-

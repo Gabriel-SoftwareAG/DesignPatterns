@@ -1,7 +1,6 @@
-namespace Prototype
+namespace Prototype;
+
+interface IPrototype
 {
-    public interface IPrototype
-    {
-        IPrototype Clone();
-    }
+    IPrototype Clone();
 }

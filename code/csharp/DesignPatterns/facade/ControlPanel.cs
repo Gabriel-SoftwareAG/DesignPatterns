@@ -1,8 +1,13 @@
-public class ControlPanel
+namespace facade;
+
+class ControlPanel
 {
-    private IAutomaticParkingSystem _parkingSystem = new AutomaticParkingSystem();
-    private IAdaptiveCruiseControlSystem _cruiseControlSystem = new AdaptiveCruiseControlSystem();
-    private ICollisionAvoidanceSystem _collisionSystem = new CollisionAvoidanceSystem();
+    private IAutomaticParkingSystem _parkingSystem = 
+                                                new AutomaticParkingSystem();
+    private IAdaptiveCruiseControlSystem _cruiseControlSystem = 
+                                            new AdaptiveCruiseControlSystem();
+    private ICollisionAvoidanceSystem _collisionSystem = 
+                                                new CollisionAvoidanceSystem();
 
     public void Park()
     {

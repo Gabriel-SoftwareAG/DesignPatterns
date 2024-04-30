@@ -1,4 +1,6 @@
-public interface ICommand
+namespace Command;
+
+interface ICommand
 {
     void Execute();
 }

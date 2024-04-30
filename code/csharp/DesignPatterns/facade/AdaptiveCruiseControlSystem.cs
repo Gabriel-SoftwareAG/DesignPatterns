@@ -1,7 +1,10 @@
-public class AdaptiveCruiseControlSystem : IAdaptiveCruiseControlSystem
+namespace facade;
+
+class AdaptiveCruiseControlSystem : IAdaptiveCruiseControlSystem
 {
     public void Activate()
     {
-        System.Console.WriteLine("Activating the adaptive cruise control system...");
+        System.Console
+                .WriteLine("Activating the adaptive cruise control system...");
     }
 }

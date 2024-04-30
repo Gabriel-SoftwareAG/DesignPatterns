@@ -1,5 +1,5 @@
 namespace FactoryMethod;
-public class IceCreamStall : FoodStall
+class IceCreamStall : FoodStall
 {
     public override Product PrepareFood()
     {

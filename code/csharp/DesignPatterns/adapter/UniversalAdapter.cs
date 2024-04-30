@@ -1,4 +1,5 @@
-public class UniversalAdapter : ElectricalOutlet
+namespace Adapter;
+class UniversalAdapter : ElectricalOutlet
 {
     private MobilePhone _device;
 

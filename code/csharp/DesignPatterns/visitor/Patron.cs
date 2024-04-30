@@ -1,19 +1,17 @@
+namespace Visitor;
 using System;
 
-namespace Visitor
+class Patron : IVisitor
 {
-    public class Patron : IVisitor
+    public void VisitPainting(Painting painting)
     {
-        public void VisitPainting(Painting painting)
-        {
-            // Interact with the painting exhibit
-            Console.WriteLine("Patron admires the painting");
-        }
+        // Interact with the painting exhibit
+        Console.WriteLine("Patron admires the painting");
+    }
 
-        public void VisitSculpture(Sculpture sculpture)
-        {
-            // Interact with the sculpture exhibit
-            Console.WriteLine("Patron examines the sculpture");
-        }
+    public void VisitSculpture(Sculpture sculpture)
+    {
+        // Interact with the sculpture exhibit
+        Console.WriteLine("Patron examines the sculpture");
     }
 }

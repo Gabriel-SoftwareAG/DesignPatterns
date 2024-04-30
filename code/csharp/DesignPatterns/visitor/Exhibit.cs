@@ -1,7 +1,6 @@
-namespace Visitor
+namespace Visitor;
+
+interface Exhibit
 {
-    public interface Exhibit
-    {
-        void Accept(IVisitor visitor);
-    }
+    void Accept(IVisitor visitor);
 }

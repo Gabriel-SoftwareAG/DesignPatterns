@@ -1,3 +1,4 @@
+namespace Adapter;
 using System;
 
 public class Traveler

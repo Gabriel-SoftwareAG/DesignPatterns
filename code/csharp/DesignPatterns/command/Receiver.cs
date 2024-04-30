@@ -1,4 +1,6 @@
-public class Receiver
+namespace Command;
+
+class Receiver
 {
     public void PreparePizza()
     {

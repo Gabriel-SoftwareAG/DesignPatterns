@@ -1,17 +1,16 @@
-namespace Observer
+namespace Observer;
+
+public class ObserverClient
 {
-    public class ObserverClient
+    public static void ObserverExample()
     {
-        public static void Observer()
-        {
-            Teacher teacher = new Teacher();
-            IStudent mathStudent = new MathStudent();
-            IStudent scienceStudent = new ScienceStudent();
+        Teacher teacher = new Teacher();
+        IStudent mathStudent = new MathStudent();
+        IStudent scienceStudent = new ScienceStudent();
 
-            teacher.AddStudent(mathStudent);
-            teacher.AddStudent(scienceStudent);
+        teacher.AddStudent(mathStudent);
+        teacher.AddStudent(scienceStudent);
 
-            teacher.NotifyStudents();
-        }
+        teacher.NotifyStudents();
     }
 }

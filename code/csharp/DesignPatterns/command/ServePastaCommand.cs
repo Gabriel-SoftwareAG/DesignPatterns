@@ -1,4 +1,6 @@
-public class ServePastaCommand : ICommand
+namespace Command;
+
+class ServePastaCommand : ICommand
 {
     private Receiver _receiver;
 
@@ -9,8 +11,8 @@ public class ServePastaCommand : ICommand
 
     public void Execute()
     {
-        System.Console.WriteLine("ServePastaCommand.Execute(): Delegating to Receiver.ServePasta()");
+        System.Console.WriteLine("ServePastaCommand.Execute(): " +
+                                        "Delegating to Receiver.ServePasta()");
         _receiver.ServePasta();
     }
 }
-

@@ -1,4 +1,6 @@
-public class MobilePhone
+namespace Adapter;
+
+class MobilePhone
 {
     public void SpecificRequest()
     {

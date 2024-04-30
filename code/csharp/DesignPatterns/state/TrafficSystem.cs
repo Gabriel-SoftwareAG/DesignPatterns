@@ -1,23 +1,21 @@
+namespace State;
 using System;
 
-namespace State
+public class TrafficSystem
 {
-    public class TrafficSystem
+    public static void StateExample()
     {
-        public static void StateExample()
-        {
-            TrafficLight light = new TrafficLight(new GreenState());
+        TrafficLight light = new TrafficLight(new GreenState());
 
-            // Green
-            light.Perform();
+        // Green
+        light.Perform();
 
-            // Green to Yellow
-            light.SetState(new YellowState());
-            light.Perform();
+        // Green to Yellow
+        light.SetState(new YellowState());
+        light.Perform();
 
-            // Yellow to Red
-            light.SetState(new RedState());
-            light.Perform();
-        }
+        // Yellow to Red
+        light.SetState(new RedState());
+        light.Perform();
     }
 }

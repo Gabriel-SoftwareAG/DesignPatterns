@@ -1,7 +1,5 @@
-namespace Interpreter
+namespace Interpreter;
+interface IExpression
 {
-    public interface IExpression
-    {
-        string Interpret(Context context);
-    }
+    string Interpret(Context context);
 }

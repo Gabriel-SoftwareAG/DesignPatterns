@@ -1,4 +1,6 @@
-public interface IPlaylistComponent
+namespace Composite;
+
+interface IPlaylistComponent
 {
     void PlaySong();
 }

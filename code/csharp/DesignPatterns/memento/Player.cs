@@ -1,23 +1,22 @@
-namespace Memento
+namespace Memento;
+
+class Player
 {
-    public class Player
+    private string _state;
+
+    public string State
     {
-        private string _state;
+        get => _state;
+        set => _state = value;
+    }
 
-        public string State
-        {
-            get => _state;
-            set => _state = value;
-        }
+    public GameState SaveStateToMemento()
+    {
+        return new GameState(_state);
+    }
 
-        public GameState SaveStateToMemento()
-        {
-            return new GameState(_state);
-        }
-
-        public void GetStateFromMemento(GameState gameState)
-        {
-            _state = gameState.State;
-        }
+    public void GetStateFromMemento(GameState gameState)
+    {
+        _state = gameState.State;
     }
 }

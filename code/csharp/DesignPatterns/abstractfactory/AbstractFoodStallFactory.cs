@@ -1,4 +1,6 @@
-public interface AbstractFoodStallFactory
+namespace AbstractFactory;
+
+interface AbstractFoodStallFactory
 {
     IceCream CreateIceCream();
     Pizza CreatePizza();

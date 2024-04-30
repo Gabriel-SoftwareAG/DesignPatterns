@@ -1,8 +1,7 @@
-namespace Visitor
+namespace Visitor;
+
+interface IVisitor
 {
-    public interface IVisitor
-    {
-        void VisitPainting(Painting painting);
-        void VisitSculpture(Sculpture sculpture);
-    }
+    void VisitPainting(Painting painting);
+    void VisitSculpture(Sculpture sculpture);
 }

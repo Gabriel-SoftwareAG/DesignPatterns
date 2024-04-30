@@ -1,8 +1,10 @@
+namespace Composite;
 using System.Collections.Generic;
 
-public class Playlist : IPlaylistComponent
+class Playlist : IPlaylistComponent
 {
-    private List<IPlaylistComponent> _components = new List<IPlaylistComponent>();
+    private List<IPlaylistComponent> _components = 
+                                                new List<IPlaylistComponent>();
 
     public void AddComponent(IPlaylistComponent component)
     {

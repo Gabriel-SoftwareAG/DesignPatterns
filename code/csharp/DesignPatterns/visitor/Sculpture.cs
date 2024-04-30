@@ -1,10 +1,9 @@
-namespace Visitor
+namespace Visitor;
+
+class Sculpture : Exhibit
 {
-    public class Sculpture : Exhibit
+    public void Accept(IVisitor visitor)
     {
-        public void Accept(IVisitor visitor)
-        {
-            visitor.VisitSculpture(this);
-        }
+        visitor.VisitSculpture(this);
     }
 }

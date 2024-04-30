@@ -1,4 +1,6 @@
-public class EnchantedPizza : Pizza
+namespace AbstractFactory;
+
+class EnchantedPizza : Pizza
 {
     public void Enjoy()
     {

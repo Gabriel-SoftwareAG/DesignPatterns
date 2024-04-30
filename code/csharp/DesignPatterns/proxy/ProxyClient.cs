@@ -1,13 +1,11 @@
+namespace Proxy;
 using System;
 
-namespace Proxy
+public class ProxyClient
 {
-    public class ProxyClient
+    public static void ProxyExample()
     {
-        public static void Proxy()
-        {
-            ProxyLegalService proxyLegalService = new ProxyLegalService();
-            proxyLegalService.RequestLegalAssistance();
-        }
+        ProxyLegalService proxyLegalService = new ProxyLegalService();
+        proxyLegalService.RequestLegalAssistance();
     }
 }

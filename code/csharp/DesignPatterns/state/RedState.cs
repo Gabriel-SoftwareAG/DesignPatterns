@@ -1,13 +1,11 @@
+namespace State;
 using System;
 
-namespace State
+class RedState : IState
 {
-    public class RedState : IState
+    public void HandleRequest()
     {
-        public void HandleRequest()
-        {
-            Console.WriteLine("Red light - Stop!");
-            // Logic to switch to the green light
-        }
+        Console.WriteLine("Red light - Stop!");
+        // Logic to switch to the green light
     }
 }

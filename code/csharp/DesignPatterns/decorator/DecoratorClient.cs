@@ -1,8 +1,10 @@
+namespace Decorator;
 using System;
+using Composite;
 
 public class DecoratorClient
 {
-    public static void Decorator()
+    public static void DecoratorExample()
     {
         IPizza plainCheesePizza = new PlainCheesePizza();
 

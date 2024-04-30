@@ -1,8 +1,7 @@
-namespace Iterator
+namespace Iterator;
+
+interface IIterator
 {
-    public interface IIterator
-    {
-        bool HasNext();
-        Post Next();
-    }
+    bool HasNext();
+    Post Next();
 }

@@ -1,29 +1,28 @@
+namespace Interpreter;
 using System.Collections.Generic;
 
-namespace Interpreter
+class Interpreter
 {
-    public class Interpreter
+    private Dictionary<string, IExpression> _expressions;
+
+    public Interpreter()
     {
-        private Dictionary<string, IExpression> _expressions;
+        _expressions = new Dictionary<string, IExpression>();
+        _expressions.Add("Hello", new TerminalExpression("Bonjour"));
+        // Add more expressions as needed
+    }
 
-        public Interpreter()
+    public void Interpret(string expression, Context context)
+    {
+        if (_expressions.ContainsKey(expression))
         {
-            _expressions = new Dictionary<string, IExpression>();
-            _expressions.Add("Hello", new TerminalExpression("Bonjour"));
-            // Add more expressions as needed
+            string translation = _expressions[expression].Interpret(context);
+            System.Console
+            .WriteLine($"Interpreter: Translated expression - {translation}");
         }
-
-        public void Interpret(string expression, Context context)
+        else
         {
-            if (_expressions.ContainsKey(expression))
-            {
-                string translation = _expressions[expression].Interpret(context);
-                System.Console.WriteLine($"Interpreter: Translated expression - {translation}");
-            }
-            else
-            {
-                System.Console.WriteLine("Interpreter: Expression not recognized");
-            }
+            System.Console.WriteLine("Interpreter: Expression not recognized");
         }
     }
 }

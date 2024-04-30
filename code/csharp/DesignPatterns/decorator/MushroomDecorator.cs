@@ -1,4 +1,6 @@
-public class MushroomDecorator : PizzaDecorator
+namespace Composite;
+
+class MushroomDecorator : PizzaDecorator
 {
     public MushroomDecorator(IPizza pizza) : base(pizza) {}
 

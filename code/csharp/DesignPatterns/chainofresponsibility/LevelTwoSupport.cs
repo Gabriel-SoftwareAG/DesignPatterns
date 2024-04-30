@@ -1,4 +1,6 @@
-public class LevelTwoSupport : ISupportLevel
+namespace ChainOfResponsibility;
+
+class LevelTwoSupport : ISupportLevel
 {
     private ISupportLevel _next;
 

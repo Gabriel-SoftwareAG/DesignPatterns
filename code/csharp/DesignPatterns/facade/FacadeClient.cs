@@ -1,6 +1,8 @@
-public class FacadeClient
+namespace facade;
+
+class FacadeClient
 {
-    public static void Facade()
+    public static void FacadeExample()
     {
         ControlPanel controlPanel = new ControlPanel();
 

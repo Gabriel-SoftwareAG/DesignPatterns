@@ -1,5 +1,13 @@
 using System;
+using AbstractFactory;
+using Adapter;
 using Bridge;
+using Builder;
+using ChainOfResponsibility;
+using Command;
+using Composite;
+using Decorator;
+using facade;
 using FactoryMethod;
 using Flyweight;
 using Interpreter;
@@ -19,30 +27,28 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        //ParkVisitor.VisitPark();
-        //Singleton.RunSingleton();
-        //Visitor.RunVisitor();
-        //AdapterClient.Adapter();
-        //BridgeClient.Bridge();
-        //BuilderClient.Builder();
-        // ChainOfResponsibilityClient.ChainOfResponsibility();
-        // CommandClient.Command();
-        //CompositeClient.Composite();
-        //DecoratorClient.Decorator();
-        // FacadeClient.Facade();
-        // FactoryMethodClient.FactoryMethod();
-        // FlyweightClient.Flyweight();
-        // InterpreterClient.Interpreter();
-        // IteratorClient.Iterator();
-        // MediatorClient.Mediator();
-        // MementoClient.Memento();
-        // ObserverClient.Observer();
-        // PrototypeClient.Prototype();
-        // ProxyClient.Proxy();
-        // SingletonClient.Singleton();
-        // StateClient.State();
-        // StrategyMain.Strategy();
-        // TemplateMethodClient.TemplateMethod();
+        ParkVisitor.VisitPark();
+        Traveler.AdapterExample();
         BridgeClient.BridgeExample();
+        BuilderClient.BuilderExample();
+        HelpDesk.ChainOfResponsibilityExample();
+        CommandClient.CommandExample();
+        MusicPlayer.CompositeExample();
+        DecoratorClient.DecoratorExample();
+        FacadeClient.FacadeExample();
+        FactoryMethodClient.FactoryMethodExample();
+        FlyweightClient.FlyweightExample();
+        InterpreterClient.InterpreterExample();
+        User.IteratorExample();
+        AgileTeam.MediatorExample();
+        MementoClient.MementoExample();
+        ObserverClient.ObserverExample();
+        PrototypeClient.PrototypeExample();
+        ProxyClient.ProxyExample();
+        Singleton.Client.Singleton();
+        TrafficSystem.StateExample();
+        StrategyClient.StrategyExample();
+        TemplateMethodClient.TemplateMethodExample();
+        Museum.VisitorExample();
     }
 }

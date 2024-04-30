@@ -1,13 +1,11 @@
+namespace Strategy;
 using System;
 
-namespace Strategy
+class ShortestRouteStrategy : IRouteStrategy
 {
-    public class ShortestRouteStrategy : IRouteStrategy
+    public void CalculateRoute()
     {
-        public void CalculateRoute()
-        {
-            Console.WriteLine("Calculating the shortest route...");
-            // Implementation for calculating the shortest route
-        }
+        Console.WriteLine("Calculating the shortest route...");
+        // Implementation for calculating the shortest route
     }
 }

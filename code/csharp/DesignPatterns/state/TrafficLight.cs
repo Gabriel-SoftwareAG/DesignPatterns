@@ -1,25 +1,23 @@
+namespace State;
 using System;
 
-namespace State
+class TrafficLight
 {
-    public class TrafficLight
+    private IState currentState;
+
+    public TrafficLight(IState state)
     {
-        private IState currentState;
+        this.currentState = state;
+    }
 
-        public TrafficLight(IState state)
-        {
-            this.currentState = state;
-        }
+    public void Perform()
+    {
+        currentState.HandleRequest();
+        // Logic to change the current state
+    }
 
-        public void Perform()
-        {
-            currentState.HandleRequest();
-            // Logic to change the current state
-        }
-
-        public void SetState(IState state)
-        {
-            this.currentState = state;
-        }
+    public void SetState(IState state)
+    {
+        this.currentState = state;
     }
 }

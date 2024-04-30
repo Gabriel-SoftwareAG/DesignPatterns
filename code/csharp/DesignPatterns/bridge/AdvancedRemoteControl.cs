@@ -1,14 +1,12 @@
+namespace Bridge;
 using System;
 
-namespace Bridge
+class AdvancedRemoteControl : RemoteControl
 {
-    public class AdvancedRemoteControl : RemoteControl
-    {
-        public AdvancedRemoteControl(Device device) : base(device) { }
+    public AdvancedRemoteControl(Device device) : base(device) { }
 
-        public void Mute()
-        {
-            device.AdjustVolume(0);
-        }
+    public void Mute()
+    {
+        device.AdjustVolume(0);
     }
 }

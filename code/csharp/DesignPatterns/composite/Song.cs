@@ -1,4 +1,6 @@
-public class Song : IPlaylistComponent
+namespace Composite;
+
+class Song : IPlaylistComponent
 {
     private string _title;
 

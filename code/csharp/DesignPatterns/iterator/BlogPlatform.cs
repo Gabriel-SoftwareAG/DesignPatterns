@@ -1,19 +1,17 @@
+namespace Iterator;
 using System.Collections.Generic;
 
-namespace Iterator
+class BlogPlatform : IBlog
 {
-    public class BlogPlatform : IBlog
+    private List<Post> _posts = new List<Post>();
+
+    public void AddPost(Post post)
     {
-        private List<Post> _posts = new List<Post>();
+        _posts.Add(post);
+    }
 
-        public void AddPost(Post post)
-        {
-            _posts.Add(post);
-        }
-
-        public IIterator CreateIterator()
-        {
-            return new PostIterator(_posts);
-        }
+    public IIterator CreateIterator()
+    {
+        return new PostIterator(_posts);
     }
 }

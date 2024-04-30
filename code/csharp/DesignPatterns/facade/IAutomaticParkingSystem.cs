@@ -1,4 +1,6 @@
-public interface IAutomaticParkingSystem
+namespace facade;
+
+interface IAutomaticParkingSystem
 {
     void Park();
 }

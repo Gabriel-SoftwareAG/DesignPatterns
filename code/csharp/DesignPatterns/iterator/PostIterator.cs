@@ -1,30 +1,28 @@
+namespace Iterator;
 using System;
 using System.Collections.Generic;
 
-namespace Iterator
+class PostIterator : IIterator
 {
-    public class PostIterator : IIterator
+    private List<Post> _posts;
+    private int _position = 0;
+
+    public PostIterator(List<Post> posts)
     {
-        private List<Post> _posts;
-        private int _position = 0;
+        _posts = posts;
+    }
 
-        public PostIterator(List<Post> posts)
-        {
-            _posts = posts;
-        }
+    public bool HasNext()
+    {
+        return _position < _posts.Count;
+    }
 
-        public bool HasNext()
+    public Post Next()
+    {
+        if (!HasNext())
         {
-            return _position < _posts.Count;
+            throw new InvalidOperationException("No more posts available");
         }
-
-        public Post Next()
-        {
-            if (!HasNext())
-            {
-                throw new InvalidOperationException("No more posts available");
-            }
-            return _posts[_position++];
-        }
+        return _posts[_position++];
     }
 }

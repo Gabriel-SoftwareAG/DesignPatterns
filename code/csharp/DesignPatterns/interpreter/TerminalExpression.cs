@@ -1,17 +1,16 @@
-namespace Interpreter
+namespace Interpreter;
+
+class TerminalExpression : IExpression
 {
-    public class TerminalExpression : IExpression
+    private string _translation;
+
+    public TerminalExpression(string translation)
     {
-        private string _translation;
+        _translation = translation;
+    }
 
-        public TerminalExpression(string translation)
-        {
-            _translation = translation;
-        }
-
-        public string Interpret(Context context)
-        {
-            return _translation;
-        }
+    public string Interpret(Context context)
+    {
+        return _translation;
     }
 }
