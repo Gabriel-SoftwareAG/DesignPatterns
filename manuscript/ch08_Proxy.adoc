@@ -64,7 +64,7 @@ include::{python_path}/proxy/LegalService.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/proxy/LegalService.cs[lines=3..]
+include::{csharp_path}/proxy/ILegalService.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -86,7 +86,7 @@ include::{python_path}/proxy/ProxyLegalService.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/proxy/ProxyLegalService.cs[lines=3..]
+include::{csharp_path}/proxy/ProxyLegalService.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -110,7 +110,7 @@ include::{python_path}/proxy/RealLegalService.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/proxy/RealLegalService.cs[lines=3..]
+include::{csharp_path}/proxy/RealLegalService.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -136,7 +136,7 @@ include::{python_path}/proxy/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/proxy/Client.cs[lines=3..]
+include::{csharp_path}/proxy/ProxyClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

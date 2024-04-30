@@ -2,7 +2,7 @@ namespace Visitor
 {
     public class Museum
     {
-        public static void Run()
+        public static void VisitorExample()
         {
             Exhibit painting = new Painting();
             Exhibit sculpture = new Sculpture();

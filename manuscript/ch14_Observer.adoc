@@ -61,7 +61,7 @@ include::{python_path}/observer/Student.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/Student.cs[lines=3..]
+include::{csharp_path}/strategy/IStudent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -85,7 +85,7 @@ include::{python_path}/observer/MathStudent.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/MathStudent.cs[lines=3..]
+include::{csharp_path}/strategy/MathStudent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -104,7 +104,7 @@ include::{python_path}/observer/ScienceStudent.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/ScienceStudent.cs[lines=3..]
+include::{csharp_path}/strategy/ScienceStudent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -128,7 +128,7 @@ include::{python_path}/observer/Teacher.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/Teacher.cs[lines=3..]
+include::{csharp_path}/strategy/Teacher.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -152,7 +152,7 @@ include::{python_path}/observer/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/Client.cs[lines=3..]
+include::{csharp_path}/strategy/ObserverClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

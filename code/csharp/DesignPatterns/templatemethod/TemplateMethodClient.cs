@@ -6,7 +6,7 @@ namespace TemplateMethod
     {
         
 
-        public static void TemplateMethod()
+        public static void TemplateMethodExample()
         {
             HouseBuilder modernBuilder = new ModernHouseBuilder();
             modernBuilder.BuildHouse(); // Builds a modern house

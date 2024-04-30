@@ -74,7 +74,7 @@ include::{python_path}/visitor/Exhibit.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/visitor/Exhibit.cs[lines=3..]
+include::{csharp_path}/visitor/Exhibit.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -98,7 +98,7 @@ include::{python_path}/visitor/Painting.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/visitor/Painting.cs[lines=3..]
+include::{csharp_path}/visitor/Painting.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -117,7 +117,7 @@ include::{python_path}/visitor/Sculpture.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/visitor/Sculpture.cs[lines=3..]
+include::{csharp_path}/visitor/Sculpture.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -141,7 +141,7 @@ include::{python_path}/visitor/Visitor.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/visitor/Visitor.cs[lines=3..]
+include::{csharp_path}/visitor/IVisitor.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -165,7 +165,7 @@ include::{python_path}/visitor/Patron.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/visitor/Patron.cs[lines=3..]
+include::{csharp_path}/visitor/Patron.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -189,7 +189,7 @@ include::{python_path}/visitor/Museum.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/visitor/Museum.cs[lines=3..]
+include::{csharp_path}/visitor/Museum.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

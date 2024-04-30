@@ -72,7 +72,7 @@ include::{python_path}/bridge/Device.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/bridge/Device.cs[lines=3..]
+include::{csharp_path}/bridge/Device.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -96,7 +96,7 @@ include::{python_path}/bridge/Television.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/bridge/Television.cs[lines=3..]
+include::{csharp_path}/bridge/Television.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -120,7 +120,7 @@ include::{python_path}/bridge/SoundSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/bridge/SoundSystem.cs[lines=3..]
+include::{csharp_path}/bridge/SoundSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -144,7 +144,7 @@ include::{python_path}/bridge/RemoteControl.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/bridge/RemoteControl.cs[lines=3..]
+include::{csharp_path}/bridge/RemoteControl.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -168,7 +168,7 @@ include::{python_path}/bridge/AdvancedRemoteControl.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/bridge/AdvancedRemoteControl.cs[lines=3..]
+include::{csharp_path}/bridge/AdvancedRemoteControl.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -192,7 +192,7 @@ include::{python_path}/bridge/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/bridge/Client.cs[lines=3..]
+include::{csharp_path}/bridge/BridgeClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

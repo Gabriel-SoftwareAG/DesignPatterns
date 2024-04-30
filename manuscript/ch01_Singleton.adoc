@@ -56,7 +56,7 @@ include::{python_path}/singleton/Library.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/singleton/Singleton.cs[lines=3..]
+include::{csharp_path}/singleton/Library.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -83,7 +83,7 @@ include::{python_path}/singleton/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/singleton/Client.cs[lines=3..]
+include::{csharp_path}/singleton/Client.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

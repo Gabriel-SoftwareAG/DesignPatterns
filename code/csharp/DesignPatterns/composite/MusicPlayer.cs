@@ -1,6 +1,6 @@
-public class CompositeClient
+public class MusicPlayer
 {
-    public static void Composite()
+    public static void CompositeExample()
     {
         // Create individual songs
         Song song1 = new Song("Song 1");

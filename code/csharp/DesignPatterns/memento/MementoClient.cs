@@ -4,7 +4,7 @@ namespace Memento
 {
     public class MementoClient
     {
-        public static void Memento()
+        public static void MementoExample()
         {
             Player player = new Player();
             SaveManager saveManager = new SaveManager();

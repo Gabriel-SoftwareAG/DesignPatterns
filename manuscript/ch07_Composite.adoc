@@ -66,7 +66,7 @@ include::{python_path}/composite/PlaylistComponent.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/composite/PlaylistComponent.cs[lines=3..]
+include::{csharp_path}/composite/IPlaylistComponent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -90,7 +90,7 @@ include::{python_path}/composite/Song.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/composite/Song.cs[lines=3..]
+include::{csharp_path}/composite/Song.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -114,7 +114,7 @@ include::{python_path}/composite/Playlist.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/composite/Playlist.cs[lines=3..]
+include::{csharp_path}/composite/Playlist.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -138,7 +138,7 @@ include::{python_path}/composite/MusicPlayer.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/composite/MusicPlayer.cs[lines=3..]
+include::{csharp_path}/composite/MusicPlayer.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

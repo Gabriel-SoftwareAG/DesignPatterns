@@ -61,7 +61,7 @@ include::{python_path}/factorymethod/Product.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/Product.cs[lines=3..]
+include::{csharp_path}/factorymethod/Product.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -85,7 +85,7 @@ include::{python_path}/factorymethod/IceCream.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/IceCream.cs[lines=3..]
+include::{csharp_path}/factorymethod/IceCream.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -104,7 +104,7 @@ include::{python_path}/factorymethod/Pizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/Pizza.cs[lines=3..]
+include::{csharp_path}/factorymethod/Pizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -128,7 +128,7 @@ include::{python_path}/factorymethod/FoodStall.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/FoodStall.cs[lines=3..]
+include::{csharp_path}/factorymethod/FoodStall.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -152,7 +152,7 @@ include::{python_path}/factorymethod/PizzaStall.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/PizzaStall.cs[lines=3..]
+include::{csharp_path}/factorymethod/PizzaStall.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -171,7 +171,7 @@ include::{python_path}/factorymethod/IceCreamStall.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/IceCreamStall.cs[lines=3..]
+include::{csharp_path}/factorymethod/IceCreamStall.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -195,11 +195,11 @@ include::{python_path}/factorymethod/ParkVisitor.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/factorymethod/ParkVisitor.cs[lines=3..]
+include::{csharp_path}/factorymethod/FactoryMethodClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/ParkVisitor.ts[lines=3..]
+include::{typescript_path}/factorymethod/FactoryMethod.ts[lines=3..]
 endif::[]
 ----
 

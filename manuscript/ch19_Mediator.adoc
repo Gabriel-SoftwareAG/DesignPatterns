@@ -76,7 +76,7 @@ include::{python_path}/mediator/Mediator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/mediator/Mediator.cs[lines=3..]
+include::{csharp_path}/mediator/IMediator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -100,7 +100,7 @@ include::{python_path}/mediator/ScrumMaster.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/mediator/ScrumMaster.cs[lines=3..]
+include::{csharp_path}/mediator/ScrumMaster.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -124,7 +124,7 @@ include::{python_path}/mediator/Colleague.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/mediator/Colleague.cs[lines=3..]
+include::{csharp_path}/mediator/Colleague.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -148,7 +148,7 @@ include::{python_path}/mediator/Developer.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/mediator/Developer.cs[lines=3..]
+include::{csharp_path}/mediator/Developer.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -167,7 +167,7 @@ include::{python_path}/mediator/Tester.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/mediator/Tester.cs[lines=3..]
+include::{csharp_path}/mediator/Tester.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -191,7 +191,7 @@ include::{python_path}/mediator/AgileTeam.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/mediator/AgileTeam.cs[lines=3..]
+include::{csharp_path}/mediator/AgileTeam.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

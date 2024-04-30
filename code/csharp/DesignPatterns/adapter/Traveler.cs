@@ -1,8 +1,8 @@
 using System;
 
-public class AdapterClient
+public class Traveler
 {
-    public static void Adapter()
+    public static void AdapterExample()
     {
         // Create electronic device
         MobilePhone device = new MobilePhone();

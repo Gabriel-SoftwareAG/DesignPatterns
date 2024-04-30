@@ -1,8 +1,8 @@
 using System;
 
-public class ChainOfResponsibilityClient
+public class HelpDesk
 {
-    public static void ChainOfResponsibility()
+    public static void ChainOfResponsibilityExample()
     {
         LevelOneSupport levelOne = new LevelOneSupport();
         LevelTwoSupport levelTwo = new LevelTwoSupport();

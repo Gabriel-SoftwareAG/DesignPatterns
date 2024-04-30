@@ -1,4 +1,5 @@
 using System;
+using Bridge;
 using FactoryMethod;
 using Flyweight;
 using Interpreter;
@@ -42,7 +43,6 @@ public class Program
         // StateClient.State();
         // StrategyMain.Strategy();
         // TemplateMethodClient.TemplateMethod();
-        Museum.Run();
-        
+        BridgeClient.BridgeExample();
     }
 }

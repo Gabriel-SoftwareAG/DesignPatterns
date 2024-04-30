@@ -63,7 +63,7 @@ include::{python_path}/decorator/Pizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/decorator/Pizza.cs[lines=3..]
+include::{csharp_path}/decorator/IPizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -87,7 +87,7 @@ include::{python_path}/decorator/PlainCheesePizza.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/decorator/PlainCheesePizza.cs[lines=3..]
+include::{csharp_path}/decorator/PlainCheesePizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -111,7 +111,7 @@ include::{python_path}/decorator/PizzaDecorator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/decorator/PizzaDecorator.cs[lines=3..]
+include::{csharp_path}/decorator/PizzaDecorator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -135,7 +135,7 @@ include::{python_path}/decorator/TomatoDecorator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/decorator/TomatoDecorator.cs[lines=3..]
+include::{csharp_path}/decorator/TomatoDecorator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -155,7 +155,7 @@ include::{python_path}/decorator/MushroomDecorator.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/decorator/MushroomDecorator.cs[lines=3..]
+include::{csharp_path}/decorator/MushroomDecorator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -181,7 +181,7 @@ include::{python_path}/decorator/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/decorator/Client.cs[lines=3..]
+include::{csharp_path}/decorator/DecoratorClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

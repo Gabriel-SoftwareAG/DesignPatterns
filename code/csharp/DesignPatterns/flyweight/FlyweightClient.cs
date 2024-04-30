@@ -2,7 +2,7 @@ namespace Flyweight
 {
     public class FlyweightClient
     {
-        public static void Flyweight()
+        public static void FlyweightExample()
         {
             Library library = new Library();
 

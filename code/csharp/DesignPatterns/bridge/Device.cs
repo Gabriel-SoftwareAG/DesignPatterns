@@ -1,7 +1,13 @@
-public interface Device
+namespace Bridge
 {
-    void PowerOn();
-    void PowerOff();
-    void AdjustVolume(int volume);
-    void ChangeChannel(int channel);
+    public interface Device
+    {
+        void PowerOn();
+
+        void PowerOff();
+
+        void AdjustVolume(int volume);
+
+        void ChangeChannel(int channel);
+    }
 }

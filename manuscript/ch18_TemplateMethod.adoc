@@ -76,7 +76,7 @@ include::{python_path}/templatemethod/HouseBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/templatemethod/HouseBuilder.cs[lines=3..]
+include::{csharp_path}/templatemethod/HouseBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -100,7 +100,7 @@ include::{python_path}/templatemethod/ModernHouseBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/templatemethod/ModernHouseBuilder.cs[lines=3..]
+include::{csharp_path}/templatemethod/ModernHouseBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -124,7 +124,7 @@ include::{python_path}/templatemethod/TraditionalHouseBuilder.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/templatemethod/TraditionalHouseBuilder.cs[lines=3..]
+include::{csharp_path}/templatemethod/TraditionalHouseBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -150,7 +150,7 @@ include::{python_path}/templatemethod/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/templatemethod/Client.cs[lines=3..]
+include::{csharp_path}/templatemethod/TemplateMethodClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

@@ -65,7 +65,7 @@ include::{python_path}/memento/GameState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/GameState.cs[lines=3..]
+include::{csharp_path}/memento/GameState.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -89,7 +89,7 @@ include::{python_path}/memento/Player.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/Player.cs[lines=3..]
+include::{csharp_path}/memento/Player.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -113,7 +113,7 @@ include::{python_path}/memento/SaveManager.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/SaveManager.cs[lines=3..]
+include::{csharp_path}/memento/SaveManager.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -137,7 +137,7 @@ include::{python_path}/memento/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/Client.cs[lines=3..]
+include::{csharp_path}/memento/MementoClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

@@ -2,9 +2,9 @@ using System;
 
 namespace State
 {
-    public class StateClient
+    public class TrafficSystem
     {
-        public static void State()
+        public static void StateExample()
         {
             TrafficLight light = new TrafficLight(new GreenState());
 

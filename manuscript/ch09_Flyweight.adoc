@@ -67,7 +67,7 @@ include::{python_path}/flyweight/Book.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/flyweight/Book.cs[lines=3..]
+include::{csharp_path}/flyweight/Book.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -92,7 +92,7 @@ include::{python_path}/flyweight/ConcreteBook.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/flyweight/ConcreteBook.cs[lines=3..]
+include::{csharp_path}/flyweight/ConcreteBook.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -116,7 +116,7 @@ include::{python_path}/flyweight/Library.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/flyweight/Library.cs[lines=3..]
+include::{csharp_path}/flyweight/Library.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -140,7 +140,7 @@ include::{python_path}/flyweight/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/flyweight/Client.cs[lines=3..]
+include::{csharp_path}/flyweight/FlyweightClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

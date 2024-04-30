@@ -2,7 +2,7 @@ using System;
 
 namespace Strategy
 {
-    public class StrategyMain
+    public class StrategyClient
     {
         public static void Strategy()
         {

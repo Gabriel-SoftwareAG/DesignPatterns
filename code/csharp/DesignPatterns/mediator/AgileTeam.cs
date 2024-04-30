@@ -1,8 +1,8 @@
 namespace Mediator
 {
-    public class MediatorClient
+    public class AgileTeam
     {
-        public static void Mediator()
+        public static void MediatorExample()
         {
             ScrumMaster scrumMaster = new ScrumMaster();
             Developer developer = new Developer(scrumMaster);

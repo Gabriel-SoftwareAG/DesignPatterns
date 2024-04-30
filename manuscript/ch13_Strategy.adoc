@@ -64,7 +64,7 @@ include::{python_path}/strategy/RouteStrategy.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/RouteStrategy.cs[lines=3..]
+include::{csharp_path}/strategy/IRouteStrategy.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -88,7 +88,7 @@ include::{python_path}/strategy/RoutePlanner.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/RoutePlanner.cs[lines=3..]
+include::{csharp_path}/strategy/RoutePlanner.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -112,7 +112,7 @@ include::{python_path}/strategy/FastestRouteStrategy.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/FastestRouteStrategy.cs[lines=3..]
+include::{csharp_path}/strategy/FastestRouteStrategy.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -131,7 +131,7 @@ include::{python_path}/strategy/ShortestRouteStrategy.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/ShortestRouteStrategy.cs[lines=3..]
+include::{csharp_path}/strategy/ShortestRouteStrategy.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -157,7 +157,7 @@ include::{python_path}/strategy/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/strategy/Client.cs[lines=3..]
+include::{csharp_path}/strategy/StrategyClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

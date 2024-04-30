@@ -4,7 +4,7 @@ namespace Interpreter
 {
     public class InterpreterClient
     {
-        public static void Interpreter()
+        public static void InterpreterExample()
         {
             Context context = new Context("English");
             Interpreter interpreter = new Interpreter();

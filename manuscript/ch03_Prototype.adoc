@@ -59,7 +59,7 @@ include::{python_path}/prototype/Prototype.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/prototype/Prototype.cs[lines=3..]
+include::{csharp_path}/prototype/IPrototype.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -83,7 +83,7 @@ include::{python_path}/prototype/WhiteTeddyBearPrototype.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/prototype/WhiteTeddyBearPrototype.cs[lines=3..]
+include::{csharp_path}/prototype/WhiteTeddyBearPrototype.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -102,7 +102,7 @@ include::{python_path}/prototype/BlackTeddyBearPrototype.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/prototype/BlackTeddyBearPrototype.cs[lines=3..]
+include::{csharp_path}/prototype/BlackTeddyBearPrototype.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -126,11 +126,11 @@ include::{python_path}/prototype/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/prototype/Client.cs[lines=3..]
+include::{csharp_path}/prototype/PrototypeClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/prototype/Client.ts[lines=3..]
+include::{typescript_path}/prototype/PrototypeClient.ts[lines=3..]
 endif::[]
 ----
 

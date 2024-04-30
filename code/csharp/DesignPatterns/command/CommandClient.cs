@@ -2,7 +2,7 @@ using System;
 
 public class CommandClient
 {
-    public static void Command()
+    public static void CommandExample()
     {
         // Create receiver (kitchen staff)
         Receiver chef = new Receiver();

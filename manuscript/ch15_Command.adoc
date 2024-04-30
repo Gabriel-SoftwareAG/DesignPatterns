@@ -55,7 +55,7 @@ include::{python_path}/command/Command.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/command/Command.cs[lines=3..]
+include::{csharp_path}/command/ICommand.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -79,7 +79,7 @@ include::{python_path}/command/PreparePizzaCommand.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/command/PreparePizzaCommand.cs[lines=3..]
+include::{csharp_path}/command/PreparePizzaCommand.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -98,7 +98,7 @@ include::{python_path}/command/ServePastaCommand.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/command/ServePastaCommand.cs[lines=3..]
+include::{csharp_path}/command/ServePastaCommand.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -122,7 +122,7 @@ include::{python_path}/command/Receiver.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/command/Receiver.cs[lines=3..]
+include::{csharp_path}/command/Receiver.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -146,7 +146,7 @@ include::{python_path}/command/Waiter.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/command/Waiter.cs[lines=3..]
+include::{csharp_path}/command/Waiter.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -168,7 +168,7 @@ include::{python_path}/command/Client.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/command/Client.cs[lines=3..]
+include::{csharp_path}/command/CommandClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

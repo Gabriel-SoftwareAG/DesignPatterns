@@ -64,7 +64,7 @@ include::{python_path}/adapter/ElectricalOutlet.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/ElectricalOutlet.cs[lines=3..]
+include::{csharp_path}/adapter/ElectricalOutlet.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -88,7 +88,7 @@ include::{python_path}/adapter/MobilePhone.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/MobilePhone.cs[lines=3..]
+include::{csharp_path}/adapter/MobilePhone.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -112,7 +112,7 @@ include::{python_path}/adapter/UniversalAdapter.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/UniversalAdapter.cs[lines=3..]
+include::{csharp_path}/adapter/UniversalAdapter.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
@@ -136,7 +136,7 @@ include::{python_path}/adapter/Traveler.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/adapter/Traveler.cs[lines=3..]
+include::{csharp_path}/adapter/Traveler.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]

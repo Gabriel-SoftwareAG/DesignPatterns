@@ -2,7 +2,7 @@ using System;
 
 namespace Singleton
 {
-    public class SingletonClient
+    public class Client
     {
         public static void Singleton()
         {
