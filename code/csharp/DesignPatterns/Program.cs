@@ -1,4 +1,18 @@
 using System;
+using FactoryMethod;
+using Flyweight;
+using Interpreter;
+using Iterator;
+using Mediator;
+using Memento;
+using Observer;
+using Prototype;
+using Proxy;
+using Singleton;
+using State;
+using Strategy;
+using TemplateMethod;
+using Visitor;
 
 public class Program
 {
@@ -11,6 +25,24 @@ public class Program
         //BridgeClient.Bridge();
         //BuilderClient.Builder();
         // ChainOfResponsibilityClient.ChainOfResponsibility();
-        CommandClient.Command();
+        // CommandClient.Command();
+        //CompositeClient.Composite();
+        //DecoratorClient.Decorator();
+        // FacadeClient.Facade();
+        // FactoryMethodClient.FactoryMethod();
+        // FlyweightClient.Flyweight();
+        // InterpreterClient.Interpreter();
+        // IteratorClient.Iterator();
+        // MediatorClient.Mediator();
+        // MementoClient.Memento();
+        // ObserverClient.Observer();
+        // PrototypeClient.Prototype();
+        // ProxyClient.Proxy();
+        // SingletonClient.Singleton();
+        // StateClient.State();
+        // StrategyMain.Strategy();
+        // TemplateMethodClient.TemplateMethod();
+        Museum.Run();
+        
     }
 }
