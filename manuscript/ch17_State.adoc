@@ -74,11 +74,11 @@ include::{python_path}/state/State.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/IState.cs[]
+include::{csharp_path}/state/IState.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/State.ts[lines=3..]
+include::{typescript_path}/state/State.ts[lines=3..]
 endif::[]
 ----
 
@@ -98,11 +98,11 @@ include::{python_path}/state/GreenState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/GreenState.cs[]
+include::{csharp_path}/state/GreenState.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/GreenState.ts[lines=3..]
+include::{typescript_path}/state/GreenState.ts[lines=3..]
 endif::[]
 ----
 
@@ -122,11 +122,11 @@ include::{python_path}/state/YellowState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/YellowState.cs[]
+include::{csharp_path}/state/YellowState.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/YellowState.ts[lines=3..]
+include::{typescript_path}/state/YellowState.ts[lines=3..]
 endif::[]
 ----
 
@@ -146,11 +146,11 @@ include::{python_path}/state/RedState.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/RedState.cs[]
+include::{csharp_path}/state/RedState.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/RedState.ts[lines=3..]
+include::{typescript_path}/state/RedState.ts[lines=3..]
 endif::[]
 ----
 
@@ -172,11 +172,11 @@ include::{python_path}/state/TrafficLight.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/TrafficLight.cs[]
+include::{csharp_path}/state/TrafficLight.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/TrafficLight.ts[lines=3..]
+include::{typescript_path}/state/TrafficLight.ts[lines=3..]
 endif::[]
 ----
 
@@ -196,11 +196,11 @@ include::{python_path}/state/TrafficSystem.py[]
 endif::[]
 
 ifeval::["{lang}" == "csharp"]
-include::{csharp_path}/memento/TrafficSystem.cs[]
+include::{csharp_path}/state/TrafficSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/TrafficSystem.ts[lines=3..]
+include::{typescript_path}/state/TrafficSystem.ts[lines=3..]
 endif::[]
 ----
 

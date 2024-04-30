@@ -2,9 +2,9 @@ using System;
 
 namespace Iterator
 {
-    public class IteratorClient
+    public class User
     {
-        public static void Iterator()
+        public static void IteratorExample()
         {
             IBlog blog = new BlogPlatform();
             blog.AddPost(new Post("Title 1", "Author 1", "Summary 1"));
