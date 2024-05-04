@@ -1,5 +1,7 @@
 
 =  Chapter 1: The Singleton Pattern
+:header-left: Chapter 1: The Singleton Pattern
+
 
 ifndef::already_included_config[]
 include::config.adoc[]

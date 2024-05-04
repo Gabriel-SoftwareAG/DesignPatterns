@@ -1,4 +1,5 @@
 :lang: java
+:edition: Java
 :java_path: ../code/java/src/main/java
 :python_path: ../code/python
 :csharp_path: ../code/csharp/DesignPatterns

@@ -40,7 +40,7 @@ table:
     font_style: bold
     background_color: F9F9F9
   cell:
-    padding: [0, 0, 0, 0]
+    padding: [0, 0, 0, 2]
   frame: none
   grid: none
 admonition:
@@ -48,17 +48,18 @@ admonition:
     font_style: bold
     font_size: 10
 header:
+  vertical_align: bottom
   border_width: 0.5     # Sets the width of the border line
   border_top_width: 1   # Specifically sets the top border line width
   height: 1cm           # Sets the height of the header area
   recto:
     left:
-      content: 'From Concept to Code: Mastering Design Patterns'  # Example content: document title centered
+      content: '{chapter-title}'  # Example content: document title centered
     right:
       content: 'Nir Gallner, VeriSoft'  # Example content: document title centered
   verso:
     left:
-      content: 'From Concept to Code: Mastering Design Patterns'  # Same for verso pages
+      content: '{chapter-title}'  # Same for verso pages
     right:
       content: 'Nir Gallner, VeriSoft'  # Example content: document title centered
 footer:
@@ -68,9 +69,9 @@ footer:
     center: '{page-number}'
 cover:
   front:
-    image: ../images/cover/front_cover.pdf
+    image: ../images/cover/cover_front_{lang}.png
   back:
-    image: ../images/cover/back_cover.pdf 
+    image: ../images/cover/cover_back.png 
 page:
   layout: portrait  # Could be 'portrait' or 'landscape'
   margin: [0.8in, 1in, 0.75in, 1in]  # Top, right, bottom, left margins

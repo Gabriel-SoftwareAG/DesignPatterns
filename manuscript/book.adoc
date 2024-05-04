@@ -1,6 +1,6 @@
 include::config.adoc[]
 = From Concept to Code: Mastering Design Patterns
-{lang} Edition
+Java Edition
 Nir Gallner
 :doctype: book
 :sectnums!:         // This disables section numbers globally
