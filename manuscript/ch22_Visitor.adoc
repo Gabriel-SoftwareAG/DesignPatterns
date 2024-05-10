@@ -37,7 +37,7 @@ Overall, the visitor pattern provides a way to separate the algorithm for traver
 
 - _Client_: The visitor pattern is initiated and utilized by the client, much like a museum visitor exploring the exhibits. In software design, the client creates visitor objects and passes them to the object structure to initiate traversal and perform operations on the elements.
 
-
+<<<
 [discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Visitor design pattern using UML.
@@ -54,7 +54,7 @@ In the Visitor Pattern class diagram, The `Visitor` interface represents the vis
 image::VisitorPatternSequenceDiagram.png[title="The Visitor Sequence Diagram", align=center]
 In the Visitor Pattern sequence diagram, the Client represents you, initiating the visit to each exhibit. The `Element` represents each exhibit in the museum, and the `ConcreteElementA` and `ConcreteElementB` are specific types of exhibits you encounter. As you visit each exhibit, you interact with a `Visitor`, which represents your actions or interests related to that exhibit. The `ConcreteVisitor` class represents different roles you might assume during your visit, such as a historian or an art enthusiast. As you interact with each exhibit, you trigger specific actions defined by the `Visitor`. For example, when you visit ConcreteElementA, you trigger the `performOperationA()` action implemented by the `ConcreteVisitor`. Similarly, when you visit `ConcreteElementB`, you trigger the `performOperationB()` action. The sequence diagram illustrates how you, as the client, interact with different exhibits and trigger specific actions via the `visitor` pattern.
 
-
+<<<
 [discrete%breakable]
 == Implementation Walkthrough
 In this example, we'll implement a visitor pattern using the museum analogy to explain each component of the design. We'll simulate a museum with different types of exhibits and visitors who interact with them.

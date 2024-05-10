@@ -33,7 +33,7 @@ Using the Chain of Responsibility pattern in this context allows for flexible an
 
 - _Request_: The request that flows through the chain of handlers. It contains the data or issue that needs to be processed or resolved by one of the handlers. The request is analogous to a customer's call or a helpdesk ticket in the IT department scenario. It can contain various data fields or properties indicating the nature of the request, which the handlers can use to determine if they can process the request or if it should be passed along the chain.
 
-
+<<<
 [discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Chain Of Responsibility design pattern using UML.
@@ -41,7 +41,7 @@ Next, we will explain the concept of the Chain Of Responsibility design pattern 
 
 [discrete%breakable]
 === Class Diagram
-image::ChainOfResponsibilityPatternClassDiagram.png[title="The Chain Of Responsibility Class Diagram", align=center]
+image::ChainOfResponsibilityPatternClassDiagram.png[title="The Chain Of Responsibility Class Diagram", align=center, scaledwidth=80%]
 In the Chain of Responsibility Pattern class diagrm, the `Handler` interface represents the general protocol for handling helpdesk tickets, akin to various levels of support within the helpdesk system. It defines two primary operations: setting the next level of support (`setSuccessor(handler: Handler)`) and handling the ticket itself (`handleRequest(request: Request)`).
 
 `ConcreteHandler1` and `ConcreteHandler2` symbolize specific levels of support, such as level 1 and level 2 technical support teams. Each of these classes implements the Handler interface, allowing them to receive a ticket (or Request), attempt to resolve it, and if unable to do so, pass it on to the next level of support specified by their successor. This passing along of the ticket mimics escalating a ticket from level 1 to level 2 support when the issue cannot be resolved at the initial level.
@@ -53,7 +53,7 @@ In essence, this diagram depicts a structured approach to handling helpdesk tick
 
 [discrete%breakable]
 === Sequence Diagram
-image::ChainOfResponsibilityPatternSequenceDiagram.png[title="The Chain Of Responsibility Sequence Diagram", align=center]
+image::ChainOfResponsibilityPatternSequenceDiagram.png[title="The Chain Of Responsibility Sequence Diagram", align=center, scaledwidth=85%]
 The sequence diagram illustrates the Chain of Responsibility pattern's flow of communication, using the analogy of a help desk system for IT support. In this scenario, the Client represents a user or employee facing an issue, seeking assistance from the help desk. The Client initiates the process by submitting a request to the help desk, which is first received by `ConcreteHandler1`, symbolizing the level 1 support team within the IT help desk structure.
 
 `ConcreteHandler1` evaluates the request to determine if it can handle it based on its expertise or predefined criteria. In this instance, `ConcreteHandler1` decides it cannot resolve the issue on its own and escalates the request to `ConcreteHandler2`, representing the level 2 support team, which possesses a broader or more specialized set of skills for handling more complex issues.

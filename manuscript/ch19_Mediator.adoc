@@ -44,7 +44,7 @@ In practice, when a `ConcreteColleague` (e.g., a developer) completes a task or 
 
 [discrete%breakable]
 === Sequence Diagram
-image::MediatorPatternSequenceDiagram.png[title="The Mediator Sequence Diagram", align=center]
+image::MediatorPatternSequenceDiagram.png[title="The Mediator Sequence Diagram", align=center, scaledwidth=70%]
 In the Mediator Pattern sequence diagram, the Client acts as the project manager or product owner, initiating requests related to the project. The Mediator symbolizes the scrum master, the central figure who coordinates all communication and task delegation within the team.
 
 When the Client (project manager/product owner) has a request or needs an update on the project's progress, they communicate this need to the Mediator (scrum master) instead of going directly to the team members. The scrum master then assesses the request and decides the best course of action.
