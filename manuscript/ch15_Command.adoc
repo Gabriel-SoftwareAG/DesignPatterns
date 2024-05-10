@@ -34,7 +34,7 @@ In this Command Pattern class diagram, we can relate the elements to roles in th
 
 [discrete%breakable]
 === Sequence Diagram
-image::CommandPatternSequenceDiagram.png[title="The Command Sequence Diagram", align=center]
+image::CommandPatternSequenceDiagram.png[title="The Command Sequence Diagram", align=center, scaledwidth=80%]
 In this Command Pattern sequence diagram, we can relate the interactions to the scenario in a restaurant. The Client represents a customer who places an order, specifying the command to be executed. This order is passed to the `Invoker`, who acts as the waiter taking the customer's request. The `Invoker` then triggers the execution of the command (`executeCommand()`), which is represented by the `ConcreteCommand`. In our analogy, the `ConcreteCommand` corresponds to a specific dish order, such as "Prepare Pizza" or "Serve Pasta." The `ConcreteCommand` delegates the actual execution of the command to the `Receiver`, symbolizing the kitchen staff responsible for preparing the meal. Once the action is completed, the `Receiver` notifies the `ConcreteCommand`, which then reports back to the Invoker that the execution is completed. Finally, the `Invoker` communicates the status back to the `Client`, informing them that their request has been fulfilled. This sequence illustrates how the Command Pattern facilitates decoupling between the sender (`Client`) and receiver (`Receiver`) by encapsulating requests as objects and enabling their execution at different times.
 
 

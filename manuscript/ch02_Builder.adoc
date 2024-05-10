@@ -30,7 +30,7 @@ In the Builder pattern, let's imagine a sandwich stand where customers can custo
 - _Concrete Builders_: These are the specific implementations of the builder interface. The sandwich maker serves as the concrete builder, following the customer's instructions to construct the sandwich according to their preferences. For each type of sandwich or combination, there is a concrete builder defining how to construct that particular sandwich. This approach ensures flexibility and customization based on customer preferences.
 - _Product_: The end result of the construction process, in this case, is the custom sandwich. It represents the object that's gradually built up according to the step-by-step instructions provided by the customer.
 
-
+<<<
 [discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Builder design pattern using UML.
@@ -38,10 +38,10 @@ Next, we will explain the concept of the Builder design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram", align=center, scaledwidth=80%]
+image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram", align=center, scaledwidth=100%]
 In the sandwich analogy depicted by the class diagram, the `Director` corresponds to the sandwich shop customer who provides instructions for constructing a custom sandwich. The `Builder` interface represents the step-by-step process of making the sandwich, where each method (buildPartA, buildPartB, buildPartC) corresponds to choosing the type of bread, filling, toppings, and sauce, respectively. `ConcreteBuilder` is akin to the sandwich maker who implements the `Builder` interface to construct the sandwich. It manages the assembly of the sandwich parts (`buildPartA()`, `buildPartB()` and `buildPartC()`) to create the final product, which corresponds to the completed custom sandwich. Through this process, the `Director` (customer) controls the construction process, ensuring flexibility and customization, just like ordering a custom sandwich at a sandwich shop.
 
-
+<<<
 [discrete%breakable]
 === Sequence Diagram
 image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram", align=center, scaledwidth=70%]

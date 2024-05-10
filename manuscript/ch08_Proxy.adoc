@@ -26,7 +26,7 @@ The Proxy Pattern in software development is quite similar to hiring a lawyer. I
 - _Subject_: The subject interface defines the common interface that both the proxy and the real object (the underlying system or resource) implement. This allows the client to interact with the proxy and the real object interchangeably. In the legal analogy, the subject interface represents the legal services or expertise that both the lawyer (proxy) and the legal system (real object) provide.
 - _Real Subject_: The real subject represents the underlying system or resource that the proxy interacts with on behalf of the client. It implements the subject interface and performs the actual work requested by the client. In the legal analogy, the real subject is the legal system itself, which the lawyer interacts with to provide legal services to the client.
 
-
+<<<
 [discrete%breakable]
 == UML Diagrams 
 Next, we will explain the concept of the Proxy design pattern using UML.
@@ -34,10 +34,10 @@ Next, we will explain the concept of the Proxy design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::ProxyPatternClassDiagram.png[title="The Proxy Class Diagram", align=center, scaledwidth=70%]
+image::ProxyPatternClassDiagram.png[title="The Proxy Class Diagram", align=center, scaledwidth=80%]
 In the Proxy Pattern class diagram, we have three main classes represented by entities in the legal analogy. Firstly, the `Subject` interface corresponds to the legal services that both the real lawyer (proxy) and the legal system (real object) provide. Secondly, the `RealSubject` class represents the real lawyer who directly interacts with the legal system to provide legal services to the client. This class implements the `Subject` interface and defines the actual actions taken in response to requests from the client. Lastly, the `Proxy` class acts as an intermediary between the client and the real lawyer. It maintains a reference to the `RealSubject` (the real lawyer) and controls access to it. The proxy may defer making a request to the real lawyer until necessary, perform additional operations before or after forwarding the request, or even deny access to the real lawyer under certain conditions. In summary, the Proxy Pattern allows the client to interact with the legal system (represented by the real lawyer) through the proxy, providing additional control and functionality while maintaining the same interface as the real object.
 
-
+<<<
 [discrete%breakable]
 === Sequence Diagram
 image::ProxyPatternSequenceDiagram.png[title="The Proxy Sequence Diagram", align=center, scaledwidth=50%]
