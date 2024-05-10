@@ -7,10 +7,11 @@
 == Introduction
 [cols="<1,>m"]
 |===
-|The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object. This allows request parameters to be saved, queued, and executed at different times according to the application's needs. Imagine you're at a restaurant. You (the `Client`) give your order (`Command`) to a waiter (`Invoker`), who then delivers the order to the kitchen (`Receiver`). The kitchen prepares your meal and eventually, the waiter delivers the meal back to you. In this analogy, your order is encapsulated as a command and handled independently of the initial request.
+|The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object. This allows request parameters to be saved, queued, and executed at different times according to the application's needs. Imagine you're at a restaurant. You (the `Client`) give your order (`Command`) to a waiter (`Invoker`), who then delivers the order to the kitchen (`Receiver`). The kitchen prepares your meal and eventually, the waiter delivers the meal back to you. 
 |image:command_kitchen.jpg[width=270, height=270]
 |===
 
+In this analogy, your order is encapsulated as a command and handled independently of the initial request.
 
 [discrete%breakable]
 == Key Components
@@ -27,7 +28,7 @@ Next, we will explain the concept of the Command design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::CommandPatternClassDiagram.png[title="The Command Class Diagram", align=center]
+image::CommandPatternClassDiagram.png[title="The Command Class Diagram", align=center, scaledwidth=70%]
 In this Command Pattern class diagram, we can relate the elements to roles in the restaurant scenario. The `Command` interface represents the order placed by a customer, which is abstracted as an executable command. ConcreteCommand classes, such as `ConcreteCommandA` and `ConcreteCommandB`, correspond to specific orders like "Prepare Pizza" or "Serve Pasta," each associated with a particular receiver, represented by the `Receiver` class. The `Receiver` class embodies the kitchen staff responsible for executing the commands by performing actions like `actionA()` or `actionB()`, which could be preparing specific dishes. The `Invoker` class acts as the waiter who takes orders from customers (Client) and relays them to the kitchen staff (`Receiver`) to execute (`invokeCommand()`). The `Client` class represents the entity initiating the commands, akin to a customer placing an order at the restaurant. Overall, the Command Pattern decouples the sender (`Client`) from the receiver (`Receiver`) by encapsulating requests as objects, providing flexibility and extensibility in handling commands.
 
 

@@ -38,10 +38,11 @@ In this class diagram, the `Facade` class represents the control panel, which pr
 
 [discrete%breakable]
 === Sequence Diagram
-image::FacadePatternSequenceDiagram.png[title="The Facade Sequence Diagram", align=center]
+image::FacadePatternSequenceDiagram.png[title="The Facade Sequence Diagram", align=center, scaledwidth=80%]
 In this sequence diagram, the Client represents the driver interacting with the control panel to perform actions. When the driver initiates an action, such as activating a feature like automatic parking or adaptive cruise control, the request is forwarded to the `Facade` class, which represents the control panel. The facade then delegates the action to the appropriate subsystems: `SubsystemClassA`, `SubsystemClassB`, and `SubsystemClassC`, which represent the automatic parking, adaptive cruise control, and collision avoidance systems, respectively. Each subsystem performs its specific action and returns the result to the facade. Finally, the facade aggregates the results and sends the action result back to the client.
 
 
+<<<
 [discrete%breakable]
 == Implementation Walkthrough
 In this example, we'll implement the Facade Pattern using our analogy of a control panel. We'll have four main classes: `ControlPanel`, `AutomaticParkingSystem`, `AdaptiveCruiseControlSystem`, and `CollisionAvoidanceSystem`. The `ControlPanel` class represents the facade, providing a simplified interface for interacting with the car's advanced features, while the subsystems represent the automatic parking, adaptive cruise control, and collision avoidance systems.

@@ -1,8 +1,9 @@
 include::config.adoc[]
 = From Concept to Code: Mastering Design Patterns
-Java Edition
+Csharp Edition
 Nir Gallner
 :doctype: book
+:pdf-page-size: [18cm,23cm]
 :sectnums!:         // This disables section numbers globally
 :icons: font
 :source-highlighter: rouge
@@ -10,7 +11,7 @@ Nir Gallner
 :toc: preamble      // Generates the TOC in the preamble of the document
 :toc-title: Table of Contents
 :toclevels: 1       // Only include top-level sections in the TOC
-:media: print
+:media: prepress
 
 
 

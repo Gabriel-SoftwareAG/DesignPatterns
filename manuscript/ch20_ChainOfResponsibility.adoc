@@ -14,11 +14,11 @@ endif::[]
 |===
 |Let's imagine you're working at a customer service center where customers call in with various requests or issues. There are different departments in the center, such as billing, technical support, and customer complaints. When a customer calls in, their request or issue is passed through these departments until it's resolved.
 
-In software design, the Chain of Responsibility pattern works similarly. It allows multiple objects, called handlers, to handle a request sequentially. Each handler has the option to handle the request or pass it on to the next handler in the chain. This chain continues until the request is handled or until it reaches the end of the chain.
+In software design, the Chain of Responsibility pattern works similarly. 
 |image:chain_of_responsibility_helpdesk.jpg[width=370, scale=50%]
 |===
 
-For example, let's drill down to the tech department, and say you're building a helpdesk ticketing system for an IT department. When a user submits a ticket for assistance, it's first routed to the level 1 support team. If the level 1 support team can't resolve the issue, they escalate the ticket to the level 2 support team. If the level 2 support team can't resolve it either, they escalate it to the level 3 support team, and so on.
+It allows multiple objects, called handlers, to handle a request sequentially. Each handler has the option to handle the request or pass it on to the next handler in the chain. This chain continues until the request is handled or until it reaches the end of the chain. For example, let's drill down to the tech department, and say you're building a helpdesk ticketing system for an IT department. When a user submits a ticket for assistance, it's first routed to the level 1 support team. If the level 1 support team can't resolve the issue, they escalate the ticket to the level 2 support team. If the level 2 support team can't resolve it either, they escalate it to the level 3 support team, and so on.
 
 Using the Chain of Responsibility pattern in this context allows for flexible and dynamic handling of tickets. Each support team can focus on their area of expertise, and tickets are automatically routed through the appropriate levels until they're resolved. This helps streamline the support process and ensures that tickets are handled efficiently and effectively.
 

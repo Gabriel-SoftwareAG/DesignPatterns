@@ -12,11 +12,11 @@ endif::[]
 |===
 |Imagine you have a favorite toy, let's say it's a teddy bear. Over time, this teddy bear might get worn out or damaged because you play with it a lot. But what if you could easily make an exact copy of your favorite teddy bear whenever you need a new one?
 
-That's where the prototype pattern comes in. It's like having a special machine that can duplicate your favorite teddy bear perfectly. You don't need to go through the hassle of designing and sewing a new teddy bear from scratch every time. Instead, you just use the prototype – your original teddy bear – to create as many copies as you want. 
+That's where the prototype pattern comes in. It's like having a special machine that can duplicate your favorite teddy bear perfectly. You don't need to go through the hassle of designing and sewing a new teddy bear from scratch every time.  
 |image:prototype_teddy_bear.jpg[width=290, height=290]
 |===
 
-So, in simpler terms, the prototype pattern allows you to create new objects by copying an existing object. It's like making a photocopy of your favorite toy whenever you need a replacement. This saves time and effort because you don't have to start from scratch every time you want to create a similar object.
+Instead, you just use the prototype – your original teddy bear – to create as many copies as you want. So, in simpler terms, the prototype pattern allows you to create new objects by copying an existing object. It's like making a photocopy of your favorite toy whenever you need a replacement. This saves time and effort because you don't have to start from scratch every time you want to create a similar object.
 
 [discrete%breakable]
 == Key Components
@@ -36,10 +36,10 @@ Next, we will explain the concept of the Prototype design pattern using UML.
 image::PrototypePatternClassDiagram.png[title="The Prototype Class Diagram", align=center]
 In  the class diagram, the abstract class `Prototype` serves as the blueprint for creating new teddy bears, declaring the `clone()` method that enables the creation of exact copies. The `ConcretePrototype1` and `ConcretePrototype2` classes represent specific types of teddy bears that implement the cloning mechanism defined by the `Prototype` class. Each concrete `prototype` class provides its own implementation of the `clone()` method, allowing for customization and variation in the cloning process. Through this pattern, users can create multiple copies of their favorite teddy bear without needing to recreate it from scratch, just like making duplicates of a beloved toy.
 
-
+<<<
 [discrete%breakable]
 === Sequence Diagram
-image::PrototypePatternSequenceDiagram.png[title="The Prototype Sequence Diagram", align=center]
+image::PrototypePatternSequenceDiagram.png[title="The Prototype Sequence Diagram", align=center, scaledwidth=50%]
 In the sequence diagram, the Client interacts with the `Prototype`, which acts as the template for creating new teddy bears. When the Client requests a clone using the `clone()` method, the `Prototype` activates and delegates the cloning process to the `ConcretePrototype`, representing a specific type of teddy bear. The `ConcretePrototype` creates a copy of itself using the `clone()` method, which is then returned to the `Prototype`. Finally, the `Prototype` passes the cloned teddy bear back to the Client, who receives an exact duplicate of their favorite toy. 
 
 

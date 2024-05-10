@@ -1,5 +1,4 @@
 = Remarks
-- **Add a table summary for all design patterns** - 2
 - Add to the appendix the singleton multithread issue, and the java prototype - 3
 - Need to support epub and html also - 3
 - Translate to TS, C# - 2

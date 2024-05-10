@@ -13,12 +13,10 @@ endif::[]
 |===
 |Imagine you have a legal question or need to handle a legal matter, but you're not familiar with the laws or how to proceed. Instead of trying to figure it out yourself, you hire a lawyer. This lawyer acts as your representative, using their knowledge and expertise to advise you, speak on your behalf, and navigate the legal system for you. Essentially, the lawyer is a go-between for you and the legal world, making sure your needs are met without you having to dive into the 
 complexities of law yourself. 
-
-The Proxy Pattern in software development is quite similar to hiring a lawyer. In this pattern, a proxy object acts as an intermediary between the client (you) and another system or resource (the legal system, in our analogy).
 |image:proxy_lawyer.jpg[width=360, scale=50%]
 |===
 
-Just as a lawyer translates your needs into legal actions, manages the process, and communicates results back to you, a proxy object in software takes requests from its client, does the necessary work to interact with the underlying system or resource, and then returns the results. This setup helps manage complexity, control access, and even optimize performance, all without the client needing to know the intricacies of the system they're interacting with.
+The Proxy Pattern in software development is quite similar to hiring a lawyer. In this pattern, a proxy object acts as an intermediary between the client (you) and another system or resource (the legal system, in our analogy). Just as a lawyer translates your needs into legal actions, manages the process, and communicates results back to you, a proxy object in software takes requests from its client, does the necessary work to interact with the underlying system or resource, and then returns the results. This setup helps manage complexity, control access, and even optimize performance, all without the client needing to know the intricacies of the system they're interacting with.
 
 
 [discrete%breakable]
@@ -36,13 +34,13 @@ Next, we will explain the concept of the Proxy design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::ProxyPatternClassDiagram.png[title="The Proxy Class Diagram", align=center]
+image::ProxyPatternClassDiagram.png[title="The Proxy Class Diagram", align=center, scaledwidth=70%]
 In the Proxy Pattern class diagram, we have three main classes represented by entities in the legal analogy. Firstly, the `Subject` interface corresponds to the legal services that both the real lawyer (proxy) and the legal system (real object) provide. Secondly, the `RealSubject` class represents the real lawyer who directly interacts with the legal system to provide legal services to the client. This class implements the `Subject` interface and defines the actual actions taken in response to requests from the client. Lastly, the `Proxy` class acts as an intermediary between the client and the real lawyer. It maintains a reference to the `RealSubject` (the real lawyer) and controls access to it. The proxy may defer making a request to the real lawyer until necessary, perform additional operations before or after forwarding the request, or even deny access to the real lawyer under certain conditions. In summary, the Proxy Pattern allows the client to interact with the legal system (represented by the real lawyer) through the proxy, providing additional control and functionality while maintaining the same interface as the real object.
 
 
 [discrete%breakable]
 === Sequence Diagram
-image::ProxyPatternSequenceDiagram.png[title="The Proxy Sequence Diagram", align=center]
+image::ProxyPatternSequenceDiagram.png[title="The Proxy Sequence Diagram", align=center, scaledwidth=50%]
 In the Proxy Pattern sequence diagram, we have two main participants represented by entities in the legal analogy. Firstly, the Client initiates a request by interacting with the `Proxy`, which acts as the intermediary between the client and the real lawyer (represented by `RealSubject`). Upon receiving the request from the client, the `Proxy` forwards the request to the `RealSubject` (the real lawyer) to handle it. The real lawyer then performs the necessary actions in response to the request and returns the response to the proxy. The proxy may perform additional operations, such as preprocessing or postprocessing, before or after forwarding the request to the real lawyer. Finally, the proxy communicates the response back to the client. This setup allows the proxy to control access to the real lawyer and add functionality or security measures without the client's direct involvement, similar to how a legal proxy may handle legal matters on behalf of a client.
 
 

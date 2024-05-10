@@ -10,10 +10,11 @@ endif::[]
 == Introduction
 [cols="<1,>m"]
 |===
-|The flyweight design pattern is similar to sharing books in a library. It involves maximizing resource utilization through sharing. Just as a library allows multiple readers to share a single copy of a book instead of each person needing a personal copy, the flyweight pattern enables sharing of common state objects to minimize memory usage in software applications. This pattern is particularly useful when a large number of objects with identical or similar state information are required (like the books in the library). It works by separating the intrinsic state (the unchanging part) of the object, which is shared, from the extrinsic state (the changing part), which is kept external. By doing so, the flyweight design pattern allows for a reduction in the number of instantiated objects, thus optimizing both memory and processing resources in software systems.
+|The flyweight design pattern is similar to sharing books in a library. It involves maximizing resource utilization through sharing. Just as a library allows multiple readers to share a single copy of a book instead of each person needing a personal copy, the flyweight pattern enables sharing of common state objects to minimize memory usage in software applications. This pattern is particularly useful when a large number of objects with identical or similar state information are required (like the books in the library). 
 |image:flyweight_books.jpg[width=300, scale=50%]
 |===
 
+It works by separating the intrinsic state (the unchanging part) of the object, which is shared, from the extrinsic state (the changing part), which is kept external. By doing so, the flyweight design pattern allows for a reduction in the number of instantiated objects, thus optimizing both memory and processing resources in software systems.
 
 [discrete%breakable]
 == Key Components

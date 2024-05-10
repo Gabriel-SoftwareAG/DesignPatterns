@@ -12,12 +12,10 @@ endif::[]
 [cols="<1,>m"]
 |===
 |Imagine you're at a big amusement park with various food stalls. Each stall specializes in a different type of food: one makes pizza, another serves ice cream, and yet another offers burgers. You don't need to know how they prepare the food; you just tell them what you want, and they make it for you. Each stall has its own "recipe" and method for making its specialty, but from your perspective, the process is simple: you ask, and you receive. The Factory Method Pattern is similar to this idea but in the world of programming. 
-
-It's like having different "stalls" (factories) in your software. When a part of your program needs a new "dish" (object), it doesn't make it directly.
 |image:FactoryMethod_amusement_park.jpg[width=300, height=300]
 |===
 
-Instead, it asks the corresponding "stall" (factory) for it. This factory knows how to create the object in a specific way. This setup makes it easy to add new types of objects without changing the way your program asks for them, just like how the amusement park can add a new food stall without changing how you order food.
+It's like having different "stalls" (factories) in your software. When a part of your program needs a new "dish" (object), it doesn't make it directly. Instead, it asks the corresponding "stall" (factory) for it. This factory knows how to create the object in a specific way. This setup makes it easy to add new types of objects without changing the way your program asks for them, just like how the amusement park can add a new food stall without changing how you order food.
 
 
 [discrete%breakable]
@@ -41,13 +39,12 @@ In the class diagram, the abstract class `Product` represents the general idea o
 
 [discrete%breakable]
 === Sequence Diagram
-image::FactoryMethodPatternSequenceDiagram.png[title="The Factory Method Sequence Diagram", align=center]
+image::FactoryMethodPatternSequenceDiagram.png[title="The Factory Method Sequence Diagram", align=center, scaledwidth=60%]
 In the Factory Method Pattern illustrated by the sequence diagram, the analogy is likened to the process of ordering food at an amusement park. The Client represents the customer placing an order for a dish without knowing the specifics of how it's prepared. The `Creator` corresponds to the food stall manager who oversees the creation of dishes. When the Client requests a dish, the `Creator` activates and delegates the creation process to the ConcreteCr`eator, representing a specific food stall. The `ConcreteCreator` then creates a new `ConcreteProduct` (dish) according to its own method, which is returned to the `Creator` and ultimately delivered to the Client. Through this pattern, the Client can order dishes without needing to know the details of how they're prepared, similar to ordering food at an amusement park without needing to know the specifics of each food stall's cooking process.
 
 
+<<<
 == Implementation Walkthrough
-
-
 [discrete%breakable]
 === Abstract Product: Product
 [source, {lang}]

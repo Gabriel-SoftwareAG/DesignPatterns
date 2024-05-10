@@ -17,6 +17,8 @@ Why should you care about design patterns? Well, think of them as shortcuts. The
 
 So, whether you're a coding newbie or a seasoned pro, this book is your new sidekick. We're here to make your coding journey smoother, one pattern at a time. Let's dive in and take our coding skills up a notch!
 
+
+<<<
 == About me
 [cols="<1,>m"]
 |===

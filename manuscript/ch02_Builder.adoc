@@ -15,11 +15,10 @@ endif::[]
 
 Now, imagine the builder pattern as the process the sandwich maker follows to build your sandwich. Instead of telling them all the details at once, you can give them step-by-step instructions. First, you specify the type of bread you want, then the filling, followed by the toppings, and finally, the sauce. 
 
-The sandwich maker, like a builder in the builder pattern, follows these instructions and constructs your sandwich accordingly.
 |image:builder_sandwich.jpg[width=310, height=310]
 |===
 
-This way, you can create a wide variety of sandwiches with different combinations without the need for predefined sandwich types cluttering up the menu. The builder pattern simplifies the process of creating complex objects step by step, just like ordering a custom sandwich.
+The sandwich maker, like a builder in the builder pattern, follows these instructions and constructs your sandwich accordingly. This way, you can create a wide variety of sandwiches with different combinations without the need for predefined sandwich types cluttering up the menu. The builder pattern simplifies the process of creating complex objects step by step, just like ordering a custom sandwich.
 
 
 [discrete%breakable]
@@ -39,13 +38,13 @@ Next, we will explain the concept of the Builder design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram", align=center]
+image::BuilderPatternClassDiagram.png[title="The Builder Class Diagram", align=center, scaledwidth=80%]
 In the sandwich analogy depicted by the class diagram, the `Director` corresponds to the sandwich shop customer who provides instructions for constructing a custom sandwich. The `Builder` interface represents the step-by-step process of making the sandwich, where each method (buildPartA, buildPartB, buildPartC) corresponds to choosing the type of bread, filling, toppings, and sauce, respectively. `ConcreteBuilder` is akin to the sandwich maker who implements the `Builder` interface to construct the sandwich. It manages the assembly of the sandwich parts (`buildPartA()`, `buildPartB()` and `buildPartC()`) to create the final product, which corresponds to the completed custom sandwich. Through this process, the `Director` (customer) controls the construction process, ensuring flexibility and customization, just like ordering a custom sandwich at a sandwich shop.
 
 
 [discrete%breakable]
 === Sequence Diagram
-image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram", align=center]
+image::BuilderPatternSequenceDiagram.png[title="The Builder Class Diagram", align=center, scaledwidth=70%]
 In the sequence diagram, the Client represents the customer at the sandwich shop, initiating the construction process by interacting with the `Director`. The `Director` acts as the mediator between the Client and the `ConcreteBuilder`, orchestrating the steps involved in making the custom sandwich. The `ConcreteBuilder` corresponds to the sandwich maker who sequentially builds each part of the sandwich (`buildPartA()`, `buildPartB()` and `buildPartC()`) according to the Director's instructions. The `Product` represents the partially constructed sandwich at each stage, gradually adding parts until the final sandwich is assembled. Through this sequence, the Client receives the completed custom sandwich from the `Director`, mirroring the process of ordering and receiving a custom sandwich at a sandwich shop.
 
 

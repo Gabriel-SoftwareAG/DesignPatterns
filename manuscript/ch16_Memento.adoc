@@ -13,10 +13,11 @@ endif::[]
 |===
 |Let's imagine you're playing a video game where you can save your progress at certain points. When you save your game, it creates a snapshot of your current state, including things like your character's health, inventory, and progress through the game. Later on, if you encounter a tough enemy and lose some progress, you can load your saved game to return to a previous state and try again.
 
-In software design, the memento pattern works similarly. It allows you to capture the current state of an object and store it in a memento object. This memento object acts like a snapshot of the object's state at a specific point in time. Later on, if you need to restore the object to a previous state, you can use the memento object to revert it back to that state.
-
+In software design, the memento pattern works similarly. 
 |image:memento_arcade_video_game.jpg[width=370, scale=50%]
 |===
+
+It allows you to capture the current state of an object and store it in a memento object. This memento object acts like a snapshot of the object's state at a specific point in time. Later on, if you need to restore the object to a previous state, you can use the memento object to revert it back to that state. 
 
 Considering another example, let's say you're working on a text editor, and you want to implement an "undo" feature. Every time the user makes a change to the text, such as typing, deleting, or formatting, you can create a memento object to store the state of the text before the change was made. If the user wants to undo their last action, you can use the memento object to restore the text to its previous state.
 
@@ -37,13 +38,13 @@ Next, we will explain the concept of the Memento design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::MementoPatternClassDiagram.png[title="The Memento Class Diagram", align=center]
+image::MementoPatternClassDiagram.png[title="The Memento Class Diagram", align=center, scaledwidth=80%]
 In this Memento Pattern class diagram, the `Originator` class represents the player character whose state needs to be saved and restored. It has methods to set and get the current state, as well as methods to save the state to a `Memento` object and retrieve the state from a `Memento` object. The `Memento` class acts as a snapshot of the player character's state at a specific point in time. It encapsulates the state information and provides methods to retrieve the saved state. The `Caretaker` class is responsible for managing `Memento` objects. It maintains a list of `Memento` objects and provides methods to add new Mementos to the list and retrieve Mementos from the list. In the video game context, the `Originator` represents the player character, the `Memento` represents a saved game state, and the `Caretaker` manages the saved game states.
 
 
 [discrete%breakable]
 === Sequence Diagram
-image::MementoPatternSequenceDiagram.png[title="The Memento Sequence Diagram", align=center]
+image::MementoPatternSequenceDiagram.png[title="The Memento Sequence Diagram", align=center, scaledwidth=70%]
 In the video game analogy illustrated in the sequence diagram, the Player initiates the process by interacting with the Game. Initially, the Player reaches a certain checkpoint in the game, representing the state of progress as 'Checkpoint1'. Then, the Player requests the Game to save the current state to a saved game file, akin to creating a `Memento`. The Game creates a saved game file with the current state and returns it to the Player. The Player then passes this saved game file to the Console, which saves it to the storage device. Later, when the Player wants to return to 'Checkpoint1', they request the saved game file from the Console. The Console retrieves the desired saved game file and returns it to the Player, who then loads it into the Game. Finally, the Game restores the player's progress to 'Checkpoint1' using the saved game file provided by the Player.
 
 

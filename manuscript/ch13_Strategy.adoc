@@ -13,11 +13,11 @@ endif::[]
 |===
 |Imagine you're planning a road trip, and you have different options for getting to your destination. You could take the highway, which is the fastest but may have tolls. Alternatively, you could take scenic routes, which are slower but offer beautiful views. Depending on factors like time, budget, and personal preferences, you might choose different strategies for your journey.
 
-In software design, the strategy pattern works similarly. It allows you to define a family of algorithms, or strategies, for accomplishing a task, and then select the appropriate one at runtime based on specific conditions or requirements. Just like choosing a route for your road trip, you can dynamically select the best strategy for solving a problem based on various factors.
+In software design, the strategy pattern works similarly. 
 |image:strategy_roads.jpg[width=370, scale=50%]
 |===
 
-For example, if you're building a navigation app, you could implement different strategies for calculating the fastest route, the shortest route, or the most scenic route to a destination. Depending on user preferences or real-time traffic conditions, the app can switch between these strategies to provide the best possible route for the user's needs.
+It allows you to define a family of algorithms, or strategies, for accomplishing a task, and then select the appropriate one at runtime based on specific conditions or requirements. Just like choosing a route for your road trip, you can dynamically select the best strategy for solving a problem based on various factors. For example, if you're building a navigation app, you could implement different strategies for calculating the fastest route, the shortest route, or the most scenic route to a destination. Depending on user preferences or real-time traffic conditions, the app can switch between these strategies to provide the best possible route for the user's needs.
 
 Overall, the strategy pattern provides flexibility and adaptability in software design by allowing you to encapsulate different algorithms and dynamically select the most suitable one at runtime, just like choosing the best strategy for a road trip based on various factors.
 
@@ -36,13 +36,13 @@ Next, we will explain the concept of the Strategy design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::StrategyPatternClassDiagram.png[title="The Strategy Class Diagram", align=center]
+image::StrategyPatternClassDiagram.png[title="The Strategy Class Diagram", align=center, scaledwidth=80%]
 In this diagram, the `Context` class represents the road trip planner or navigation app, which selects the appropriate strategy (route) for the journey. The `Strategy` interface defines the contract for all strategies, specifying the method `algorithmInterface()` that each strategy must implement. Concrete strategies are represented by classes such as `ConcreteStrategyA`, `ConcreteStrategyB`, and `ConcreteStrategyC`, each implementing the `Strategy` interface with its unique algorithm for planning a route. For example, `ConcreteStrategyA` could represent the fastest route, `ConcreteStrategyB` the shortest route, and `ConcreteStrategyC` the most scenic route. The `Context` class holds a reference to the selected strategy and delegates the route planning task to it. 
 
 
 [discrete%breakable]
 === Sequence Diagram
-image::StrategyPatternSequenceDiagram.png[title="The Strategy Sequence Diagram"]
+image::StrategyPatternSequenceDiagram.png[title="The Strategy Sequence Diagram", align=center, scaledwidth=90%]
 In this sequence diagram, the Client represents the user or system interacting with the road trip planner or navigation app, the `Context`. The `Context` class holds a reference to the selected strategy (route) and delegates the route planning task to it. Initially, the client sets the strategy to `ConcreteStrategyA` (e.g., the fastest route). The `Context` then creates an instance of `ConcreteStrategyA` and executes its `algorithmInterface()`, which represents calculating the fastest route. Once completed, the context returns the result to the client. Later, the client changes the strategy to `ConcreteStrategyB` (e.g., the shortest route). Again, the `Context` creates an instance of `ConcreteStrategyB` and executes its `algorithmInterface()` to calculate the shortest route before returning the result to the client. The Strategy Pattern allows for dynamic selection and execution of different algorithms (strategies) for solving a problem (planning routes) at runtime.
 
 

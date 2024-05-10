@@ -15,10 +15,10 @@ endif::[]
 
 Each student who is interested in a particular type of news tells the teacher, "Hey, please let me know whenever there's news about my favorite subject!"
 
-The Observer Pattern works a lot like this classroom scenario. In this pattern, the teacher acts as the "Subject," and the students are the "Observers." The Subject has important information or updates to share, and the Observers are interested in receiving updates about certain topics.
 |image:observer_teacher_image.jpg[width=370, scale=50%]
 |===
 
+The Observer Pattern works a lot like this classroom scenario. In this pattern, the teacher acts as the "Subject," and the students are the "Observers." The Subject has important information or updates to share, and the Observers are interested in receiving updates about certain topics.
 
 [discrete%breakable]
 == Key Components
@@ -33,13 +33,13 @@ Next, we will explain the concept of the Observer design pattern using UML.
 
 [discrete%breakable]
 === Class Diagram
-image::ObserverPatternClassDiagram.png[title="The Observer Class Diagram", align=center]
+image::ObserverPatternClassDiagram.png[title="The Observer Class Diagram", align=center, scaledwidth=75%]
 In this class diagram, the `Subject` class represents the teacher who holds important information or updates. The teacher maintains a list of observers (students) interested in receiving updates. `ConcreteObserverA` and `ConcreteObserverB` represent individual students interested in updates. Both `ConcreteObserverA` and `ConcreteObserverB` implement the `Observer` interface, specifying the update method. The Subject class provides methods to attach and detach observers from its list and to notify all observers when there's new information available. 
 
 
 [discrete%breakable]
 === Sequence Diagram
-image::ObserverPatternSequenceDiagram.png[title="The Observer Sequence Diagram", align=center]
+image::ObserverPatternSequenceDiagram.png[title="The Observer Sequence Diagram", align=center, scaledwidth=57%]
 In this sequence diagram, the `Subject` represents the teacher who has important information or updates to share with the students. Initially, the teacher activates and attaches `ObserverA` and `ObserverB`, representing two students interested in receiving updates. When the teacher receives new information by invoking `setState(newState)`, it activates itself to update its state. Then, it notifies `ObserverA` and `ObserverB` about the new state. Each observer, upon receiving the notification, activates itself to update its state accordingly. 
 
 

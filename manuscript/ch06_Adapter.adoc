@@ -14,15 +14,14 @@ endif::[]
 
 However, the electrical outlets in different countries might have different shapes and voltages. For instance, some countries have outlets with two flat prongs, while others have outlets with two round prongs or even three prongs in a triangular configuration.
 
-To ensure that your devices can still be charged no matter where you go, you carry a universal adapter with you.
 |image:adapter_plug.jpg[width=320, scale=50%]
 |===
 
-This adapter has multiple types of prongs and sockets, allowing it to fit into different types of outlets around the world. So, regardless of whether you're in Europe, Asia, or North America, you can simply plug your devices into the adapter, and the adapter into the local outlet, ensuring that you can stay connected and powered up wherever you are.
+To ensure that your devices can still be charged no matter where you go, you carry a universal adapter with you. This adapter has multiple types of prongs and sockets, allowing it to fit into different types of outlets around the world. So, regardless of whether you're in Europe, Asia, or North America, you can simply plug your devices into the adapter, and the adapter into the local outlet, ensuring that you can stay connected and powered up wherever you are.
 
 In this scenario, the universal adapter acts as an adapter pattern, bridging the gap between the different types of plugs on your devices and the various types of outlets you encounter during your travels. Just like how the adapter enables your devices to work with different outlets, the adapter pattern enables different classes or objects to work together despite having different interfaces.
 
-
+<<<
 [discrete%breakable]
 == Key Components
 - _Client_: In the travel scenario, the client represents the traveler who owns various electronic devices and needs to charge them while traveling. The client interacts with the adapter to connect their devices to different types of electrical outlets.
@@ -44,7 +43,7 @@ In the class diagram, the `Target` interface represents the universal adapter us
 
 [discrete%breakable]
 === Sequence Diagram
-image::AdapterPatternSequenceDiagram.png[title="The Adapter Sequence Diagram", align=center]
+image::AdapterPatternSequenceDiagram.png[title="The Adapter Sequence Diagram", align=center, scaledwidth=70%]
 In the sequence diagram, the Client represents the traveler who initiates the charging process by making a request to the electrical outlet, represented by the `Target` Interface. The `Target` Interface defines a common interface expected by the electrical outlet, with a `request()` method. The Adapter acts as the universal adapter used by the traveler, translating the request from the `Target` Interface to the specific interface of the electrical device, represented by the `Adaptee`. The `Adaptee` represents the electronic device owned by the traveler, which has its own specific interface with a `specificRequest()` method. The `Adapter` translates the request from the `Target` Interface to the specific `specificRequest()` method of the `Adaptee`, allowing the device to be charged seamlessly. Finally, the response from the `Adaptee` is translated back to the `Target` Interface by the `Adapter` and returned to the Client, completing the charging process.
 
 

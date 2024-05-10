@@ -13,11 +13,11 @@ endif::[]
 |===
 |Let's consider the process of building a house. There are several steps involved, such as laying the foundation, constructing the walls, installing the roof, and finishing the interior. While these steps are common to every house construction project, the specific materials, techniques, and designs may vary depending on factors like the location, budget, and architectural style.
 
-In software design, the Template Method pattern can be applied to model the construction process of a house. You can create a generic "HouseBuilder" class with a template method that outlines the overall sequence of construction steps. The template method would include fixed steps such as laying the foundation, constructing the walls, and installing the roof, while leaving certain steps open for customization through abstract methods or hooks.
+In software design, the Template Method pattern can be applied to model the construction process of a house. 
 |image:template_method_town_house.jpg[width=300, height=300]
 |===
 
-For example, subclasses for building different types of houses, such as a modern-style house or a traditional-style house, can extend the "HouseBuilder" class and override specific steps to implement unique construction techniques or architectural features. While both types of houses follow the same overall construction process, they can differ in the choice of materials, design elements, and finishing touches.
+You can create a generic "HouseBuilder" class with a template method that outlines the overall sequence of construction steps. The template method would include fixed steps such as laying the foundation, constructing the walls, and installing the roof, while leaving certain steps open for customization through abstract methods or hooks. For example, subclasses for building different types of houses, such as a modern-style house or a traditional-style house, can extend the "HouseBuilder" class and override specific steps to implement unique construction techniques or architectural features. While both types of houses follow the same overall construction process, they can differ in the choice of materials, design elements, and finishing touches.
 
 The Template Method pattern provides a flexible and reusable way to define the overall structure of a complex process, allowing subclasses to customize specific steps to meet varying requirements or preferences, similar to how different types of houses can be built using a common construction framework with room for customization based on architectural style and design preferences.
 
@@ -40,13 +40,13 @@ Next, we will explain the concept of the Template Method design pattern using UM
 
 [discrete%breakable]
 === Class Diagram
-image::TemplateMethodPatternClassDiagram.png[title="The Template Method Class Diagram", align=center]
+image::TemplateMethodPatternClassDiagram.png[title="The Template Method Class Diagram", align=center, scaledwidth=70%]
 In the given UML diagram, we see the Template Method design pattern represented through classes that resemble the process of constructing a house, using an analogy to explain each class's role. The `AbstractClass` acts as the blueprint or the general contractor for building a house, defining the overall sequence of construction steps (`templateMethod()`) and specifying that certain tasks (like laying the foundation `primitiveOperation1()` and installing the roof `primitiveOperation2()`) need customization but does not dictate how to perform these tasks. This class mandates that any specific construction project (house) must define how these tasks are carried out. The `ConcreteClass1` and `ConcreteClass2` are akin to specialized builders or construction teams for different styles of houses, say a modern-style home and a traditional-style home, respectively. These classes provide concrete implementations for the foundation-laying and roof-installing steps (`primitiveOperation1()` and `primitiveOperation2()`) according to the requirements or design specifics of the house they are tasked to build. The relationship arrows indicate that both specialized builders inherit the overall construction plan from the general contractor but tailor specific steps based on the architectural style and construction techniques suitable for the type of house being constructed.
 
 
 [discrete%breakable]
 === Sequence Diagram
-image::TemplateMethodPatternSequenceDiagram.png[title="The Template Method Sequence Diagram", align=center]
+image::TemplateMethodPatternSequenceDiagram.png[title="The Template Method Sequence Diagram", align=center, scaledwidth=70%]
 This sequence diagram illustrates the interaction between different components in the Template Method design pattern. The Client represents the homeowner or project manager, initiating the construction process by calling the `templateMethod()` on the `AbstractClass`, which acts as the general blueprint or construction guideline for building a house. This blueprint outlines the necessary steps for construction but delegates the specifics of some steps to its subclasses.
 
 The `AbstractClass` then coordinates the construction process by engaging two different types of specialized construction teams, represented by `ConcreteClass1` and `ConcreteClass2`. These could be likened to teams specializing in different styles of houses or different construction tasks. For instance, `ConcreteClass1` might be a team skilled in laying foundations and `ConcreteClass2` skilled in roof installations, or they might represent teams building in modern and traditional styles, respectively.
