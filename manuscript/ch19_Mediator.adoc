@@ -80,7 +80,7 @@ include::{csharp_path}/mediator/IMediator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/mediator/Mediator.ts[lines=3..]
+include::{typescript_path}/mediator/Mediator.ts[]
 endif::[]
 ----
 
@@ -104,7 +104,7 @@ include::{csharp_path}/mediator/ScrumMaster.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/mediator/ScrumMaster.ts[lines=3..]
+include::{typescript_path}/mediator/ScrumMaster.ts[]
 endif::[]
 ----
 
@@ -128,7 +128,7 @@ include::{csharp_path}/mediator/Colleague.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/mediator/Colleague.ts[lines=3..]
+include::{typescript_path}/mediator/Colleague.ts[]
 endif::[]
 ----
 
@@ -152,7 +152,7 @@ include::{csharp_path}/mediator/Developer.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/mediator/Developer.ts[lines=3..]
+include::{typescript_path}/mediator/Developer.ts[]
 endif::[]
 ----
 
@@ -171,7 +171,7 @@ include::{csharp_path}/mediator/Tester.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/mediator/Tester.ts[lines=3..]
+include::{typescript_path}/mediator/Tester.ts[]
 endif::[]
 ----
 
@@ -195,7 +195,7 @@ include::{csharp_path}/mediator/AgileTeam.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/mediator/AgileTeam.ts[lines=3..]
+include::{typescript_path}/mediator/AgileTeam.ts[]
 endif::[]
 ----
 

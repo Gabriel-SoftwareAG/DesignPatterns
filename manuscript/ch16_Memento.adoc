@@ -70,7 +70,7 @@ include::{csharp_path}/memento/GameState.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/GameState.ts[lines=3..]
+include::{typescript_path}/memento/GameState.ts[]
 endif::[]
 ----
 
@@ -94,7 +94,7 @@ include::{csharp_path}/memento/Player.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/Player.ts[lines=3..]
+include::{typescript_path}/memento/Player.ts[]
 endif::[]
 ----
 
@@ -118,7 +118,7 @@ include::{csharp_path}/memento/SaveManager.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/SaveManager.ts[lines=3..]
+include::{typescript_path}/memento/SaveManager.ts[]
 endif::[]
 ----
 
@@ -142,7 +142,7 @@ include::{csharp_path}/memento/MementoClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/Client.ts[lines=3..]
+include::{typescript_path}/memento/Client.ts[]
 endif::[]
 ----
 

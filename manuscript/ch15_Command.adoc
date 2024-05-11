@@ -60,7 +60,7 @@ include::{csharp_path}/command/ICommand.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/Command.ts[lines=3..]
+include::{typescript_path}/command/Command.ts[]
 endif::[]
 ----
 
@@ -84,7 +84,7 @@ include::{csharp_path}/command/PreparePizzaCommand.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/PreparePizzaCommand.ts[lines=3..]
+include::{typescript_path}/command/PreparePizzaCommand.ts[]
 endif::[]
 ----
 
@@ -103,7 +103,7 @@ include::{csharp_path}/command/ServePastaCommand.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/ServePastaCommand.ts[lines=3..]
+include::{typescript_path}/command/ServePastaCommand.ts[]
 endif::[]
 ----
 
@@ -127,7 +127,7 @@ include::{csharp_path}/command/Receiver.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/Receiver.ts[lines=3..]
+include::{typescript_path}/command/Receiver.ts[]
 endif::[]
 ----
 
@@ -151,7 +151,7 @@ include::{csharp_path}/command/Waiter.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/Waiter.ts[lines=3..]
+include::{typescript_path}/command/Waiter.ts[]
 endif::[]
 ----
 
@@ -173,7 +173,7 @@ include::{csharp_path}/command/CommandClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/Client.ts[lines=3..]
+include::{typescript_path}/command/Client.ts[]
 endif::[]
 ----
 

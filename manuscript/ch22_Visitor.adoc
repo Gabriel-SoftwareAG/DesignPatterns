@@ -77,7 +77,7 @@ include::{csharp_path}/visitor/Exhibit.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Exhibit.ts[lines=3..]
+include::{typescript_path}/visitor/Exhibit.ts[]
 endif::[]
 ----
 
@@ -101,7 +101,7 @@ include::{csharp_path}/visitor/Painting.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Painting.ts[lines=3..]
+include::{typescript_path}/visitor/Painting.ts[]
 endif::[]
 ----
 
@@ -120,7 +120,7 @@ include::{csharp_path}/visitor/Sculpture.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Sculpture.ts[lines=3..]
+include::{typescript_path}/visitor/Sculpture.ts[]
 endif::[]
 ----
 
@@ -144,7 +144,7 @@ include::{csharp_path}/visitor/IVisitor.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Visitor.ts[lines=3..]
+include::{typescript_path}/visitor/Visitor.ts[]
 endif::[]
 ----
 
@@ -168,7 +168,7 @@ include::{csharp_path}/visitor/Patron.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Patron.ts[lines=3..]
+include::{typescript_path}/visitor/Patron.ts[]
 endif::[]
 ----
 
@@ -192,7 +192,7 @@ include::{csharp_path}/visitor/Museum.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Museum.ts[lines=3..]
+include::{typescript_path}/visitor/Museum.ts[]
 endif::[]
 ----
 

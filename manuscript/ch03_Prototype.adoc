@@ -63,7 +63,7 @@ include::{csharp_path}/prototype/IPrototype.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/prototype/Prototype.ts[lines=3..]
+include::{typescript_path}/prototype/Prototype.ts[]
 endif::[]
 ----
 
@@ -87,7 +87,7 @@ include::{csharp_path}/prototype/WhiteTeddyBearPrototype.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/prototype/WhiteTeddyBearPrototype.ts[lines=3..]
+include::{typescript_path}/prototype/WhiteTeddyBearPrototype.ts[]
 endif::[]
 ----
 
@@ -106,7 +106,7 @@ include::{csharp_path}/prototype/BlackTeddyBearPrototype.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/prototype/BlackTeddyBearPrototype.ts[lines=3..]
+include::{typescript_path}/prototype/BlackTeddyBearPrototype.ts[]
 endif::[]
 ----
 
@@ -130,7 +130,7 @@ include::{csharp_path}/prototype/PrototypeClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/prototype/PrototypeClient.ts[lines=3..]
+include::{typescript_path}/prototype/PrototypeClient.ts[]
 endif::[]
 ----
 

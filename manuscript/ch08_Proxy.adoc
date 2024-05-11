@@ -66,7 +66,7 @@ include::{csharp_path}/proxy/ILegalService.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/proxy/LegalService.ts[lines=3..]
+include::{typescript_path}/proxy/LegalService.ts[]
 endif::[]
 ----
 
@@ -88,7 +88,7 @@ include::{csharp_path}/proxy/ProxyLegalService.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/proxy/ProxyLegalService.ts[lines=3..]
+include::{typescript_path}/proxy/ProxyLegalService.ts[]
 endif::[]
 ----
 
@@ -112,7 +112,7 @@ include::{csharp_path}/proxy/RealLegalService.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/proxy/RealLegalService.ts[lines=3..]
+include::{typescript_path}/proxy/RealLegalService.ts[]
 endif::[]
 ----
 
@@ -138,7 +138,7 @@ include::{csharp_path}/proxy/ProxyClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/proxy/Client.ts[lines=3..]
+include::{typescript_path}/proxy/Client.ts[]
 endif::[]
 ----
 

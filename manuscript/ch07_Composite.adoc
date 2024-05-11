@@ -70,7 +70,7 @@ include::{csharp_path}/composite/IPlaylistComponent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/composite/PlaylistComponent.ts[lines=3..]
+include::{typescript_path}/composite/PlaylistComponent.ts[]
 endif::[]
 ----
 
@@ -94,7 +94,7 @@ include::{csharp_path}/composite/Song.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/composite/Song.ts[lines=3..]
+include::{typescript_path}/composite/Song.ts[]
 endif::[]
 ----
 
@@ -118,7 +118,7 @@ include::{csharp_path}/composite/Playlist.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/composite/Playlist.ts[lines=3..]
+include::{typescript_path}/composite/Playlist.ts[]
 endif::[]
 ----
 
@@ -142,7 +142,7 @@ include::{csharp_path}/composite/MusicPlayer.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/composite/MusicPlayer.ts[lines=3..]
+include::{typescript_path}/composite/MusicPlayer.ts[]
 endif::[]
 ----
 

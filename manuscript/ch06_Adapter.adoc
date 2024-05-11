@@ -67,7 +67,7 @@ include::{csharp_path}/adapter/ElectricalOutlet.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/ElectricalOutlet.ts[lines=3..]
+include::{typescript_path}/adapter/ElectricalOutlet.ts[]
 endif::[]
 ----
 
@@ -91,7 +91,7 @@ include::{csharp_path}/adapter/MobilePhone.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/MobilePhone.ts[lines=3..]
+include::{typescript_path}/adapter/MobilePhone.ts[]
 endif::[]
 ----
 
@@ -115,7 +115,7 @@ include::{csharp_path}/adapter/UniversalAdapter.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/UniversalAdapter.ts[lines=3..]
+include::{typescript_path}/adapter/UniversalAdapter.ts[]
 endif::[]
 ----
 
@@ -139,7 +139,7 @@ include::{csharp_path}/adapter/Traveler.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/adapter/Traveler.ts[lines=3..]
+include::{typescript_path}/adapter/Traveler.ts[]
 endif::[]
 ----
 

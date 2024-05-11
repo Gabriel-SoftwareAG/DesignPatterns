@@ -67,7 +67,7 @@ include::{csharp_path}/decorator/IPizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/Pizza.ts[lines=3..]
+include::{typescript_path}/decorator/Pizza.ts[]
 endif::[]
 ----
 
@@ -91,7 +91,7 @@ include::{csharp_path}/decorator/PlainCheesePizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/PlainCheesePizza.ts[lines=3..]
+include::{typescript_path}/decorator/PlainCheesePizza.ts[]
 endif::[]
 ----
 
@@ -115,7 +115,7 @@ include::{csharp_path}/decorator/PizzaDecorator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/PizzaDecorator.ts[lines=3..]
+include::{typescript_path}/decorator/PizzaDecorator.ts[]
 endif::[]
 ----
 
@@ -139,7 +139,7 @@ include::{csharp_path}/decorator/TomatoDecorator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/TomatoDecorator.ts[lines=3..]
+include::{typescript_path}/decorator/TomatoDecorator.ts[]
 endif::[]
 ----
 
@@ -159,7 +159,7 @@ include::{csharp_path}/decorator/MushroomDecorator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/MushroomDecorator.ts[lines=3..]
+include::{typescript_path}/decorator/MushroomDecorator.ts[]
 endif::[]
 ----
 
@@ -185,7 +185,7 @@ include::{csharp_path}/decorator/DecoratorClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/Client.ts[lines=3..]
+include::{typescript_path}/decorator/Client.ts[]
 endif::[]
 ----
 

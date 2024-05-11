@@ -68,7 +68,7 @@ include::{csharp_path}/strategy/IRouteStrategy.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/strategy/RouteStrategy.ts[lines=3..]
+include::{typescript_path}/strategy/RouteStrategy.ts[]
 endif::[]
 ----
 
@@ -92,7 +92,7 @@ include::{csharp_path}/strategy/RoutePlanner.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/strategy/RoutePlanner.ts[lines=3..]
+include::{typescript_path}/strategy/RoutePlanner.ts[]
 endif::[]
 ----
 
@@ -116,7 +116,7 @@ include::{csharp_path}/strategy/FastestRouteStrategy.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/strategy/FastestRouteStrategy.ts[lines=3..]
+include::{typescript_path}/strategy/FastestRouteStrategy.ts[]
 endif::[]
 ----
 
@@ -135,7 +135,7 @@ include::{csharp_path}/strategy/ShortestRouteStrategy.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/strategy/ShortestRouteStrategy.ts[lines=3..]
+include::{typescript_path}/strategy/ShortestRouteStrategy.ts[]
 endif::[]
 ----
 
@@ -161,7 +161,7 @@ include::{csharp_path}/strategy/StrategyClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/strategy/Client.ts[lines=3..]
+include::{typescript_path}/strategy/Client.ts[]
 endif::[]
 ----
 

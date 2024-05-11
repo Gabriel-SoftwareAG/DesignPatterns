@@ -62,7 +62,7 @@ include::{csharp_path}/factorymethod/Product.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/Product.ts[lines=3..]
+include::{typescript_path}/factorymethod/Product.ts[]
 endif::[]
 ----
 
@@ -86,7 +86,7 @@ include::{csharp_path}/factorymethod/IceCream.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/IceCream.ts[lines=3..]
+include::{typescript_path}/factorymethod/IceCream.ts[]
 endif::[]
 ----
 
@@ -105,7 +105,7 @@ include::{csharp_path}/factorymethod/Pizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/Pizza.ts[lines=3..]
+include::{typescript_path}/factorymethod/Pizza.ts[]
 endif::[]
 ----
 
@@ -129,7 +129,7 @@ include::{csharp_path}/factorymethod/FoodStall.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/FoodStall.ts[lines=3..]
+include::{typescript_path}/factorymethod/FoodStall.ts[]
 endif::[]
 ----
 
@@ -153,7 +153,7 @@ include::{csharp_path}/factorymethod/PizzaStall.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/PizzaStall.ts[lines=3..]
+include::{typescript_path}/factorymethod/PizzaStall.ts[]
 endif::[]
 ----
 
@@ -172,7 +172,7 @@ include::{csharp_path}/factorymethod/IceCreamStall.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/IceCreamStall.ts[lines=3..]
+include::{typescript_path}/factorymethod/IceCreamStall.ts[]
 endif::[]
 ----
 
@@ -196,7 +196,7 @@ include::{csharp_path}/factorymethod/FactoryMethodClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/factorymethod/FactoryMethod.ts[lines=3..]
+include::{typescript_path}/factorymethod/FactoryMethod.ts[]
 endif::[]
 ----
 

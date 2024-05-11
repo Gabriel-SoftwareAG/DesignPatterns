@@ -65,7 +65,7 @@ include::{csharp_path}/observer/IStudent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/observer/Student.ts[lines=3..]
+include::{typescript_path}/observer/Student.ts[]
 endif::[]
 ----
 
@@ -89,7 +89,7 @@ include::{csharp_path}/observer/MathStudent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/observer/MathStudent.ts[lines=3..]
+include::{typescript_path}/observer/MathStudent.ts[]
 endif::[]
 ----
 
@@ -108,7 +108,7 @@ include::{csharp_path}/observer/ScienceStudent.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/observer/ScienceStudent.ts[lines=3..]
+include::{typescript_path}/observer/ScienceStudent.ts[]
 endif::[]
 ----
 
@@ -132,7 +132,7 @@ include::{csharp_path}/observer/Teacher.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/observer/Teacher.ts[lines=3..]
+include::{typescript_path}/observer/Teacher.ts[]
 endif::[]
 ----
 
@@ -156,7 +156,7 @@ include::{csharp_path}/observer/ObserverClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/observer/Client.ts[lines=3..]
+include::{typescript_path}/observer/Client.ts[]
 endif::[]
 ----
 

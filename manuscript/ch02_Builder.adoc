@@ -69,7 +69,7 @@ include::{csharp_path}/builder/IBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/builder/IBuilder.ts[lines=3..]
+include::{typescript_path}/builder/Builder.ts[]
 endif::[]
 ----
 
@@ -93,7 +93,7 @@ include::{csharp_path}/builder/ConcreteBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/builder/ConcreteBuilder.ts[lines=3..]
+include::{typescript_path}/builder/ConcreteBuilder.ts[]
 endif::[]
 ----
 
@@ -117,7 +117,7 @@ include::{csharp_path}/builder/Product.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/builder/Product.ts[lines=3..]
+include::{typescript_path}/builder/Product.ts[]
 endif::[]
 ----
 
@@ -141,7 +141,7 @@ include::{csharp_path}/builder/Director.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/builder/Director.ts[lines=3..]
+include::{typescript_path}/builder/Director.ts[]
 endif::[]
 ----
 
@@ -164,7 +164,7 @@ include::{csharp_path}/builder/BuilderClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/builder/Client.ts[lines=3..]
+include::{typescript_path}/builder/Client.ts[]
 endif::[]
 ----
 

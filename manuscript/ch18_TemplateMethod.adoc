@@ -80,7 +80,7 @@ include::{csharp_path}/templatemethod/HouseBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/templatemethod/HouseBuilder.ts[lines=3..]
+include::{typescript_path}/templatemethod/HouseBuilder.ts[]
 endif::[]
 ----
 
@@ -104,7 +104,7 @@ include::{csharp_path}/templatemethod/ModernHouseBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/templatemethod/ModernHouseBuilder.ts[lines=3..]
+include::{typescript_path}/templatemethod/ModernHouseBuilder.ts[]
 endif::[]
 ----
 
@@ -128,7 +128,7 @@ include::{csharp_path}/templatemethod/TraditionalHouseBuilder.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/templatemethod/TraditionalHouseBuilder.ts[lines=3..]
+include::{typescript_path}/templatemethod/TraditionalHouseBuilder.ts[]
 endif::[]
 ----
 
@@ -154,7 +154,7 @@ include::{csharp_path}/templatemethod/TemplateMethodClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/templatemethod/Client.ts[lines=3..]
+include::{typescript_path}/templatemethod/Client.ts[]
 endif::[]
 ----
 

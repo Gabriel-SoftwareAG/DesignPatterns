@@ -74,7 +74,7 @@ include::{csharp_path}/iterator/Post.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/Post.ts[lines=3..]
+include::{typescript_path}/iterator/Post.ts[]
 endif::[]
 ----
 
@@ -100,7 +100,7 @@ include::{csharp_path}/iterator/IBlog.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/Blog.ts[lines=3..]
+include::{typescript_path}/iterator/Blog.ts[]
 endif::[]
 ----
 
@@ -126,7 +126,7 @@ include::{csharp_path}/iterator/BlogPlatform.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/BlogPlatform.ts[lines=3..]
+include::{typescript_path}/iterator/BlogPlatform.ts[]
 endif::[]
 ----
 
@@ -152,7 +152,7 @@ include::{csharp_path}/iterator/IIterator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/Iterator.ts[lines=3..]
+include::{typescript_path}/iterator/Iterator.ts[]
 endif::[]
 ----
 
@@ -178,7 +178,7 @@ include::{csharp_path}/iterator/PostIterator.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/PostIterator.ts[lines=3..]
+include::{typescript_path}/iterator/PostIterator.ts[]
 endif::[]
 ----
 
@@ -204,7 +204,7 @@ include::{csharp_path}/iterator/User.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/User.ts[lines=3..]
+include::{typescript_path}/iterator/User.ts[]
 endif::[]
 ----
 

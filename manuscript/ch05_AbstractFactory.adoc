@@ -66,7 +66,7 @@ include::{csharp_path}/abstractfactory/AbstractFoodStallFactory.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/AbstractFoodStallFactory.ts[lines=3..]
+include::{typescript_path}/abstractfactory/AbstractFoodStallFactory.ts[]
 endif::[]
 ----
 
@@ -90,7 +90,7 @@ include::{csharp_path}/abstractfactory/AdventureLandFactory.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/AdventureLandFactory.ts[lines=3..]
+include::{typescript_path}/abstractfactory/AdventureLandFactory.ts[]
 endif::[]
 ----
 
@@ -109,7 +109,7 @@ include::{csharp_path}/abstractfactory/FantasyLandFactory.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/FantasyLandFactory.ts[lines=3..]
+include::{typescript_path}/abstractfactory/FantasyLandFactory.ts[]
 endif::[]
 ----
 
@@ -133,7 +133,7 @@ include::{csharp_path}/abstractfactory/IceCream.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/IceCream.ts[lines=3..]
+include::{typescript_path}/abstractfactory/IceCream.ts[]
 endif::[]
 ----
 
@@ -152,7 +152,7 @@ include::{csharp_path}/abstractfactory/Pizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/Pizza.ts[lines=3..]
+include::{typescript_path}/abstractfactory/Pizza.ts[]
 endif::[]
 ----
 
@@ -176,7 +176,7 @@ include::{csharp_path}/abstractfactory/TropicalIceCream.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/TropicalIceCream.ts[lines=3..]
+include::{typescript_path}/abstractfactory/TropicalIceCream.ts[]
 endif::[]
 ----
 
@@ -195,7 +195,7 @@ include::{csharp_path}/abstractfactory/ExoticPizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/ExoticPizza.ts[lines=3..]
+include::{typescript_path}/abstractfactory/ExoticPizza.ts[]
 endif::[]
 ----
 
@@ -214,7 +214,7 @@ include::{csharp_path}/abstractfactory/MagicalIceCream.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/MagicalIceCream.ts[lines=3..]
+include::{typescript_path}/abstractfactory/MagicalIceCream.ts[]
 endif::[]
 ----
 
@@ -233,7 +233,7 @@ include::{csharp_path}/abstractfactory/EnchantedPizza.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/EnchantedPizza.ts[lines=3..]
+include::{typescript_path}/abstractfactory/EnchantedPizza.ts[]
 endif::[]
 ----
 
@@ -257,7 +257,7 @@ include::{csharp_path}/abstractfactory/ParkVisitor.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/abstractfactory/ParkVisitor.ts[lines=3..]
+include::{typescript_path}/abstractfactory/ParkVisitor.ts[]
 endif::[]
 ----
 

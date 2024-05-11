@@ -65,7 +65,7 @@ include::{csharp_path}/facade/ControlPanel.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/facade/ControlPanel.ts[lines=3..]
+include::{typescript_path}/facade/ControlPanel.ts[]
 endif::[]
 ----
 
@@ -89,7 +89,7 @@ include::{csharp_path}/facade/AutomaticParkingSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/facade/AutomaticParkingSystem.ts[lines=3..]
+include::{typescript_path}/facade/AutomaticParkingSystem.ts[]
 endif::[]
 ----
 
@@ -113,7 +113,7 @@ include::{csharp_path}/facade/AdaptiveCruiseControlSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/facade/AdaptiveCruiseControlSystem.ts[lines=3..]
+include::{typescript_path}/facade/AdaptiveCruiseControlSystem.ts[]
 endif::[]
 ----
 
@@ -137,7 +137,7 @@ include::{csharp_path}/facade/CollisionAvoidanceSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/facade/CollisionAvoidanceSystem.ts[lines=3..]
+include::{typescript_path}/facade/CollisionAvoidanceSystem.ts[]
 endif::[]
 ----
 
@@ -163,7 +163,7 @@ include::{csharp_path}/facade/FacadeClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/facade/Client.ts[lines=3..]
+include::{typescript_path}/facade/Client.ts[]
 endif::[]
 ----
 

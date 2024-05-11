@@ -60,7 +60,7 @@ include::{csharp_path}/singleton/Library.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/singleton/Library.ts[lines=3..]
+include::{typescript_path}/singleton/Library.ts[]
 endif::[]
 ----
 
@@ -87,7 +87,7 @@ include::{csharp_path}/singleton/Client.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/singleton/Client.ts[lines=3..]
+include::{typescript_path}/singleton/Client.ts[]
 endif::[]
 ----
 

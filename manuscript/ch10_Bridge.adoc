@@ -76,7 +76,7 @@ include::{csharp_path}/bridge/Device.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/bridge/Device.ts[lines=3..]
+include::{typescript_path}/bridge/Device.ts[]
 endif::[]
 ----
 
@@ -100,7 +100,7 @@ include::{csharp_path}/bridge/Television.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/bridge/Television.ts[lines=3..]
+include::{typescript_path}/bridge/Television.ts[]
 endif::[]
 ----
 
@@ -124,7 +124,7 @@ include::{csharp_path}/bridge/SoundSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/bridge/SoundSystem.ts[lines=3..]
+include::{typescript_path}/bridge/SoundSystem.ts[]
 endif::[]
 ----
 
@@ -148,7 +148,7 @@ include::{csharp_path}/bridge/RemoteControl.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/bridge/RemoteControl.ts[lines=3..]
+include::{typescript_path}/bridge/RemoteControl.ts[]
 endif::[]
 ----
 
@@ -172,7 +172,7 @@ include::{csharp_path}/bridge/AdvancedRemoteControl.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/bridge/AdvancedRemoteControl.ts[lines=3..]
+include::{typescript_path}/bridge/AdvancedRemoteControl.ts[]
 endif::[]
 ----
 
@@ -196,7 +196,7 @@ include::{csharp_path}/bridge/BridgeClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/bridge/Client.ts[lines=3..]
+include::{typescript_path}/bridge/Client.ts[]
 endif::[]
 ----
 
