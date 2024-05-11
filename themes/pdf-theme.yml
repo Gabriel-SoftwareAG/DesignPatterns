@@ -56,12 +56,12 @@ header:
     left:
       content: '{chapter-title}'  # Example content: document title centered
     right:
-      content: 'Nir Gallner, VeriSoft'  # Example content: document title centered
+      content: 'Nir Gallner'  # Example content: document title centered
   verso:
     left:
       content: '{chapter-title}'  # Same for verso pages
     right:
-      content: 'Nir Gallner, VeriSoft'  # Example content: document title centered
+      content: 'Nir Gallner'  # Example content: document title centered
 footer:
   recto_content:
     center: '{page-number}'
