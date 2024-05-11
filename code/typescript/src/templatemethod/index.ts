@@ -1,5 +1,3 @@
-
-
 let modernBuilder: HouseBuilder = new ModernHouseBuilder();
 modernBuilder.buildHouse(); // Builds a modern house
 

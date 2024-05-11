@@ -1,9 +1,9 @@
-import { IRouteStrategy } from "./RouteStrategy";
+import { RouteStrategy } from "./RouteStrategy";
 
 export class RoutePlanner {
-    private strategy: IRouteStrategy;
+    private strategy!: RouteStrategy;
 
-    setStrategy(strategy: IRouteStrategy): void {
+    setStrategy(strategy: RouteStrategy): void {
         console.log("Setting the strategy to calculate the route: " + strategy.constructor.name);
         this.strategy = strategy;
     }

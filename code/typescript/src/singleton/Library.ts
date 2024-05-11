@@ -1,7 +1,7 @@
 export class Library {
     private static uniqueInstance: Library;
-    
-    private constructor() {}
+
+    private constructor() { }
 
     static getInstance(): Library {
         if (!Library.uniqueInstance) {

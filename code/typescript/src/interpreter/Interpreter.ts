@@ -1,6 +1,5 @@
 import { Expression } from "./Expression";
 import { TerminalExpression } from "./TerminalExpression";
-import { NonterminalExpression } from "./NonterminalExpression";
 import { Context } from "./Context";
 
 export class Interpreter {

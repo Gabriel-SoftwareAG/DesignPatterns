@@ -1,9 +1,9 @@
-import { IState } from "./State";
+import { State } from "./State";
 
 export class TrafficLight {
-    private currentState: IState;
+    private currentState: State;
 
-    constructor(state: IState) {
+    constructor(state: State) {
         this.currentState = state;
     }
 
@@ -12,7 +12,7 @@ export class TrafficLight {
         // Logic to change the current state
     }
 
-    setState(state: IState): void {
+    setState(state: State): void {
         this.currentState = state;
     }
 }

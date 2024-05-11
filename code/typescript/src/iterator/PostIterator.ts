@@ -4,7 +4,7 @@ import { Post } from "./Post";
 export class PostIterator implements Iterator {
     private position = 0;
 
-    constructor(private posts: Post[]) {}
+    constructor(private posts: Post[]) { }
 
     hasNext(): boolean {
         return this.position < this.posts.length;
