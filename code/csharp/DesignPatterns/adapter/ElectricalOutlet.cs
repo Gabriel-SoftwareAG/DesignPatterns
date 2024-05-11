@@ -1,6 +1,6 @@
 namespace Adapter;
 
-interface ElectricalOutlet
+interface IElectricalOutlet
 {
     void Request();
 }

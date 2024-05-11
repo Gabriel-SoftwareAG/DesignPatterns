@@ -2,5 +2,5 @@ namespace Bridge;
 
 class RegularRemoteControl : RemoteControl
 {
-    public RegularRemoteControl(Device device) : base(device) { }
+    public RegularRemoteControl(IDevice device) : base(device) { }
 }

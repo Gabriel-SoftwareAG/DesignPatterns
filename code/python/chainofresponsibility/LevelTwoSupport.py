@@ -1,5 +1,6 @@
 from SupportLevel import SupportLevel
 
+
 class LevelTwoSupport(SupportLevel):
     def __init__(self):
         self.next = None

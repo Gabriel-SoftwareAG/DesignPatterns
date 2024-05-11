@@ -1,6 +1,6 @@
 namespace AbstractFactory;
 
-interface IceCream
+interface IIceCream
 {
     void Enjoy();
 }

@@ -1,32 +1,32 @@
 namespace Bridge;
 using System;
 
-class SoundSystem : Device
+class SoundSystem : IDevice
 {
-    private bool isOn;
-    private int volume;
+    private bool _isOn;
+    private int _volume;
 
     public SoundSystem()
     {
-        this.isOn = false;
-        this.volume = 50; // Default volume
+        this._isOn = false;
+        this._volume = 50; // Default volume
     }
 
     public void PowerOn()
     {
-        isOn = true;
+        _isOn = true;
         Console.WriteLine("Sound system powered on");
     }
 
     public void PowerOff()
     {
-        isOn = false;
+        _isOn = false;
         Console.WriteLine("Sound system powered off");
     }
 
     public void AdjustVolume(int volume)
     {
-        this.volume = volume;
+        this._volume = volume;
         Console.WriteLine("Adjusting sound system volume to " + volume);
     }
 

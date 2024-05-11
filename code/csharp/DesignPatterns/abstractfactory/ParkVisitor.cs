@@ -5,15 +5,15 @@ public class ParkVisitor
     public static void VisitPark()
     {
         // Choose themed area (factory)
-        AbstractFoodStallFactory adventureLandFactory =
+        IAbstractFoodStallFactory adventureLandFactory =
                                                     new AdventureLandFactory();
-        AbstractFoodStallFactory fantasyLandFactory = new FantasyLandFactory();
+        IAbstractFoodStallFactory fantasyLandFactory = new FantasyLandFactory();
 
         // Order themed food items
-        IceCream tropicalIceCream = adventureLandFactory.CreateIceCream();
+        IIceCream tropicalIceCream = adventureLandFactory.CreateIceCream();
         Pizza exoticPizza = adventureLandFactory.CreatePizza();
 
-        IceCream magicalIceCream = fantasyLandFactory.CreateIceCream();
+        IIceCream magicalIceCream = fantasyLandFactory.CreateIceCream();
         Pizza enchantedPizza = fantasyLandFactory.CreatePizza();
 
         // Enjoy themed food items

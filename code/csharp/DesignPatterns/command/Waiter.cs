@@ -4,9 +4,15 @@ class Waiter
 {
     private ICommand _command;
 
-    public void SetCommand(ICommand command)
+    public ICommand Command
     {
-        _command = command;
+        get => _command;
+        set
+        {
+            _command = value;
+            System.Console.WriteLine($"Waiter setting command to {value
+                                                            .GetType().Name}");
+        }
     }
 
     public void ExecuteCommand()

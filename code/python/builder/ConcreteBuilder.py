@@ -1,6 +1,7 @@
 from Builder import Builder
 from Product import Product
 
+
 class ConcreteBuilder(Builder):
     def __init__(self):
         self.product = Product()

@@ -1,7 +1,7 @@
 from Player import Player
 from SaveManager import SaveManager
 
-def main():
+if __name__ == "__main__":
     player = Player()
     save_manager = SaveManager()
 
@@ -18,6 +18,3 @@ def main():
     # Player wants to revert to the previous state
     player.get_state_from_memento(save_manager.get(0))
     print(f"Player reverted to state: {player.get_state()}")
-
-if __name__ == "__main__":
-    main()

@@ -1,5 +1,6 @@
 from HouseBuilder import HouseBuilder
 
+
 class ModernHouseBuilder(HouseBuilder):
     def build_walls(self):
         print("Building walls with glass and steel.")

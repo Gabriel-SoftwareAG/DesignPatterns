@@ -1,8 +1,7 @@
-
 from Context import Context
 from Interpreter import Interpreter
 
-def main():
+if __name__ == "__main__":
     context = Context("English")
     interpreter = Interpreter()
 
@@ -13,6 +12,3 @@ def main():
     complex_expression = "How are you?"
     print(f"Client: Sending expression - {complex_expression}")
     interpreter.interpret(complex_expression, context)
-
-if __name__ == "__main__":
-    main()

@@ -1,4 +1,5 @@
 namespace Observer;
+
 class ScienceStudent : IStudent
 {
     public void ReceiveUpdate()

@@ -1,5 +1,5 @@
-
 from Expression import Expression
+
 
 class TerminalExpression(Expression):
     def __init__(self, translation):

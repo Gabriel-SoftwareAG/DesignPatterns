@@ -1,8 +1,7 @@
-
 from Song import Song
 from Playlist import Playlist
 
-def main():
+if __name__ == "__main__":
     # Create individual songs
     song1 = Song("Song 1")
     song2 = Song("Song 2")
@@ -24,6 +23,3 @@ def main():
 
     # Play playlist
     playlist1.play_song()
-
-if __name__ == "__main__":
-    main()

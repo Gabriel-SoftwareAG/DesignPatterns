@@ -1,7 +1,6 @@
 namespace Proxy;
 using System;
 
-
 class RealLegalService : ILegalService
 {
     public void RequestLegalAssistance()

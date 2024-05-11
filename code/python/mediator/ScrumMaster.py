@@ -1,5 +1,6 @@
 from Mediator import Mediator
 
+
 class ScrumMaster(Mediator):
     def __init__(self):
         self.developer = None

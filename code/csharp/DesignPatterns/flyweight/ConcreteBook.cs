@@ -1,6 +1,6 @@
 namespace Flyweight;
 
-class ConcreteBook : Book
+class ConcreteBook : IBook
 {
     private readonly string _title;
     private readonly string _author;

@@ -1,4 +1,5 @@
 namespace Flyweight;
+
 public class FlyweightClient
 {
     public static void FlyweightExample()

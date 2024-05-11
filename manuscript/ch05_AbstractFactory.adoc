@@ -159,7 +159,6 @@ endif::[]
 The `IceCream` and `Pizza` interfaces define the general concept of themed food items within the amusement park. They declare methods for enjoying the themed food items.
 
 
-<<<
 [discrete%breakable]
 === Concrete Products: TropicalIceCream, ExoticPizza, MagicalIceCream, and EnchantedPizza
 [source, {lang}]

@@ -1,5 +1,5 @@
-
 from Iterator import Iterator
+
 
 class PostIterator(Iterator):
     def __init__(self, posts):

@@ -1,9 +1,8 @@
-
 from PlainCheesePizza import PlainCheesePizza
 from TomatoDecorator import TomatoDecorator
 from MushroomDecorator import MushroomDecorator
 
-def main():
+if __name__ == "__main__":
     plain_cheese_pizza = PlainCheesePizza()
 
     # Adding tomatoes to the pizza
@@ -17,6 +16,3 @@ def main():
     # Adding both tomatoes and mushrooms to the pizza
     deluxe_pizza = MushroomDecorator(TomatoDecorator(plain_cheese_pizza))
     deluxe_pizza.bake()
-
-if __name__ == "__main__":
-    main()

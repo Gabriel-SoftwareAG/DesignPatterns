@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Colleague(ABC):
     def __init__(self, mediator):
         self.mediator = mediator

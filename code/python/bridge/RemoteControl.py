@@ -1,5 +1,6 @@
 from Device import Device
 
+
 class RemoteControl(Device):
     def __init__(self, device):
         self.device = device

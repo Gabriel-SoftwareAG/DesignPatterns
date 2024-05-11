@@ -1,4 +1,5 @@
 namespace FactoryMethod;
+
 abstract class FoodStall
 {
     public abstract Product PrepareFood();

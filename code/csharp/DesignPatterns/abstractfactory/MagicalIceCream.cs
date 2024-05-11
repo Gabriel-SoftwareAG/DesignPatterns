@@ -1,6 +1,6 @@
 namespace AbstractFactory;
 
-class MagicalIceCream : IceCream
+class MagicalIceCream : IIceCream
 {
     public void Enjoy()
     {

@@ -1,5 +1,5 @@
-
 from Product import Product
+
 
 class IceCream(Product):
     def serve(self):

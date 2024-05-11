@@ -6,7 +6,7 @@ public class BridgeClient
     public static void BridgeExample()
     {
         // Creating a television device
-        Device tv = new Television();
+        IDevice tv = new Television();
 
         // Using a basic remote control for the television
         RemoteControl remoteControl = new RegularRemoteControl(tv);
@@ -16,7 +16,7 @@ public class BridgeClient
         remoteControl.ChangeChannel(5);
 
         // Creating a sound system device
-        Device soundSystem = new SoundSystem();
+        IDevice soundSystem = new SoundSystem();
 
         // Using an advanced remote control for the sound system
         AdvancedRemoteControl advancedRemoteControl = new AdvancedRemoteControl(soundSystem);

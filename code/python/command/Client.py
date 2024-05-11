@@ -3,7 +3,7 @@ from PreparePizzaCommand import PreparePizzaCommand
 from ServePastaCommand import ServePastaCommand
 from Waiter import Waiter
 
-def main():
+if __name__ == "__main__":
     chef = Receiver()
 
     prepare_pizza_command = PreparePizzaCommand(chef)
@@ -16,6 +16,3 @@ def main():
 
     waiter.set_command(serve_pasta_command)
     waiter.execute_command()
-
-if __name__ == "__main__":
-    main()

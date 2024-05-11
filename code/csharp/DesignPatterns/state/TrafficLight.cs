@@ -3,21 +3,21 @@ using System;
 
 class TrafficLight
 {
-    private IState currentState;
+    private IState _currentState;
 
     public TrafficLight(IState state)
     {
-        this.currentState = state;
+        this._currentState = state;
     }
 
     public void Perform()
     {
-        currentState.HandleRequest();
+        _currentState.HandleRequest();
         // Logic to change the current state
     }
 
     public void SetState(IState state)
     {
-        this.currentState = state;
+        this._currentState = state;
     }
 }

@@ -1,5 +1,5 @@
-
 from PlaylistComponent import PlaylistComponent
+
 
 class Song(PlaylistComponent):
     def __init__(self, title):

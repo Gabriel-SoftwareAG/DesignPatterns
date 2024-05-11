@@ -1,4 +1,5 @@
 namespace Interpreter;
+
 class Context
 {
     public string Language { get; }

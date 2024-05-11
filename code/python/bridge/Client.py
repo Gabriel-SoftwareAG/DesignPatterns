@@ -3,7 +3,7 @@ from SoundSystem import SoundSystem
 from RegularRemoteControl import RegularRemoteControl
 from AdvancedRemoteControl import AdvancedRemoteControl
 
-def main():
+if __name__ == "__main__":
     tv = Television()
     remote_control = RegularRemoteControl(tv)
     remote_control.power_on()
@@ -14,6 +14,3 @@ def main():
     advanced_remote_control.power_on()
     advanced_remote_control.adjust_volume(20)
     advanced_remote_control.mute()
-
-if __name__ == "__main__":
-    main()

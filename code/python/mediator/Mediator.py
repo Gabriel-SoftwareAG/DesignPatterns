@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Mediator(ABC):
     @abstractmethod
     def request(self, message, colleague):

@@ -1,5 +1,6 @@
 from Book import Book
 
+
 class ConcreteBook(Book):
     def __init__(self, title, author, book_id):
         self.title = title

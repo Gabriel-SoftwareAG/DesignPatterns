@@ -2,7 +2,7 @@ from RoutePlanner import RoutePlanner
 from FastestRouteStrategy import FastestRouteStrategy
 from ShortestRouteStrategy import ShortestRouteStrategy
 
-def main():
+if __name__ == "__main__":
     planner = RoutePlanner()
 
     # Set the strategy to calculate the fastest route
@@ -12,6 +12,3 @@ def main():
     # Set the strategy to calculate the shortest route
     planner.set_strategy(ShortestRouteStrategy())
     planner.execute_strategy()
-
-if __name__ == "__main__":
-    main()

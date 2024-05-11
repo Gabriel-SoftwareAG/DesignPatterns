@@ -1,5 +1,6 @@
 from Device import Device
 
+
 class SoundSystem(Device):
     def __init__(self):
         self.is_on = False

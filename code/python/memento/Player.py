@@ -1,5 +1,6 @@
 from GameState import GameState
 
+
 class Player:
     def __init__(self):
         self._state = ""

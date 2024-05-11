@@ -1,7 +1,6 @@
-
 from ControlPanel import ControlPanel
 
-def main():
+if __name__ == "__main__":
     control_panel = ControlPanel()
 
     control_panel.park()
@@ -10,6 +9,3 @@ def main():
 
     # Tie all actions together - take me home
     control_panel.drive_to_home_and_park()
-
-if __name__ == "__main__":
-    main()

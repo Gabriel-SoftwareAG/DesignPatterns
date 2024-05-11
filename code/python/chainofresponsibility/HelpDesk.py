@@ -2,7 +2,7 @@ from LevelOneSupport import LevelOneSupport
 from LevelTwoSupport import LevelTwoSupport
 from SupportTicket import SupportTicket
 
-def main():
+if __name__ == "__main__":
     levelOne = LevelOneSupport()
     levelTwo = LevelTwoSupport()
 
@@ -13,6 +13,3 @@ def main():
 
     anotherTicket = SupportTicket(2, "Computer does not start.")
     levelOne.handle_request(anotherTicket)
-
-if __name__ == "__main__":
-    main()

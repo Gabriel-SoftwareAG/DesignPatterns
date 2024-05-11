@@ -1,5 +1,5 @@
 namespace Adapter;
-class UniversalAdapter : ElectricalOutlet
+class UniversalAdapter : IElectricalOutlet
 {
     private MobilePhone _device;
 

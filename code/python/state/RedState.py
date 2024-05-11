@@ -1,5 +1,6 @@
 from State import State
 
+
 class RedState(State):
     def handle_request(self):
         print("Red light - Stop!")

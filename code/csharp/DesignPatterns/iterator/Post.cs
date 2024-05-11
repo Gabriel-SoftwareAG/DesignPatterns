@@ -1,4 +1,5 @@
 namespace Iterator;
+
 class Post
 {
     public string Title { get; }

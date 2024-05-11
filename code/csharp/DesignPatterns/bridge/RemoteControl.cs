@@ -2,30 +2,30 @@ namespace Bridge;
 
 abstract class RemoteControl
 {
-    protected Device device;
+    protected IDevice _device;
 
-    public RemoteControl(Device device)
+    public RemoteControl(IDevice device)
     {
-        this.device = device;
+        this._device = device;
     }
 
     public void PowerOn()
     {
-        device.PowerOn();
+        _device.PowerOn();
     }
 
     public void PowerOff()
     {
-        device.PowerOff();
+        _device.PowerOff();
     }
 
     public void AdjustVolume(int volume)
     {
-        device.AdjustVolume(volume);
+        _device.AdjustVolume(volume);
     }
 
     public void ChangeChannel(int channel)
     {
-        device.ChangeChannel(channel);
+        _device.ChangeChannel(channel);
     }
 }

@@ -1,5 +1,5 @@
 from Command import Command
-from Receiver import Receiver
+
 
 class ServePastaCommand(Command):
     def __init__(self, receiver):

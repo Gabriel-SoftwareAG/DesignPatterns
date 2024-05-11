@@ -1,5 +1,4 @@
 namespace Command;
-
 using System;
 
 public class CommandClient
@@ -17,10 +16,10 @@ public class CommandClient
         Waiter waiter = new Waiter();
 
         // Set and execute commands
-        waiter.SetCommand(preparePizzaCommand);
+        waiter.Command = preparePizzaCommand;
         waiter.ExecuteCommand();
 
-        waiter.SetCommand(servePastaCommand);
+        waiter.Command = servePastaCommand;
         waiter.ExecuteCommand();
     }
 }

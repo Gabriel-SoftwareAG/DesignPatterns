@@ -1,5 +1,5 @@
-
 from TerminalExpression import TerminalExpression
+
 
 class Interpreter:
     def __init__(self):

@@ -1,4 +1,3 @@
-
 class Post:
     def __init__(self, title, author, summary):
         self.title = title

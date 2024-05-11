@@ -1,6 +1,6 @@
-
 from Blog import Blog
 from PostIterator import PostIterator
+
 
 class BlogPlatform(Blog):
     def __init__(self):

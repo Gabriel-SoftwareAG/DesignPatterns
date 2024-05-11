@@ -1,5 +1,6 @@
 from Colleague import Colleague
 
+
 class Developer(Colleague):
     def send(self, message):
         print(f"Developer sending message: {message}")

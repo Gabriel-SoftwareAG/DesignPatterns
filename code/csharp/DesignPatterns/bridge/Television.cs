@@ -1,40 +1,40 @@
 namespace Bridge;
 using System;
 
-public class Television : Device
+public class Television : IDevice
 {
-    private bool isOn;
-    private int volume;
-    private int channel;
+    private bool _isOn;
+    private int _volume;
+    private int _channel;
 
     public Television()
     {
-        this.isOn = false;
-        this.volume = 50; // Default volume
-        this.channel = 1; // Default channel
+        this._isOn = false;
+        this._volume = 50; // Default volume
+        this._channel = 1; // Default channel
     }
 
     public void PowerOn()
     {
-        isOn = true;
+        _isOn = true;
         Console.WriteLine("Television powered on");
     }
 
     public void PowerOff()
     {
-        isOn = false;
+        _isOn = false;
         Console.WriteLine("Television powered off");
     }
 
     public void AdjustVolume(int volume)
     {
-        this.volume = volume;
+        this._volume = volume;
         Console.WriteLine("Adjusting television volume to " + volume);
     }
 
     public void ChangeChannel(int channel)
     {
-        this.channel = channel;
+        this._channel = channel;
         Console.WriteLine("Changing television channel to " + channel);
     }
 }

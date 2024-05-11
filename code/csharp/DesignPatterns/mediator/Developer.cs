@@ -7,7 +7,7 @@ class Developer : Colleague
     public override void Send(string message)
     {
         System.Console.WriteLine($"Developer sending message: {message}");
-        Mediator.Request(message, this);
+        _mediator.Request(message, this);
     }
 
     public override void Receive(string message)

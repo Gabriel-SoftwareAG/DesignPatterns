@@ -1,5 +1,6 @@
 from LegalService import LegalService
 
+
 class RealLegalService(LegalService):
     def request_legal_assistance(self):
         print("Real legal service is providing legal assistance.")

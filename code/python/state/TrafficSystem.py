@@ -3,7 +3,7 @@ from GreenState import GreenState
 from YellowState import YellowState
 from RedState import RedState
 
-def main():
+if __name__ == "__main__":
     light = TrafficLight(GreenState())
 
     # Green
@@ -16,6 +16,3 @@ def main():
     # Yellow to Red
     light.set_state(RedState())
     light.perform()
-
-if __name__ == "__main__":
-    main()

@@ -1,7 +1,7 @@
 namespace AbstractFactory;
 
-interface AbstractFoodStallFactory
+interface IAbstractFoodStallFactory
 {
-    IceCream CreateIceCream();
+    IIceCream CreateIceCream();
     Pizza CreatePizza();
 }

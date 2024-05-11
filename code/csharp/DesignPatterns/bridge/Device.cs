@@ -1,5 +1,5 @@
 namespace Bridge;
-interface Device
+interface IDevice
 {
     void PowerOn();
     void PowerOff();

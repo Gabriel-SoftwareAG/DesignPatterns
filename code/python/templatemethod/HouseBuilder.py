@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class HouseBuilder(ABC):
     def build_house(self):
         self._lay_foundation()

@@ -1,5 +1,5 @@
-
 from PizzaDecorator import PizzaDecorator
+
 
 class TomatoDecorator(PizzaDecorator):
     def __init__(self, pizza):

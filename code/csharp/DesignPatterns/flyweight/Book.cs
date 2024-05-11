@@ -1,5 +1,6 @@
 namespace Flyweight;
-public interface Book
+
+public interface IBook
 {
     void BorrowBook();
     void ReturnBook();

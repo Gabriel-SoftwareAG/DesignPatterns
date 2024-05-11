@@ -1,7 +1,7 @@
 namespace Singleton;
 using System;
 
-public class Client
+class Client
 {
     public static void Singleton()
     {

@@ -1,6 +1,7 @@
 from LegalService import LegalService
 from RealLegalService import RealLegalService
 
+
 class ProxyLegalService(LegalService):
     def __init__(self):
         self.real_legal_service = None

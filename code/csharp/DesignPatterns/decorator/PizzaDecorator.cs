@@ -2,15 +2,15 @@ namespace Composite;
 
 abstract class PizzaDecorator : IPizza
 {
-    protected IPizza Pizza;
+    protected IPizza _pizza;
 
     public PizzaDecorator(IPizza pizza)
     {
-        Pizza = pizza;
+        _pizza = pizza;
     }
 
     public virtual void Bake()
     {
-        Pizza.Bake();
+        _pizza.Bake();
     }
 }

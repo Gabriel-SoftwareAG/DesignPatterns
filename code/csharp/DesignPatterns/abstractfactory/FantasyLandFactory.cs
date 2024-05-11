@@ -1,8 +1,8 @@
 namespace AbstractFactory;
 
-class FantasyLandFactory : AbstractFoodStallFactory
+class FantasyLandFactory : IAbstractFoodStallFactory
 {
-    public IceCream CreateIceCream()
+    public IIceCream CreateIceCream()
     {
         Console.WriteLine("Creating magical-themed ice cream");
         return new MagicalIceCream();
