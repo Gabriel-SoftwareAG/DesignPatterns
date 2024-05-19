@@ -1,7 +1,7 @@
 import { GameState } from "./GameState";
 
 export class Player {
-    private state: string;
+    private state!: string;
 
     setState(state: string): void {
         this.state = state;

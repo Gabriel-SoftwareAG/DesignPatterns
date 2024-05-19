@@ -1,10 +1,10 @@
-import { ISupportLevel } from "./ISupportLevel";
+import { SupportLevel } from "./SupportLevel";
 import { SupportTicket } from "./SupportTicket";
 
-export class LevelTwoSupport implements ISupportLevel {
-    private next: ISupportLevel;
+export class LevelTwoSupport implements SupportLevel {
+    private next?: SupportLevel;
 
-    setNext(next: ISupportLevel): void {
+    setNext(next: SupportLevel): void {
         this.next = next;
         console.log(`Setting next level to ${next.constructor.name} Support`);
     }

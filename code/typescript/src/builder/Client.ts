@@ -4,7 +4,6 @@ import { Director } from "./Director";
 import { Product } from "./Product";
 
 
-// Client class
 // Create a ConcreteBuilder instance
 let builder: Builder = new ConcreteBuilder();
 

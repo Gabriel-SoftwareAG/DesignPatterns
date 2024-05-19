@@ -2,7 +2,7 @@ import { LegalService } from "./LegalService";
 import { RealLegalService } from "./RealLegalService";
 
 export class ProxyLegalService implements LegalService {
-    private realLegalService: RealLegalService;
+    private realLegalService?: RealLegalService;
 
     requestLegalAssistance(): void {
         if (!this.realLegalService) {

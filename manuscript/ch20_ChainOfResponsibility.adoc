@@ -90,7 +90,7 @@ include::{csharp_path}/chainofresponsibility/ISupportLevel.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/chainofresponsibility/ISupportLevel.ts[]
+include::{typescript_path}/chainofresponsibility/SupportLevel.ts[]
 endif::[]
 ----
 
@@ -181,7 +181,7 @@ include::{csharp_path}/chainofresponsibility/HelpDesk.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/chainofresponsibility/HelpDesk.ts[]
+include::{typescript_path}/chainofresponsibility/ChainOfResponsibility.ts[]
 endif::[]
 ----
 

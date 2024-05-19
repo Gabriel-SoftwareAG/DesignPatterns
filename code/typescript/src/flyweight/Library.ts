@@ -23,4 +23,12 @@ export class Library {
         }
     }
 
-    return
+    returnBook(title: string): void {
+        const book = this.books[title];
+        if (book) {
+            book.returnBook();
+        } else {
+            console.log(`Book with title ${title} not found in the library.`);
+        }
+    }
+}

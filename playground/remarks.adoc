@@ -4,3 +4,6 @@
 
 Future options:
 - RTL: add in css - https://github.com/asciidoctor/asciidoctor/issues/1601
+
+flyweight
+templatemethod

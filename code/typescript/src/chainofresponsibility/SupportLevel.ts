@@ -1,6 +1,6 @@
 import { SupportTicket } from "./SupportTicket";
 
-export interface ISupportLevel {
-    setNext(next: ISupportLevel): void;
+export interface SupportLevel {
+    setNext(next: SupportLevel): void;
     handleRequest(ticket: SupportTicket): void;
 }
