@@ -53,7 +53,7 @@ header:
   border_top_width: 1   # Specifically sets the top border line width
   height: 1cm           # Sets the height of the header area
   recto:
-    left:
+    right:
       content: '{chapter-title}'  # Example content: document title centered
     # right:
     # content: 'Nir Gallner'  # Example content: document title centered
@@ -77,4 +77,4 @@ page:
   margin: [0.8in, 1in, 0.75in, 1in]  # Top, right, bottom, left margins
 role:
   copyright:
-    font_size: 8
+    font_size: 6

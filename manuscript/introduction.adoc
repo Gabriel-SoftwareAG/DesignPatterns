@@ -46,12 +46,20 @@ A huge thank you to my wife, Irit, and my kids, Amit, Lior, and Ofir. You've all
 ++++
 ++++
 ++++
-
-
-
+++++
+++++
+++++
+++++
+++++
+++++
+++++
+++++
 
 [role="copyright"]
 © 2024 VeriSoft
+[role="copyright"]
 All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+[role="copyright"]
 First Edition, First Printing
+[role="copyright"]
 Published in 2024
