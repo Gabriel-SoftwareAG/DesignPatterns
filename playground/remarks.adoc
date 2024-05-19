@@ -1,6 +1,5 @@
 = Remarks
 - Need to support epub and html also - 3
-- Translate to TS - 2
 
 Future options:
 - RTL: add in css - https://github.com/asciidoctor/asciidoctor/issues/1601
