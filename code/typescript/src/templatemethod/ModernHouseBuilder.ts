@@ -1,4 +1,6 @@
-class ModernHouseBuilder extends HouseBuilder {
+import { HouseBuilder } from "./HouseBuilder";
+
+export class ModernHouseBuilder extends HouseBuilder {
     protected buildWalls(): void {
         console.log("Building walls with glass and steel.");
     }

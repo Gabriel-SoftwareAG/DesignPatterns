@@ -1,4 +1,4 @@
-abstract class HouseBuilder {
+export abstract class HouseBuilder {
     // The template method defining the sequence of steps to build a house.
     public buildHouse(): void {
         this.layFoundation();
