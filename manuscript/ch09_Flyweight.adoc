@@ -145,7 +145,7 @@ include::{csharp_path}/flyweight/FlyweightClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/flyweight/Client.ts[]
+include::{typescript_path}/flyweight/FlyweightClient.ts[]
 endif::[]
 ----
 

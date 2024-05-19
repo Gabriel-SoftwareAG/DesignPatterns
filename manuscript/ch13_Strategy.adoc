@@ -161,7 +161,7 @@ include::{csharp_path}/strategy/StrategyClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/strategy/Client.ts[]
+include::{typescript_path}/strategy/StrategyMain.ts[]
 endif::[]
 ----
 

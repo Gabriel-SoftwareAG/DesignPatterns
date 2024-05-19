@@ -138,7 +138,7 @@ include::{csharp_path}/proxy/ProxyClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/proxy/Client.ts[]
+include::{typescript_path}/proxy/ProxyClient.ts[]
 endif::[]
 ----
 

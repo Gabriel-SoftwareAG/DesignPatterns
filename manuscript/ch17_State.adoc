@@ -200,7 +200,7 @@ include::{csharp_path}/state/TrafficSystem.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/state/TrafficSystem.ts[]
+include::{typescript_path}/state/StateMain.ts[]
 endif::[]
 ----
 

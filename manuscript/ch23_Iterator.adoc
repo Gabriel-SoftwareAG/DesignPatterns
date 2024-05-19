@@ -204,7 +204,7 @@ include::{csharp_path}/iterator/User.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/iterator/User.ts[]
+include::{typescript_path}/iterator/IteratorClient.ts[]
 endif::[]
 ----
 

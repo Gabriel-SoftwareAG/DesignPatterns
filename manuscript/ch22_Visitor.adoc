@@ -192,7 +192,7 @@ include::{csharp_path}/visitor/Museum.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/visitor/Museum.ts[]
+include::{typescript_path}/visitor/index.ts[]
 endif::[]
 ----
 

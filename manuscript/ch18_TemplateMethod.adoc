@@ -154,7 +154,7 @@ include::{csharp_path}/templatemethod/TemplateMethodClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/templatemethod/Client.ts[]
+include::{typescript_path}/templatemethod/index.ts[]
 endif::[]
 ----
 

@@ -185,7 +185,7 @@ include::{csharp_path}/decorator/DecoratorClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/decorator/Client.ts[]
+include::{typescript_path}/decorator/Decorator.ts[]
 endif::[]
 ----
 

@@ -156,7 +156,7 @@ include::{csharp_path}/observer/ObserverClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/observer/Client.ts[]
+include::{typescript_path}/observer/Observer.ts[]
 endif::[]
 ----
 

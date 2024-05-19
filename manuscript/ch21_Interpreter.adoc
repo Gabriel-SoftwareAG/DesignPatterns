@@ -201,7 +201,7 @@ include::{csharp_path}/interpreter/InterpreterClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/interpreter/Client.ts[]
+include::{typescript_path}/interpreter/InterpreterClient.ts[]
 endif::[]
 ----
 

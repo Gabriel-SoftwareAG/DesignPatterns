@@ -142,7 +142,7 @@ include::{csharp_path}/memento/MementoClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/memento/Client.ts[]
+include::{typescript_path}/memento/Memento.ts[]
 endif::[]
 ----
 

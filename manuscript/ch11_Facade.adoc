@@ -163,7 +163,7 @@ include::{csharp_path}/facade/FacadeClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/facade/Client.ts[]
+include::{typescript_path}/facade/Facade.ts[]
 endif::[]
 ----
 

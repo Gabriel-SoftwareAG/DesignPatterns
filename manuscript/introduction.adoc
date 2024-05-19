@@ -39,4 +39,19 @@ Happy Coding!
 
 
 == Acknowledgment
-A huge thank you to my wife, Irit, and my kids, Amit, Lior, and Ofir. You've all been amazingly patient and supportive while I've been buried in this book. I'm so grateful that you can still put up with me after all those long hours. Your love and support mean the world to me! I love you all so much!
+A huge thank you to my wife, Irit, and my kids, Amit, Lior, and Ofir. You've all been amazingly patient and supportive while I've been buried in this book. I'm so grateful that you can still put up with me after all those long hours. Your love and support mean the world to me! I love you all so much! 
+
+
+++++
+++++
+++++
+++++
+
+
+
+
+[role="copyright"]
+© 2024 VeriSoft
+All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+First Edition, First Printing
+Published in 2024

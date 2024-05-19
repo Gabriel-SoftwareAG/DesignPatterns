@@ -173,7 +173,7 @@ include::{csharp_path}/command/CommandClient.cs[]
 endif::[]
 
 ifeval::["{lang}" == "typescript"]
-include::{typescript_path}/command/Client.ts[]
+include::{typescript_path}/command/CommandClient.ts[]
 endif::[]
 ----
 
