@@ -1,0 +1,15 @@
+
+=  Dedication
+
+ifndef::already_included_config[]
+include::config.adoc[]
+endif::[]
+
+To [Name],
+
+In recognition of your unwavering commitment and invaluable contributions to our team. 
+Your dedication not only elevates our work but inspires all of us to strive for excellence.
+
+Thank you for being an essential part of our journey.
+
+Nir
