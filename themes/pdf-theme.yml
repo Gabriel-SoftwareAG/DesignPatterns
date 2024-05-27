@@ -3,6 +3,7 @@ base:
   font_family: Helvetica
   font_size: 10
   line_height: 1.5
+  font-color: [0, 0, 0, 1]
 heading:
   font_family: Helvetica
   levels:
@@ -68,13 +69,13 @@ footer:
   verso_content:
     center: '{page-number}'
 cover:
-  front:
-    image: ../images/cover/cover_front_{lang}.png
-  back:
-    image: ../images/cover/cover_back.png 
+  # front:
+    # image: ../images/cover/cover_front_{lang}.png
+  # back:
+    # image: ../images/cover/cover_back.png 
 page:
   layout: portrait  # Could be 'portrait' or 'landscape'
   margin: [0.8in, 1in, 0.75in, 1in]  # Top, right, bottom, left margins
 role:
   copyright:
-    font_size: 6
+    font_size: 9

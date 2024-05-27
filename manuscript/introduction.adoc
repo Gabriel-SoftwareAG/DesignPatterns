@@ -5,7 +5,7 @@ ifndef::already_included_config[]
 include::config.adoc[]
 endif::[]
 
-:imagesdir: ../images/cover
+:imagesdir: ../images/introduction
 
 Let's talk about design patterns – those handy tools that make coding life a breeze. Whether you're just starting out or you've been around the block, they're like secret tricks for writing top-notch software.
 
@@ -50,10 +50,7 @@ A huge thank you to my wife, Irit, and my kids, Amit, Lior, and Ofir. You've all
 ++++
 ++++
 ++++
-++++
-++++
-++++
-++++
+
 
 [role="copyright"]
 © 2024 VeriSoft
@@ -63,3 +60,19 @@ All rights reserved. No part of this publication may be reproduced, distributed,
 First Edition, First Printing
 [role="copyright"]
 Published in 2024
+
+ifeval::["{lang}" == "java"]
+image::ISBN9789655988451_Java.png[width=150, Height=150]
+endif::[]
+
+ifeval::["{lang}" == "python"]
+image::ISBN9789655988475_Python.png[width=150, Height=150]
+endif::[]
+
+ifeval::["{lang}" == "csharp"]
+image::ISBN9789655988468_CS.png[width=150, Height=150]
+endif::[]
+
+ifeval::["{lang}" == "typescript"]
+image::ISBN9789655988482_TS.png[width=150, Height=150]
+endif::[]
