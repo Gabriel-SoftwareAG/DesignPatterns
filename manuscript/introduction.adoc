@@ -15,15 +15,15 @@ So, why yet another design pattern book? Well, we're not here to reinvent the wh
 
 Why should you care about design patterns? Well, think of them as shortcuts. They help you tackle common problems in a structured way. For newbies, they're like a roadmap through the coding jungle. And for the pros, they're a gentle nudge to the basics.
 
-So, whether you're a coding newbie or a seasoned pro, this book is your new sidekick. We're here to make your coding journey smoother, one pattern at a time. Let's dive in and take our coding skills up a notch!
+So, whether you're a coding newbie or a seasoned pro, this book is your new sidekick. We're here to make your coding journey smoother, one pattern at a time. So, let's dive in and take our coding skills up a notch!
 
 == Unified Design Patterns Across Diverse Programming Languages
-This book is presented in four editions—Java, C#, Python, and TypeScript—each has its own way of implementing the object-oriented paradigm. While all these languages support object-oriented programming, they do so in markedly different ways. Java and C#, with their strict and traditional class structures, facilitate a direct implementation of design patterns that rely heavily on interfaces and abstract classes. On the other hand, Python and TypeScript, while also object-oriented, adopt more flexible approaches. Python uses duck typing and abstract base classes to achieve polymorphism and interface enforcement, which are less rigid than Java's interface structures. TypeScript, being a superset of JavaScript, integrates object-oriented principles in a language that is inherently prototype-based, allowing interfaces to be used as structural contracts without enforcing behavior through classical inheritance.
+This book is presented in four editions - Java, C#, Python, and TypeScript - each has its own way of implementing the object-oriented paradigm. While all these languages support object-oriented programming, they do so in markedly different ways. Java and C#, with their strict and traditional class structures, facilitate a direct implementation of design patterns that rely heavily on interfaces and abstract classes. On the other hand, Python and TypeScript, while also object-oriented, adopt more flexible approaches. Python uses duck typing and abstract base classes to achieve polymorphism and interface enforcement, which are less rigid than Java's interface structures. TypeScript, being a superset of JavaScript, integrates object-oriented principles in a language that is inherently prototype-based, allowing interfaces to be used as structural contracts without enforcing behavior through classical inheritance.
 
 Despite these differences, the core principles underlying design patterns remain invaluable across all programming paradigms. The decision to present the same concepts in all four languages stems from the universal benefits that design patterns provide: they help developers decouple components, encourage broad and strategic thinking about common programming issues, and ultimately lead to cleaner, more efficient code. While it might seem incongruous to discuss the same design patterns across such diverse programming environments, the advantages—such as improved code maintenance, scalability, and readability—justify the approach. Having said that, readers are encouraged to interpret these design patterns concepts and adapt them to fit the specific paradigm offered by their preferred programming language.
 
 
-
+[discrete%breakable]
 == About me
 [cols="<1,>m"]
 |===
