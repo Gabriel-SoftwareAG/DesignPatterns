@@ -56,13 +56,13 @@ header:
   recto:
     right:
       content: '{chapter-title}'  # Example content: document title centered
-    #left:
-    #  content: 'Copy of Yael Adler'  # Example content: document title centered
+    # left:
+    #   content: 'Copy of Yoav Inbar'  # Example content: document title centered
   verso:
     left:
       content: '{doctitle}'  # Same for verso pages
-    #right:
-    #  content: 'Copy of Yael Adler'  # Example content: document title centered
+    # right:
+    #   content: 'Copy of Yoav Inbar'  # Example content: document title centered
 footer:
   recto_content:
     center: '{page-number}'

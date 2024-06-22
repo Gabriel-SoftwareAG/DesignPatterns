@@ -1,6 +1,6 @@
 include::config.adoc[]
 = From Concept to Code: Mastering Design Patterns
-TypeScript Edition
+C# Edition
 Nir Gallner
 :doctype: book
 :pdf-page-size: [18cm,23cm]
