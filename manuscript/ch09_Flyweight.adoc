@@ -1,5 +1,5 @@
 
-= Chapter 9: The Flyweight Patther
+= Chapter 9: The Flyweight Pattern
 
 ifndef::already_included_config[]
 include::config.adoc[]
